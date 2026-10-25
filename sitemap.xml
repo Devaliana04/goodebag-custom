@@ -1,115 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://goodebag.com/</loc>
+    <loc>https://goodebag-custom.vercel.app/portofolio</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/tentang</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliotentang</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/paket</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliopaket</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/paket/seminar-workshop</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliopaket/seminar-workshop</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/paket/corporate-kantor</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliopaket/corporate-kantor</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/paket/event-promosi</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliopaket/event-promosi</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/paket/sekolah-komunitas</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliopaket/sekolah-komunitas</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/paket/pernikahan-acara</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliopaket/pernikahan-acara</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/paket/custom</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliopaket/custom</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/portofolio</loc>
+    <loc>https://goodebag-custom.vercel.app/portofolioportofolio</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/blog</loc>
+    <loc>https://goodebag-custom.vercel.app/portofolioblog</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/blog/panduan-goodie-bag</loc>
+    <loc>https://goodebag-custom.vercel.app/portofolioblog/panduan-goodie-bag</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/blog/jenis-bahan-goodie-bag</loc>
+    <loc>https://goodebag-custom.vercel.app/portofolioblog/jenis-bahan-goodie-bag</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/blog/ide-isi-goodie-bag-seminar</loc>
+    <loc>https://goodebag-custom.vercel.app/portofolioblog/ide-isi-goodie-bag-seminar</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/kontak</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliokontak</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/faq</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliofaq</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/cara-pesan</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliocara-pesan</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/kebijakan-privasi</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliokebijakan-privasi</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://goodebag.com/syarat-ketentuan</loc>
+    <loc>https://goodebag-custom.vercel.app/portofoliosyarat-ketentuan</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
