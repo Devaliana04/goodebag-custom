@@ -1,0 +1,42 @@
+# Goodebag .htaccess - Clean URLs & Security Configuration
+RewriteEngine On
+RewriteBase /
+
+# 1. Redirect /index.html and index to root /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html)?\ HTTP/
+RewriteRule ^index(\.html)?$ / [R=301,L]
+
+# 2. Redirect any direct .html request to clean URL (without .html)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# 3. Specific Route Mapping for Paket & Blog Subpages
+RewriteRule ^paket/?$ paket.html [L]
+RewriteRule ^paket/seminar-workshop/?$ paket-seminar-workshop.html [L]
+RewriteRule ^paket/corporate-kantor/?$ paket-corporate-kantor.html [L]
+RewriteRule ^paket/event-promosi/?$ paket-event-promosi.html [L]
+RewriteRule ^paket/sekolah-komunitas/?$ paket-sekolah-komunitas.html [L]
+RewriteRule ^paket/pernikahan-acara/?$ paket-pernikahan-acara.html [L]
+RewriteRule ^paket/custom/?$ paket-custom.html [L]
+
+RewriteRule ^blog/?$ blog.html [L]
+RewriteRule ^blog/panduan-goodie-bag/?$ blog-panduan-goodie-bag.html [L]
+RewriteRule ^blog/jenis-bahan-goodie-bag/?$ blog-jenis-bahan-goodie-bag.html [L]
+RewriteRule ^blog/ide-isi-goodie-bag-seminar/?$ blog-ide-isi-goodie-bag-seminar.html [L]
+
+# 4. General Clean URL Internal Rewrite (Serves .html behind the scenes)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# 5. Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# 6. Gzip & Browser Caching Headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
