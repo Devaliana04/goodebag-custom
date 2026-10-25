@@ -4,8 +4,6 @@
    Sky Blue + Warm Ivory Palette / Bootstrap 5.3.8 / Native CSS
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
 :root {
   /* Core Sky Blue & Navy Tokens */
   --color-primary: #096EA7;
@@ -17,12 +15,12 @@
   --color-navy: #0B2942;
   --color-navy-dark: #071c2f;
   
-  /* Howel & Co Inspired Warm Luxury Neutral Tokens */
+  /* Luxury Neutral Tokens - High Contrast WCAG AA Compliant */
   --color-warm-bg: #FAF8F5;
   --color-warm-accent: #F4EFE6;
   --color-warm-border: #E8E2D5;
-  --color-gold: #9E7D46;
-  --color-gold-hover: #826636;
+  --color-gold: #6E5018;
+  --color-gold-hover: #543D10;
   --color-gold-light: #F7F1E5;
 
   --color-body: #364C5C;
@@ -31,8 +29,8 @@
   --color-border: #E1EAF0;
   --color-success: #126B56;
   --color-danger: #B42318;
-  --color-wa: #25D366;
-  --color-wa-hover: #1EBE5D;
+  --color-wa: #0D695B;
+  --color-wa-hover: #084D42;
 
   /* Typography */
   --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
@@ -308,13 +306,42 @@ img {
   background-color: var(--color-wa);
   border-color: var(--color-wa);
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 4px 14px rgba(13, 105, 91, 0.25);
 }
 
 .btn-wa-brand:hover {
   background-color: var(--color-wa-hover);
   border-color: var(--color-wa-hover);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 18px rgba(13, 105, 91, 0.35);
+}
+
+/* Accessible High-Contrast Badges & Text */
+.text-sky {
+  color: #7dd3fc !important;
+}
+.text-sky:hover {
+  color: #bae6fd !important;
+}
+
+.portfolio-card .badge.bg-light.text-primary {
+  background-color: #E0F2FE !important;
+  color: #035388 !important;
+}
+.portfolio-card .badge.bg-light.text-success {
+  background-color: #DCFCE7 !important;
+  color: #14532D !important;
+}
+.portfolio-card .badge.bg-light.text-navy {
+  background-color: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+.portfolio-card .badge.bg-light.text-danger {
+  background-color: #FEE2E2 !important;
+  color: #991B1B !important;
+}
+.portfolio-card .badge.bg-light.text-warning {
+  background-color: #FEF3C7 !important;
+  color: #78350F !important;
 }
 
 /* Sections & Layout */
@@ -350,9 +377,9 @@ img {
 }
 
 .section-eyebrow-warm {
-  color: var(--color-gold);
+  color: #6E5018;
   background: var(--color-gold-light);
-  border: 1px solid rgba(158, 125, 70, 0.2);
+  border: 1px solid rgba(110, 80, 24, 0.28);
 }
 
 .section-title {
@@ -913,21 +940,41 @@ img {
   color: var(--color-navy);
 }
 
-/* Spec Tables */
+/* Spec Tables & Responsive Containers */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: var(--color-sky-200);
+  border-radius: 4px;
+}
+
 .spec-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  margin-bottom: 1.5rem;
+  min-width: 620px;
+  border-collapse: collapse;
+  margin-bottom: 0;
+  border: none;
 }
 
 .spec-table th,
 .spec-table td {
-  padding: 12px 18px;
+  padding: 12px 16px;
+  font-size: 0.885rem;
+  line-height: 1.5;
   border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
 }
 
 .spec-table tr:last-child th,
@@ -935,16 +982,27 @@ img {
   border-bottom: none;
 }
 
-.spec-table th {
+.spec-table thead th {
+  background-color: var(--color-sky-50);
+  color: var(--color-navy);
+  font-weight: 750;
+  white-space: nowrap;
+  border-bottom: 2px solid var(--color-sky-200);
+}
+
+.spec-table tbody th {
   background-color: var(--color-sky-50);
   color: var(--color-navy);
   font-weight: 700;
-  width: 32%;
+  width: auto;
+  min-width: 130px;
+  white-space: nowrap;
 }
 
-.spec-table td {
-  background-color: #fff;
+.spec-table tbody td {
+  background-color: #ffffff;
   color: var(--color-body);
+  min-width: 140px;
 }
 
 /* CTA Banner Box */
@@ -1306,6 +1364,85 @@ img {
   border-top: 1px solid var(--color-border);
   text-align: center;
   line-height: 1.5;
+}
+
+/* Blog Cards */
+.blog-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-sky-200);
+}
+
+.blog-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--color-sky-50);
+}
+
+.blog-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.blog-card:hover .blog-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.blog-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-body h2 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-body h2 a {
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+.blog-card-body h2 a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 575.98px) {
+  .material-card {
+    padding: 14px 10px;
+  }
+  .material-card h3 {
+    font-size: 0.9rem;
+  }
+  .material-card p {
+    font-size: 0.775rem;
+    line-height: 1.4;
+  }
+  .blog-card-body {
+    padding: 18px 16px;
+  }
+  .blog-card-body h2 {
+    font-size: 1.05rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

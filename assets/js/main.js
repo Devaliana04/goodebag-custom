@@ -109,10 +109,12 @@
   const btnScrollBottom = document.getElementById('btnScrollBottom');
   const siteHeader = document.querySelector('.site-header');
 
-  function handleScroll() {
-    const scrollY = window.scrollY || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight;
+  let isScrollTicking = false;
+
+  function updateScrollVisuals() {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const windowH = window.innerHeight;
+    const docH = document.documentElement.scrollHeight || document.body.scrollHeight;
 
     // Header shadow
     if (siteHeader) {
@@ -134,17 +136,31 @@
 
     // Button Turun (Scroll to Bottom) - visible until near bottom
     if (btnScrollBottom) {
-      const distFromBottom = scrollHeight - (scrollY + clientHeight);
+      const distFromBottom = docH - (scrollY + windowH);
       if (distFromBottom > 250) {
         btnScrollBottom.classList.add('visible');
       } else {
         btnScrollBottom.classList.remove('visible');
       }
     }
+
+    isScrollTicking = false;
   }
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll(); // Initial check
+  function onScroll() {
+    if (!isScrollTicking) {
+      isScrollTicking = true;
+      window.requestAnimationFrame(updateScrollVisuals);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // Initial check
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onScroll);
+  } else {
+    window.requestAnimationFrame(updateScrollVisuals);
+  }
 
   if (btnScrollTop) {
     btnScrollTop.addEventListener('click', function (e) {

@@ -36,10 +36,13 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
   <link rel="icon" type="image/png" href="assets/images/logo-icon.webp">
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5.3.8 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap 5.3.8 CSS (Local self-hosted for fast critical rendering) -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <!-- Native Design System CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -339,8 +342,7 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="./" aria-label="Goodebag Custom Beranda">
-          <img src="assets/images/logo.svg" onerror="this.onerror=null; this.src='assets/images/logo.webp';"
-            alt="Goodebag Custom Logo" class="site-logo" width="180" height="48">
+          <img src="assets/images/logo.webp" alt="Goodie Bag Custom Logo" class="site-logo" width="180" height="48">
         </a>
 
         <!-- Hamburger Toggler -->
@@ -439,13 +441,12 @@
 
           <div class="col-lg-6">
             <div class="hero-image-wrapper">
-              <img src="assets/images/hero-goodiebag.webp" width="1024" height="682" fetchpriority="high"
-                alt="Koleksi tas goodie bag custom berbagai pilihan warna bahan kokoh dan tali handle kulit sintetis Goodebag">
+              <img src="assets/images/hero-goodiebag.webp" srcset="assets/images/hero-goodiebag-sm.webp 480w, assets/images/hero-goodiebag.webp 800w" sizes="(max-width: 576px) 440px, (max-width: 992px) 630px, 540px" width="800" height="533" fetchpriority="high" alt="Koleksi tas goodie bag custom berbagai pilihan warna bahan kokoh dan tali handle Goodie Bag Custom">
               <div class="hero-floating-badge">
-                <div class="feature-icon-wrap mb-0" style="width:42px;height:42px;font-size:1.1rem;">🌱</div>
+                <div class="feature-icon-wrap mb-0" style="width:42px;height:42px;font-size:1.1rem;">⭐</div>
                 <div>
-                  <div class="fw-bold text-navy" style="font-size:0.9rem;">Ramah Lingkungan</div>
-                  <div class="text-muted" style="font-size:0.775rem;">Material kain dapat digunakan berulang kali</div>
+                  <div class="fw-bold text-navy" style="font-size:0.9rem;">Kualitas Terjamin</div>
+                  <div class="text-muted" style="font-size:0.775rem;">Material kain kokoh & jahitan rapi presisi</div>
                 </div>
               </div>
             </div>
@@ -502,7 +503,7 @@
               <div class="feature-icon-wrap">🎒</div>
               <h3 class="h5 mb-2">Pilihan Material Beragam</h3>
               <p class="text-muted small mb-0">Tersedia bahan spunbond ekonomis, blacu natural, kanvas kokoh, hingga
-                paper bag kraft daur ulang ramah lingkungan.</p>
+                paper bag kraft pilihan berkualitas dan tahan lama.</p>
             </div>
           </div>
           <div class="col-12 col-sm-6 col-lg-3">
@@ -710,7 +711,7 @@
           <div class="col-6 col-lg-3">
             <div class="material-card">
               <img src="assets/images/materials/spunbond.webp" width="600" height="450" loading="lazy" decoding="async"
-                alt="Kain spunbond sintetis ramah lingkungan untuk goodie bag ekonomis">
+                alt="Kain spunbond sintetis berkualitas dan tahan lama untuk goodie bag ekonomis">
               <h3 class="h6 fw-bold mb-1">Spunbond (Non-Woven)</h3>
               <p class="text-muted small mb-0">Ringan, tersedia dalam banyak pilihan warna cerah, dan sangat ekonomis
                 untuk acara massal.</p>
@@ -721,8 +722,8 @@
               <img src="assets/images/materials/blacu.webp" width="600" height="450" loading="lazy" decoding="async"
                 alt="Kain blacu katun belum diputihkan dengan warna broken white natural">
               <h3 class="h6 fw-bold mb-1">Kain Blacu</h3>
-              <p class="text-muted small mb-0">Tekstur serat alami warna broken white, berkesan ramah lingkungan
-                (eco-friendly) dan vintage.</p>
+              <p class="text-muted small mb-0">Tekstur serat alami warna broken white, berkesan berkualitas dan tahan lama
+                (premium) dan vintage.</p>
             </div>
           </div>
           <div class="col-6 col-lg-3">
@@ -737,9 +738,9 @@
           <div class="col-6 col-lg-3">
             <div class="material-card">
               <img src="assets/images/materials/kraft.webp" width="600" height="450" loading="lazy" decoding="async"
-                alt="Paper bag kertas kraft coklat daur ulang elegan">
+                alt="Paper bag kertas kraft coklat pilihan elegan">
               <h3 class="h6 fw-bold mb-1">Kertas Kraft (Paper Bag)</h3>
-              <p class="text-muted small mb-0">Kertas daur ulang warna coklat atau putih dengan pegangan tali kur atau
+              <p class="text-muted small mb-0">Kertas pilihan warna coklat atau putih dengan pegangan tali kur atau
                 tali kertas yang rapi.</p>
             </div>
           </div>
@@ -1214,14 +1215,14 @@
         <div class="col-12 col-md-6 col-lg-4">
           <a href="./" aria-label="Goodebag Custom Beranda">
             <img src="assets/images/logo.svg" onerror="this.onerror=null; this.src='assets/images/logo.webp';"
-              alt="Goodebag Custom Logo" class="footer-logo mb-3" width="190" height="50">
+              alt="Goodie Bag Custom Logo" class="footer-logo mb-3" width="190" height="50">
           </a>
           <p class="small text-light-50 mb-3">
             Goodebag Custom adalah penyedia solusi goodie bag, tote bag, dan souvenir custom terpercaya untuk kebutuhan
             seminar, perusahaan, pameran promosi, dan acara perayaan.
           </p>
           <div class="d-flex flex-wrap">
-            <span class="footer-badge">🌱 Ramah Lingkungan</span>
+            <span class="footer-badge">⭐ Kualitas Terjamin</span>
             <span class="footer-badge">🧵 Jahitan Terkontrol</span>
             <span class="footer-badge">🚚 Seluruh Indonesia</span>
           </div>
@@ -1229,7 +1230,7 @@
 
         <!-- Col 2: Navigasi Cepat -->
         <div class="col-6 col-md-3 col-lg-2">
-          <h5>Navigasi</h5>
+          <h3 class="footer-heading">Navigasi</h3>
           <ul class="footer-links">
             <li><a href="./">Beranda</a></li>
             <li><a href="tentang">Tentang Kami</a></li>
@@ -1243,7 +1244,7 @@
 
         <!-- Col 3: Kategori Paket -->
         <div class="col-6 col-md-3 col-lg-3">
-          <h5>Kategori Paket</h5>
+          <h3 class="footer-heading">Kategori Paket</h3>
           <ul class="footer-links">
             <li><a href="paket-seminar-workshop">Seminar & Workshop</a></li>
             <li><a href="paket-corporate-kantor">Corporate & Kantor</a></li>
@@ -1256,7 +1257,7 @@
 
         <!-- Col 4: Hubungi Kami -->
         <div class="col-12 col-md-6 col-lg-3">
-          <h5>Hubungi Kami</h5>
+          <h3 class="footer-heading">Hubungi Kami</h3>
           <div class="footer-contact-item">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
               <path

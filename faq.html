@@ -36,10 +36,13 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
   <link rel="icon" type="image/png" href="assets/images/logo-icon.webp">
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5.3.8 & Styles -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap 5.3.8 CSS (Local self-hosted for fast critical rendering) -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Structured Data JSON-LD -->
@@ -152,8 +155,7 @@
     <nav class="navbar navbar-expand-lg" aria-label="Navigasi utama">
       <div class="container">
         <a class="navbar-brand" href="./" aria-label="Goodebag Custom Beranda">
-          <img src="assets/images/logo.svg" onerror="this.onerror=null; this.src='assets/images/logo.webp';"
-            alt="Goodebag Custom Logo" class="site-logo" width="180" height="48">
+          <img src="assets/images/logo.webp" alt="Goodie Bag Custom Logo" class="site-logo" width="180" height="48">
         </a>
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Buka navigasi">
@@ -389,17 +391,17 @@
       <div class="row g-4 g-lg-5">
         <div class="col-12 col-md-6 col-lg-4">
           <a href="./"><img src="assets/images/logo.svg"
-              onerror="this.onerror=null; this.src='assets/images/logo.webp';" alt="Goodebag Custom Logo"
+              onerror="this.onerror=null; this.src='assets/images/logo.webp';" alt="Goodie Bag Custom Logo"
               class="footer-logo mb-3" width="190" height="50"></a>
           <p class="small text-light-50 mb-3">Goodebag adalah penyedia solusi goodie bag custom berkualitas untuk
             seminar, perusahaan, dan event.</p>
           <div class="d-flex flex-wrap">
-            <span class="footer-badge">🌱 Ramah Lingkungan</span>
+            <span class="footer-badge">⭐ Kualitas Terjamin</span>
             <span class="footer-badge">🧵 Jahitan Terkontrol</span>
           </div>
         </div>
         <div class="col-6 col-md-3 col-lg-2">
-          <h5>Navigasi</h5>
+          <h3 class="footer-heading">Navigasi</h3>
           <ul class="footer-links">
             <li><a href="./">Beranda</a></li>
             <li><a href="tentang">Tentang Kami</a></li>
@@ -411,7 +413,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-3 col-lg-3">
-          <h5>Kategori Paket</h5>
+          <h3 class="footer-heading">Kategori Paket</h3>
           <ul class="footer-links">
             <li><a href="paket-seminar-workshop">Seminar & Workshop</a></li>
             <li><a href="paket-corporate-kantor">Corporate & Kantor</a></li>
@@ -422,7 +424,7 @@
           </ul>
         </div>
         <div class="col-12 col-md-6 col-lg-3">
-          <h5>Hubungi Kami</h5>
+          <h3 class="footer-heading">Hubungi Kami</h3>
           <div class="footer-contact-item">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
               <path
