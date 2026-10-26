@@ -65,18 +65,50 @@
 .font-xs{font-size:0.75rem;padding:4px 8px;border-radius:var(--radius-pill)}
 
 
-/* Hero Video Background (HQC Asia Style) */
+/* Hero Video Background (Clearer, High-Definition Workshop Ambience) */
 .hero-video-section{position:relative;min-height:clamp(520px,80vh,760px);display:flex;align-items:center;overflow:hidden;background-color:#071c2f;color:#ffffff;padding-block:clamp(60px,8vw,100px)}
 .hero-video-bg-wrap{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;z-index:0;pointer-events:none}
-.hero-video-bg{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%) scale(1.08);object-fit:cover;filter:blur(6px);-webkit-filter:blur(6px)}
-.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,28,47,0.88) 0%,rgba(11,41,66,0.74) 55%,rgba(7,28,47,0.92) 100%);z-index:1}
+.hero-video-bg{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%) scale(1.04);object-fit:cover;filter:blur(1px);-webkit-filter:blur(1px)}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,28,47,0.70) 0%,rgba(11,41,66,0.52) 55%,rgba(7,28,47,0.76) 100%);z-index:1}
 .hero-video-content{position:relative;z-index:2;width:100%}
 .hero-video-btn-toggle{position:absolute;bottom:24px;left:24px;z-index:10;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-size:13px;cursor:pointer;transition:all 0.2s ease;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 .hero-video-btn-toggle:hover{background:rgba(0,0,0,0.75);border-color:#ffffff;transform:scale(1.08)}
 .hero-glass-card{background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.20);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:var(--radius-lg,24px);padding:24px;color:#ffffff;transition:all 0.3s ease}
 .hero-glass-card:hover{background:rgba(255,255,255,0.16);border-color:rgba(255,255,255,0.35);transform:translateY(-3px)}
+
+/* Hero Trust Badges (High Contrast, Crystal-Clear Text & Cyan Checkmarks) */
+.hero-trust-badges-wrap{margin-top:0.75rem}
+.hero-trust-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:9999px;background:rgba(11,41,66,0.80);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(56,189,248,0.5);color:#ffffff !important;font-weight:600;font-size:0.875rem;line-height:1.4;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:all 0.2s ease}
+.hero-trust-badge:hover{background:rgba(11,41,66,0.95);border-color:#38BDF8;transform:translateY(-2px);box-shadow:0 6px 18px rgba(56,189,248,0.25)}
+.hero-trust-badge svg{flex-shrink:0}
+
+/* Material Showcase Cards (Equal-Height Grid Alignment) */
+.h-100{height:100% !important}
+.material-showcase-card{border:1px solid var(--color-border);border-radius:18px;background:#ffffff;box-shadow:0 4px 18px rgba(11,41,66,0.04);transition:all 0.25s ease;overflow:hidden;display:flex !important;flex-direction:column !important;width:100%;height:100%}
+.material-showcase-card:hover{transform:translateY(-5px);border-color:var(--color-primary);box-shadow:0 12px 30px rgba(9,110,167,0.12)}
+.material-img-wrap{flex-shrink:0;width:100%;aspect-ratio:4/3;background:var(--color-sky-50)}
+.material-card-content{display:flex !important;flex-direction:column !important;flex:1 1 auto;padding:1.25rem}
+.material-card-content p{flex-grow:1;margin-bottom:1rem;line-height:1.6}
+.material-trait-pills{display:flex;flex-wrap:wrap;gap:6px;min-height:28px;margin-bottom:0.65rem}
+.material-specs-mini{margin-top:auto;border-top:1px dashed var(--color-border);padding-top:10px;font-size:0.78rem;color:var(--color-muted)}
+.material-specs-mini div{margin-bottom:2px}
+.material-specs-mini strong{color:var(--color-navy)}
+
+/* Material Detail Modal & Swatch */
 .btn-detail-swatch{border-color:var(--color-primary);color:var(--color-primary);font-weight:600;font-size:0.835rem;padding:7px 14px;transition:all 0.2s ease}
 .btn-detail-swatch:hover{background-color:var(--color-primary);color:#ffffff;transform:translateY(-1px);box-shadow:0 4px 12px rgba(9,110,167,0.25)}
+.modal{position:fixed;top:0;left:0;z-index:1055;display:none;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;outline:0}
+.modal.show{display:block !important}
+.modal-dialog{position:relative;width:auto;margin:1.75rem auto;pointer-events:none;max-width:800px;padding:0 1rem}
+.modal-dialog-centered{display:flex;align-items:center;min-height:calc(100% - 3.5rem)}
+.modal-content{position:relative;display:flex;flex-direction:column;width:100%;pointer-events:auto;background-color:#ffffff;background-clip:padding-box;border-radius:1rem;box-shadow:0 20px 50px rgba(11,41,66,0.35);outline:0;overflow:hidden}
+.modal-header{display:flex;flex-shrink:0;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid var(--color-border)}
+.modal-body{position:relative;flex:1 1 auto;padding:1.5rem}
+.modal-footer{display:flex;flex-wrap:wrap;flex-shrink:0;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-top:1px solid var(--color-border)}
+.modal-backdrop{position:fixed;top:0;left:0;z-index:1050;width:100vw;height:100vh;background-color:rgba(7,28,47,0.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.btn-close{box-sizing:content-box;width:1em;height:1em;padding:.25em;color:#000;background:transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;border:0;border-radius:.375rem;opacity:.5;cursor:pointer;transition:opacity .15s ease}
+.btn-close:hover{opacity:1}
+body.modal-open{overflow:hidden}
 .modal-swatch-img{aspect-ratio:1/1;object-fit:cover;width:100%;height:100%;display:block;transition:transform 0.3s ease}
 .modal-swatch-card:hover .modal-swatch-img{transform:scale(1.06)}
 
@@ -426,15 +458,18 @@
             </div>
 
             <!-- Mini trust markers -->
-            <div class="d-flex flex-wrap align-items-center gap-3 text-white text-opacity-90 small">
-              <span class="d-inline-flex align-items-center gap-1.5 px-3 py-1.5 rounded-pill bg-white bg-opacity-10 border border-white border-opacity-25">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Bisa Pesan Satuan
+            <div class="hero-trust-badges-wrap d-flex flex-wrap align-items-center gap-2">
+              <span class="hero-trust-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>Bisa Pesan Satuan</span>
               </span>
-              <span class="d-inline-flex align-items-center gap-1.5 px-3 py-1.5 rounded-pill bg-white bg-opacity-10 border border-white border-opacity-25">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Free Digital Mockup
+              <span class="hero-trust-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>Free Digital Mockup</span>
               </span>
-              <span class="d-inline-flex align-items-center gap-1.5 px-3 py-1.5 rounded-pill bg-white bg-opacity-10 border border-white border-opacity-25">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Jahitan Kuat Standar Ekspor
+              <span class="hero-trust-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>Jahitan Kuat Standar Ekspor</span>
               </span>
             </div>
           </div>
@@ -781,10 +816,10 @@
           </div>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 align-items-stretch">
           <!-- 1. Kain Spunbond -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="material-showcase-card h-100">
+          <div class="col-12 col-sm-6 col-lg-3 d-flex">
+            <div class="material-showcase-card w-100 h-100">
               <div class="material-img-wrap mb-3 rounded-3 overflow-hidden" style="aspect-ratio: 4/3; background: var(--color-sky-50);">
                 <img src="assets/images/portfolio/project-2.webp" width="600" height="450" loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover" alt="Goodie bag spunbond promosi Safi berlogo rapi dan warna cerah">
               </div>
@@ -807,8 +842,8 @@
           </div>
 
           <!-- 2. Kain Blacu Katun Natural -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="material-showcase-card h-100">
+          <div class="col-12 col-sm-6 col-lg-3 d-flex">
+            <div class="material-showcase-card w-100 h-100">
               <div class="material-img-wrap mb-3 rounded-3 overflow-hidden" style="aspect-ratio: 4/3; background: var(--color-sky-50);">
                 <img src="assets/images/portfolio/project-3.webp" width="600" height="450" loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover" alt="Tas blacu katun natural broken white souvenir hajatan Sukirman &amp; Lyena">
               </div>
@@ -831,8 +866,8 @@
           </div>
 
           <!-- 3. Kain Kanvas Twill Premium -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="material-showcase-card h-100">
+          <div class="col-12 col-sm-6 col-lg-3 d-flex">
+            <div class="material-showcase-card w-100 h-100">
               <div class="material-img-wrap mb-3 rounded-3 overflow-hidden" style="aspect-ratio: 4/3; background: var(--color-sky-50);">
                 <img src="assets/images/portfolio/project-1.webp" width="600" height="450" loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover" alt="Tote bag kanvas tebal broken white dengan saku depan snap button">
               </div>
@@ -855,8 +890,8 @@
           </div>
 
           <!-- 4. Serat Goni &amp; Etnik Nusantara -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="material-showcase-card h-100">
+          <div class="col-12 col-sm-6 col-lg-3 d-flex">
+            <div class="material-showcase-card w-100 h-100">
               <div class="material-img-wrap mb-3 rounded-3 overflow-hidden" style="aspect-ratio: 4/3; background: var(--color-sky-50);">
                 <img src="assets/images/portfolio/project-9.webp" width="600" height="450" loading="lazy" decoding="async" class="w-100 h-100 object-fit-cover" alt="Tas serat karung goni natural berpadu tenun ikat nusantara">
               </div>

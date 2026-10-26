@@ -288,6 +288,8 @@
         });
       });
     });
+  }
+
   // --- 7. HERO BACKGROUND VIDEO CONTROLS (HQC ASIA STYLE) ---
   const heroVideo = document.getElementById('heroVideo');
   const btnToggleVideo = document.getElementById('btnToggleVideo');
