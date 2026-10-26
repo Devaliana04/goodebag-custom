@@ -211,19 +211,56 @@
     });
   }
 
-  // --- 5. MOBILE MENU AUTO-CLOSE ---
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-  if (navbarCollapse) {
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        if (navbarCollapse.classList.contains('show') && window.bootstrap) {
-          const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) bsCollapse.hide();
+  // --- 5. ZERO-DEPENDENCY NAVBAR COLLAPSE & DROPDOWN ---
+  document.addEventListener('click', function (e) {
+    // 1. Navbar hamburger toggle
+    const toggler = e.target.closest('[data-bs-toggle="collapse"]');
+    if (toggler) {
+      const targetSel = toggler.getAttribute('data-bs-target');
+      const target = targetSel ? document.querySelector(targetSel) : null;
+      if (target) {
+        target.classList.toggle('show');
+        const isShown = target.classList.contains('show');
+        toggler.setAttribute('aria-expanded', isShown ? 'true' : 'false');
+      }
+      return;
+    }
+
+    // 2. Dropdown menu toggle
+    const dropdownToggle = e.target.closest('[data-bs-toggle="dropdown"]');
+    if (dropdownToggle) {
+      e.preventDefault();
+      const parent = dropdownToggle.closest('.dropdown');
+      const menu = parent ? parent.querySelector('.dropdown-menu') : dropdownToggle.nextElementSibling;
+      if (menu) {
+        const isShown = menu.classList.contains('show');
+        document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+        document.querySelectorAll('[data-bs-toggle="dropdown"][aria-expanded="true"]').forEach(t => t.setAttribute('aria-expanded', 'false'));
+        if (!isShown) {
+          menu.classList.add('show');
+          dropdownToggle.setAttribute('aria-expanded', 'true');
         }
-      });
-    });
-  }
+      }
+      return;
+    }
+
+    // 3. Close open dropdowns when clicking outside
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+      document.querySelectorAll('[data-bs-toggle="dropdown"][aria-expanded="true"]').forEach(t => t.setAttribute('aria-expanded', 'false'));
+    }
+
+    // 4. Close mobile menu when navigating
+    const navLink = e.target.closest('.navbar-nav .nav-link:not(.dropdown-toggle)');
+    if (navLink) {
+      const collapse = document.querySelector('.navbar-collapse.show');
+      if (collapse) {
+        collapse.classList.remove('show');
+        const togglerBtn = document.querySelector('[data-bs-toggle="collapse"]');
+        if (togglerBtn) togglerBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
 
   // --- 6. CATALOG FILTER (IF PRESENT ON PAKET PAGE) ---
   const filterButtons = document.querySelectorAll('[data-filter]');
