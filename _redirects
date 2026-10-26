@@ -1,10 +1,18 @@
-/paket /paket.html 200
-/paket/seminar-workshop /paket-seminar-workshop.html 200
-/paket/corporate-kantor /paket-corporate-kantor.html 200
-/paket/event-promosi /paket-event-promosi.html 200
-/paket/sekolah-komunitas /paket-sekolah-komunitas.html 200
-/paket/pernikahan-acara /paket-pernikahan-acara.html 200
-/paket/custom /paket-custom.html 200
+/produk /produk.html 200
+/produk/seminar-workshop /produk-seminar-workshop.html 200
+/produk/corporate-kantor /produk-corporate-kantor.html 200
+/produk/event-promosi /produk-event-promosi.html 200
+/produk/sekolah-komunitas /produk-sekolah-komunitas.html 200
+/produk/pernikahan-acara /produk-pernikahan-acara.html 200
+/produk/custom /produk-custom.html 200
+
+/paket /produk 301
+/paket/seminar-workshop /produk/seminar-workshop 301
+/paket/corporate-kantor /produk/corporate-kantor 301
+/paket/event-promosi /produk/event-promosi 301
+/paket/sekolah-komunitas /produk/sekolah-komunitas 301
+/paket/pernikahan-acara /produk/pernikahan-acara 301
+/paket/custom /produk/custom 301
 
 /blog /blog.html 200
 /blog/panduan-totebag /blog-panduan-totebag.html 200
