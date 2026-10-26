@@ -1,5 +1,5 @@
 /**
- * Goodebag Custom - Main JavaScript
+ * Totebag Custom - Main JavaScript
  * Handles floating scroll buttons (Batom Naik Turun), WhatsApp CTAs,
  * clean URL masking/routing, and mobile interactions.
  */
@@ -54,12 +54,18 @@
     'paket/custom': 'paket-custom.html',
     'portofolio': 'portofolio.html',
     'blog': 'blog.html',
-    'blog-panduan-goodie-bag': 'blog-panduan-goodie-bag.html',
-    'blog/panduan-goodie-bag': 'blog-panduan-goodie-bag.html',
-    'blog-jenis-bahan-goodie-bag': 'blog-jenis-bahan-goodie-bag.html',
-    'blog/jenis-bahan-goodie-bag': 'blog-jenis-bahan-goodie-bag.html',
-    'blog-ide-isi-goodie-bag-seminar': 'blog-ide-isi-goodie-bag-seminar.html',
-    'blog/ide-isi-goodie-bag-seminar': 'blog-ide-isi-goodie-bag-seminar.html',
+    'blog-panduan-totebag': 'blog-panduan-totebag.html',
+    'blog/panduan-totebag': 'blog-panduan-totebag.html',
+    'blog-panduan-goodie-bag': 'blog-panduan-totebag.html',
+    'blog/panduan-goodie-bag': 'blog-panduan-totebag.html',
+    'blog-jenis-bahan-totebag': 'blog-jenis-bahan-totebag.html',
+    'blog/jenis-bahan-totebag': 'blog-jenis-bahan-totebag.html',
+    'blog-jenis-bahan-goodie-bag': 'blog-jenis-bahan-totebag.html',
+    'blog/jenis-bahan-goodie-bag': 'blog-jenis-bahan-totebag.html',
+    'blog-ide-isi-totebag-seminar': 'blog-ide-isi-totebag-seminar.html',
+    'blog/ide-isi-totebag-seminar': 'blog-ide-isi-totebag-seminar.html',
+    'blog-ide-isi-goodie-bag-seminar': 'blog-ide-isi-totebag-seminar.html',
+    'blog/ide-isi-goodie-bag-seminar': 'blog-ide-isi-totebag-seminar.html',
     'kontak': 'kontak.html',
     'faq': 'faq.html',
     'cara-pesan': 'cara-pesan.html',
@@ -187,8 +193,8 @@
   }
 
   // --- 4. WHATSAPP LINK ENCODER & BUILDER ---
-  window.openGoodebagWhatsApp = function (message) {
-    const text = message || 'Halo Goodebag, saya ingin konsultasi kebutuhan goodie bag custom.';
+  window.openTotebag CustomWhatsApp = function (message) {
+    const text = message || 'Halo Totebag Custom, saya ingin konsultasi kebutuhan tote bag custom.';
     const url = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(text);
     window.open(url, '_blank', 'noopener,noreferrer');
   };
@@ -204,14 +210,14 @@
       const bahan = (document.getElementById('formBahan') || {}).value || 'Belum pasti';
       const catatan = (document.getElementById('formCatatan') || {}).value || '-';
 
-      let msg = `Halo Goodebag, saya ingin meminta penawaran goodie bag custom:\n`;
+      let msg = `Halo Totebag Custom, saya ingin meminta penawaran tote bag custom:\n`;
       if (nama) msg += `• Nama: ${nama}\n`;
       if (acara) msg += `• Jenis Acara: ${acara}\n`;
       if (jumlah) msg += `• Estimasi Jumlah: ${jumlah} pcs\n`;
       if (bahan) msg += `• Pilihan Bahan: ${bahan}\n`;
       if (catatan && catatan !== '-') msg += `• Catatan: ${catatan}\n`;
 
-      window.openGoodebagWhatsApp(msg);
+      window.openTotebag CustomWhatsApp(msg);
     });
   }
 

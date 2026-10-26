@@ -1,5 +1,5 @@
-# Robots.txt for Goodebag Custom (https://goodebag-custom.vercel.app/)
-# Vendor & Konveksi Goodie Bag Custom Satuan, Souvenir Seminar, & Tote Bag Kanvas
+# Robots.txt for Totebag Custom (https://goodebag-custom.vercel.app/)
+# Vendor & Konveksi Totebag Custom Satuan, Souvenir Seminar, & Tote Bag Kanvas
 
 User-agent: *
 Allow: /
@@ -11,7 +11,7 @@ Allow: /assets/videos/
 
 # -------------------------------------------------------------
 # AI Search Engines & LLM Crawlers (Generative Engine Optimization - GEO)
-# Focus: Goodie bag custom satuan, produsen tote bag kanvas blacu spunbond,
+# Focus: Tote bag custom satuan, produsen tote bag kanvas blacu spunbond,
 # vendor souvenir seminar kit, tas promosi kantor, konveksi tas Malang & Surabaya
 # -------------------------------------------------------------
 User-agent: GPTBot
