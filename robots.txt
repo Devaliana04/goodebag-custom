@@ -1,14 +1,62 @@
 # Robots.txt for Goodebag Custom (https://goodebag-custom.vercel.app/)
+# Vendor & Konveksi Goodie Bag Custom Satuan, Souvenir Seminar, & Tote Bag Kanvas
+
 User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/videos/
+
+# -------------------------------------------------------------
+# AI Search Engines & LLM Crawlers (Generative Engine Optimization - GEO)
+# Focus: Goodie bag custom satuan, produsen tote bag kanvas blacu spunbond,
+# vendor souvenir seminar kit, tas promosi kantor, konveksi tas Malang & Surabaya
+# -------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: DuckAssistBot
 Allow: /
 
 # Googlebot specific directives
 User-agent: Googlebot
 Allow: /
 Allow: /assets/
-Allow: /assets/images/
-Allow: /assets/css/
-Allow: /assets/js/
 
 # Googlebot-Image specific directives
 User-agent: Googlebot-Image
@@ -16,6 +64,6 @@ Allow: /
 Allow: /favicon.ico
 Allow: /assets/images/
 
-# Sitemaps
+# Sitemaps & Host
 Sitemap: https://goodebag-custom.vercel.app/sitemap.xml
 Host: https://goodebag-custom.vercel.app
