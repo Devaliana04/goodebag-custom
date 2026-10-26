@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Test reports and temporary scratch files
+*.json
+!vercel.json
+!ai-catalog.json
+!package.json
+!package-lock.json
+scratch/
+.system_generated/

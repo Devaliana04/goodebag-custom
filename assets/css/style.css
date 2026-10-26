@@ -498,6 +498,7 @@ img {
 }
 
 .hero-title {
+  min-height: 2.3em; /* Prevents font-swap layout shift */
   font-size: clamp(2.35rem, 4.3vw, 3.65rem);
   font-weight: 800;
   line-height: 1.15;

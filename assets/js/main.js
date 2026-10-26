@@ -113,8 +113,6 @@
 
   function updateScrollVisuals() {
     const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-    const windowH = window.innerHeight;
-    const docH = document.documentElement.scrollHeight || document.body.scrollHeight;
 
     // Header shadow
     if (siteHeader) {
@@ -136,11 +134,17 @@
 
     // Button Turun (Scroll to Bottom) - visible until near bottom
     if (btnScrollBottom) {
-      const distFromBottom = docH - (scrollY + windowH);
-      if (distFromBottom > 250) {
+      if (scrollY === 0) {
         btnScrollBottom.classList.add('visible');
       } else {
-        btnScrollBottom.classList.remove('visible');
+        const windowH = window.innerHeight;
+        const docH = document.documentElement.scrollHeight || document.body.scrollHeight;
+        const distFromBottom = docH - (scrollY + windowH);
+        if (distFromBottom > 250) {
+          btnScrollBottom.classList.add('visible');
+        } else {
+          btnScrollBottom.classList.remove('visible');
+        }
       }
     }
 
@@ -155,11 +159,11 @@
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  // Initial check
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', onScroll);
+  // Delay initial scroll state until idle to prevent blocking initial render
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(updateScrollVisuals);
   } else {
-    window.requestAnimationFrame(updateScrollVisuals);
+    setTimeout(updateScrollVisuals, 500);
   }
 
   if (btnScrollTop) {
