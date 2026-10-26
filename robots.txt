@@ -1,4 +1,21 @@
+# Robots.txt for Goodebag Custom (https://goodebag-custom.vercel.app/)
 User-agent: *
 Allow: /
 
-Sitemap: https://goodebag-custom.vercel.app/portofoliositemap.xml
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Googlebot-Image specific directives
+User-agent: Googlebot-Image
+Allow: /
+Allow: /favicon.ico
+Allow: /assets/images/
+
+# Sitemaps
+Sitemap: https://goodebag-custom.vercel.app/sitemap.xml
+Host: https://goodebag-custom.vercel.app
