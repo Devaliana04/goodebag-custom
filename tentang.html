@@ -219,9 +219,113 @@
     flex-shrink: 0;
     transition: all 0.2s ease;
   }
+  .dot-gov { background: #0284c7; }
+  .dot-bank { background: #0d9488; }
   .dot-edu { background: #6366f1; }
   .dot-corp { background: #d97706; }
   .brand-chip:hover .chip-dot { transform: scale(1.4); }
+
+  /* Heel Theory Inspired Kinetic Marquee & Filter */
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  @keyframes marquee-reverse { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+  @keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+  .animate-marquee { display: flex; width: max-content; animation: marquee 35s linear infinite; }
+  .animate-marquee-reverse { display: flex; width: max-content; animation: marquee-reverse 35s linear infinite; }
+  .animate-float { animation: float-y 5s ease-in-out infinite; }
+  .marquee-track-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    padding: 6px 0;
+  }
+  .marquee-track-wrap:hover .animate-marquee,
+  .marquee-track-wrap:hover .animate-marquee-reverse {
+    animation-play-state: paused;
+  }
+  .marquee-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 9999px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+    font-size: 0.815rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(11, 41, 66, 0.04);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+  }
+  .marquee-pill:hover {
+    border-color: #38bdf8;
+    color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(2, 132, 199, 0.16);
+    background: #f0f9ff;
+  }
+  .marquee-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .filter-tabs-heel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+  }
+  .filter-tab-btn {
+    padding: 9px 20px;
+    border-radius: 9999px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569;
+    font-size: 0.815rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .filter-tab-btn:hover {
+    background: #f8fafc;
+    color: #0f172a;
+    border-color: #94a3b8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .filter-tab-btn.active {
+    background: #0B2942;
+    color: #ffffff;
+    border-color: #0B2942;
+    box-shadow: 0 6px 18px rgba(11, 41, 66, 0.25);
+    transform: translateY(-1px);
+  }
+  .filter-count-badge {
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.08);
+    font-weight: 800;
+  }
+  .filter-tab-btn.active .filter-count-badge {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+  .brand-tailwind-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, opacity 0.3s ease;
+  }
+  .brand-col.is-hidden {
+    display: none !important;
+  }
 
   /* Timeline Styles */
   .timeline-journey-grid {
@@ -668,19 +772,103 @@
           </div>
         </div>
 
-        <!-- Loved by Brands, Trusted by Clients Showcase -->
+        <!-- Loved by Brands, Trusted by Clients Showcase (Heel Theory Style & Kinetic Motions) -->
         <div class="my-5 p-4 p-lg-5 section-fresh-ambient rounded-4 border shadow-soft">
-          <div class="text-center max-w-700 mx-auto mb-5">
-            <span class="badge-premium-glow">
+          <div class="text-center max-w-700 mx-auto mb-4">
+            <span class="badge-premium-glow animate-float">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               Kemitraan Resmi &amp; Terpercaya
             </span>
             <h2 class="section-title">Loved by <span class="text-gradient-brand">Brands</span>, Trusted by <span class="text-gradient-brand">Clients</span></h2>
-            <p class="section-lead mx-auto">Dipercaya lebih dari 500+ institusi pemerintahan, kementerian, BUMN, perbankan nasional, perguruan tinggi, serta korporasi swasta.</p>
+            <p class="section-lead mx-auto">Dipercaya lebih dari 500+ institusi pemerintahan, kementerian, BUMN, perbankan nasional, perguruan tinggi, serta korporasi swasta di seluruh Indonesia.</p>
           </div>
-          <div class="row g-4">
-            <!-- Kategori 1: Government -->
-            <div class="col-12 col-lg-6">
+
+          <!-- Heel Theory Infinite Seamless Running Marquee Ticker Track 1 -->
+          <div class="mb-2">
+            <div class="marquee-track-wrap">
+              <div class="animate-marquee">
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>OJK RI</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Indonesia</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Universitas Brawijaya</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>PLN (Persero)</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank BNI 46</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>Daikin Indonesia</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Pertamina</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Mandiri</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Univ. Muhammadiyah Malang</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>TelkomAkses</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Puspen TNI</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Syariah Indonesia</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Universitas Jember</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>Honda NSS</span>
+                <!-- Duplicate for Seamless Infinite Loop -->
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>OJK RI</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Indonesia</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Universitas Brawijaya</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>PLN (Persero)</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank BNI 46</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>Daikin Indonesia</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Pertamina</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Mandiri</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Univ. Muhammadiyah Malang</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>TelkomAkses</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Puspen TNI</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Syariah Indonesia</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Universitas Jember</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>Honda NSS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heel Theory Infinite Seamless Running Marquee Ticker Track 2 (Reverse Direction) -->
+          <div class="mb-4">
+            <div class="marquee-track-wrap">
+              <div class="animate-marquee-reverse">
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>BPJS Ketenagakerjaan</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Jatim</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Universitas Terbuka</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>PAMA Persada</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Bawaslu RI</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>BRI Finance</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>UNTAG Surabaya</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank BTN</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>BKKBN</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>IBS Software</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Mandiri Taspen</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>Kharisma Textile</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Polda Jawa Timur</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>SMK Telkom Malang</span>
+                <!-- Duplicate for Seamless Infinite Loop -->
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>BPJS Ketenagakerjaan</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank Jatim</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>Universitas Terbuka</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>PAMA Persada</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Bawaslu RI</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>BRI Finance</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>UNTAG Surabaya</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Bank BTN</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>BKKBN</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>IBS Software</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-bank"></span>Mandiri Taspen</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-corp"></span>Kharisma Textile</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-gov"></span>Polda Jawa Timur</span>
+                <span class="marquee-pill"><span class="marquee-dot dot-edu"></span>SMK Telkom Malang</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Heel Theory Filter Tabs -->
+          <div class="filter-tabs-heel" id="clientFilterTabs">
+            <button type="button" class="filter-tab-btn active" data-filter="all">Semua Kategori <span class="filter-count-badge">500+</span></button>
+            <button type="button" class="filter-tab-btn" data-filter="gov"><span class="marquee-dot dot-gov"></span>Instansi &amp; BUMN <span class="filter-count-badge">50+</span></button>
+            <button type="button" class="filter-tab-btn" data-filter="bank"><span class="marquee-dot dot-bank"></span>Bank &amp; Finansial <span class="filter-count-badge">30+</span></button>
+            <button type="button" class="filter-tab-btn" data-filter="edu"><span class="marquee-dot dot-edu"></span>Kampus &amp; Dikti <span class="filter-count-badge">25+</span></button>
+            <button type="button" class="filter-tab-btn" data-filter="corp"><span class="marquee-dot dot-corp"></span>Korporasi Swasta <span class="filter-count-badge">100+</span></button>
+          </div>
+
+          <div class="row g-4" id="brandCardsGrid">
+            <!-- Kategori 1: Government (Diubah Jadi Chip Pills Seperti Bawahnya) -->
+            <div class="col-12 col-lg-6 brand-col" data-cat="gov">
               <div class="brand-tailwind-card card-gov">
                 <div class="brand-tailwind-top">
                   <div class="brand-title-wrap">
@@ -688,20 +876,32 @@
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
                     <div>
-                      <h3 class="brand-cat-name">GOVERNMENT</h3>
-                      <span class="brand-cat-sub">Instansi Resmi &amp; Kementerian RI</span>
+                      <h3 class="brand-cat-name">GOVERNMENT &amp; KEMENTERIAN</h3>
+                      <span class="brand-cat-sub">Instansi Resmi, BUMN &amp; Dinas RI</span>
                     </div>
                   </div>
                   <span class="brand-cat-badge badge-gov">BUMN &amp; Dinas</span>
                 </div>
-                <div class="brand-logo-frame">
-                  <img src="assets/images/clients-goverment-logos.webp" alt="Logo Klien Pemerintah dan BUMN Goodebag Custom - GSF, OJK, PLN, Polda, Puspen TNI, Pertamina, Bawaslu, BPJS Ketenagakerjaan, BKKBN" class="brand-logo-img" width="472" height="111" loading="lazy">
+                <div class="brand-chips-wrap">
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>OJK (Otoritas Jasa Keuangan)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>PLN (Persero)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Pertamina</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Puspen TNI</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>BPJS Ketenagakerjaan</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Bawaslu RI</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>BKKBN</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Polda Jawa Timur</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>GSF Pemkot Malang</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Dinas Kesehatan (Dinkes)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Kemenkumham RI</span>
+                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Pemprov Jawa Timur</span>
+                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-gov"></span>+ 50 Instansi Lainnya</span>
                 </div>
               </div>
             </div>
 
-            <!-- Kategori 2: Bank -->
-            <div class="col-12 col-lg-6">
+            <!-- Kategori 2: Bank & Finansial (Diubah Jadi Chip Pills Seperti Bawahnya) -->
+            <div class="col-12 col-lg-6 brand-col" data-cat="bank">
               <div class="brand-tailwind-card card-bank">
                 <div class="brand-tailwind-top">
                   <div class="brand-title-wrap">
@@ -715,14 +915,25 @@
                   </div>
                   <span class="brand-cat-badge badge-bank">Bank Nasional</span>
                 </div>
-                <div class="brand-logo-frame">
-                  <img src="assets/images/clients-bank-logos.webp" alt="Logo Klien Bank dan Lembaga Keuangan Goodebag Custom - Bank Indonesia, BNI, BSI, Mandiri Taspen, Bank Jatim, BRI Finance, Movin, E-Maal" class="brand-logo-img" width="474" height="106" loading="lazy">
+                <div class="brand-chips-wrap">
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Indonesia (BI)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Mandiri</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank BNI 46</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Syariah Indonesia (BSI)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Jatim</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>BRI Finance</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank BTN</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Mandiri Taspen</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Movin by Mandiri</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>E-Maal Syariah</span>
+                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>PT Pegadaian</span>
+                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-bank"></span>+ 30 Lembaga Lainnya</span>
                 </div>
               </div>
             </div>
 
             <!-- Kategori 3: Pendidikan & Universitas -->
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 brand-col" data-cat="edu">
               <div class="brand-tailwind-card card-edu">
                 <div class="brand-tailwind-top">
                   <div class="brand-title-wrap">
@@ -745,12 +956,15 @@
                   <span class="brand-chip"><span class="chip-dot dot-edu"></span>UNTAG Surabaya</span>
                   <span class="brand-chip"><span class="chip-dot dot-edu"></span>SMK Telkom Malang</span>
                   <span class="brand-chip"><span class="chip-dot dot-edu"></span>Taxpert Education</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Politeknik Negeri Malang</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Negeri Malang (UM)</span>
+                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-edu"></span>+ 40 Kampus Lainnya</span>
                 </div>
               </div>
             </div>
 
             <!-- Kategori 4: Korporasi & Swasta -->
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 brand-col" data-cat="corp">
               <div class="brand-tailwind-card card-corp">
                 <div class="brand-tailwind-top">
                   <div class="brand-title-wrap">
@@ -774,11 +988,37 @@
                   <span class="brand-chip"><span class="chip-dot dot-corp"></span>RB Shera Building</span>
                   <span class="brand-chip"><span class="chip-dot dot-corp"></span>Bumida 1967</span>
                   <span class="brand-chip"><span class="chip-dot dot-corp"></span>Kanvill Dau Cafe</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>PT Indomarco Prismatama</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>J&amp;T Express</span>
                   <span class="brand-chip brand-chip-more"><span class="chip-dot dot-corp"></span>+ 100 Klien Lainnya</span>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Heel Theory Filter Tab Interaction Script -->
+          <script>
+            (function(){
+              var tabs = document.querySelectorAll('#clientFilterTabs .filter-tab-btn');
+              var cols = document.querySelectorAll('#brandCardsGrid .brand-col');
+              tabs.forEach(function(btn){
+                btn.addEventListener('click', function(){
+                  tabs.forEach(function(b){ b.classList.remove('active'); });
+                  this.classList.add('active');
+                  var filter = this.getAttribute('data-filter');
+                  cols.forEach(function(col){
+                    if (filter === 'all' || col.getAttribute('data-cat') === filter) {
+                      col.classList.remove('is-hidden');
+                      col.style.opacity = '0';
+                      setTimeout(function(){ col.style.opacity = '1'; }, 50);
+                    } else {
+                      col.classList.add('is-hidden');
+                    }
+                  });
+                });
+              });
+            })();
+          </script>
         </div>
 
         <!-- Section: Workshop & Komitmen Keberlanjutan -->

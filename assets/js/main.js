@@ -452,6 +452,23 @@
       });
     }
   }
+
+  // --- 8. HEEL THEORY INSPIRED 3D MOUSE PARALLAX TILT ON HERO GLASS CARD ---
+  const heroSection = document.querySelector('.hero-video-section');
+  const heroGlassCard = document.querySelector('.hero-glass-card');
+  if (heroSection && heroGlassCard && window.innerWidth >= 992) {
+    heroSection.addEventListener('mousemove', function (e) {
+      const rect = heroSection.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      const tiltX = -y * 14;
+      const tiltY = x * 14;
+      heroGlassCard.style.transform = `perspective(1000px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) scale(1.02)`;
+    });
+    heroSection.addEventListener('mouseleave', function () {
+      heroGlassCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+    });
+  }
 })();
 
 
