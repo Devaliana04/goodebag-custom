@@ -5,6 +5,16 @@
 /produk/sekolah-komunitas /produk-sekolah-komunitas.html 200
 /produk/pernikahan-acara /produk-pernikahan-acara.html 200
 /produk/custom /produk-custom.html 200
+/goodie-bag-custom-seminar /goodie-bag-custom-seminar.html 200
+/tote-bag-custom-seminar /tote-bag-custom-seminar.html 200
+/goodie-bag-seminar /goodie-bag-custom-seminar.html 200
+/goodie-bag-custom-perusahaan /goodie-bag-custom-perusahaan.html 200
+/goodie-bag-perusahaan /goodie-bag-custom-perusahaan.html 200
+/goodie-bag-custom-event /goodie-bag-custom-event.html 200
+/goodie-bag-promosi /goodie-bag-custom-event.html 200
+/souvenir-goodie-bag-pernikahan /souvenir-goodie-bag-pernikahan.html 200
+/produsen-goodie-bag-custom /produsen-goodie-bag-custom.html 200
+/goodie-bag-custom /produk.html 200
 
 /paket /produk 301
 /paket/seminar-workshop /produk/seminar-workshop 301

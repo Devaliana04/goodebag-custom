@@ -1,4 +1,4 @@
-﻿{
+{
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
@@ -38,6 +38,16 @@
     { "source": "/produk/sekolah-komunitas", "destination": "/produk-sekolah-komunitas.html" },
     { "source": "/produk/pernikahan-acara", "destination": "/produk-pernikahan-acara.html" },
     { "source": "/produk/custom", "destination": "/produk-custom.html" },
+    { "source": "/goodie-bag-custom-seminar", "destination": "/goodie-bag-custom-seminar.html" },
+    { "source": "/tote-bag-custom-seminar", "destination": "/tote-bag-custom-seminar.html" },
+    { "source": "/goodie-bag-seminar", "destination": "/goodie-bag-custom-seminar.html" },
+    { "source": "/goodie-bag-custom-perusahaan", "destination": "/goodie-bag-custom-perusahaan.html" },
+    { "source": "/goodie-bag-perusahaan", "destination": "/goodie-bag-custom-perusahaan.html" },
+    { "source": "/goodie-bag-custom-event", "destination": "/goodie-bag-custom-event.html" },
+    { "source": "/goodie-bag-promosi", "destination": "/goodie-bag-custom-event.html" },
+    { "source": "/souvenir-goodie-bag-pernikahan", "destination": "/souvenir-goodie-bag-pernikahan.html" },
+    { "source": "/produsen-goodie-bag-custom", "destination": "/produsen-goodie-bag-custom.html" },
+    { "source": "/goodie-bag-custom", "destination": "/produk.html" },
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/blog/panduan-goodiebag", "destination": "/blog-panduan-goodiebag.html" },
     { "source": "/blog/jenis-bahan-goodiebag", "destination": "/blog-jenis-bahan-goodiebag.html" },
