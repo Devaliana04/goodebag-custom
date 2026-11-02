@@ -3769,7 +3769,8 @@
     .timeline-journey-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
+      gap: 1.25rem;
+      align-items: stretch;
       position: relative;
     }
 
@@ -3789,11 +3790,12 @@
     .journey-card {
       background: #ffffff;
       border-radius: 1.25rem;
-      padding: 1.75rem 1.5rem;
+      padding: 1.5rem 1.25rem;
       border: 1px solid #e2e8f0;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
       display: flex;
       flex-direction: column;
+      height: 100%;
       position: relative;
       overflow: hidden;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -3834,17 +3836,17 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .journey-step-number {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 800;
       color: #ffffff;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
@@ -3879,19 +3881,19 @@
     }
 
     .journey-card-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 750;
       color: #0f172a;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
       line-height: 1.35;
       letter-spacing: -0.02em;
     }
 
     .journey-card-body {
-      font-size: 0.92rem;
-      line-height: 1.68;
+      font-size: 0.885rem;
+      line-height: 1.6;
       color: #475569;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
       flex-grow: 1;
     }
 
@@ -3901,7 +3903,7 @@
       gap: 6px;
       padding: 6px 12px;
       border-radius: 8px;
-      font-size: 0.8rem;
+      font-size: 0.785rem;
       font-weight: 700;
       background: #f0f9ff;
       color: #0369a1;
@@ -4036,7 +4038,7 @@
       will-change: transform;
     }
   </style>
-  <link href="assets/css/style.css?v=20261103_hero" rel="stylesheet">
+  <link href="assets/css/style.css?v=20261103_journey" rel="stylesheet">
 
   <!-- Rich Structured Data JSON-LD for Google Search Dominance -->
   <script type="application/ld+json">
@@ -5212,84 +5214,76 @@
 
         <div class="timeline-journey-grid">
           <!-- Tahap 1: Awal Perjalanan -->
-          <div class="journey-card journey-card-1">
-            <div class="journey-card-top">
-              <div class="journey-step-number step-num-1">01</div>
-              <span class="journey-year-pill">2016 • Titik Mula</span>
+            <div class="journey-card journey-card-1">
+              <div class="journey-card-top">
+                <div class="journey-step-number step-num-1">01</div>
+                <span class="journey-year-pill">2016 • Titik Mula</span>
+              </div>
+              <h3 class="journey-card-title">Awal Mula di Malang</h3>
+              <p class="journey-card-body">
+                Bermula dari konveksi rumahan di Malang dengan fokus jahitan tangan teliti dan standar mutu tinggi untuk komunitas dan UMKM lokal.
+              </p>
+              <div class="journey-card-highlight">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Jahitan Teliti &amp; Mutu Terjaga
+              </div>
             </div>
-            <h3 class="journey-card-title">Awal Perjalanan di Malang</h3>
-            <p class="journey-card-body">
-              Kisah Goodiebag Custom bermula dari unit konveksi rumahan berskala mikro di Kota Malang. Dengan
-              mengandalkan keahlian jahitan tangan yang teliti dan integritas tinggi, kami melayani pemesanan souvenir
-              lokal untuk komunitas, reuni, dan UMKM sekitar dengan standar mutu tanpa kompromi.
-            </p>
-            <div class="journey-card-highlight">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              Jahitan Teliti &amp; Mutu Terjaga
-            </div>
-          </div>
 
           <!-- Tahap 2: Bertumbuh & Berinovasi -->
-          <div class="journey-card journey-card-2">
-            <div class="journey-card-top">
-              <div class="journey-step-number step-num-2">02</div>
-              <span class="journey-year-pill">2019 • Inovasi Bahan</span>
+            <div class="journey-card journey-card-2">
+              <div class="journey-card-top">
+                <div class="journey-step-number step-num-2">02</div>
+                <span class="journey-year-pill">2019 • Inovasi Bahan</span>
+              </div>
+              <h3 class="journey-card-title">Inovasi Material Kain</h3>
+              <p class="journey-card-body">
+                Mengembangkan variasi bahan spunbond ramah lingkungan, blacu natural, dan kanvas tebal dengan teknologi cetak sablon presisi.
+              </p>
+              <div class="journey-card-highlight highlight-emerald">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Spunbond, Blacu &amp; Kanvas
+              </div>
             </div>
-            <h3 class="journey-card-title">Bertumbuh &amp; Berinovasi</h3>
-            <p class="journey-card-body">
-              Didorong komitmen kepuasan pelanggan, kami terus berinovasi menambah variasi material unggulan seperti
-              spunbond ramah lingkungan, blacu natural, dan kanvas premium. Kami mengintegrasikan teknologi sablon
-              modern demi menjawab kebutuhan souvenir kantor dan cinderamata perusahaan yang elegan.
-            </p>
-            <div class="journey-card-highlight highlight-emerald">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              Spunbond, Blacu &amp; Kanvas
-            </div>
-          </div>
 
           <!-- Tahap 3: Dipercaya Ratusan Instansi & BUMN -->
-          <div class="journey-card journey-card-3">
-            <div class="journey-card-top">
-              <div class="journey-step-number step-num-3">03</div>
-              <span class="journey-year-pill">2022 • Skala Nasional</span>
+            <div class="journey-card journey-card-3">
+              <div class="journey-card-top">
+                <div class="journey-step-number step-num-3">03</div>
+                <span class="journey-year-pill">2022 • Skala Nasional</span>
+              </div>
+              <h3 class="journey-card-title">Skala Mitra Nasional</h3>
+              <p class="journey-card-body">
+                Kapasitas workshop melesat, dipercaya instansi pemerintah, BUMN, perbankan, dan kampus di seluruh penjuru Indonesia.
+              </p>
+              <div class="journey-card-highlight highlight-purple">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                500+ Mitra Resmi BUMN
+              </div>
             </div>
-            <h3 class="journey-card-title">Dipercaya Instansi &amp; BUMN</h3>
-            <p class="journey-card-body">
-              Dari ruang produksi garasi sederhana, kapasitas dan kredibilitas kami melesat pesat. Goodiebag Custom kini
-              dipercaya menjadi mitra pengadaan tas seminar kit dan souvenir resmi bagi ratusan instansi pemerintah,
-              kementerian, BUMN terkemuka, perbankan, dan universitas di berbagai kota Indonesia.
-            </p>
-            <div class="journey-card-highlight highlight-purple">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              500+ Mitra Resmi BUMN &amp; Dinas
-            </div>
-          </div>
 
           <!-- Tahap 4: Visi Masa Depan -->
-          <div class="journey-card journey-card-4">
-            <div class="journey-card-top">
-              <div class="journey-step-number step-num-4">04</div>
-              <span class="journey-year-pill">2026 • Masa Depan Hijau</span>
+            <div class="journey-card journey-card-4">
+              <div class="journey-card-top">
+                <div class="journey-step-number step-num-4">04</div>
+                <span class="journey-year-pill">2026 • Masa Depan Hijau</span>
+              </div>
+              <h3 class="journey-card-title">Visi Berkelanjutan</h3>
+              <p class="journey-card-body">
+                Menjadi sentra konveksi goodie bag ramah lingkungan terdepan di Indonesia yang mengutamakan mutu dan ketepatan waktu.
+              </p>
+              <div class="journey-card-highlight highlight-amber">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Eco-Friendly &amp; Garansi QC
+              </div>
             </div>
-            <h3 class="journey-card-title">Visi Masa Depan Berkelanjutan</h3>
-            <p class="journey-card-body">
-              Kami meyakini perjalanan besar selalu lahir dari ketelitian langkah kecil dan kepercayaan pelanggan yang
-              kami jaga seumur hidup. Visi kami ke depan adalah menjadi produsen goodie bag ramah lingkungan paling
-              tepercaya di Indonesia yang selalu mengutamakan mutu, kebermanfaatan, dan keberlanjutan bumi.
-            </p>
-            <div class="journey-card-highlight highlight-amber">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              Eco-Friendly &amp; Garansi Tepat Waktu
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -2662,7 +2662,8 @@ body.modal-open {
 .timeline-journey-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
+  align-items: stretch;
   position: relative;
 }
 
@@ -2682,11 +2683,12 @@ body.modal-open {
 .journey-card {
   background: #ffffff;
   border-radius: 1.25rem;
-  padding: 1.75rem 1.5rem;
+  padding: 1.5rem 1.25rem;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
+  height: 100%;
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2727,17 +2729,17 @@ body.modal-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .journey-step-number {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
@@ -2761,9 +2763,9 @@ body.modal-open {
 }
 
 .journey-year-pill {
-  font-size: 0.785rem;
+  font-size: 0.775rem;
   font-weight: 700;
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 9999px;
   background: #f8fafc;
   color: #334155;
@@ -2772,19 +2774,19 @@ body.modal-open {
 }
 
 .journey-card-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 750;
   color: #0f172a;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
   line-height: 1.35;
   letter-spacing: -0.02em;
 }
 
 .journey-card-body {
-  font-size: 0.92rem;
-  line-height: 1.68;
+  font-size: 0.885rem;
+  line-height: 1.6;
   color: #475569;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.15rem;
   flex-grow: 1;
 }
 
@@ -2794,7 +2796,7 @@ body.modal-open {
   gap: 6px;
   padding: 6px 12px;
   border-radius: 8px;
-  font-size: 0.8rem;
+  font-size: 0.785rem;
   font-weight: 700;
   background: #f0f9ff;
   color: #0369a1;
