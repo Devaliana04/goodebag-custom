@@ -10,6 +10,11 @@
   <meta name="author" content="Devaliana Tensa">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://goodiebag.web.id/produk">
+  <meta name="keywords" content="katalog goodie bag, produk goodie bag custom, tote bag seminar, tas souvenir kantor, goodie bag malang">
+  <meta name="geo.region" content="ID-JI">
+  <meta name="geo.placename" content="Malang, Jawa Timur, Indonesia">
+  <meta name="geo.position" content="-7.983908;112.621391">
+  <meta name="ICBM" content="-7.983908, 112.621391">
 
   <!-- OpenGraph Metadata (Optimized for WhatsApp & Social Share) -->
   <meta property="og:type" content="website">
@@ -56,7 +61,88 @@
 
   <!-- Bootstrap 5.3.8 CSS (Local self-hosted for fast critical rendering) -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css?v=20261102b" rel="stylesheet">
+
+  <!-- Guaranteed Inline Slider CSS (Overcomes Browser Cache) -->
+  <style id="luxury-product-slider-css">
+    .product-slider-wrapper {
+      position: relative !important;
+      width: 100% !important;
+      overflow: hidden !important;
+    }
+    .product-slider-track {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      gap: 1.5rem !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scroll-snap-type: x mandatory !important;
+      scroll-behavior: smooth !important;
+      -webkit-overflow-scrolling: touch !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+      padding: 10px 4px 22px 4px !important;
+      cursor: grab !important;
+      outline: none !important;
+      width: 100% !important;
+    }
+    .product-slider-track::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+    .product-slider-track.is-dragging {
+      cursor: grabbing !important;
+      user-select: none !important;
+      scroll-snap-type: none !important;
+      scroll-behavior: auto !important;
+    }
+    .product-slider-slide {
+      flex: 0 0 calc(33.333% - 1rem) !important;
+      min-width: 320px !important;
+      max-width: 420px !important;
+      width: calc(33.333% - 1rem) !important;
+      flex-shrink: 0 !important;
+      scroll-snap-align: start !important;
+      scroll-snap-stop: normal !important;
+      display: flex !important;
+      flex-direction: column !important;
+      box-sizing: border-box !important;
+      transition: transform 0.25s ease, opacity 0.25s ease !important;
+    }
+    .product-slider-slide .package-card {
+      width: 100% !important;
+      height: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    @media (max-width: 991.98px) {
+      .product-slider-slide {
+        flex: 0 0 calc(50% - 0.75rem) !important;
+        min-width: 280px !important;
+        max-width: calc(50% - 0.75rem) !important;
+        width: calc(50% - 0.75rem) !important;
+      }
+    }
+    @media (max-width: 639.98px) {
+      .product-slider-slide {
+        flex: 0 0 86% !important;
+        min-width: 260px !important;
+        max-width: 86% !important;
+        width: 86% !important;
+      }
+      .slider-header-controls {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+      }
+      .slider-nav-actions {
+        width: 100% !important;
+        justify-content: space-between !important;
+      }
+    }
+  </style>
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -488,9 +574,9 @@
           </div>
 
           <!-- Slider Track -->
-          <div class="product-slider-track" id="packageGrid">
+          <div class="product-slider-track" id="packageGrid" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; overflow-y: hidden !important; gap: 1.5rem !important;">
             <!-- 1. Seminar -->
-            <div class="product-slider-slide" data-category="seminar">
+            <div class="product-slider-slide flex-shrink-0" data-category="seminar" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
               <article class="package-card h-100" data-category="seminar">
                 <div class="package-card-img-wrap">
                   <img src="assets/images/packages/seminar-workshop.webp" width="800" height="600" loading="lazy"
@@ -513,7 +599,7 @@
             </div>
 
             <!-- 2. Corporate -->
-            <div class="product-slider-slide" data-category="corporate">
+            <div class="product-slider-slide flex-shrink-0" data-category="corporate" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
               <article class="package-card h-100" data-category="corporate">
                 <div class="package-card-img-wrap">
                   <img src="assets/images/packages/corporate-kantor.webp" width="800" height="600" loading="lazy"
@@ -535,7 +621,7 @@
             </div>
 
             <!-- 3. Event & Promosi -->
-            <div class="product-slider-slide" data-category="event">
+            <div class="product-slider-slide flex-shrink-0" data-category="event" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
               <article class="package-card h-100" data-category="event">
                 <div class="package-card-img-wrap">
                   <img src="assets/images/packages/event-promosi.webp" width="800" height="600" loading="lazy"
@@ -557,7 +643,7 @@
             </div>
 
             <!-- 4. Sekolah & Komunitas -->
-            <div class="product-slider-slide" data-category="sekolah">
+            <div class="product-slider-slide flex-shrink-0" data-category="sekolah" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
               <article class="package-card h-100" data-category="sekolah">
                 <div class="package-card-img-wrap">
                   <img src="assets/images/packages/sekolah-komunitas.webp?v=telkom" width="800" height="600"
@@ -580,7 +666,7 @@
             </div>
 
             <!-- 5. Pernikahan & Acara -->
-            <div class="product-slider-slide" data-category="pernikahan">
+            <div class="product-slider-slide flex-shrink-0" data-category="pernikahan" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
               <article class="package-card h-100" data-category="pernikahan">
                 <div class="package-card-img-wrap">
                   <img src="assets/images/packages/pernikahan-acara.webp" width="800" height="600" loading="lazy"
@@ -603,7 +689,7 @@
             </div>
 
             <!-- 6. Custom Bebas -->
-            <div class="product-slider-slide" data-category="custom">
+            <div class="product-slider-slide flex-shrink-0" data-category="custom" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
               <article class="package-card h-100" data-category="custom">
                 <div class="package-card-img-wrap">
                   <img src="assets/images/packages/custom.webp" width="800" height="600" loading="lazy" decoding="async"
