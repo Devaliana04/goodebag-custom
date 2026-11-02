@@ -430,17 +430,26 @@ img {
   margin-bottom: 1.5rem;
 }
 
-/* Milestone Numbers */
+/* Milestone Numbers & Dynamic Interactive Effects */
 .milestone-item {
   border-right: 1px solid var(--color-border);
-  padding: 16px 24px;
+  padding: 18px 24px;
+  border-radius: 14px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.milestone-item:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-sky-50);
+  box-shadow: 0 8px 24px rgba(9, 110, 167, 0.08);
 }
 
 @media (max-width: 767.98px) {
   .milestone-item {
     border-right: none;
     border-bottom: 1px solid var(--color-border);
-    padding-inline: 0;
+    padding-inline: 12px;
   }
 }
 
@@ -451,6 +460,13 @@ img {
   line-height: 1;
   margin-bottom: 6px;
   letter-spacing: -0.03em;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.milestone-item:hover .milestone-number {
+  transform: scale(1.08);
+  color: #0284c7;
 }
 
 .milestone-label {
@@ -459,6 +475,11 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.milestone-item:hover .milestone-label {
+  color: var(--color-navy);
 }
 
 /* Craftsmanship / Value Cards */
