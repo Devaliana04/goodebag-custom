@@ -1,5 +1,5 @@
-# Robots.txt for Totebag Custom (https://totebag-custom.vercel.app/)
-# Vendor & Konveksi Totebag Custom Satuan, Souvenir Seminar, & Tote Bag Kanvas
+﻿# Robots.txt for Goodiebag Custom (https://goodiebag-custom.vercel.app/)
+# Vendor & Konveksi Goodiebag Custom Satuan, Souvenir Seminar, & Tote Bag Kanvas
 
 User-agent: *
 Allow: /
@@ -65,5 +65,5 @@ Allow: /favicon.ico
 Allow: /assets/images/
 
 # Sitemaps & Host
-Sitemap: https://totebag-custom.vercel.app/sitemap.xml
-Host: https://totebag-custom.vercel.app
+Sitemap: https://goodiebag-custom.vercel.app/sitemap.xml
+Host: https://goodiebag-custom.vercel.app

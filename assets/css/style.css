@@ -1257,7 +1257,7 @@ img {
   .site-logo {
     height: 40px;
   }
-  
+
   .hero-floating-badge {
     position: static;
     margin-top: 16px;
@@ -1271,6 +1271,159 @@ img {
 
   .article-toc {
     padding: 18px 18px;
+  }
+}
+
+/* ============================================================
+   MOBILE FIRST — Komprehensif Responsif (≤575px)
+   Menjamin hero section compact & rapi di HP
+   ============================================================ */
+@media (max-width: 575.98px) {
+  /* Hero video section — lebih pendek di mobile */
+  .hero-video-section {
+    min-height: auto;
+    padding-top: 56px;
+    padding-bottom: 48px;
+    align-items: flex-start;
+  }
+
+  /* Sembunyikan kolom kanan (glass card) di mobile agar hero tidak terlalu panjang */
+  .hero-video-section .col-lg-5 {
+    display: none !important;
+  }
+
+  /* Hero title lebih compact */
+  .hero-title,
+  #hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.2rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.85rem !important;
+    min-height: unset !important;
+  }
+
+  /* Hero lead paragraph */
+  .hero-lead {
+    font-size: 0.975rem !important;
+    line-height: 1.65;
+    margin-bottom: 1.25rem !important;
+    max-width: 100% !important;
+  }
+
+  /* Eyebrow badge di hero — lebih kecil */
+  .section-eyebrow {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+
+  /* Trust badges — stack jadi 2 kolom */
+  .hero-trust-badges-wrap {
+    gap: 6px !important;
+  }
+
+  .hero-trust-badge {
+    font-size: 0.78rem;
+    padding: 6px 12px;
+    gap: 6px;
+  }
+
+  /* Button CTA — full width di mobile */
+  .hero-video-section .d-flex.flex-wrap.gap-3 {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .hero-video-section .btn-primary-brand,
+  .hero-video-section .btn-outline-light {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+
+  /* Section padding lebih kecil */
+  .section-padding {
+    padding-block: clamp(36px, 8vw, 56px);
+  }
+
+  /* Section title mobile */
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 1.85rem);
+  }
+
+  /* Section lead */
+  .section-lead {
+    font-size: 0.95rem;
+  }
+
+  /* Feature box compact */
+  .feature-box {
+    padding: 18px;
+  }
+
+  /* Step item compact */
+  .step-item {
+    padding: 18px;
+  }
+
+  /* Package card body compact */
+  .package-card-body {
+    padding: 16px;
+  }
+
+  /* CTA box */
+  .cta-box {
+    padding: 28px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  /* Footer compact */
+  .site-footer {
+    padding-top: clamp(32px, 6vw, 48px);
+  }
+}
+
+/* Mobile landscape & sm (576px–767px) — medium phones */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-video-section {
+    min-height: auto;
+    padding-top: 64px;
+    padding-bottom: 56px;
+  }
+
+  .hero-video-section .col-lg-5 {
+    display: none !important;
+  }
+
+  #hero-title {
+    font-size: clamp(1.9rem, 5vw, 2.4rem) !important;
+    min-height: unset !important;
+  }
+
+  .hero-lead {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  .hero-trust-badge {
+    font-size: 0.82rem;
+  }
+}
+
+/* Tablet portrait (768px–991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-video-section {
+    min-height: 480px;
+    padding-block: 64px;
+  }
+
+  #hero-title {
+    font-size: clamp(2rem, 4vw, 2.8rem) !important;
+    min-height: unset !important;
+  }
+
+  .hero-video-section .col-lg-5 {
+    display: none !important;
   }
 }
 
@@ -1535,13 +1688,13 @@ img {
 /* Hero Video Background (HQC Asia Style) */
 .hero-video-section {
   position: relative;
-  min-height: clamp(520px, 80vh, 760px);
+  min-height: clamp(480px, 80vh, 760px);
   display: flex;
   align-items: center;
   overflow: hidden;
   background-color: #071c2f;
   color: #ffffff;
-  padding-block: clamp(60px, 8vw, 100px);
+  padding-block: clamp(52px, 8vw, 100px);
 }
 
 .hero-video-bg-wrap {

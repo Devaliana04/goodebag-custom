@@ -1,4 +1,4 @@
-{
+﻿{
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
@@ -26,9 +26,9 @@
     { "source": "/paket-sekolah-komunitas", "destination": "/produk-sekolah-komunitas", "permanent": true },
     { "source": "/paket-pernikahan-acara", "destination": "/produk-pernikahan-acara", "permanent": true },
     { "source": "/paket-custom", "destination": "/produk-custom", "permanent": true },
-    { "source": "/blog/panduan-goodie-bag", "destination": "/blog/panduan-totebag", "permanent": true },
-    { "source": "/blog/jenis-bahan-goodie-bag", "destination": "/blog/jenis-bahan-totebag", "permanent": true },
-    { "source": "/blog/ide-isi-goodie-bag-seminar", "destination": "/blog/ide-isi-totebag-seminar", "permanent": true }
+    { "source": "/blog/panduan-goodie-bag", "destination": "/blog/panduan-goodiebag", "permanent": true },
+    { "source": "/blog/jenis-bahan-goodie-bag", "destination": "/blog/jenis-bahan-goodiebag", "permanent": true },
+    { "source": "/blog/ide-isi-goodie-bag-seminar", "destination": "/blog/ide-isi-goodiebag-seminar", "permanent": true }
   ],
   "rewrites": [
     { "source": "/produk", "destination": "/produk.html" },
@@ -39,9 +39,9 @@
     { "source": "/produk/pernikahan-acara", "destination": "/produk-pernikahan-acara.html" },
     { "source": "/produk/custom", "destination": "/produk-custom.html" },
     { "source": "/blog", "destination": "/blog.html" },
-    { "source": "/blog/panduan-totebag", "destination": "/blog-panduan-totebag.html" },
-    { "source": "/blog/jenis-bahan-totebag", "destination": "/blog-jenis-bahan-totebag.html" },
-    { "source": "/blog/ide-isi-totebag-seminar", "destination": "/blog-ide-isi-totebag-seminar.html" },
+    { "source": "/blog/panduan-goodiebag", "destination": "/blog-panduan-goodiebag.html" },
+    { "source": "/blog/jenis-bahan-goodiebag", "destination": "/blog-jenis-bahan-goodiebag.html" },
+    { "source": "/blog/ide-isi-goodiebag-seminar", "destination": "/blog-ide-isi-goodiebag-seminar.html" },
     { "source": "/tentang", "destination": "/tentang.html" },
     { "source": "/portofolio", "destination": "/portofolio.html" },
     { "source": "/kontak", "destination": "/kontak.html" },
