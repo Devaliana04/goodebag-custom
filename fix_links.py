@@ -32,10 +32,10 @@ replacements = [
     (r'href="/404"', r'href="404"'),
     
     # Logo fallback onerror
-    (r'src="assets/images/logo\.svg"\s+alt="Goodebag Logo"\s+class="site-logo"', 
-     r'src="assets/images/logo.svg" onerror="this.onerror=null; this.src=\'assets/images/logo.webp\';" alt="Goodebag Logo" class="site-logo"'),
-    (r'src="assets/images/logo\.svg"\s+alt="Goodebag Logo"\s+class="footer-logo mb-3"', 
-     r'src="assets/images/logo.svg" onerror="this.onerror=null; this.src=\'assets/images/logo.webp\';" alt="Goodebag Logo" class="footer-logo mb-3"')
+    (r'src="assets/images/logo\.svg"\s+alt="Goodiebag Custom Logo"\s+class="site-logo"', 
+     r'src="assets/images/logo.svg" onerror="this.onerror=null; this.src=\'assets/images/logo.webp\';" alt="Goodiebag Custom Logo" class="site-logo"'),
+    (r'src="assets/images/logo\.svg"\s+alt="Goodiebag Custom Logo"\s+class="footer-logo mb-3"', 
+     r'src="assets/images/logo.svg" onerror="this.onerror=null; this.src=\'assets/images/logo.webp\';" alt="Goodiebag Custom Logo" class="footer-logo mb-3"')
 ]
 
 for filename in html_files:
