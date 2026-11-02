@@ -3271,63 +3271,275 @@ body.modal-open {
   font-size: 0.75rem;
 }
 
-/* Heel Theory Category Filter Tabs */
-.filter-tabs-heel {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 2rem;
+/* ==========================================================================
+   MODERN SUSTAINABILITY & WORKSHOP SHOWCASE (TENTANG KAMI)
+   ========================================================================== */
+.sustainability-modern-card {
+  background: linear-gradient(145deg, #f0fdf4 0%, #ffffff 45%, #f8fafc 100%);
+  border: 1px solid #dcfce7;
+  border-radius: 28px;
+  box-shadow: 0 10px 35px rgba(18, 107, 86, 0.05);
 }
-.filter-tab-btn {
-  padding: 9px 20px;
-  border-radius: 9999px;
-  border: 1px solid #cbd5e1;
-  background: #ffffff;
-  color: #475569;
-  font-size: 0.815rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+.badge-sustainability-glow {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-}
-.filter-tab-btn:hover {
-  background: #f8fafc;
-  color: #0f172a;
-  border-color: #94a3b8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-.filter-tab-btn.active {
-  background: #0B2942;
-  color: #ffffff;
-  border-color: #0B2942;
-  box-shadow: 0 6px 18px rgba(11, 41, 66, 0.25);
-  transform: translateY(-1px);
-}
-.filter-count-badge {
-  font-size: 0.7rem;
-  padding: 2px 7px;
+  gap: 8px;
+  padding: 6px 16px;
   border-radius: 9999px;
-  background: rgba(0, 0, 0, 0.08);
-  font-weight: 800;
+  background: #dcfce7;
+  color: #14532d;
+  border: 1px solid #86efac;
+  font-size: 0.825rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 4px 12px rgba(20, 83, 45, 0.1);
 }
-.filter-tab-btn.active .filter-count-badge {
-  background: rgba(255, 255, 255, 0.25);
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sustainability-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 575.98px) {
+  .sustainability-features-grid { grid-template-columns: 1fr; }
+}
+.sustain-feature-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.sustain-feature-item:hover {
+  transform: translateY(-3px);
+  border-color: #86efac;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.1);
+}
+.sustain-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.icon-eco-blacu { background: #ecfdf5; color: #047857; }
+.icon-eco-spun { background: #f0fdf4; color: #16a34a; }
+.icon-eco-kanvas { background: #fef3c7; color: #d97706; }
+.icon-eco-zero { background: #e0f2fe; color: #0284c7; }
+.sustain-feature-title {
+  font-size: 0.95rem;
+  font-weight: 750;
+  color: #0b2942;
+  margin-bottom: 4px;
+}
+.sustain-feature-desc {
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: #64748b;
+}
+.values-glass-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: 0 10px 30px rgba(11, 41, 66, 0.06);
+}
+.values-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+.values-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #096ea7;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.values-title {
+  font-size: 1.35rem;
+  font-weight: 750;
+  color: #0b2942;
+  margin-bottom: 0;
+}
+.value-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #f8fafc;
+}
+.value-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.value-number-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
   color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.val-num-1 { background: linear-gradient(135deg, #096ea7, #38bdf8); }
+.val-num-2 { background: linear-gradient(135deg, #0d9488, #34d399); }
+.val-num-3 { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+.value-name {
+  font-size: 1rem;
+  font-weight: 750;
+  color: #0b2942;
+  margin-bottom: 4px;
+}
+.value-desc {
+  font-size: 0.865rem;
+  line-height: 1.6;
+  color: #64748b;
 }
 
-/* Interactive 3D Card Hover Lift */
-.brand-tailwind-card {
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, opacity 0.3s ease;
+/* Modern Workshop Studio Showcase */
+.workshop-modern-card {
+  background: #ffffff;
+  border: 1px solid #e8e2d5;
+  border-radius: 28px;
 }
-.brand-tailwind-card.is-hidden {
-  display: none !important;
+.badge-status-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  font-size: 0.815rem;
+  font-weight: 750;
+  margin-bottom: 0.85rem;
+}
+.status-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.workshop-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.workshop-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #faf8f5;
+  border: 1px solid #e8e2d5;
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+.workshop-info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #096ea7;
+  border: 1px solid #e1eaf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.info-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+.info-val {
+  display: block;
+  font-size: 0.925rem;
+  color: #0b2942;
+  line-height: 1.5;
+}
+.info-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 3px;
+}
+.workshop-map-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(11, 41, 66, 0.08);
+}
+.workshop-map-img {
+  transition: transform 0.5s ease;
+  display: block;
+}
+.workshop-map-frame:hover .workshop-map-img {
+  transform: scale(1.03);
+}
+.workshop-floating-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: rgba(11, 41, 66, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+}
+.tag-pin-icon {
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+.tag-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 750;
+  color: #ffffff;
+}
+.tag-sub {
+  display: block;
+  font-size: 0.785rem;
+  color: #bae6fd;
 }
 
 

@@ -271,60 +271,273 @@
     background: #f0f9ff;
   }
   .marquee-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-  .filter-tabs-heel {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 2rem;
+  /* Modern Sustainability Showcase */
+  .sustainability-modern-card {
+    background: linear-gradient(145deg, #F0FDF4 0%, #FFFFFF 45%, #F8FAFC 100%);
+    border: 1px solid #DCFCE7;
+    border-radius: 28px;
+    box-shadow: 0 10px 35px rgba(18, 107, 86, 0.05);
   }
-  .filter-tab-btn {
-    padding: 9px 20px;
-    border-radius: 9999px;
-    border: 1px solid #cbd5e1;
-    background: #ffffff;
-    color: #475569;
-    font-size: 0.815rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  .badge-sustainability-glow {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-  }
-  .filter-tab-btn:hover {
-    background: #f8fafc;
-    color: #0f172a;
-    border-color: #94a3b8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-  .filter-tab-btn.active {
-    background: #0B2942;
-    color: #ffffff;
-    border-color: #0B2942;
-    box-shadow: 0 6px 18px rgba(11, 41, 66, 0.25);
-    transform: translateY(-1px);
-  }
-  .filter-count-badge {
-    font-size: 0.7rem;
-    padding: 2px 7px;
+    gap: 8px;
+    padding: 6px 16px;
     border-radius: 9999px;
-    background: rgba(0, 0, 0, 0.08);
-    font-weight: 800;
+    background: #DCFCE7;
+    color: #14532D;
+    border: 1px solid #86EFAC;
+    font-size: 0.825rem;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 4px 12px rgba(20, 83, 45, 0.1);
   }
-  .filter-tab-btn.active .filter-count-badge {
-    background: rgba(255, 255, 255, 0.25);
+  .text-gradient-emerald {
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .sustainability-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  @media (max-width: 575.98px) {
+    .sustainability-features-grid { grid-template-columns: 1fr; }
+  }
+  .sustain-feature-item {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 18px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  }
+  .sustain-feature-item:hover {
+    transform: translateY(-3px);
+    border-color: #86EFAC;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.1);
+  }
+  .sustain-icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .icon-eco-blacu { background: #ECFDF5; color: #047857; }
+  .icon-eco-spun { background: #F0FDF4; color: #16A34A; }
+  .icon-eco-kanvas { background: #FEF3C7; color: #D97706; }
+  .icon-eco-zero { background: #E0F2FE; color: #0284C7; }
+  .sustain-feature-title {
+    font-size: 0.95rem;
+    font-weight: 750;
+    color: #0B2942;
+    margin-bottom: 4px;
+  }
+  .sustain-feature-desc {
+    font-size: 0.825rem;
+    line-height: 1.5;
+    color: #64748B;
+  }
+  .values-glass-box {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    padding: clamp(24px, 4vw, 36px);
+    box-shadow: 0 10px 30px rgba(11, 41, 66, 0.06);
+  }
+  .values-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #F1F5F9;
+  }
+  .values-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #096EA7;
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+  .values-title {
+    font-size: 1.35rem;
+    font-weight: 750;
+    color: #0B2942;
+    margin-bottom: 0;
+  }
+  .value-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #F8FAFC;
+  }
+  .value-row:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .value-number-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #ffffff;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .val-num-1 { background: linear-gradient(135deg, #096EA7, #38BDF8); }
+  .val-num-2 { background: linear-gradient(135deg, #0D9488, #34D399); }
+  .val-num-3 { background: linear-gradient(135deg, #6366F1, #8B5CF6); }
+  .value-name {
+    font-size: 1rem;
+    font-weight: 750;
+    color: #0B2942;
+    margin-bottom: 4px;
+  }
+  .value-desc {
+    font-size: 0.865rem;
+    line-height: 1.6;
+    color: #64748B;
+  }
+
+  /* Modern Workshop Studio Showcase */
+  .workshop-modern-card {
+    background: #ffffff;
+    border: 1px solid #E8E2D5;
+    border-radius: 28px;
+  }
+  .badge-status-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    background: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #A7F3D0;
+    font-size: 0.815rem;
+    font-weight: 750;
+    margin-bottom: 0.85rem;
+  }
+  .status-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10B981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: pulse-green 2s infinite;
+  }
+  @keyframes pulse-green {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  }
+  .workshop-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .workshop-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #FAF8F5;
+    border: 1px solid #E8E2D5;
+    border-radius: 16px;
+    padding: 16px 18px;
+  }
+  .workshop-info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #096EA7;
+    border: 1px solid #E1EAF0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .info-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748B;
+    margin-bottom: 2px;
+  }
+  .info-val {
+    display: block;
+    font-size: 0.925rem;
+    color: #0B2942;
+    line-height: 1.5;
+  }
+  .info-sub {
+    display: block;
+    font-size: 0.8rem;
+    color: #94A3B8;
+    margin-top: 3px;
+  }
+  .workshop-map-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 10px 30px rgba(11, 41, 66, 0.08);
+  }
+  .workshop-map-img {
+    transition: transform 0.5s ease;
+    display: block;
+  }
+  .workshop-map-frame:hover .workshop-map-img {
+    transform: scale(1.03);
+  }
+  .workshop-floating-tag {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: rgba(11, 41, 66, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: #ffffff;
   }
-  .brand-tailwind-card {
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, opacity 0.3s ease;
+  .tag-pin-icon {
+    color: #38BDF8;
+    flex-shrink: 0;
   }
-  .brand-col.is-hidden {
-    display: none !important;
+  .tag-title {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 750;
+    color: #ffffff;
+  }
+  .tag-sub {
+    display: block;
+    font-size: 0.785rem;
+    color: #BAE6FD;
   }
 
   /* Timeline Styles */
@@ -857,232 +1070,161 @@
             </div>
           </div>
 
-          <div class="row g-4" id="brandCardsGrid">
-            <!-- Kategori 1: Government (Diubah Jadi Chip Pills Seperti Bawahnya) -->
-            <div class="col-12 col-lg-6 brand-col" data-cat="gov">
-              <div class="brand-tailwind-card card-gov">
-                <div class="brand-tailwind-top">
-                  <div class="brand-title-wrap">
-                    <div class="brand-cat-icon icon-gov">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <div>
-                      <h3 class="brand-cat-name">GOVERNMENT &amp; KEMENTERIAN</h3>
-                      <span class="brand-cat-sub">Instansi Resmi, BUMN &amp; Dinas RI</span>
-                    </div>
-                  </div>
-                  <span class="brand-cat-badge badge-gov">BUMN &amp; Dinas</span>
-                </div>
-                <div class="brand-chips-wrap">
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>OJK (Otoritas Jasa Keuangan)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>PLN (Persero)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Pertamina</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Puspen TNI</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>BPJS Ketenagakerjaan</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Bawaslu RI</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>BKKBN</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Polda Jawa Timur</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>GSF Pemkot Malang</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Dinas Kesehatan (Dinkes)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Kemenkumham RI</span>
-                  <span class="brand-chip"><span class="chip-dot dot-gov"></span>Pemprov Jawa Timur</span>
-                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-gov"></span>+ 50 Instansi Lainnya</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Kategori 2: Bank & Finansial (Diubah Jadi Chip Pills Seperti Bawahnya) -->
-            <div class="col-12 col-lg-6 brand-col" data-cat="bank">
-              <div class="brand-tailwind-card card-bank">
-                <div class="brand-tailwind-top">
-                  <div class="brand-title-wrap">
-                    <div class="brand-cat-icon icon-bank">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                    </div>
-                    <div>
-                      <h3 class="brand-cat-name">BANK &amp; FINANSIAL</h3>
-                      <span class="brand-cat-sub">Lembaga Perbankan &amp; Keuangan</span>
-                    </div>
-                  </div>
-                  <span class="brand-cat-badge badge-bank">Bank Nasional</span>
-                </div>
-                <div class="brand-chips-wrap">
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Indonesia (BI)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Mandiri</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank BNI 46</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Syariah Indonesia (BSI)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank Jatim</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>BRI Finance</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Bank BTN</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Mandiri Taspen</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>Movin by Mandiri</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>E-Maal Syariah</span>
-                  <span class="brand-chip"><span class="chip-dot dot-bank"></span>PT Pegadaian</span>
-                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-bank"></span>+ 30 Lembaga Lainnya</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Kategori 3: Pendidikan & Universitas -->
-            <div class="col-12 col-lg-6 brand-col" data-cat="edu">
-              <div class="brand-tailwind-card card-edu">
-                <div class="brand-tailwind-top">
-                  <div class="brand-title-wrap">
-                    <div class="brand-cat-icon icon-edu">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                    </div>
-                    <div>
-                      <h3 class="brand-cat-name">PENDIDIKAN &amp; KAMPUS</h3>
-                      <span class="brand-cat-sub">Universitas &amp; Institusi Pendidikan</span>
-                    </div>
-                  </div>
-                  <span class="brand-cat-badge badge-edu">Kampus Ternama</span>
-                </div>
-                <div class="brand-chips-wrap">
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Brawijaya (UB)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Univ. Muhammadiyah Malang (UMM)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Jember (UNEJ)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Terbuka (UT)</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Bosowa</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>UNTAG Surabaya</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>SMK Telkom Malang</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Taxpert Education</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Politeknik Negeri Malang</span>
-                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Negeri Malang (UM)</span>
-                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-edu"></span>+ 40 Kampus Lainnya</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Kategori 4: Korporasi & Swasta -->
-            <div class="col-12 col-lg-6 brand-col" data-cat="corp">
-              <div class="brand-tailwind-card card-corp">
-                <div class="brand-tailwind-top">
-                  <div class="brand-title-wrap">
-                    <div class="brand-cat-icon icon-corp">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
-                    </div>
-                    <div>
-                      <h3 class="brand-cat-name">KORPORASI &amp; SWASTA</h3>
-                      <span class="brand-cat-sub">Perusahaan Nasional &amp; Brand Retail</span>
-                    </div>
-                  </div>
-                  <span class="brand-cat-badge badge-corp">Corporate Partner</span>
-                </div>
-                <div class="brand-chips-wrap">
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Daikin Indonesia</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>TelkomAkses</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>IBS Software</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Honda NSS</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>PAMA Persada</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Kharisma Textile</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>RB Shera Building</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Bumida 1967</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Kanvill Dau Cafe</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>PT Indomarco Prismatama</span>
-                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>J&amp;T Express</span>
-                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-corp"></span>+ 100 Klien Lainnya</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Section: Workshop & Komitmen Keberlanjutan -->
-        <div class="my-5 p-4 p-lg-5 bg-light rounded-4 border">
+        <!-- Section: Komitmen Keberlanjutan & Nilai Integritas (Modern Editorial Showcase) -->
+        <div class="my-5 p-4 p-lg-5 sustainability-modern-card">
           <div class="row align-items-center g-4 g-lg-5">
             <div class="col-lg-6">
-              <span class="section-eyebrow bg-white">Kepedulian Lingkungan</span>
-              <h2 class="h3 fw-bold text-navy mb-3 font-serif">Mendukung Budaya Gifting yang Lebih Berkelanjutan</h2>
-              <p class="text-body mb-3">Di era modern, semakin banyak penyelenggara acara yang beralih dari kantong
-                plastik sekali pakai ke tas kain pakai ulang. Goodiebag Custom bangga menjadi bagian dari gerakan ini dengan
-                menyediakan:</p>
-              <ul class="text-muted small mb-0">
-                <li class="mb-2"><strong>Kain Blacu Kapas Alami:</strong> Bebas bahan pemutih klorin beracun, aman
-                  terurai di alam.</li>
-                <li class="mb-2"><strong>Kain Spunbond Pilihan:</strong> Alternatif praktis yang dapat dipakai
-                  puluhan kali untuk berbelanja.</li>
-                <li class="mb-2"><strong>Kain Kanvas Katun Awet:</strong> Tas yang memiliki masa pakai bertahun-tahun
-                  untuk aktivitas kantor dan kampus.</li>
-                <li><strong>Efisiensi Pemotongan Pola:</strong> Meminimalisir sisa kain potongan di workshop produksi.
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <div class="p-4 bg-white rounded-3 border">
-                <h3 class="h6 fw-bold text-navy mb-3 text-uppercase" style="letter-spacing: 0.05em;">Nilai yang Kami
-                  Junjung:</h3>
-                <div class="d-flex align-items-start gap-3 mb-3">
-                  <span class="text-primary fw-bold fs-5">01</span>
-                  <div>
-                    <strong class="text-navy">Kejujuran Spesifikasi</strong>
-                    <p class="small text-muted mb-0">Jika bahan yang Anda minta spunbond 75 gsm, maka 75 gsm murni yang
-                      kami gunakan tanpa mengurangi ketebalan kain.</p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-start gap-3 mb-3">
-                  <span class="text-primary fw-bold fs-5">02</span>
-                  <div>
-                    <strong class="text-navy">Pendampingan Desain Gratis</strong>
-                    <p class="small text-muted mb-0">Kami membantu memastikan file logo Anda siap cetak dalam resolusi
-                      yang tepat dengan simulasi visual digital.</p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-start gap-3">
-                  <span class="text-primary fw-bold fs-5">03</span>
-                  <div>
-                    <strong class="text-navy">Ketepatan Jadwal Acara</strong>
-                    <p class="small text-muted mb-0">Kami menghormati hari H acara Anda dan berkomitmen memenuhi tenggat
-                      pengiriman yang telah disepakati.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section: Workshop Fisik & Titik Lokasi -->
-        <div class="my-5 p-4 p-lg-5 bg-white rounded-4 border shadow-soft">
-          <div class="row align-items-center g-4 g-lg-5">
-            <div class="col-lg-6">
-              <span class="section-eyebrow section-eyebrow-warm">Fasilitas & Workshop</span>
-              <h2 class="h3 fw-bold text-navy mb-3 font-serif">Workshop & Sentra Produksi di Malang</h2>
-              <p class="text-body mb-3">
-                Kami beroperasi langsung dari workshop fisik di Kota Malang dengan standar pengerjaan rapi dan tim penjahit berpengalaman. Anda dipersilakan berkunjung untuk melihat katalog contoh dan mendiskusikan kebutuhan merchandise instansi Anda.
+              <span class="badge-sustainability-glow">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/><path d="M12 6v6l4 2"/></svg>
+                Kepedulian Lingkungan &amp; Masa Depan
+              </span>
+              <h2 class="section-title mb-3 font-serif">Mendukung Budaya Gifting yang Lebih <span class="text-gradient-emerald">Berkelanjutan</span></h2>
+              <p class="section-lead mb-4" style="font-size: 1.05rem;">
+                Di era modern, penyelenggara acara cerdas beralih dari kantong plastik sekali pakai ke tas kain pakai ulang berdaya guna panjang. Goodiebag Custom bangga memimpin transformasi cinderamata ramah lingkungan:
               </p>
-              <div class="mb-3">
-                <div class="small fw-bold text-muted text-uppercase" style="font-size: 0.75rem;">Alamat Workshop:</div>
-                <div class="fw-bold text-navy">
-                  Jl. Band. Palmerah No.D3-35B, Cemorokandang, Kec. Kedungkandang, Kota Malang, Jawa Timur 65138
+              
+              <div class="sustainability-features-grid">
+                <div class="sustain-feature-item">
+                  <div class="sustain-icon-wrap icon-eco-blacu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="sustain-feature-title">Kain Blacu Kapas Alami</h3>
+                    <p class="sustain-feature-desc mb-0">100% serat kapas natural tanpa pemutih klorin, aman terurai secara hayati di alam.</p>
+                  </div>
+                </div>
+
+                <div class="sustain-feature-item">
+                  <div class="sustain-icon-wrap icon-eco-spun">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="sustain-feature-title">Spunbond Reusable Pilihan</h3>
+                    <p class="sustain-feature-desc mb-0">Gramasi tebal 75–100 gsm yang kokoh dipakai berbelanja hingga puluhan kali.</p>
+                  </div>
+                </div>
+
+                <div class="sustain-feature-item">
+                  <div class="sustain-icon-wrap icon-eco-kanvas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="sustain-feature-title">Kanvas Katun Multi-Tahun</h3>
+                    <p class="sustain-feature-desc mb-0">Ketahanan fisik maksimal yang menjadi tas kerja, seminar kit, dan kuliah jangka panjang.</p>
+                  </div>
+                </div>
+
+                <div class="sustain-feature-item">
+                  <div class="sustain-icon-wrap icon-eco-zero">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="sustain-feature-title">Efisiensi Pola Zero-Waste</h3>
+                    <p class="sustain-feature-desc mb-0">Pemotongan pola presisi meminimalisir sisa kain potongan di ruang workshop.</p>
+                  </div>
                 </div>
               </div>
-              <div class="mb-4">
-                <div class="small fw-bold text-muted text-uppercase" style="font-size: 0.75rem;">Jam Layanan Konsultasi & Operasional:</div>
-                <div class="fw-bold text-navy">Senin – Sabtu: 08.00 – 16.00 WIB</div>
-                <div class="small text-muted">Minggu: Tutup (Layanan chat WhatsApp tetap responsif)</div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="values-glass-box">
+                <div class="values-header">
+                  <span class="values-badge">Integritas Kerja</span>
+                  <h3 class="values-title font-serif">3 Prinsip Utama Pengerjaan Kami</h3>
+                </div>
+
+                <div class="value-row">
+                  <div class="value-number-badge val-num-1">01</div>
+                  <div>
+                    <h4 class="value-name">Kejujuran Spesifikasi Bahan</h4>
+                    <p class="value-desc mb-0">Jika permintaan Anda spunbond 75 gsm atau kanvas broken white 12 oz, material itulah yang kami pakai murni tanpa substitusi gramasi tipis.</p>
+                  </div>
+                </div>
+
+                <div class="value-row">
+                  <div class="value-number-badge val-num-2">02</div>
+                  <div>
+                    <h4 class="value-name">Pendampingan Desain &amp; Mockup Cepat</h4>
+                    <p class="value-desc mb-0">Tim desainer kami memastikan file logo Anda siap cetak dalam resolusi optimal dengan simulasi 3D visual sebelum masuk tahap sablon massal.</p>
+                  </div>
+                </div>
+
+                <div class="value-row">
+                  <div class="value-number-badge val-num-3">03</div>
+                  <div>
+                    <h4 class="value-name">Garansi Ketepatan Jadwal Hari H</h4>
+                    <p class="value-desc mb-0">Kami menghormati jadwal acara Anda dan berkomitmen memenuhi tenggat waktu pengiriman yang disepakati dengan pengawalan nomor resi aktif.</p>
+                  </div>
+                </div>
               </div>
-              <div class="d-flex flex-wrap gap-2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Workshop Fisik & Titik Lokasi (Modern Luxury Studio Showcase) -->
+        <div class="my-5 p-4 p-lg-5 workshop-modern-card shadow-soft">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-6">
+              <span class="badge-status-live">
+                <span class="status-pulse-dot"></span>
+                Workshop Terbuka &amp; Aktif Berproduksi
+              </span>
+              <h2 class="section-title mb-3 font-serif">Workshop &amp; Sentra Produksi di Malang</h2>
+              <p class="section-lead mb-4" style="font-size: 1.05rem;">
+                Kami beroperasi langsung dari workshop fisik di Kota Malang dengan standar pengerjaan rapi, mesin jahit industri berkecepatan tinggi, serta tim penjahit konveksi berpengalaman. Anda dipersilakan berkunjung untuk melihat katalog contoh dan mendiskusikan kebutuhan merchandise instansi Anda.
+              </p>
+
+              <div class="workshop-info-list mb-4">
+                <div class="workshop-info-item">
+                  <div class="workshop-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <span class="info-label">Alamat Workshop Resmi</span>
+                    <strong class="info-val">Jl. Band. Palmerah No.D3-35B, Cemorokandang, Kec. Kedungkandang, Kota Malang, Jawa Timur 65138</strong>
+                  </div>
+                </div>
+
+                <div class="workshop-info-item">
+                  <div class="workshop-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div>
+                    <span class="info-label">Jam Layanan &amp; Kunjungan Workshop</span>
+                    <strong class="info-val">Senin – Sabtu: 08.00 – 16.00 WIB</strong>
+                    <span class="info-sub">Minggu: Tutup produksi (Layanan chat WhatsApp tetap responsif)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-3">
                 <a href="https://maps.google.com/?q=Jl.+Band.+Palmerah+No.D3-35B,+Cemorokandang,+Kota+Malang,+Jawa+Timur+65138" 
                    target="_blank" rel="noopener noreferrer" 
-                   class="btn btn-primary-brand btn-sm">
-                  Lihat Titik di Google Maps →
+                   class="btn btn-primary-brand">
+                  Buka Rute di Google Maps →
                 </a>
-                <a href="kontak" class="btn btn-outline-secondary btn-sm">
-                  Info Kontak Lengkap
+                <a href="kontak" class="btn btn-secondary-brand">
+                  Halaman Kontak Resmi
                 </a>
               </div>
             </div>
+
             <div class="col-lg-6">
-              <div class="position-relative overflow-hidden rounded-3 shadow-sm border">
+              <div class="workshop-map-frame">
                 <img src="assets/images/lokasi-workshop-maps.webp" 
                      alt="Workshop dan Titik Google Maps Goodiebag Custom di Jl Band Palmerah Malang" 
-                     class="w-100 h-auto object-fit-cover" 
+                     class="w-100 h-auto object-fit-cover workshop-map-img" 
                      loading="lazy" width="600" height="380">
-                <div class="position-absolute bottom-0 start-0 m-3">
-                  <span class="badge bg-navy text-white px-3 py-2 rounded-pill shadow-sm">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Cemorokandang, Malang
-                  </span>
+                <div class="workshop-floating-tag">
+                  <div class="tag-pin-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <strong class="tag-title">Sentra Produksi Malang</strong>
+                    <span class="tag-sub">Akses Cepat Pengiriman Seluruh Indonesia</span>
+                  </div>
                 </div>
               </div>
             </div>
