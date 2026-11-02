@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -466,141 +466,170 @@
           </div>
         </div>
 
-        <!-- 6 Category Cards Grid -->
-        <div class="row g-4" id="packageGrid">
-          <!-- 1. Seminar -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="package-card" data-category="seminar">
-              <div class="package-card-img-wrap">
-                <img src="assets/images/packages/seminar-workshop.webp" width="800" height="600" loading="lazy"
-                  decoding="async"
-                  alt="Produk Goodie Bag Seminar bahan kanvas broken white saku kancing snap dan resleting">
-                <span class="package-badge">Seminar Kit</span>
+        <!-- Modern Luxury Slider Container (Heels Theory Inspired) -->
+        <div class="product-slider-wrapper position-relative mt-4">
+          <!-- Slider Top Navigation Bar -->
+          <div class="slider-header-controls d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+            <div class="slider-hint d-flex align-items-center gap-2">
+              <span class="slider-hint-dot"></span>
+              <span class="small fw-semibold text-muted">Geser koleksi untuk melihat semua model paket</span>
+            </div>
+            <div class="slider-nav-actions d-flex align-items-center gap-3">
+              <span class="slider-counter" id="catalogSlideCounter" aria-live="polite">01 / 06</span>
+              <div class="slider-btn-group d-flex align-items-center gap-2">
+                <button type="button" class="slider-nav-btn" id="sliderPrevBtn" aria-label="Geser ke kiri" title="Koleksi sebelumnya">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button type="button" class="slider-nav-btn" id="sliderNextBtn" aria-label="Geser ke kanan" title="Koleksi berikutnya">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
               </div>
-              <div class="package-card-body">
-                <h2 class="package-card-title"><a href="produk-seminar-workshop">Seminar & Workshop</a></h2>
-                <p class="package-card-desc">Konsep produk terstruktur untuk seminar, konferensi ilmiah, simposium, dan
-                  workshop bisnis berkapasitas besar.</p>
-                <div class="small mb-3">
-                  <strong>Bahan Tas:</strong> Kanvas Tebal Broken White / Blacu Premium<br>
-                  <strong>Fitur Tas:</strong> Saku Depan Kancing Snap, Saku Samping, Resleting Atas<br>
-                  <strong>Opsi Isi:</strong> Notebook A5, Pulpen Gel, Tali ID Card Lanyard
-                </div>
-                <a href="produk-seminar-workshop" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
-              </div>
-            </article>
+            </div>
           </div>
 
-          <!-- 2. Corporate -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="package-card" data-category="corporate">
-              <div class="package-card-img-wrap">
-                <img src="assets/images/packages/corporate-kantor.webp" width="800" height="600" loading="lazy"
-                  decoding="async" alt="Produk Goodiebag Corporate bahan denim navy saku depan dse Dermascalp Expert">
-                <span class="package-badge">Corporate Gift</span>
-              </div>
-              <div class="package-card-body">
-                <h2 class="package-card-title"><a href="produk-corporate-kantor">Corporate & Kantor</a></h2>
-                <p class="package-card-desc">Produk eksklusif untuk onboarding karyawan baru, klinik
-                  kesehatan/kecantikan, apresiasi klien VIP, dan suvenir perusahaan.</p>
-                <div class="small mb-3">
-                  <strong>Bahan Tas:</strong> Denim Navy Tebal 14 oz / Kanvas Twill<br>
-                  <strong>Fitur Tas:</strong> Kompartemen Saku Depan, Sablon Presisi Logo Cyan<br>
-                  <strong>Opsi Isi:</strong> Tumbler Stainless, Agenda Eksklusif, Kit Kantor
+          <!-- Slider Track -->
+          <div class="product-slider-track" id="packageGrid">
+            <!-- 1. Seminar -->
+            <div class="product-slider-slide" data-category="seminar">
+              <article class="package-card h-100" data-category="seminar">
+                <div class="package-card-img-wrap">
+                  <img src="assets/images/packages/seminar-workshop.webp" width="800" height="600" loading="lazy"
+                    decoding="async"
+                    alt="Produk Goodie Bag Seminar bahan kanvas broken white saku kancing snap dan resleting">
+                  <span class="package-badge">Seminar Kit</span>
                 </div>
-                <a href="produk-corporate-kantor" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
-              </div>
-            </article>
+                <div class="package-card-body">
+                  <h2 class="package-card-title"><a href="produk-seminar-workshop">Seminar & Workshop</a></h2>
+                  <p class="package-card-desc">Konsep produk terstruktur untuk seminar, konferensi ilmiah, simposium, dan
+                    workshop bisnis berkapasitas besar.</p>
+                  <div class="small mb-3">
+                    <strong>Bahan Tas:</strong> Kanvas Tebal Broken White / Blacu Premium<br>
+                    <strong>Fitur Tas:</strong> Saku Depan Kancing Snap, Saku Samping, Resleting Atas<br>
+                    <strong>Opsi Isi:</strong> Notebook A5, Pulpen Gel, Tali ID Card Lanyard
+                  </div>
+                  <a href="produk-seminar-workshop" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- 2. Corporate -->
+            <div class="product-slider-slide" data-category="corporate">
+              <article class="package-card h-100" data-category="corporate">
+                <div class="package-card-img-wrap">
+                  <img src="assets/images/packages/corporate-kantor.webp" width="800" height="600" loading="lazy"
+                    decoding="async" alt="Produk Goodiebag Corporate bahan denim navy saku depan dse Dermascalp Expert">
+                  <span class="package-badge">Corporate Gift</span>
+                </div>
+                <div class="package-card-body">
+                  <h2 class="package-card-title"><a href="produk-corporate-kantor">Corporate & Kantor</a></h2>
+                  <p class="package-card-desc">Produk eksklusif untuk onboarding karyawan baru, klinik
+                    kesehatan/kecantikan, apresiasi klien VIP, dan suvenir perusahaan.</p>
+                  <div class="small mb-3">
+                    <strong>Bahan Tas:</strong> Denim Navy Tebal 14 oz / Kanvas Twill<br>
+                    <strong>Fitur Tas:</strong> Kompartemen Saku Depan, Sablon Presisi Logo Cyan<br>
+                    <strong>Opsi Isi:</strong> Tumbler Stainless, Agenda Eksklusif, Kit Kantor
+                  </div>
+                  <a href="produk-corporate-kantor" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- 3. Event & Promosi -->
+            <div class="product-slider-slide" data-category="event">
+              <article class="package-card h-100" data-category="event">
+                <div class="package-card-img-wrap">
+                  <img src="assets/images/packages/event-promosi.webp" width="800" height="600" loading="lazy"
+                    decoding="async" alt="Produk Goodiebag Promosi Brand Retail Safi Skincare full color">
+                  <span class="package-badge">Brand Activation</span>
+                </div>
+                <div class="package-card-body">
+                  <h2 class="package-card-title"><a href="produk-event-promosi">Event & Promosi</a></h2>
+                  <p class="package-card-desc">Solusi merchandise massal untuk booth pameran, peluncuran produk retail
+                    FMCG/skincare, dan festival promosi.</p>
+                  <div class="small mb-3">
+                    <strong>Bahan Tas:</strong> Kain Putih Bersih Tebal / Spunbond / Kraft<br>
+                    <strong>Cetak Desain:</strong> Sablon/DTF Full-Color Maskot & Motif Brand<br>
+                    <strong>Kapasitas:</strong> Produksi cepat dalam skala ratusan hingga ribuan pcs
+                  </div>
+                  <a href="produk-event-promosi" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- 4. Sekolah & Komunitas -->
+            <div class="product-slider-slide" data-category="sekolah">
+              <article class="package-card h-100" data-category="sekolah">
+                <div class="package-card-img-wrap">
+                  <img src="assets/images/packages/sekolah-komunitas.webp?v=telkom" width="800" height="600"
+                    loading="lazy" decoding="async"
+                    alt="Goodie bag kanvas hitam solid SMK Telkom Malang dengan sablon ilustrasi gedung sekolah dan handle kulit sintetis">
+                  <span class="package-badge">Pilihan Hemat</span>
+                </div>
+                <div class="package-card-body">
+                  <h2 class="package-card-title"><a href="produk-sekolah-komunitas">Sekolah & Komunitas</a></h2>
+                  <p class="package-card-desc">Pilihan praktis untuk masa orientasi mahasiswa (MOS/Ospek), perpisahan
+                    sekolah, gathering komunitas alumni, dan reuni akbar.</p>
+                  <div class="small mb-3">
+                    <strong>Bahan Tas:</strong> Canvas Polyester Berdiri 4 Pilihan Warna<br>
+                    <strong>Fitur Tas:</strong> Handle Kulit Sintetis (Faux Leather) Coklat Tan<br>
+                    <strong>Varian Warna:</strong> Khaki Krem, Oranye Hangat, Hijau Botani, Merah Marun
+                  </div>
+                  <a href="produk-sekolah-komunitas" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- 5. Pernikahan & Acara -->
+            <div class="product-slider-slide" data-category="pernikahan">
+              <article class="package-card h-100" data-category="pernikahan">
+                <div class="package-card-img-wrap">
+                  <img src="assets/images/packages/pernikahan-acara.webp" width="800" height="600" loading="lazy"
+                    decoding="async"
+                    alt="Produk Souvenir Goodie Bag Acara Kenang-kenangan Bapak Sukirman dan Ibu Lyena tali kulit">
+                  <span class="package-badge">Wedding Souvenir</span>
+                </div>
+                <div class="package-card-body">
+                  <h2 class="package-card-title"><a href="produk-pernikahan-acara">Pernikahan & Acara</a></h2>
+                  <p class="package-card-desc">Souvenir tas jinjing bermakna untuk para tamu undangan pernikahan, syukuran
+                    keluarga, kenang-kenangan pensiun, dan reuni.</p>
+                  <div class="small mb-3">
+                    <strong>Bahan Tas:</strong> Kanvas Natural Katun dengan Tali Kulit Sintetis<br>
+                    <strong>Opsi Cetak:</strong> Ilustrasi Watercolor Portrait, Nama Mempelai/Tokoh<br>
+                    <strong>Kesan:</strong> Hangat, bersahaja, berkelas, dan berdaya guna tinggi
+                  </div>
+                  <a href="produk-pernikahan-acara" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- 6. Custom Bebas -->
+            <div class="product-slider-slide" data-category="custom">
+              <article class="package-card h-100" data-category="custom">
+                <div class="package-card-img-wrap">
+                  <img src="assets/images/packages/custom.webp" width="800" height="600" loading="lazy" decoding="async"
+                    alt="Produk Goodiebag Custom Penuh Bebas Desain">
+                  <span class="package-badge">Spesifikasi Bebas</span>
+                </div>
+                <div class="package-card-body">
+                  <h2 class="package-card-title"><a href="produk-custom">Produk Custom Bebas</a></h2>
+                  <p class="package-card-desc">Bebas memilih ukuran dimensi tas, kombinasi warna bahan kain, kompartemen
+                    saku, kancing, resleting, dan isi bundling.</p>
+                  <div class="small mb-3">
+                    <strong>Bahan Tas:</strong> Segala material kain kanvas, denim, blacu, spunbond<br>
+                    <strong>Finishing:</strong> Sablon manual presisi, DTF transfer, bordir logo<br>
+                    <strong>Konsultasi:</strong> Didampingi langsung oleh staf produksi Goodiebag Custom
+                  </div>
+                  <a href="produk-custom" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+              </article>
+            </div>
           </div>
 
-          <!-- 3. Event & Promosi -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="package-card" data-category="event">
-              <div class="package-card-img-wrap">
-                <img src="assets/images/packages/event-promosi.webp" width="800" height="600" loading="lazy"
-                  decoding="async" alt="Produk Goodiebag Promosi Brand Retail Safi Skincare full color">
-                <span class="package-badge">Brand Activation</span>
-              </div>
-              <div class="package-card-body">
-                <h2 class="package-card-title"><a href="produk-event-promosi">Event & Promosi</a></h2>
-                <p class="package-card-desc">Solusi merchandise massal untuk booth pameran, peluncuran produk retail
-                  FMCG/skincare, dan festival promosi.</p>
-                <div class="small mb-3">
-                  <strong>Bahan Tas:</strong> Kain Putih Bersih Tebal / Spunbond / Kraft<br>
-                  <strong>Cetak Desain:</strong> Sablon/DTF Full-Color Maskot & Motif Brand<br>
-                  <strong>Kapasitas:</strong> Produksi cepat dalam skala ratusan hingga ribuan pcs
-                </div>
-                <a href="produk-event-promosi" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- 4. Sekolah & Komunitas -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="package-card" data-category="sekolah">
-              <div class="package-card-img-wrap">
-                <img src="assets/images/packages/sekolah-komunitas.webp?v=telkom" width="800" height="600"
-                  loading="lazy" decoding="async"
-                  alt="Goodie bag kanvas hitam solid SMK Telkom Malang dengan sablon ilustrasi gedung sekolah dan handle kulit sintetis">
-                <span class="package-badge">Pilihan Hemat</span>
-              </div>
-              <div class="package-card-body">
-                <h2 class="package-card-title"><a href="produk-sekolah-komunitas">Sekolah & Komunitas</a></h2>
-                <p class="package-card-desc">Pilihan praktis untuk masa orientasi mahasiswa (MOS/Ospek), perpisahan
-                  sekolah, gathering komunitas alumni, dan reuni akbar.</p>
-                <div class="small mb-3">
-                  <strong>Bahan Tas:</strong> Canvas Polyester Berdiri 4 Pilihan Warna<br>
-                  <strong>Fitur Tas:</strong> Handle Kulit Sintetis (Faux Leather) Coklat Tan<br>
-                  <strong>Varian Warna:</strong> Khaki Krem, Oranye Hangat, Hijau Botani, Merah Marun
-                </div>
-                <a href="produk-sekolah-komunitas" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- 5. Pernikahan & Acara -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="package-card" data-category="pernikahan">
-              <div class="package-card-img-wrap">
-                <img src="assets/images/packages/pernikahan-acara.webp" width="800" height="600" loading="lazy"
-                  decoding="async"
-                  alt="Produk Souvenir Goodie Bag Acara Kenang-kenangan Bapak Sukirman dan Ibu Lyena tali kulit">
-                <span class="package-badge">Wedding Souvenir</span>
-              </div>
-              <div class="package-card-body">
-                <h2 class="package-card-title"><a href="produk-pernikahan-acara">Pernikahan & Acara</a></h2>
-                <p class="package-card-desc">Souvenir tas jinjing bermakna untuk para tamu undangan pernikahan, syukuran
-                  keluarga, kenang-kenangan pensiun, dan reuni.</p>
-                <div class="small mb-3">
-                  <strong>Bahan Tas:</strong> Kanvas Natural Katun dengan Tali Kulit Sintetis<br>
-                  <strong>Opsi Cetak:</strong> Ilustrasi Watercolor Portrait, Nama Mempelai/Tokoh<br>
-                  <strong>Kesan:</strong> Hangat, bersahaja, berkelas, dan berdaya guna tinggi
-                </div>
-                <a href="produk-pernikahan-acara" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- 6. Custom Bebas -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="package-card" data-category="custom">
-              <div class="package-card-img-wrap">
-                <img src="assets/images/packages/custom.webp" width="800" height="600" loading="lazy" decoding="async"
-                  alt="Produk Goodiebag Custom Penuh Bebas Desain">
-                <span class="package-badge">Spesifikasi Bebas</span>
-              </div>
-              <div class="package-card-body">
-                <h2 class="package-card-title"><a href="produk-custom">Produk Custom Bebas</a></h2>
-                <p class="package-card-desc">Bebas memilih ukuran dimensi tas, kombinasi warna bahan kain, kompartemen
-                  saku, kancing, resleting, dan isi bundling.</p>
-                <div class="small mb-3">
-                  <strong>Bahan Tas:</strong> Segala material kain kanvas, denim, blacu, spunbond<br>
-                  <strong>Finishing:</strong> Sablon manual presisi, DTF transfer, bordir logo<br>
-                  <strong>Konsultasi:</strong> Didampingi langsung oleh staf produksi Goodiebag Custom
-                </div>
-                <a href="produk-custom" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
-              </div>
-            </article>
+          <!-- Bottom Progress Bar -->
+          <div class="slider-progress-wrap mt-3" aria-hidden="true">
+            <div class="slider-progress-track">
+              <div class="slider-progress-bar" id="sliderProgressBar"></div>
+            </div>
           </div>
         </div>
 

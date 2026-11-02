@@ -3562,4 +3562,182 @@ body.modal-open {
   color: #bae6fd;
 }
 
+/* ==========================================================================
+   PRODUCT SLIDER (HEELS THEORY INSPIRED HORIZONTAL LUXURY SLIDER)
+   ========================================================================== */
+.product-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slider-header-controls {
+  padding: 4px 2px;
+}
+
+.slider-hint-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-primary, #096EA7);
+  display: inline-block;
+  animation: pulseDot 2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(9, 110, 167, 0.45);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.75;
+    box-shadow: 0 0 0 8px rgba(9, 110, 167, 0);
+  }
+}
+
+.slider-counter {
+  font-family: var(--font-heading, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 750;
+  color: var(--color-navy, #0B2942);
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: var(--color-sky-50, #F3FAFF);
+  border: 1px solid var(--color-sky-200, #CDEDFD);
+  user-select: none;
+}
+
+.slider-btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.slider-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid var(--color-border, #E1EAF0);
+  color: var(--color-navy, #0B2942);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(11, 41, 66, 0.05);
+  outline: none;
+}
+
+.slider-nav-btn:hover:not(:disabled) {
+  background-color: var(--color-primary, #096EA7);
+  border-color: var(--color-primary, #096EA7);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(9, 110, 167, 0.28);
+}
+
+.slider-nav-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.96);
+}
+
+.slider-nav-btn:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.product-slider-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 4px 18px 4px;
+  cursor: grab;
+  outline: none;
+}
+
+.product-slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.product-slider-track.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.product-slider-slide {
+  flex: 0 0 calc(33.333% - 1rem);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.product-slider-slide .package-card {
+  width: 100%;
+  height: 100%;
+}
+
+.card-slider-focus {
+  border-color: var(--color-primary, #096EA7) !important;
+  box-shadow: 0 0 0 3px rgba(9, 110, 167, 0.28), 0 14px 34px rgba(9, 110, 167, 0.2) !important;
+  transform: translateY(-4px) scale(1.01) !important;
+}
+
+.slider-progress-wrap {
+  width: 100%;
+  padding: 4px 2px;
+}
+
+.slider-progress-track {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(11, 41, 66, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary, #096EA7) 0%, var(--color-sky, #38BDF8) 100%);
+  border-radius: 9999px;
+  transition: width 0.18s ease-out;
+  width: 16.66%;
+}
+
+@media (max-width: 991.98px) {
+  .product-slider-slide {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 639.98px) {
+  .product-slider-slide {
+    flex: 0 0 86%;
+  }
+  .slider-header-controls {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+  .slider-nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+
 
