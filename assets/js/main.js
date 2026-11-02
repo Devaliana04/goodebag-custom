@@ -378,157 +378,6 @@
     });
   }
 
-  // --- 5C. LUXURY PRODUCT SLIDER CONTROLLER (HEELS THEORY INSPIRED) ---
-  function initProductSlider() {
-    const wrappers = document.querySelectorAll('.product-slider-wrapper');
-    wrappers.forEach(function (wrapper) {
-      const track = wrapper.querySelector('.product-slider-track');
-      const btnPrev = wrapper.querySelector('#sliderPrevBtn, .slider-nav-btn-prev');
-      const btnNext = wrapper.querySelector('#sliderNextBtn, .slider-nav-btn-next');
-      const counter = wrapper.querySelector('#catalogSlideCounter, .slider-counter');
-      const progressBar = wrapper.querySelector('#sliderProgressBar, .slider-progress-bar');
-      const slides = wrapper.querySelectorAll('.product-slider-slide');
-
-      if (!track || !slides.length) return;
-
-      const totalSlides = slides.length;
-
-      function getSlideStep() {
-        const first = slides[0];
-        const gap = 24; // 1.5rem
-        return first ? first.getBoundingClientRect().width + gap : 360;
-      }
-
-      function updateSliderState() {
-        const scrollLeft = track.scrollLeft;
-        const maxScroll = Math.max(1, track.scrollWidth - track.clientWidth);
-        const step = getSlideStep();
-
-        // 1. Update prev / next button disabled states
-        if (btnPrev) {
-          btnPrev.disabled = scrollLeft <= 4;
-        }
-        if (btnNext) {
-          btnNext.disabled = scrollLeft >= maxScroll - 4;
-        }
-
-        // 2. Active slide index (1-based)
-        let activeIndex = Math.round(scrollLeft / step) + 1;
-        activeIndex = Math.max(1, Math.min(totalSlides, activeIndex));
-
-        const padIndex = String(activeIndex).padStart(2, '0');
-        const padTotal = String(totalSlides).padStart(2, '0');
-        if (counter) {
-          counter.textContent = `${padIndex} / ${padTotal}`;
-        }
-
-        // 3. Update bottom progress bar fill
-        if (progressBar) {
-          const ratio = maxScroll > 0 ? (scrollLeft / maxScroll) : 0;
-          const minPercent = 100 / totalSlides;
-          const progressPercent = Math.min(100, Math.max(minPercent, ratio * 100));
-          progressBar.style.width = progressPercent + '%';
-        }
-      }
-
-      // Prev Button Click
-      if (btnPrev) {
-        btnPrev.addEventListener('click', function (e) {
-          e.preventDefault();
-          const step = getSlideStep();
-          track.scrollBy({ left: -step, behavior: 'smooth' });
-        });
-      }
-
-      // Next Button Click
-      if (btnNext) {
-        btnNext.addEventListener('click', function (e) {
-          e.preventDefault();
-          const step = getSlideStep();
-          track.scrollBy({ left: step, behavior: 'smooth' });
-        });
-      }
-
-      // Mouse Drag-to-Scroll (Luxury Grab-and-Slide Experience)
-      let isDown = false;
-      let startX = 0;
-      let scrollStart = 0;
-      let hasDragged = false;
-
-      track.addEventListener('mousedown', function (e) {
-        if (e.target.closest('button, a')) return;
-        isDown = true;
-        hasDragged = false;
-        track.classList.add('is-dragging');
-        startX = e.pageX - track.offsetLeft;
-        scrollStart = track.scrollLeft;
-      });
-
-      window.addEventListener('mouseup', function () {
-        if (!isDown) return;
-        isDown = false;
-        track.classList.remove('is-dragging');
-      });
-
-      track.addEventListener('mouseleave', function () {
-        if (isDown) {
-          isDown = false;
-          track.classList.remove('is-dragging');
-        }
-      });
-
-      track.addEventListener('mousemove', function (e) {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - track.offsetLeft;
-        const walk = (x - startX) * 1.35;
-        if (Math.abs(walk) > 6) {
-          hasDragged = true;
-        }
-        track.scrollLeft = scrollStart - walk;
-      });
-
-      // Prevent accidental link clicking after dragging
-      track.addEventListener('click', function (e) {
-        if (hasDragged) {
-          e.preventDefault();
-          e.stopPropagation();
-          hasDragged = false;
-        }
-      }, true);
-
-      // Keyboard Accessibility
-      track.setAttribute('tabindex', '0');
-      track.setAttribute('role', 'region');
-      track.setAttribute('aria-label', 'Koleksi Paket Goodie Bag');
-      track.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') {
-          e.preventDefault();
-          track.scrollBy({ left: -getSlideStep(), behavior: 'smooth' });
-        } else if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          track.scrollBy({ left: getSlideStep(), behavior: 'smooth' });
-        }
-      });
-
-      track.addEventListener('scroll', updateSliderState, { passive: true });
-      window.addEventListener('resize', updateSliderState);
-
-      // Initial state update
-      setTimeout(updateSliderState, 120);
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
-      initSliders();
-      initProductSlider();
-    });
-  } else {
-    initSliders();
-    initProductSlider();
-  }
-
   // --- 6. CATALOG FILTER (IF PRESENT ON PAKET PAGE) ---
   const filterButtons = document.querySelectorAll('[data-filter]');
   const packageCards = document.querySelectorAll('[data-category]');
@@ -536,44 +385,19 @@
   if (filterButtons.length && packageCards.length) {
     filterButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        // Update Filter Button UI (Both Tailwind and Bootstrap compatible)
-        filterButtons.forEach(b => {
-          b.classList.remove('active', 'btn-primary-brand', 'bg-[#096EA7]', 'text-white', 'shadow-sky-500/20', 'border-[#096EA7]');
-          b.classList.add('btn-secondary-brand', 'bg-white', 'text-slate-700', 'border-slate-200');
-        });
-        this.classList.remove('btn-secondary-brand', 'bg-white', 'text-slate-700', 'border-slate-200');
-        this.classList.add('active', 'btn-primary-brand', 'bg-[#096EA7]', 'text-white', 'shadow-sky-500/20', 'border-[#096EA7]');
+        filterButtons.forEach(b => b.classList.remove('active', 'btn-primary-brand'));
+        filterButtons.forEach(b => b.classList.add('btn-secondary-brand'));
+        this.classList.remove('btn-secondary-brand');
+        this.classList.add('active', 'btn-primary-brand');
 
         const filterValue = this.getAttribute('data-filter');
-        const track = document.getElementById('packageGrid');
-
-        // Check if inside modern product slider track
-        if (track && track.classList.contains('product-slider-track')) {
-          if (filterValue === 'all') {
-            track.scrollTo({ left: 0, behavior: 'smooth' });
+        packageCards.forEach(function (card) {
+          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            card.closest('.col-12').style.display = '';
           } else {
-            const targetSlide = track.querySelector(`.product-slider-slide[data-category="${filterValue}"]`);
-            if (targetSlide) {
-              const targetOffset = targetSlide.offsetLeft - track.offsetLeft;
-              track.scrollTo({ left: targetOffset, behavior: 'smooth' });
-              targetSlide.classList.add('card-slider-focus');
-              setTimeout(function () {
-                targetSlide.classList.remove('card-slider-focus');
-              }, 1400);
-            }
+            card.closest('.col-12').style.display = 'none';
           }
-        } else {
-          packageCards.forEach(function (card) {
-            const container = card.closest('.col-12, .product-slider-slide');
-            if (container) {
-              if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                container.style.display = '';
-              } else {
-                container.style.display = 'none';
-              }
-            }
-          });
-        }
+        });
       });
     });
   }
