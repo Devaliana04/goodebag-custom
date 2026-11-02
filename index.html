@@ -203,8 +203,11 @@
 .hero-video-bg{z-index:1;filter:none;-webkit-filter:none}
 .hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,28,47,0.52) 0%,rgba(11,41,66,0.38) 55%,rgba(7,28,47,0.58) 100%);z-index:2;pointer-events:none}
 .hero-video-content{position:relative;z-index:3;width:100%}
-.hero-video-btn-toggle{position:absolute;bottom:24px;left:24px;z-index:10;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-size:13px;cursor:pointer;transition:all 0.2s ease;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
-.hero-video-btn-toggle:hover{background:rgba(0,0,0,0.75);border-color:#ffffff;transform:scale(1.08)}
+.hero-video-btn-toggle{display:none !important}
+.btn-hero-catalog{background:#ffffff !important;color:#0B2942 !important;border:2px solid #ffffff !important;font-weight:750 !important;font-size:0.95rem !important;letter-spacing:-0.01em;box-shadow:0 6px 20px rgba(0,0,0,0.22) !important;transition:all 0.2s cubic-bezier(0.16,1,0.3,1) !important}
+.btn-hero-catalog:hover{background:#F0F9FF !important;color:#096EA7 !important;border-color:#BAE6FD !important;transform:translateY(-2px);box-shadow:0 8px 24px rgba(9,110,167,0.3) !important}
+.hero-video-section .btn-outline-light{background:#ffffff !important;color:#0B2942 !important;border:2px solid #ffffff !important;font-weight:750 !important;font-size:0.95rem !important;box-shadow:0 6px 20px rgba(0,0,0,0.22) !important}
+.hero-video-section .btn-outline-light:hover{background:#F0F9FF !important;color:#096EA7 !important;border-color:#BAE6FD !important}
 .hero-glass-card{background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.20);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:var(--radius-lg,24px);padding:24px;color:#ffffff;transition:all 0.3s ease}
 .hero-glass-card:hover{background:rgba(255,255,255,0.16);border-color:rgba(255,255,255,0.35);transform:translateY(-3px)}
 
@@ -1014,12 +1017,10 @@ body.modal-open{overflow:hidden}
         </video>
         <div class="hero-video-overlay"></div>
       </div>
-      <button type="button" id="btnToggleVideo" class="hero-video-btn-toggle" aria-label="Jeda video latar" title="Jeda atau putar video latar">❚❚</button>
       <script>
         (function(){
           var v = document.getElementById('heroVideo');
           var poster = document.getElementById('heroPosterImg');
-          var btn = document.getElementById('btnToggleVideo');
           if (v) {
             v.muted = true;
             v.defaultMuted = true;
@@ -1028,12 +1029,10 @@ body.modal-open{overflow:hidden}
               if (p !== undefined) {
                 p.then(function() {
                   if (poster) poster.style.opacity = '0';
-                  if (btn) { btn.innerHTML = '❚❚'; btn.setAttribute('aria-label', 'Jeda video latar'); }
                 }).catch(function() {
                   var onFirstTouch = function() {
                     v.play().then(function() {
                       if (poster) poster.style.opacity = '0';
-                      if (btn) { btn.innerHTML = '❚❚'; btn.setAttribute('aria-label', 'Jeda video latar'); }
                     }).catch(function(){});
                     window.removeEventListener('click', onFirstTouch);
                     window.removeEventListener('touchstart', onFirstTouch);
@@ -1048,22 +1047,7 @@ body.modal-open{overflow:hidden}
             startPlay();
             v.addEventListener('playing', function() {
               if (poster) poster.style.opacity = '0';
-              if (btn) { btn.innerHTML = '❚❚'; btn.setAttribute('aria-label', 'Jeda video latar'); }
             });
-            if (btn) {
-              btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                if (v.paused) {
-                  v.play();
-                  btn.innerHTML = '❚❚';
-                  btn.setAttribute('aria-label', 'Jeda video latar');
-                } else {
-                  v.pause();
-                  btn.innerHTML = '▶';
-                  btn.setAttribute('aria-label', 'Putar video latar');
-                }
-              });
-            }
           }
         })();
       </script>
@@ -1088,7 +1072,7 @@ body.modal-open{overflow:hidden}
                 </svg>
                 Konsultasi Desain WhatsApp
               </a>
-              <a href="produk" class="btn btn-outline-light rounded-3 px-4 py-2 fw-semibold d-inline-flex align-items-center" style="border-width: 1.5px;">
+              <a href="produk" class="btn btn-hero-catalog rounded-3 px-4 py-2 fw-bold d-inline-flex align-items-center">
                 Lihat Katalog Produk Tas →
               </a>
             </div>
@@ -1145,10 +1129,6 @@ body.modal-open{overflow:hidden}
         </div>
       </div>
 
-      <!-- Video Pause / Play Button -->
-      <button type="button" id="btnToggleVideo" class="hero-video-btn-toggle" aria-label="Jeda video latar" title="Jeda/Putar video latar">
-        ❚❚
-      </button>
     </section>
 
     <!-- Heel Theory Inspired Kinetic Running Marquee Editorial Ticker -->
@@ -1197,8 +1177,8 @@ body.modal-open{overflow:hidden}
           </div>
           <div class="col-6 col-md-3">
             <div class="milestone-item border-end-0">
-              <div class="milestone-number">0%</div>
-              <div class="milestone-label">Hidden Cost</div>
+              <div class="milestone-number">500+</div>
+              <div class="milestone-label">Mitra &amp; Instansi</div>
             </div>
           </div>
         </div>

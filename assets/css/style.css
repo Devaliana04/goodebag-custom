@@ -1445,6 +1445,7 @@ img {
   }
 
   .hero-video-section .btn-primary-brand,
+  .hero-video-section .btn-hero-catalog,
   .hero-video-section .btn-outline-light {
     width: 100% !important;
     justify-content: center !important;
@@ -1858,30 +1859,49 @@ img {
 }
 
 .hero-video-btn-toggle {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  z-index: 10;
+  display: none !important;
+}
+
+.btn-hero-catalog {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: #ffffff;
-  font-size: 13px;
+  gap: 8px;
+  min-height: 46px;
+  padding: 11px 24px;
+  border-radius: 12px;
+  background-color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  color: var(--color-navy) !important;
+  font-weight: 750 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22) !important;
+  transition: all var(--transition-fast);
   cursor: pointer;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 
-.hero-video-btn-toggle:hover {
-  background: rgba(0, 0, 0, 0.75);
-  border-color: #ffffff;
-  transform: scale(1.08);
+.btn-hero-catalog:hover {
+  background-color: var(--color-sky-50) !important;
+  border-color: var(--color-sky-200) !important;
+  color: var(--color-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(9, 110, 167, 0.3) !important;
+}
+
+.hero-video-section .btn-outline-light {
+  background-color: #ffffff !important;
+  color: var(--color-navy) !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 750 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+.hero-video-section .btn-outline-light:hover {
+  background-color: var(--color-sky-50) !important;
+  color: var(--color-primary) !important;
+  border-color: var(--color-sky-200) !important;
 }
 
 .hero-glass-card {
