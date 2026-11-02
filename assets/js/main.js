@@ -246,76 +246,137 @@
 
   // --- 5. ZERO-DEPENDENCY NAVBAR COLLAPSE & DROPDOWN ---
   function initNavbarCollapse() {
-    const togglers = document.querySelectorAll('[data-bs-toggle="collapse"]');
-    togglers.forEach(function (toggler) {
-      toggler.addEventListener('click', function (e) {
+    document.addEventListener('click', function (e) {
+      // 1. Mobile Navbar Hamburger Toggler
+      const toggler = e.target.closest('[data-bs-toggle="collapse"]');
+      if (toggler) {
         e.preventDefault();
         e.stopPropagation();
-        const targetSel = toggler.getAttribute('data-bs-target');
+        const targetSel = toggler.getAttribute('data-bs-target') || toggler.getAttribute('href');
         const target = targetSel ? document.querySelector(targetSel) : null;
         if (target) {
           const isShown = target.classList.toggle('show');
           toggler.setAttribute('aria-expanded', isShown ? 'true' : 'false');
+          toggler.classList.toggle('active', isShown);
         }
-      });
+        return;
+      }
+
+      // 2. Dropdown menu toggle
+      const dropdownToggle = e.target.closest('[data-bs-toggle="dropdown"]');
+      if (dropdownToggle) {
+        e.preventDefault();
+        e.stopPropagation();
+        const parent = dropdownToggle.closest('.dropdown');
+        const menu = parent ? parent.querySelector('.dropdown-menu') : dropdownToggle.nextElementSibling;
+        if (menu) {
+          const isShown = menu.classList.contains('show');
+          document.querySelectorAll('.dropdown-menu.show').forEach(m => {
+            if (m !== menu) m.classList.remove('show');
+          });
+          document.querySelectorAll('[data-bs-toggle="dropdown"][aria-expanded="true"]').forEach(t => {
+            if (t !== dropdownToggle) t.setAttribute('aria-expanded', 'false');
+          });
+          if (isShown) {
+            menu.classList.remove('show');
+            dropdownToggle.setAttribute('aria-expanded', 'false');
+          } else {
+            menu.classList.add('show');
+            dropdownToggle.setAttribute('aria-expanded', 'true');
+          }
+        }
+        return;
+      }
+
+      // 3. Regular nav link or dropdown item clicked: close mobile menu
+      const navLink = e.target.closest('.navbar-nav .nav-link:not(.dropdown-toggle), .dropdown-item');
+      if (navLink) {
+        const collapse = document.querySelector('.navbar-collapse.show');
+        if (collapse) {
+          collapse.classList.remove('show');
+          const togglerBtn = document.querySelector('[data-bs-toggle="collapse"]');
+          if (togglerBtn) {
+            togglerBtn.setAttribute('aria-expanded', 'false');
+            togglerBtn.classList.remove('active');
+          }
+        }
+        return;
+      }
+
+      // 4. Click outside site header: close any open collapse and dropdown
+      if (!e.target.closest('.site-header')) {
+        const collapse = document.querySelector('.navbar-collapse.show');
+        if (collapse) {
+          collapse.classList.remove('show');
+          const togglerBtn = document.querySelector('[data-bs-toggle="collapse"]');
+          if (togglerBtn) {
+            togglerBtn.setAttribute('aria-expanded', 'false');
+            togglerBtn.classList.remove('active');
+          }
+        }
+        document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+        document.querySelectorAll('[data-bs-toggle="dropdown"][aria-expanded="true"]').forEach(t => t.setAttribute('aria-expanded', 'false'));
+      }
+    });
+  }
+  initNavbarCollapse();
+
+  // --- 5B. HORIZONTAL SLIDERS CONTROLLER (GAYA GESER KEKIRI & KEKANAN) ---
+  function initSliders() {
+    const containers = document.querySelectorAll('.slider-container');
+    containers.forEach(function (container) {
+      const track = container.querySelector('.slider-track');
+      const btnPrev = container.querySelector('.btn-slider-prev');
+      const btnNext = container.querySelector('.btn-slider-next');
+      if (!track) return;
+
+      function updateButtonStates() {
+        if (!btnPrev && !btnNext) return;
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const currentScroll = track.scrollLeft;
+
+        if (btnPrev) {
+          btnPrev.disabled = currentScroll <= 4;
+        }
+        if (btnNext) {
+          btnNext.disabled = currentScroll >= maxScroll - 4;
+        }
+      }
+
+      function getStep() {
+        const firstItem = track.querySelector('.slider-item, .slider-item-history');
+        if (firstItem) {
+          return firstItem.offsetWidth + 20; // item width + gap
+        }
+        return 340;
+      }
+
+      if (btnPrev) {
+        btnPrev.addEventListener('click', function (e) {
+          e.preventDefault();
+          const step = getStep();
+          track.scrollBy({ left: -step, behavior: 'smooth' });
+        });
+      }
+
+      if (btnNext) {
+        btnNext.addEventListener('click', function (e) {
+          e.preventDefault();
+          const step = getStep();
+          track.scrollBy({ left: step, behavior: 'smooth' });
+        });
+      }
+
+      track.addEventListener('scroll', updateButtonStates, { passive: true });
+      setTimeout(updateButtonStates, 150);
     });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNavbarCollapse);
+    document.addEventListener('DOMContentLoaded', initSliders);
   } else {
-    initNavbarCollapse();
+    initSliders();
   }
-
-  document.addEventListener('click', function (e) {
-    // 1. Fallback Navbar hamburger toggle via delegation (for dynamic elements)
-    const toggler = e.target.closest('[data-bs-toggle="collapse"]');
-    if (toggler) {
-      const targetSel = toggler.getAttribute('data-bs-target');
-      const target = targetSel ? document.querySelector(targetSel) : null;
-      if (target && !target.classList.contains('show')) {
-        target.classList.add('show');
-        toggler.setAttribute('aria-expanded', 'true');
-      }
-      return;
-    }
-
-    // 2. Dropdown menu toggle
-    const dropdownToggle = e.target.closest('[data-bs-toggle="dropdown"]');
-    if (dropdownToggle) {
-      e.preventDefault();
-      const parent = dropdownToggle.closest('.dropdown');
-      const menu = parent ? parent.querySelector('.dropdown-menu') : dropdownToggle.nextElementSibling;
-      if (menu) {
-        const isShown = menu.classList.contains('show');
-        document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-        document.querySelectorAll('[data-bs-toggle="dropdown"][aria-expanded="true"]').forEach(t => t.setAttribute('aria-expanded', 'false'));
-        if (!isShown) {
-          menu.classList.add('show');
-          dropdownToggle.setAttribute('aria-expanded', 'true');
-        }
-      }
-      return;
-    }
-
-    // 3. Close open dropdowns when clicking outside dropdown
-    if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
-      document.querySelectorAll('[data-bs-toggle="dropdown"][aria-expanded="true"]').forEach(t => t.setAttribute('aria-expanded', 'false'));
-    }
-
-    // 4. Close mobile menu when navigating or clicking outside header
-    const navLink = e.target.closest('.navbar-nav .nav-link:not(.dropdown-toggle)');
-    const clickedOutsideHeader = !e.target.closest('.site-header');
-    if (navLink || clickedOutsideHeader) {
-      const collapse = document.querySelector('.navbar-collapse.show');
-      if (collapse) {
-        collapse.classList.remove('show');
-        const togglerBtn = document.querySelector('[data-bs-toggle="collapse"]');
-        if (togglerBtn) togglerBtn.setAttribute('aria-expanded', 'false');
-      }
-    }
-  });
 
   // --- 6. CATALOG FILTER (IF PRESENT ON PAKET PAGE) ---
   const filterButtons = document.querySelectorAll('[data-filter]');

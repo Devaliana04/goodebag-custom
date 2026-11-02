@@ -11,7 +11,7 @@
   <meta name="keywords" content="goodiebag custom, tote bag custom, jasa goodiebag, goodiebag seminar, goodiebag pernikahan, goodiebag satuan, pesan tote bag custom, souvenir custom, goodiebag murah, vendor goodiebag Malang, goodiebag spunbond, goodiebag blacu, goodiebag kanvas, goodiebag partai besar">
   <meta name="geo.region" content="ID-JI">
   <meta name="geo.placename" content="Malang, Jawa Timur">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://goodiebag-custom.vercel.app/">
 
   <!-- OpenGraph Metadata (Optimized for WhatsApp &amp; Social Share) -->
@@ -40,10 +40,10 @@
   <!-- Favicon &amp; Google Search Icon (Multi-Size 48px Multiples &amp; Apple Touch) -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/logo-icon-192.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/logo-icon-96.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/logo-icon-48.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/webp" sizes="192x192" href="/assets/images/logo-icon-192.webp">
+  <link rel="icon" type="image/webp" sizes="96x96" href="/assets/images/logo-icon-96.webp">
+  <link rel="icon" type="image/webp" sizes="48x48" href="/assets/images/logo-icon-48.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.webp">
   <!-- Critical Preloads for Instant Render &amp; 0 Layout Shift -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2" crossorigin>
@@ -117,52 +117,74 @@ body.modal-open{overflow:hidden}
 
 /* Mobile Responsive Navbar Collapse & Hamburger Menu Fix */
 @media (max-width: 991.98px) {
+  .site-header .navbar > .container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+  }
   .navbar-toggler {
     display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: var(--color-sky-50);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 8px !important;
+    background-color: var(--color-sky-50) !important;
+    border: 1.5px solid var(--color-sky-200) !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    order: 2 !important;
+    position: relative !important;
+    z-index: 1050 !important;
   }
   .navbar-toggler:focus,
-  .navbar-toggler:active {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(9, 110, 167, 0.2);
-    background-color: var(--color-sky-100);
+  .navbar-toggler:active,
+  .navbar-toggler.active {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(9, 110, 167, 0.2) !important;
+    background-color: var(--color-sky-100) !important;
+    border-color: var(--color-primary) !important;
   }
   .navbar-toggler-icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2811,41,66,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230B2942' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.6' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% !important;
+    transition: transform 0.2s ease !important;
+  }
+  .navbar-toggler.active .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23096EA7' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.6' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e") !important;
   }
 
   /* Container card menu saat hamburger diklik */
   .navbar-collapse {
-    display: none;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
     background: #ffffff !important;
-    border-radius: 16px;
-    padding: 20px;
-    margin-top: 12px;
-    box-shadow: 0 14px 40px rgba(11, 41, 66, 0.14);
-    border: 1px solid var(--color-border);
+    border-radius: 16px !important;
+    padding: 18px 20px 22px !important;
+    margin-top: 14px !important;
+    box-shadow: 0 16px 40px rgba(11, 41, 66, 0.16) !important;
+    border: 1px solid var(--color-border) !important;
     width: 100% !important;
     flex-basis: 100% !important;
-    order: 10;
+    order: 10 !important;
+    transition: opacity 0.22s ease, transform 0.22s ease !important;
+    transform: translateY(-8px) !important;
   }
 
   .navbar-collapse.show {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
 
   .navbar-nav {
@@ -1251,6 +1273,313 @@ body.modal-open{overflow:hidden}
                 <h3 class="h6 fw-bold mb-1">Tas Goni &amp; Tenun Ikat Etnik</h3>
                 <p class="text-muted small mb-0">Serat karung goni alami, panel tenun ikat etnik nusantara &amp; aksen
                   webbing navy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loved by Brands, Trusted by Clients Showcase (Sesuai Referensi Pengadaan Resmi) -->
+    <section class="section-padding section-bg-warm border-top border-bottom" aria-labelledby="client-showcase-heading">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="section-eyebrow section-eyebrow-warm">Kemitraan Terpercaya</span>
+          <h2 id="client-showcase-heading" class="section-title">Loved by Brands, Trusted by Clients</h2>
+          <p class="section-lead mx-auto">Lihat alasan ratusan institusi pemerintah, BUMN, perbankan nasional, perguruan tinggi, dan korporasi swasta memilih Goodiebag Custom Malang untuk menghadirkan kesan terbaik.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Kategori 1: Government / Instansi Pemerintah & BUMN -->
+          <div class="col-12 col-lg-6">
+            <div class="client-brand-card">
+              <div class="client-brand-header">
+                <h3 class="client-brand-category">Government &amp; Lembaga Negara</h3>
+                <span class="badge bg-light text-primary">Instansi Resmi</span>
+              </div>
+              <div class="client-logo-tags">
+                <span class="client-logo-pill">⚡ PT PLN (Persero)</span>
+                <span class="client-logo-pill">🏛️ Otoritas Jasa Keuangan (OJK)</span>
+                <span class="client-logo-pill">🛡️ Puspen TNI</span>
+                <span class="client-logo-pill">🔥 PT Pertamina (Persero)</span>
+                <span class="client-logo-pill">⚖️ Bawaslu Kota Malang</span>
+                <span class="client-logo-pill">👶 BKKBN RI</span>
+                <span class="client-logo-pill">💼 BPJS Ketenagakerjaan</span>
+                <span class="client-logo-pill">🌿 GSF Green School</span>
+                <span class="client-logo-pill">📋 Badan Perencanaan Daerah</span>
+                <span class="client-logo-pill">⭐ Dan Puluhan Dinas Lainnya</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kategori 2: Sektor Perbankan & Keuangan -->
+          <div class="col-12 col-lg-6">
+            <div class="client-brand-card">
+              <div class="client-brand-header">
+                <h3 class="client-brand-category">Bank &amp; Keuangan Nasional</h3>
+                <span class="badge bg-light text-primary">Sektor Finansial</span>
+              </div>
+              <div class="client-logo-tags">
+                <span class="client-logo-pill">🏦 Bank Indonesia (BI)</span>
+                <span class="client-logo-pill">🏦 Bank Jatim</span>
+                <span class="client-logo-pill">🏦 Bank Negara Indonesia (BNI)</span>
+                <span class="client-logo-pill">🏦 Bank Syariah Indonesia (BSI)</span>
+                <span class="client-logo-pill">🏦 Mandiri Taspen</span>
+                <span class="client-logo-pill">💳 BRI Finance</span>
+                <span class="client-logo-pill">📱 Movin Digital</span>
+                <span class="client-logo-pill">💳 E-Maal Payment</span>
+                <span class="client-logo-pill">📈 KSP Sahabat Mitra Sejati</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kategori 3: Sektor Pendidikan & Kampus -->
+          <div class="col-12 col-lg-6">
+            <div class="client-brand-card">
+              <div class="client-brand-header">
+                <h3 class="client-brand-category">Pendidikan &amp; Universitas</h3>
+                <span class="badge bg-light text-primary">Akademik &amp; Riset</span>
+              </div>
+              <div class="client-logo-tags">
+                <span class="client-logo-pill">🎓 Universitas Brawijaya (UB)</span>
+                <span class="client-logo-pill">🎓 Univ. Muhammadiyah Malang (UMM)</span>
+                <span class="client-logo-pill">🎓 Universitas Jember (UNEJ)</span>
+                <span class="client-logo-pill">🎓 Universitas Bosowa</span>
+                <span class="client-logo-pill">🎓 Universitas Terbuka (UT)</span>
+                <span class="client-logo-pill">🎓 UNTAG Surabaya</span>
+                <span class="client-logo-pill">📚 Taxpert Education</span>
+                <span class="client-logo-pill">🏫 SMK Telkom Malang</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kategori 4: Korporasi & Bisnis Swasta -->
+          <div class="col-12 col-lg-6">
+            <div class="client-brand-card">
+              <div class="client-brand-header">
+                <h3 class="client-brand-category">Corporate &amp; Swasta</h3>
+                <span class="badge bg-light text-primary">100+ Mitra Bisnis</span>
+              </div>
+              <div class="client-logo-tags">
+                <span class="client-logo-pill">❄️ Daikin Indonesia</span>
+                <span class="client-logo-pill">📡 TelkomAkses</span>
+                <span class="client-logo-pill">💻 IBS Software</span>
+                <span class="client-logo-pill">🏍️ PT Nusantara Surya Sakti (Honda NSS)</span>
+                <span class="client-logo-pill">🏗️ PAMA Persada Nusantara</span>
+                <span class="client-logo-pill">🧵 Kharisma Textile</span>
+                <span class="client-logo-pill">🎯 Ghazi Archery</span>
+                <span class="client-logo-pill">🏢 Midville &amp; MMV Property</span>
+                <span class="client-logo-pill">🧱 RB Shera Building</span>
+                <span class="client-logo-pill">🛡️ Bumida 1967</span>
+                <span class="client-logo-pill">☕ Kanvill Dau Cafe</span>
+                <span class="client-logo-pill">✈️ Maida Tour &amp; Travel</span>
+                <span class="client-logo-pill">🏠 CozyKos.id</span>
+                <span class="client-logo-pill">🚜 Kembar Jaya Machinery</span>
+                <span class="client-logo-pill">⚡ POWR Energy</span>
+                <span class="client-logo-pill">✨ Serta 100+ Klien Lainnya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jejak & Sejarah Goodiebag Custom (Horizontal Slider Geser Kiri-Kanan) -->
+    <section class="section-padding bg-white" aria-labelledby="history-heading">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+          <div>
+            <span class="section-eyebrow">Jejak Dedikasi &amp; Mutu</span>
+            <h2 id="history-heading" class="section-title mb-2">Sejarah &amp; Perjalanan Goodiebag Custom</h2>
+            <p class="section-lead mb-0">Tumbuh bersama kepercayaan pelanggan dari workshop sederhana di Malang hingga menjangkau seluruh penjuru Indonesia.</p>
+          </div>
+          <!-- Slider Navigation Controls -->
+          <div class="slider-controls">
+            <button type="button" class="btn-slider btn-slider-prev" aria-label="Geser ke kiri riwayat sejarah" title="Geser ke kiri">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button type="button" class="btn-slider btn-slider-next" aria-label="Geser ke kanan riwayat sejarah" title="Geser ke kanan">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider-track" id="historyTrack" tabindex="0" aria-label="Daftar perjalanan sejarah Goodiebag Custom">
+            <!-- Tahap 1: Awal Perjalanan -->
+            <div class="slider-item slider-item-history">
+              <div class="history-card">
+                <div class="history-card-header">
+                  <span class="history-step-badge">01</span>
+                  <span class="history-year-tag">Awal Mula</span>
+                </div>
+                <h3 class="history-card-title">Awal Perjalanan</h3>
+                <p class="history-card-text">
+                  Kisah Goodiebag Custom bermula dari unit konveksi rumahan berskala mikro di Kota Malang. Dengan mengandalkan keahlian jahitan tangan yang teliti dan integritas tinggi, kami melayani pemesanan souvenir lokal untuk komunitas, reuni, dan UMKM sekitar dengan standar mutu tanpa kompromi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tahap 2: Bertumbuh & Berinovasi -->
+            <div class="slider-item slider-item-history">
+              <div class="history-card">
+                <div class="history-card-header">
+                  <span class="history-step-badge">02</span>
+                  <span class="history-year-tag">Inovasi Bahan</span>
+                </div>
+                <h3 class="history-card-title">Bertumbuh &amp; Berinovasi</h3>
+                <p class="history-card-text">
+                  Didorong komitmen kepuasan pelanggan, kami terus berinovasi menambah variasi material unggulan seperti spunbond ramah lingkungan, blacu natural, dan kanvas premium. Kami mengintegrasikan teknologi sablon modern demi menjawab kebutuhan souvenir kantor dan cinderamata perusahaan yang elegan.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tahap 3: Dipercaya Ratusan Instansi & BUMN -->
+            <div class="slider-item slider-item-history">
+              <div class="history-card">
+                <div class="history-card-header">
+                  <span class="history-step-badge">03</span>
+                  <span class="history-year-tag">Skala Nasional</span>
+                </div>
+                <h3 class="history-card-title">Dipercaya Instansi &amp; BUMN</h3>
+                <p class="history-card-text">
+                  Dari ruang produksi garasi sederhana, kapasitas dan kredibilitas kami melesat pesat. Goodiebag Custom kini dipercaya menjadi mitra pengadaan tas seminar kit dan souvenir resmi bagi ratusan instansi pemerintah, kementerian, BUMN terkemuka, perbankan, dan universitas di berbagai kota Indonesia.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tahap 4: Visi Masa Depan -->
+            <div class="slider-item slider-item-history">
+              <div class="history-card">
+                <div class="history-card-header">
+                  <span class="history-step-badge">04</span>
+                  <span class="history-year-tag">Berkelanjutan</span>
+                </div>
+                <h3 class="history-card-title">Visi Masa Depan</h3>
+                <p class="history-card-text">
+                  Kami meyakini perjalanan besar selalu lahir dari ketelitian langkah kecil dan kepercayaan pelanggan yang kami jaga seumur hidup. Visi kami ke depan adalah menjadi produsen goodie bag ramah lingkungan paling tepercaya di Indonesia yang selalu mengutamakan mutu, kebermanfaatan, dan keberlanjutan bumi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimoni Pelanggan Terpercaya (Horizontal Slider Geser Kiri-Kanan) -->
+    <section class="section-padding section-bg-soft" aria-labelledby="testimonial-heading">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+          <div>
+            <span class="section-eyebrow">Ulasan &amp; Bukti Nyata</span>
+            <h2 id="testimonial-heading" class="section-title mb-2">Testimoni Pelanggan Goodiebag Custom</h2>
+            <p class="section-lead mb-0">Pengalaman nyata dari para panitia acara, perwakilan korporasi, instansi pemerintah, dan nasabah prioritas.</p>
+          </div>
+          <!-- Slider Navigation Controls -->
+          <div class="slider-controls">
+            <button type="button" class="btn-slider btn-slider-prev" aria-label="Geser ke kiri ulasan pelanggan" title="Geser ke kiri">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button type="button" class="btn-slider btn-slider-next" aria-label="Geser ke kanan ulasan pelanggan" title="Geser ke kanan">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider-track" id="testimonialTrack" tabindex="0" aria-label="Daftar testimoni pelanggan">
+            <!-- Testimoni 1 -->
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+                  ★★★★★
+                </div>
+                <p class="testimonial-text">
+                  “Pesan 850 pcs goodie bag kanvas untuk seminar tahunan PLN. Jahitannya luar biasa rapi, sablon logo tajam tidak mudah luntur. Pengiriman ke Surabaya tepat waktu bahkan lebih cepat dari deadline. Sangat memuaskan!”
+                </p>
+                <div class="testimonial-client">
+                  <div class="testimonial-avatar">RW</div>
+                  <div>
+                    <h3 class="testimonial-client-name">Rina Wulandari, S.I.Kom.</h3>
+                    <p class="testimonial-client-role mb-0">Humas &amp; Protokoler PT PLN (Persero)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimoni 2 -->
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+                  ★★★★★
+                </div>
+                <p class="testimonial-text">
+                  “Goodiebag Custom jadi vendor langganan kami untuk tas souvenir nasabah prioritas. Pelayanan super responsif, gratis mockup cepat, dan bahan spunbond-nya tebal serta kokoh membawa beban berat.”
+                </p>
+                <div class="testimonial-client">
+                  <div class="testimonial-avatar">DK</div>
+                  <div>
+                    <h3 class="testimonial-client-name">Dedi Kurniawan, S.E.</h3>
+                    <p class="testimonial-client-role mb-0">Divisi Promosi Bank Jatim</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimoni 3 -->
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+                  ★★★★★
+                </div>
+                <p class="testimonial-text">
+                  “Total 1.200 pcs seminar kit tas blacu selesai sebelum hari H. Peserta dari berbagai kampus memuji kualitas tasnya yang aesthetic dan kuat muat binder &amp; laptop. Terima kasih tim Goodiebag Custom Malang!”
+                </p>
+                <div class="testimonial-client">
+                  <div class="testimonial-avatar">HP</div>
+                  <div>
+                    <h3 class="testimonial-client-name">Dr. Ir. Hendra Prasetyo</h3>
+                    <p class="testimonial-client-role mb-0">Ketua Panitia Seminar Nasional UB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimoni 4 -->
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+                  ★★★★★
+                </div>
+                <p class="testimonial-text">
+                  “Kualitas pengerjaan dan kerapian packaging luar biasa. Customer service ramah, revisi mockup gratis dan cepat tanggap. Tas goodie bag promosi kami jadi pusat perhatian di pameran expo industri.”
+                </p>
+                <div class="testimonial-client">
+                  <div class="testimonial-avatar">SA</div>
+                  <div>
+                    <h3 class="testimonial-client-name">Salsa Amanda Putri</h3>
+                    <p class="testimonial-client-role mb-0">Brand Marketing Daikin Indonesia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimoni 5 -->
+            <div class="slider-item">
+              <div class="testimonial-card">
+                <div class="testimonial-stars" aria-label="Rating 5 dari 5 bintang">
+                  ★★★★★
+                </div>
+                <p class="testimonial-text">
+                  “Pelayanan sangat profesional, faktur dan kelengkapan administrasi pengadaan instansi pemerintah sangat rapi. Kualitas tas spunbond berkualitas prima dan tahan lama.”
+                </p>
+                <div class="testimonial-client">
+                  <div class="testimonial-avatar">FH</div>
+                  <div>
+                    <h3 class="testimonial-client-name">Bpk. Firman Hidayat</h3>
+                    <p class="testimonial-client-role mb-0">Logistik &amp; Pengadaan Bawaslu Kota Malang</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
