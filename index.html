@@ -115,7 +115,186 @@ body.modal-open{overflow:hidden}
 .modal-swatch-img{aspect-ratio:1/1;object-fit:cover;width:100%;height:100%;display:block;transition:transform 0.3s ease}
 .modal-swatch-card:hover .modal-swatch-img{transform:scale(1.06)}
 
+/* Mobile Responsive Navbar Collapse & Hamburger Menu Fix */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: var(--color-sky-50);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(9, 110, 167, 0.2);
+    background-color: var(--color-sky-100);
+  }
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2811,41,66,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  /* Container card menu saat hamburger diklik */
+  .navbar-collapse {
+    display: none;
+    background: #ffffff !important;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 12px;
+    box-shadow: 0 14px 40px rgba(11, 41, 66, 0.14);
+    border: 1px solid var(--color-border);
+    width: 100% !important;
+    flex-basis: 100% !important;
+    order: 10;
+  }
+
+  .navbar-collapse.show {
+    display: block !important;
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px;
+    margin-bottom: 14px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 650;
+    color: var(--color-navy) !important;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all 0.18s ease;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: var(--color-primary) !important;
+    background-color: var(--color-sky-50);
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link[aria-current="page"] {
+    color: var(--color-primary) !important;
+    background-color: var(--color-sky-100);
+    font-weight: 750;
+  }
+
+  .dropdown-menu {
+    border: 1px solid var(--color-sky-200) !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    padding: 8px !important;
+    margin-top: 6px !important;
+    margin-bottom: 8px !important;
+    background: var(--color-sky-50) !important;
+    display: none;
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .dropdown-menu.show {
+    display: block !important;
+  }
+
+  .dropdown-item {
+    padding: 10px 14px;
+    font-size: 0.925rem;
+    font-weight: 600;
+    color: var(--color-navy) !important;
+    border-radius: 8px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.18s ease;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: var(--color-sky-100);
+    color: var(--color-primary) !important;
+  }
+
+  .navbar-collapse .btn-primary-brand {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Hero Section Mobile Compact Responsive */
+@media (max-width: 991.98px) {
+  .hero-video-section {
+    min-height: auto !important;
+    padding-top: 40px !important;
+    padding-bottom: 48px !important;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 6.8vw, 2.35rem) !important;
+    line-height: 1.22 !important;
+    margin-bottom: 14px !important;
+    min-height: auto !important;
+  }
+  .hero-lead {
+    font-size: 0.98rem !important;
+    line-height: 1.62 !important;
+    margin-bottom: 22px !important;
+    max-width: 100% !important;
+  }
+  /* Sembunyikan card video workshop di mobile agar hero ringkas & fokus */
+  .hero-video-section .col-lg-5 {
+    display: none !important;
+  }
+  .hero-video-section .col-lg-7 {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left;
+  }
+  .hero-trust-badges-wrap {
+    gap: 8px !important;
+    margin-top: 20px !important;
+  }
+  .hero-trust-badge {
+    font-size: 0.82rem !important;
+    padding: 7px 13px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero-video-section {
+    padding-top: 32px !important;
+    padding-bottom: 38px !important;
+  }
+  .hero-video-section .btn {
+    width: 100%;
+  }
+}
+
 </style>
+  <link href="assets/css/style.css?v=2.5" rel="stylesheet">
+
   <!-- Rich Structured Data JSON-LD for Google Search Dominance -->
   <script type="application/ld+json">
   {
@@ -1464,7 +1643,7 @@ body.modal-open{overflow:hidden}
   </nav>
 
   <!-- Scripts (Deferred with Cache Busting) -->
-  <script src="assets/js/main.min.js?v=2.3" defer></script>
+  <script src="assets/js/main.js?v=2.5" defer></script>
 
 </body>
 

@@ -235,16 +235,37 @@
   }
 
   // --- 5. ZERO-DEPENDENCY NAVBAR COLLAPSE & DROPDOWN ---
+  function initNavbarCollapse() {
+    const togglers = document.querySelectorAll('[data-bs-toggle="collapse"]');
+    togglers.forEach(function (toggler) {
+      toggler.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const targetSel = toggler.getAttribute('data-bs-target');
+        const target = targetSel ? document.querySelector(targetSel) : null;
+        if (target) {
+          const isShown = target.classList.toggle('show');
+          toggler.setAttribute('aria-expanded', isShown ? 'true' : 'false');
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavbarCollapse);
+  } else {
+    initNavbarCollapse();
+  }
+
   document.addEventListener('click', function (e) {
-    // 1. Navbar hamburger toggle
+    // 1. Fallback Navbar hamburger toggle via delegation (for dynamic elements)
     const toggler = e.target.closest('[data-bs-toggle="collapse"]');
     if (toggler) {
       const targetSel = toggler.getAttribute('data-bs-target');
       const target = targetSel ? document.querySelector(targetSel) : null;
-      if (target) {
-        target.classList.toggle('show');
-        const isShown = target.classList.contains('show');
-        toggler.setAttribute('aria-expanded', isShown ? 'true' : 'false');
+      if (target && !target.classList.contains('show')) {
+        target.classList.add('show');
+        toggler.setAttribute('aria-expanded', 'true');
       }
       return;
     }
@@ -267,15 +288,16 @@
       return;
     }
 
-    // 3. Close open dropdowns when clicking outside
+    // 3. Close open dropdowns when clicking outside dropdown
     if (!e.target.closest('.dropdown')) {
       document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
       document.querySelectorAll('[data-bs-toggle="dropdown"][aria-expanded="true"]').forEach(t => t.setAttribute('aria-expanded', 'false'));
     }
 
-    // 4. Close mobile menu when navigating
+    // 4. Close mobile menu when navigating or clicking outside header
     const navLink = e.target.closest('.navbar-nav .nav-link:not(.dropdown-toggle)');
-    if (navLink) {
+    const clickedOutsideHeader = !e.target.closest('.site-header');
+    if (navLink || clickedOutsideHeader) {
       const collapse = document.querySelector('.navbar-collapse.show');
       if (collapse) {
         collapse.classList.remove('show');
