@@ -3736,7 +3736,6 @@ body.modal-open {
     min-width: 280px !important;
     max-width: 88vw !important;
   }
-}
   .slider-header-controls {
     flex-direction: column !important;
     align-items: flex-start !important;
