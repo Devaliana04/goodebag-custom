@@ -4038,7 +4038,11 @@
       will-change: transform;
     }
   </style>
-  <link href="assets/css/style.css?v=20261103_spacing" rel="stylesheet">
+    <!-- Critical Resource Hints for High Mobile Performance & LCP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/hero-video-poster.webp" fetchpriority="high">
+  <link href="assets/css/style.css?v=20261103_mobile_perf" rel="stylesheet">
 
   <!-- Rich Structured Data JSON-LD for Google Search Dominance -->
   <script type="application/ld+json">
@@ -4356,8 +4360,7 @@
       <div class="hero-video-bg-wrap">
         <img id="heroPosterImg" src="assets/images/hero-video-poster.webp" alt="Workshop Goodiebag Custom Malang"
           class="hero-poster-img" width="1280" height="720" fetchpriority="high" decoding="sync">
-        <video id="heroVideo" class="hero-video-bg" poster="assets/images/hero-video-poster.webp" autoplay muted loop
-          playsinline webkit-playsinline preload="auto">
+        <video id="heroVideo" class="hero-video-bg" poster="assets/images/hero-video-poster.webp" muted loop playsinline webkit-playsinline preload="none">
           <source src="assets/videos/hero-bg.mp4" type="video/mp4">
         </video>
         <div class="hero-video-overlay"></div>
@@ -4369,30 +4372,20 @@
           if (v) {
             v.muted = true;
             v.defaultMuted = true;
-            var startPlay = function () {
-              var p = v.play();
-              if (p !== undefined) {
-                p.then(function () {
-                  if (poster) poster.style.opacity = '0';
-                }).catch(function () {
-                  var onFirstTouch = function () {
-                    v.play().then(function () {
+            // On mobile viewports (< 768px), keep the fast, crisp WebP poster as background
+            // Only stream video on desktop viewports (>= 768px) to protect mobile data and PageSpeed
+            if (window.innerWidth >= 768) {
+              window.addEventListener('load', function () {
+                setTimeout(function () {
+                  var p = v.play();
+                  if (p !== undefined) {
+                    p.then(function () {
                       if (poster) poster.style.opacity = '0';
-                    }).catch(function () { });
-                    window.removeEventListener('click', onFirstTouch);
-                    window.removeEventListener('touchstart', onFirstTouch);
-                    window.removeEventListener('scroll', onFirstTouch);
-                  };
-                  window.addEventListener('click', onFirstTouch, { once: true, passive: true });
-                  window.addEventListener('touchstart', onFirstTouch, { once: true, passive: true });
-                  window.addEventListener('scroll', onFirstTouch, { once: true, passive: true });
-                });
-              }
-            };
-            startPlay();
-            v.addEventListener('playing', function () {
-              if (poster) poster.style.opacity = '0';
-            });
+                    }).catch(function () {});
+                  }
+                }, 300);
+              });
+            }
           }
         })();
       </script>
@@ -5702,7 +5695,7 @@
   </nav>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js?v=20261103_counter" defer></script>
+  <script src="assets/js/main.js?v=20261103_mobile_perf" defer></script>
 
 </body>
 

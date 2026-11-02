@@ -465,6 +465,35 @@
   }
 
   // --- 9. MILESTONE COUNTER ANIMATION ---
+  function animateMilestoneNumber(el) {
+    var targetAttr = el.getAttribute('data-target');
+    var target = targetAttr ? parseInt(targetAttr, 10) : parseInt(el.textContent.replace(/\D/g, ''), 10);
+    var rawText = el.textContent.trim();
+    var suffix = el.getAttribute('data-suffix');
+    if (suffix === null) {
+      suffix = rawText.includes('%') ? '%' : (rawText.includes('+') ? '+' : '');
+    }
+    if (isNaN(target)) return;
+
+    var duration = 1400;
+    var startTime = performance.now();
+
+    function update(now) {
+      var elapsed = now - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var easeProgress = 1 - Math.pow(1 - progress, 3);
+      var current = Math.floor(easeProgress * target);
+      el.textContent = current + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+    requestAnimationFrame(update);
+  }
+
   function initMilestoneCounter() {
     var milestoneNumbers = document.querySelectorAll('.milestone-number');
     if (!milestoneNumbers.length) return;
@@ -474,39 +503,19 @@
         if (!entry.isIntersecting) return;
         var el = entry.target;
         obs.unobserve(el);
-
-        var targetAttr = el.getAttribute('data-target');
-        var target = targetAttr ? parseInt(targetAttr, 10) : parseInt(el.textContent.replace(/\D/g, ''), 10);
-        var rawText = el.textContent.trim();
-        var suffix = el.getAttribute('data-suffix');
-        if (suffix === null) {
-          suffix = rawText.includes('%') ? '%' : (rawText.includes('+') ? '+' : '');
-        }
-        if (isNaN(target)) return;
-
-        var duration = 1600;
-        var startTime = performance.now();
-
-        function update(now) {
-          var elapsed = now - startTime;
-          var progress = Math.min(elapsed / duration, 1);
-          // Ease-out cubic curve
-          var easeProgress = 1 - Math.pow(1 - progress, 3);
-          var current = Math.floor(easeProgress * target);
-          el.textContent = current + suffix;
-
-          if (progress < 1) {
-            requestAnimationFrame(update);
-          } else {
-            el.textContent = target + suffix;
-          }
-        }
-        requestAnimationFrame(update);
+        animateMilestoneNumber(el);
       });
-    }, { threshold: 0.25 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 
     milestoneNumbers.forEach(function (el) {
       observer.observe(el);
+      // Mobile tap / click interaction
+      var item = el.closest('.milestone-item');
+      if (item) {
+        item.addEventListener('click', function () {
+          animateMilestoneNumber(el);
+        });
+      }
     });
   }
 
