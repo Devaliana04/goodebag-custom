@@ -2324,307 +2324,464 @@ body.modal-open {
 }
 
 /* ==========================================================================
-   HORIZONTAL SLIDER COMPONENT (GAYA GESER KEKIRI & KEKANAN)
+   MODERN VIBRANT REDESIGN: BRAND SHOWCASE, JOURNEY TIMELINE & TESTIMONIALS
    ========================================================================== */
-.slider-container {
+
+/* Gradient Text & Fresh Badges */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #096EA7 0%, #0284C7 50%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.badge-premium-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, rgba(9, 110, 167, 0.08) 0%, rgba(56, 189, 248, 0.16) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #096EA7;
+  font-size: 0.84rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.15);
+}
+
+/* Section Ambient Background */
+.section-fresh-ambient {
+  background: linear-gradient(180deg, #F4FAFD 0%, #FFFFFF 40%, #F8FBFE 100%);
   position: relative;
-  width: 100%;
+  overflow: hidden;
 }
 
-.slider-track {
+/* Modern Brand Showcase Cards */
+.brand-showcase-card {
+  background: #FFFFFF;
+  border: 1px solid #E2EDF5;
+  border-radius: 22px;
+  padding: 30px 26px;
+  height: 100%;
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  padding: 10px 4px 20px;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(11, 41, 66, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.slider-track::-webkit-scrollbar {
-  display: none;
+.brand-showcase-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #096EA7, #38BDF8);
+  opacity: 0.9;
 }
 
-.slider-item {
-  flex: 0 0 86%;
-  max-width: 380px;
-  scroll-snap-align: start;
+.brand-showcase-card.card-gov::before {
+  background: linear-gradient(90deg, #0B2942, #096EA7);
+}
+
+.brand-showcase-card.card-bank::before {
+  background: linear-gradient(90deg, #0D9488, #34D399);
+}
+
+.brand-showcase-card.card-edu::before {
+  background: linear-gradient(90deg, #6366F1, #A855F7);
+}
+
+.brand-showcase-card.card-corp::before {
+  background: linear-gradient(90deg, #F59E0B, #FB923C);
+}
+
+.brand-showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(9, 110, 167, 0.12);
+  border-color: #BAE6FD;
+}
+
+.brand-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #EEF5F9;
+}
+
+.brand-card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-card-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-box-gov {
+  background: #EBF5FB;
+  color: #096EA7;
+}
+
+.icon-box-bank {
+  background: #E6FBF5;
+  color: #0D9488;
+}
+
+.icon-box-edu {
+  background: #F3EEFE;
+  color: #7C3AED;
+}
+
+.icon-box-corp {
+  background: #FEF6E7;
+  color: #D97706;
+}
+
+.brand-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 0;
+  letter-spacing: -0.01em;
+}
+
+.brand-card-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: #F1F7FB;
+  color: #096EA7;
+  border: 1px solid #D5E9F7;
+}
+
+.brand-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  background: #F8FBFE;
+  border: 1px solid #E1EDF6;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1A364E;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(11, 41, 66, 0.03);
+}
+
+.brand-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #096EA7;
+  flex-shrink: 0;
+}
+
+.brand-pill-item:hover {
+  background: #FFFFFF;
+  border-color: #096EA7;
+  color: #096EA7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(9, 110, 167, 0.12);
+}
+
+.brand-pill-item:hover .brand-pill-dot {
+  transform: scale(1.3);
+  background-color: #38BDF8;
+}
+
+/* ==========================================================================
+   MODERN VISUAL JOURNEY TIMELINE (SEJARAH GOODIEBAG CUSTOM)
+   ========================================================================== */
+.timeline-journey-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  position: relative;
 }
 
 @media (min-width: 768px) {
-  .slider-item {
-    flex: 0 0 calc(50% - 12px);
-    max-width: 440px;
-  }
-}
-
-@media (min-width: 992px) {
-  .slider-item {
-    flex: 0 0 calc(33.333% - 14px);
-    max-width: 460px;
-  }
-}
-
-/* 4-Item History Grid / Slider Item on Wide Screens */
-.slider-item-history {
-  flex: 0 0 86%;
-  max-width: 380px;
-  scroll-snap-align: start;
-}
-
-@media (min-width: 768px) {
-  .slider-item-history {
-    flex: 0 0 calc(50% - 12px);
-    max-width: 400px;
+  .timeline-journey-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1200px) {
-  .slider-item-history {
-    flex: 0 0 calc(25% - 15px);
-    max-width: 340px;
+  .timeline-journey-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.slider-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.btn-slider {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 1.5px solid var(--color-border);
-  color: var(--color-navy);
-  box-shadow: 0 4px 14px rgba(11, 41, 66, 0.08);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-slider:hover:not(:disabled) {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(9, 110, 167, 0.25);
-}
-
-.btn-slider:disabled {
-  opacity: 0.38;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-/* History Milestones Cards */
-.history-card {
-  background: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
-  height: 100%;
+.journey-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 32px 26px;
+  border: 1px solid #E3EDF5;
+  box-shadow: 0 10px 30px rgba(11, 41, 66, 0.05);
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: all 0.25s ease;
-  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.history-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--color-sky-200);
+.journey-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
 }
 
-.history-card-header {
+.journey-card-1::before {
+  background: linear-gradient(90deg, #096EA7, #38BDF8);
+}
+
+.journey-card-2::before {
+  background: linear-gradient(90deg, #0D9488, #34D399);
+}
+
+.journey-card-3::before {
+  background: linear-gradient(90deg, #6366F1, #A855F7);
+}
+
+.journey-card-4::before {
+  background: linear-gradient(90deg, #F59E0B, #FB923C);
+}
+
+.journey-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 48px rgba(9, 110, 167, 0.13);
+  border-color: #BAE6FD;
+}
+
+.journey-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
-.history-step-badge {
-  display: inline-flex;
+.journey-step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--color-sky-100);
-  color: var(--color-primary);
-  font-weight: 800;
-  font-size: 1.1rem;
-}
-
-.history-year-tag {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-primary);
-  background: var(--color-sky-50);
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--color-sky-200);
-}
-
-.history-card-title {
   font-size: 1.25rem;
+  font-weight: 850;
+  color: #FFFFFF;
+  box-shadow: 0 8px 18px rgba(9, 110, 167, 0.22);
+}
+
+.step-num-1 {
+  background: linear-gradient(135deg, #096EA7, #0284C7);
+}
+
+.step-num-2 {
+  background: linear-gradient(135deg, #0D9488, #10B981);
+}
+
+.step-num-3 {
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+}
+
+.step-num-4 {
+  background: linear-gradient(135deg, #F59E0B, #EA580C);
+}
+
+.journey-year-pill {
+  font-size: 0.8rem;
   font-weight: 750;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: #F1F7FB;
+  color: #096EA7;
+  border: 1px solid #CCE5F7;
+  letter-spacing: 0.02em;
+}
+
+.journey-card-title {
+  font-size: 1.28rem;
+  font-weight: 800;
   color: var(--color-navy);
   margin-bottom: 12px;
-  line-height: 1.35;
+  line-height: 1.32;
+  letter-spacing: -0.015em;
 }
 
-.history-card-text {
-  font-size: 0.935rem;
-  line-height: 1.7;
-  color: var(--color-body);
-  margin-bottom: 0;
+.journey-card-body {
+  font-size: 0.94rem;
+  line-height: 1.72;
+  color: #475B6C;
+  margin-bottom: 18px;
   flex-grow: 1;
 }
 
-/* Testimonial Cards */
-.testimonial-card {
-  background: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
-  height: 100%;
+.journey-card-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 750;
+  background: #EBF5FB;
+  color: #096EA7;
+  border: 1px solid #D1E8F8;
+  width: fit-content;
+}
+
+.journey-card-highlight.highlight-emerald {
+  background: #ECFDF5;
+  color: #059669;
+  border-color: #A7F3D0;
+}
+
+.journey-card-highlight.highlight-purple {
+  background: #F5F3FF;
+  color: #7C3AED;
+  border-color: #DDD6FE;
+}
+
+.journey-card-highlight.highlight-amber {
+  background: #FFFBEB;
+  color: #D97706;
+  border-color: #FDE68A;
+}
+
+/* ==========================================================================
+   MODERN TESTIMONIALS CARDS
+   ========================================================================== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review-card-modern {
+  background: #FFFFFF;
+  border: 1px solid #E2EDF5;
+  border-radius: 22px;
+  padding: 30px 26px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
-  transition: all 0.25s ease;
+  box-shadow: 0 10px 30px rgba(11, 41, 66, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  overflow: hidden;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--color-sky-200);
+.review-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(9, 110, 167, 0.12);
+  border-color: #BAE6FD;
 }
 
-.testimonial-quote-icon {
-  color: var(--color-sky-200);
-  margin-bottom: 14px;
-}
-
-.testimonial-stars {
+.review-stars-wrap {
   display: flex;
-  gap: 4px;
-  color: #F59E0B;
-  margin-bottom: 14px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
 
-.testimonial-text {
+.review-stars {
+  color: #F59E0B;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+}
+
+.review-verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.76rem;
+  font-weight: 750;
+  color: #126B56;
+  background: #E8F7F3;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid #BAEBDD;
+}
+
+.review-quote-text {
   font-size: 0.95rem;
-  line-height: 1.72;
-  color: var(--color-body);
-  margin-bottom: 20px;
+  line-height: 1.75;
+  color: #2D4355;
+  margin-bottom: 22px;
   flex-grow: 1;
   font-style: italic;
 }
 
-.testimonial-client {
+.review-client-footer {
   display: flex;
   align-items: center;
   gap: 14px;
-  border-top: 1px solid var(--color-border);
-  padding-top: 16px;
+  padding-top: 18px;
+  border-top: 1px solid #EEF5F9;
 }
 
-.testimonial-avatar {
-  width: 46px;
-  height: 46px;
+.review-avatar-ring {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-sky));
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 750;
+  font-weight: 800;
   font-size: 1.05rem;
+  color: #FFFFFF;
   flex-shrink: 0;
+  background: linear-gradient(135deg, #096EA7, #38BDF8);
+  box-shadow: 0 4px 12px rgba(9, 110, 167, 0.25);
 }
 
-.testimonial-client-name {
-  font-size: 0.95rem;
-  font-weight: 750;
+.review-client-name {
+  font-size: 0.98rem;
+  font-weight: 800;
   color: var(--color-navy);
   margin-bottom: 2px;
 }
 
-.testimonial-client-role {
-  font-size: 0.825rem;
-  color: var(--color-muted);
+.review-client-role {
+  font-size: 0.835rem;
+  color: #607282;
   line-height: 1.35;
 }
 
-/* Brand Logos Showcase ("Loved by Brands, Trusted by Clients") */
-.client-brand-card {
-  background: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 24px;
-  height: 100%;
-  box-shadow: var(--shadow-card);
-  transition: all 0.25s ease;
-}
-
-.client-brand-card:hover {
-  border-color: var(--color-sky-200);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-3px);
-}
-
-.client-brand-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid var(--color-sky-100);
-  padding-bottom: 12px;
-  margin-bottom: 18px;
-}
-
-.client-brand-category {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0;
-}
-
-.client-logo-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.client-logo-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background: var(--color-warm-bg);
-  border: 1px solid var(--color-warm-border);
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 650;
-  color: var(--color-navy);
-  transition: all 0.18s ease;
-}
-
-.client-logo-pill:hover {
-  background: var(--color-sky-50);
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  transform: translateY(-1px);
-}
