@@ -408,35 +408,49 @@
     });
   }
 
-  // --- 7. HERO BACKGROUND VIDEO CONTROLS (HQC ASIA STYLE) ---
+  // --- 7. HERO BACKGROUND VIDEO CONTROLS ---
   const heroVideo = document.getElementById('heroVideo');
   const btnToggleVideo = document.getElementById('btnToggleVideo');
-  if (heroVideo && btnToggleVideo) {
-    // Only stream 2.6MB video on desktop after initial paint to protect LCP & data
-    if (window.innerWidth >= 768 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      window.addEventListener('load', function () {
-        setTimeout(function () {
-          heroVideo.preload = 'auto';
-          const playPromise = heroVideo.play();
-          if (playPromise !== undefined) {
-            playPromise.catch(function () {});
-          }
-        }, 400);
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    const playVid = function () {
+      const p = heroVideo.play();
+      if (p !== undefined) {
+        p.catch(function () {
+          // Autoplay policy fallback: start on any initial tap/click
+          const resumeOnTouch = function () {
+            heroVideo.play();
+            window.removeEventListener('click', resumeOnTouch);
+            window.removeEventListener('touchstart', resumeOnTouch);
+            window.removeEventListener('scroll', resumeOnTouch);
+          };
+          window.addEventListener('click', resumeOnTouch, { once: true, passive: true });
+          window.addEventListener('touchstart', resumeOnTouch, { once: true, passive: true });
+          window.addEventListener('scroll', resumeOnTouch, { once: true, passive: true });
+        });
+      }
+    };
+    playVid();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', playVid);
+    }
+    window.addEventListener('load', playVid);
+
+    if (btnToggleVideo) {
+      btnToggleVideo.addEventListener('click', function () {
+        if (heroVideo.paused) {
+          heroVideo.play().then(function () {
+            btnToggleVideo.innerHTML = '❚❚';
+            btnToggleVideo.setAttribute('aria-label', 'Jeda video latar');
+          }).catch(function () {});
+        } else {
+          heroVideo.pause();
+          btnToggleVideo.innerHTML = '▶';
+          btnToggleVideo.setAttribute('aria-label', 'Putar video latar');
+        }
       });
     }
-
-    btnToggleVideo.addEventListener('click', function () {
-      if (heroVideo.paused) {
-        heroVideo.play().then(function () {
-          btnToggleVideo.innerHTML = '❚❚';
-          btnToggleVideo.setAttribute('aria-label', 'Jeda video latar');
-        }).catch(function () {});
-      } else {
-        heroVideo.pause();
-        btnToggleVideo.innerHTML = '▶';
-        btnToggleVideo.setAttribute('aria-label', 'Putar video latar');
-      }
-    });
   }
 })();
 

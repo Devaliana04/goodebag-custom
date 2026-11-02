@@ -198,10 +198,10 @@
 /* Hero Video Background (Clearer, High-Definition Workshop Ambience) */
 .hero-video-section{position:relative;min-height:clamp(520px,80vh,760px);display:flex;align-items:center;overflow:hidden;background-color:#071c2f;color:#ffffff;padding-block:clamp(60px,8vw,100px)}
 .hero-video-bg-wrap{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;z-index:0;pointer-events:none}
-.hero-poster-img,.hero-video-bg{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%) scale(1.04);object-fit:cover;filter:blur(1px);-webkit-filter:blur(1px)}
-.hero-poster-img{z-index:0;display:block}
-.hero-video-bg{z-index:1}
-.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,28,47,0.70) 0%,rgba(11,41,66,0.52) 55%,rgba(7,28,47,0.76) 100%);z-index:2;pointer-events:none}
+.hero-poster-img,.hero-video-bg{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%) scale(1.04);object-fit:cover}
+.hero-poster-img{z-index:0;display:block;transition:opacity 0.6s ease}
+.hero-video-bg{z-index:1;filter:none;-webkit-filter:none}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,28,47,0.52) 0%,rgba(11,41,66,0.38) 55%,rgba(7,28,47,0.58) 100%);z-index:2;pointer-events:none}
 .hero-video-content{position:relative;z-index:3;width:100%}
 .hero-video-btn-toggle{position:absolute;bottom:24px;left:24px;z-index:10;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.35);color:#ffffff;font-size:13px;cursor:pointer;transition:all 0.2s ease;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 .hero-video-btn-toggle:hover{background:rgba(0,0,0,0.75);border-color:#ffffff;transform:scale(1.08)}
@@ -946,12 +946,65 @@ body.modal-open{overflow:hidden}
     <!-- Hero Section (Full-Width Blurred Video Background - HQC Asia Style) -->
     <section class="hero-video-section" aria-labelledby="hero-title">
       <div class="hero-video-bg-wrap">
-        <img src="assets/images/hero-video-poster.webp" alt="Workshop Goodiebag Custom Malang" class="hero-poster-img" width="1280" height="720" fetchpriority="high" decoding="sync">
-        <video id="heroVideo" class="hero-video-bg" poster="assets/images/hero-video-poster.webp" muted loop playsinline preload="none">
+        <img id="heroPosterImg" src="assets/images/hero-video-poster.webp" alt="Workshop Goodiebag Custom Malang" class="hero-poster-img" width="1280" height="720" fetchpriority="high" decoding="sync">
+        <video id="heroVideo" class="hero-video-bg" poster="assets/images/hero-video-poster.webp" autoplay muted loop playsinline webkit-playsinline preload="auto">
           <source src="assets/videos/hero-bg.mp4" type="video/mp4">
         </video>
         <div class="hero-video-overlay"></div>
       </div>
+      <button type="button" id="btnToggleVideo" class="hero-video-btn-toggle" aria-label="Jeda video latar" title="Jeda atau putar video latar">❚❚</button>
+      <script>
+        (function(){
+          var v = document.getElementById('heroVideo');
+          var poster = document.getElementById('heroPosterImg');
+          var btn = document.getElementById('btnToggleVideo');
+          if (v) {
+            v.muted = true;
+            v.defaultMuted = true;
+            var startPlay = function() {
+              var p = v.play();
+              if (p !== undefined) {
+                p.then(function() {
+                  if (poster) poster.style.opacity = '0';
+                  if (btn) { btn.innerHTML = '❚❚'; btn.setAttribute('aria-label', 'Jeda video latar'); }
+                }).catch(function() {
+                  var onFirstTouch = function() {
+                    v.play().then(function() {
+                      if (poster) poster.style.opacity = '0';
+                      if (btn) { btn.innerHTML = '❚❚'; btn.setAttribute('aria-label', 'Jeda video latar'); }
+                    }).catch(function(){});
+                    window.removeEventListener('click', onFirstTouch);
+                    window.removeEventListener('touchstart', onFirstTouch);
+                    window.removeEventListener('scroll', onFirstTouch);
+                  };
+                  window.addEventListener('click', onFirstTouch, { once: true, passive: true });
+                  window.addEventListener('touchstart', onFirstTouch, { once: true, passive: true });
+                  window.addEventListener('scroll', onFirstTouch, { once: true, passive: true });
+                });
+              }
+            };
+            startPlay();
+            v.addEventListener('playing', function() {
+              if (poster) poster.style.opacity = '0';
+              if (btn) { btn.innerHTML = '❚❚'; btn.setAttribute('aria-label', 'Jeda video latar'); }
+            });
+            if (btn) {
+              btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (v.paused) {
+                  v.play();
+                  btn.innerHTML = '❚❚';
+                  btn.setAttribute('aria-label', 'Jeda video latar');
+                } else {
+                  v.pause();
+                  btn.innerHTML = '▶';
+                  btn.setAttribute('aria-label', 'Putar video latar');
+                }
+              });
+            }
+          }
+        })();
+      </script>
 
       <div class="container hero-video-content">
         <div class="row align-items-center g-4 g-lg-5">
@@ -2063,8 +2116,8 @@ body.modal-open{overflow:hidden}
     </a>
   </nav>
 
-  <!-- Scripts (Deferred with Cache Busting) -->
-  <script src="assets/js/main.js?v=2.5" defer></script>
+  <!-- Scripts -->
+  <script src="assets/js/main.js" defer></script>
 
 </body>
 

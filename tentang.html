@@ -53,6 +53,270 @@
   <!-- Bootstrap 5.3.8 CSS (Local self-hosted for fast critical rendering) -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+  /* ==========================================================================
+     TAILWIND-STYLE MODERN BRAND CARDS & TIMELINE
+     ========================================================================== */
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0B2942 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  .badge-premium-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    color: #0284c7;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px rgba(2, 132, 199, 0.08);
+  }
+  .brand-tailwind-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .brand-tailwind-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+  }
+  .brand-tailwind-card.card-gov::before { background: linear-gradient(90deg, #0284c7, #0f172a); }
+  .brand-tailwind-card.card-bank::before { background: linear-gradient(90deg, #0d9488, #10b981); }
+  .brand-tailwind-card.card-edu::before { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
+  .brand-tailwind-card.card-corp::before { background: linear-gradient(90deg, #d97706, #ea580c); }
+  .brand-tailwind-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    border-color: #cbd5e1;
+  }
+  .brand-tailwind-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .brand-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-cat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .icon-gov { background: #f0f9ff; color: #0284c7; }
+  .icon-bank { background: #ecfdf5; color: #0d9488; }
+  .icon-edu { background: #f5f3ff; color: #6366f1; }
+  .icon-corp { background: #fffbeb; color: #d97706; }
+  .brand-cat-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .brand-cat-sub {
+    font-size: 0.785rem;
+    color: #64748b;
+    font-weight: 500;
+    display: block;
+  }
+  .brand-cat-badge {
+    font-size: 0.725rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .badge-gov { background: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd; }
+  .badge-bank { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+  .badge-edu { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+  .badge-corp { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+  .brand-logo-frame {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130px;
+    flex-grow: 1;
+  }
+  .brand-logo-img {
+    width: 100%;
+    height: auto;
+    max-height: 110px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .brand-tailwind-card:hover .brand-logo-img { transform: scale(1.03); }
+  .brand-chips-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 4px;
+    flex-grow: 1;
+    align-content: flex-start;
+  }
+  .brand-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 13px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.815rem;
+    font-weight: 650;
+    color: #334155;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+  .brand-chip:hover {
+    background: #ffffff;
+    border-color: #38bdf8;
+    color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.12);
+  }
+  .brand-chip-more { background: #f1f5f9; font-weight: 750; }
+  .chip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+  .dot-edu { background: #6366f1; }
+  .dot-corp { background: #d97706; }
+  .brand-chip:hover .chip-dot { transform: scale(1.4); }
+
+  /* Timeline Styles */
+  .timeline-journey-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    position: relative;
+  }
+  @media (max-width: 1199.98px) { .timeline-journey-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 639.98px) { .timeline-journey-grid { grid-template-columns: 1fr; gap: 1.25rem; } }
+  .journey-card {
+    background: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.75rem 1.5rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .journey-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+  .journey-card-1::before { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+  .journey-card-2::before { background: linear-gradient(90deg, #0d9488, #34d399); }
+  .journey-card-3::before { background: linear-gradient(90deg, #6366f1, #a855f7); }
+  .journey-card-4::before { background: linear-gradient(90deg, #d97706, #f59e0b); }
+  .journey-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
+    border-color: #cbd5e1;
+  }
+  .journey-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  .journey-step-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+  .step-num-1 { background: linear-gradient(135deg, #0284c7, #0369a1); }
+  .step-num-2 { background: linear-gradient(135deg, #0d9488, #059669); }
+  .step-num-3 { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+  .step-num-4 { background: linear-gradient(135deg, #d97706, #ea580c); }
+  .journey-year-pill {
+    font-size: 0.785rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    background: #f8fafc;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+  }
+  .journey-card-title {
+    font-size: 1.2rem;
+    font-weight: 750;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+  }
+  .journey-card-body {
+    font-size: 0.92rem;
+    line-height: 1.68;
+    color: #475569;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+  }
+  .journey-card-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: #f0f9ff;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+    width: fit-content;
+    margin-top: auto;
+  }
+  .journey-card-highlight.highlight-emerald { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+  .journey-card-highlight.highlight-purple { background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe; }
+  .journey-card-highlight.highlight-amber { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+  </style>
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -415,62 +679,102 @@
             <p class="section-lead mx-auto">Dipercaya lebih dari 500+ institusi pemerintahan, kementerian, BUMN, perbankan nasional, perguruan tinggi, serta korporasi swasta.</p>
           </div>
           <div class="row g-4">
-            <div class="col-12 col-md-6">
-              <div class="client-frame-box">
-                <div class="client-frame-header">
-                  <h3 class="client-frame-title">GOVERNMENT</h3>
-                  <div class="client-frame-line"></div>
-                </div>
-                <div class="client-frame-body">
-                  <img src="assets/images/clients-goverment-logos.webp" alt="Logo Klien Pemerintah dan BUMN Goodebag Custom - GSF, OJK, PLN, Polda, Puspen TNI, Pertamina, Bawaslu, BPJS Ketenagakerjaan, BKKBN" class="client-logo-banner" width="472" height="111" loading="lazy">
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="client-frame-box">
-                <div class="client-frame-header">
-                  <h3 class="client-frame-title">BANK</h3>
-                  <div class="client-frame-line"></div>
-                </div>
-                <div class="client-frame-body">
-                  <img src="assets/images/clients-bank-logos.webp" alt="Logo Klien Bank dan Lembaga Keuangan Goodebag Custom - Bank Indonesia, BNI, BSI, Mandiri Taspen, Bank Jatim, BRI Finance, Movin, E-Maal" class="client-logo-banner" width="474" height="106" loading="lazy">
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="client-frame-box">
-                <div class="client-frame-header">
-                  <h3 class="client-frame-title">PENDIDIKAN &amp; UNIVERSITAS</h3>
-                  <div class="client-frame-line"></div>
-                </div>
-                <div class="client-frame-body">
-                  <div class="client-chips-grid">
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Brawijaya (UB)</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Univ. Muhammadiyah Malang</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Jember (UNEJ)</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Bosowa</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Terbuka (UT)</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>UNTAG Surabaya</span>
+            <!-- Kategori 1: Government -->
+            <div class="col-12 col-lg-6">
+              <div class="brand-tailwind-card card-gov">
+                <div class="brand-tailwind-top">
+                  <div class="brand-title-wrap">
+                    <div class="brand-cat-icon icon-gov">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="brand-cat-name">GOVERNMENT</h3>
+                      <span class="brand-cat-sub">Instansi Resmi &amp; Kementerian RI</span>
+                    </div>
                   </div>
+                  <span class="brand-cat-badge badge-gov">BUMN &amp; Dinas</span>
+                </div>
+                <div class="brand-logo-frame">
+                  <img src="assets/images/clients-goverment-logos.webp" alt="Logo Klien Pemerintah dan BUMN Goodebag Custom - GSF, OJK, PLN, Polda, Puspen TNI, Pertamina, Bawaslu, BPJS Ketenagakerjaan, BKKBN" class="brand-logo-img" width="472" height="111" loading="lazy">
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6">
-              <div class="client-frame-box">
-                <div class="client-frame-header">
-                  <h3 class="client-frame-title">KORPORASI &amp; SWASTA</h3>
-                  <div class="client-frame-line"></div>
-                </div>
-                <div class="client-frame-body">
-                  <div class="client-chips-grid">
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Daikin Indonesia</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>TelkomAkses</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>IBS Software</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Honda NSS</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>PAMA Persada</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>Kharisma Textile</span>
-                    <span class="client-brand-chip"><span class="client-chip-dot"></span>+ 100 Klien Lainnya</span>
+
+            <!-- Kategori 2: Bank -->
+            <div class="col-12 col-lg-6">
+              <div class="brand-tailwind-card card-bank">
+                <div class="brand-tailwind-top">
+                  <div class="brand-title-wrap">
+                    <div class="brand-cat-icon icon-bank">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="brand-cat-name">BANK &amp; FINANSIAL</h3>
+                      <span class="brand-cat-sub">Lembaga Perbankan &amp; Keuangan</span>
+                    </div>
                   </div>
+                  <span class="brand-cat-badge badge-bank">Bank Nasional</span>
+                </div>
+                <div class="brand-logo-frame">
+                  <img src="assets/images/clients-bank-logos.webp" alt="Logo Klien Bank dan Lembaga Keuangan Goodebag Custom - Bank Indonesia, BNI, BSI, Mandiri Taspen, Bank Jatim, BRI Finance, Movin, E-Maal" class="brand-logo-img" width="474" height="106" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Kategori 3: Pendidikan & Universitas -->
+            <div class="col-12 col-lg-6">
+              <div class="brand-tailwind-card card-edu">
+                <div class="brand-tailwind-top">
+                  <div class="brand-title-wrap">
+                    <div class="brand-cat-icon icon-edu">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="brand-cat-name">PENDIDIKAN &amp; KAMPUS</h3>
+                      <span class="brand-cat-sub">Universitas &amp; Institusi Pendidikan</span>
+                    </div>
+                  </div>
+                  <span class="brand-cat-badge badge-edu">Kampus Ternama</span>
+                </div>
+                <div class="brand-chips-wrap">
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Brawijaya (UB)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Univ. Muhammadiyah Malang (UMM)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Jember (UNEJ)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Terbuka (UT)</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Universitas Bosowa</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>UNTAG Surabaya</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>SMK Telkom Malang</span>
+                  <span class="brand-chip"><span class="chip-dot dot-edu"></span>Taxpert Education</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kategori 4: Korporasi & Swasta -->
+            <div class="col-12 col-lg-6">
+              <div class="brand-tailwind-card card-corp">
+                <div class="brand-tailwind-top">
+                  <div class="brand-title-wrap">
+                    <div class="brand-cat-icon icon-corp">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M9 8h1M9 12h1M9 16h1M14 8h1M14 12h1M14 16h1M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="brand-cat-name">KORPORASI &amp; SWASTA</h3>
+                      <span class="brand-cat-sub">Perusahaan Nasional &amp; Brand Retail</span>
+                    </div>
+                  </div>
+                  <span class="brand-cat-badge badge-corp">Corporate Partner</span>
+                </div>
+                <div class="brand-chips-wrap">
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Daikin Indonesia</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>TelkomAkses</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>IBS Software</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Honda NSS</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>PAMA Persada</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Kharisma Textile</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>RB Shera Building</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Bumida 1967</span>
+                  <span class="brand-chip"><span class="chip-dot dot-corp"></span>Kanvill Dau Cafe</span>
+                  <span class="brand-chip brand-chip-more"><span class="chip-dot dot-corp"></span>+ 100 Klien Lainnya</span>
                 </div>
               </div>
             </div>
