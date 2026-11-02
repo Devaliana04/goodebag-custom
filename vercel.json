@@ -13,207 +13,51 @@
     }
   ],
   "redirects": [
-    {
-      "source": "/paket",
-      "destination": "/produk",
-      "permanent": true
-    },
-    {
-      "source": "/paket/seminar-workshop",
-      "destination": "/produk/seminar-workshop",
-      "permanent": true
-    },
-    {
-      "source": "/paket/corporate-kantor",
-      "destination": "/produk/corporate-kantor",
-      "permanent": true
-    },
-    {
-      "source": "/paket/event-promosi",
-      "destination": "/produk/event-promosi",
-      "permanent": true
-    },
-    {
-      "source": "/paket/sekolah-komunitas",
-      "destination": "/produk/sekolah-komunitas",
-      "permanent": true
-    },
-    {
-      "source": "/paket/pernikahan-acara",
-      "destination": "/produk/pernikahan-acara",
-      "permanent": true
-    },
-    {
-      "source": "/paket/custom",
-      "destination": "/produk/custom",
-      "permanent": true
-    },
-    {
-      "source": "/paket-seminar-workshop",
-      "destination": "/produk-seminar-workshop",
-      "permanent": true
-    },
-    {
-      "source": "/paket-corporate-kantor",
-      "destination": "/produk-corporate-kantor",
-      "permanent": true
-    },
-    {
-      "source": "/paket-event-promosi",
-      "destination": "/produk-event-promosi",
-      "permanent": true
-    },
-    {
-      "source": "/paket-sekolah-komunitas",
-      "destination": "/produk-sekolah-komunitas",
-      "permanent": true
-    },
-    {
-      "source": "/paket-pernikahan-acara",
-      "destination": "/produk-pernikahan-acara",
-      "permanent": true
-    },
-    {
-      "source": "/paket-custom",
-      "destination": "/produk-custom",
-      "permanent": true
-    },
-    {
-      "source": "/blog/panduan-goodie-bag",
-      "destination": "/blog/panduan-goodiebag",
-      "permanent": true
-    },
-    {
-      "source": "/blog/jenis-bahan-goodie-bag",
-      "destination": "/blog/jenis-bahan-goodiebag",
-      "permanent": true
-    },
-    {
-      "source": "/blog/ide-isi-goodie-bag-seminar",
-      "destination": "/blog/ide-isi-goodiebag-seminar",
-      "permanent": true
-    }
+    { "source": "/paket", "destination": "/produk", "permanent": true },
+    { "source": "/paket/seminar-workshop", "destination": "/produk/seminar-workshop", "permanent": true },
+    { "source": "/paket/corporate-kantor", "destination": "/produk/corporate-kantor", "permanent": true },
+    { "source": "/paket/event-promosi", "destination": "/produk/event-promosi", "permanent": true },
+    { "source": "/paket/sekolah-komunitas", "destination": "/produk/sekolah-komunitas", "permanent": true },
+    { "source": "/paket/pernikahan-acara", "destination": "/produk/pernikahan-acara", "permanent": true },
+    { "source": "/paket/custom", "destination": "/produk/custom", "permanent": true },
+    { "source": "/paket-seminar-workshop", "destination": "/produk-seminar-workshop", "permanent": true },
+    { "source": "/paket-corporate-kantor", "destination": "/produk-corporate-kantor", "permanent": true },
+    { "source": "/paket-event-promosi", "destination": "/produk-event-promosi", "permanent": true },
+    { "source": "/paket-sekolah-komunitas", "destination": "/produk-sekolah-komunitas", "permanent": true },
+    { "source": "/paket-pernikahan-acara", "destination": "/produk-pernikahan-acara", "permanent": true },
+    { "source": "/paket-custom", "destination": "/produk-custom", "permanent": true },
+    { "source": "/blog/panduan-goodie-bag", "destination": "/blog/panduan-goodiebag", "permanent": true },
+    { "source": "/blog/jenis-bahan-goodie-bag", "destination": "/blog/jenis-bahan-goodiebag", "permanent": true },
+    { "source": "/blog/ide-isi-goodie-bag-seminar", "destination": "/blog/ide-isi-goodiebag-seminar", "permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/produk",
-      "destination": "/produk.html"
-    },
-    {
-      "source": "/produk/seminar-workshop",
-      "destination": "/produk-seminar-workshop.html"
-    },
-    {
-      "source": "/produk/corporate-kantor",
-      "destination": "/produk-corporate-kantor.html"
-    },
-    {
-      "source": "/produk/event-promosi",
-      "destination": "/produk-event-promosi.html"
-    },
-    {
-      "source": "/produk/sekolah-komunitas",
-      "destination": "/produk-sekolah-komunitas.html"
-    },
-    {
-      "source": "/produk/pernikahan-acara",
-      "destination": "/produk-pernikahan-acara.html"
-    },
-    {
-      "source": "/produk/custom",
-      "destination": "/produk-custom.html"
-    },
-    {
-      "source": "/goodie-bag-custom-seminar",
-      "destination": "/goodie-bag-custom-seminar.html"
-    },
-    {
-      "source": "/tote-bag-custom-seminar",
-      "destination": "/tote-bag-custom-seminar.html"
-    },
-    {
-      "source": "/goodie-bag-seminar",
-      "destination": "/goodie-bag-custom-seminar.html"
-    },
-    {
-      "source": "/goodie-bag-custom-perusahaan",
-      "destination": "/goodie-bag-custom-perusahaan.html"
-    },
-    {
-      "source": "/goodie-bag-perusahaan",
-      "destination": "/goodie-bag-custom-perusahaan.html"
-    },
-    {
-      "source": "/goodie-bag-custom-event",
-      "destination": "/goodie-bag-custom-event.html"
-    },
-    {
-      "source": "/goodie-bag-promosi",
-      "destination": "/goodie-bag-custom-event.html"
-    },
-    {
-      "source": "/souvenir-goodie-bag-pernikahan",
-      "destination": "/souvenir-goodie-bag-pernikahan.html"
-    },
-    {
-      "source": "/produsen-goodie-bag-custom",
-      "destination": "/produsen-goodie-bag-custom.html"
-    },
-    {
-      "source": "/goodie-bag-custom",
-      "destination": "/produk.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    },
-    {
-      "source": "/blog/panduan-goodiebag",
-      "destination": "/blog-panduan-goodiebag.html"
-    },
-    {
-      "source": "/blog/jenis-bahan-goodiebag",
-      "destination": "/blog-jenis-bahan-goodiebag.html"
-    },
-    {
-      "source": "/blog/ide-isi-goodiebag-seminar",
-      "destination": "/blog-ide-isi-goodiebag-seminar.html"
-    },
-    {
-      "source": "/tentang",
-      "destination": "/tentang.html"
-    },
-    {
-      "source": "/portofolio",
-      "destination": "/portofolio.html"
-    },
-    {
-      "source": "/kontak",
-      "destination": "/kontak.html"
-    },
-    {
-      "source": "/faq",
-      "destination": "/faq.html"
-    },
-    {
-      "source": "/cara-pesan",
-      "destination": "/cara-pesan.html"
-    },
-    {
-      "source": "/kebijakan-privasi",
-      "destination": "/kebijakan-privasi.html"
-    },
-    {
-      "source": "/syarat-ketentuan",
-      "destination": "/syarat-ketentuan.html"
-    },
-    {
-      "source": "/googlefc10d9448e1380f8.html",
-      "destination": "/googlefc10d9448e1380f8.html"
-    },
-    {
-      "source": "/googlefc10d9448e1380f8",
-      "destination": "/googlefc10d9448e1380f8.html"
-    }
+    { "source": "/produk", "destination": "/produk.html" },
+    { "source": "/produk/seminar-workshop", "destination": "/produk-seminar-workshop.html" },
+    { "source": "/produk/corporate-kantor", "destination": "/produk-corporate-kantor.html" },
+    { "source": "/produk/event-promosi", "destination": "/produk-event-promosi.html" },
+    { "source": "/produk/sekolah-komunitas", "destination": "/produk-sekolah-komunitas.html" },
+    { "source": "/produk/pernikahan-acara", "destination": "/produk-pernikahan-acara.html" },
+    { "source": "/produk/custom", "destination": "/produk-custom.html" },
+    { "source": "/goodie-bag-custom-seminar", "destination": "/goodie-bag-custom-seminar.html" },
+    { "source": "/tote-bag-custom-seminar", "destination": "/tote-bag-custom-seminar.html" },
+    { "source": "/goodie-bag-seminar", "destination": "/goodie-bag-custom-seminar.html" },
+    { "source": "/goodie-bag-custom-perusahaan", "destination": "/goodie-bag-custom-perusahaan.html" },
+    { "source": "/goodie-bag-perusahaan", "destination": "/goodie-bag-custom-perusahaan.html" },
+    { "source": "/goodie-bag-custom-event", "destination": "/goodie-bag-custom-event.html" },
+    { "source": "/goodie-bag-promosi", "destination": "/goodie-bag-custom-event.html" },
+    { "source": "/souvenir-goodie-bag-pernikahan", "destination": "/souvenir-goodie-bag-pernikahan.html" },
+    { "source": "/produsen-goodie-bag-custom", "destination": "/produsen-goodie-bag-custom.html" },
+    { "source": "/goodie-bag-custom", "destination": "/produk.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog/panduan-goodiebag", "destination": "/blog-panduan-goodiebag.html" },
+    { "source": "/blog/jenis-bahan-goodiebag", "destination": "/blog-jenis-bahan-goodiebag.html" },
+    { "source": "/blog/ide-isi-goodiebag-seminar", "destination": "/blog-ide-isi-goodiebag-seminar.html" },
+    { "source": "/tentang", "destination": "/tentang.html" },
+    { "source": "/portofolio", "destination": "/portofolio.html" },
+    { "source": "/kontak", "destination": "/kontak.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/cara-pesan", "destination": "/cara-pesan.html" },
+    { "source": "/kebijakan-privasi", "destination": "/kebijakan-privasi.html" },
+    { "source": "/syarat-ketentuan", "destination": "/syarat-ketentuan.html" }
   ]
 }

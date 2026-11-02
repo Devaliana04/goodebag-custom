@@ -7,7 +7,6 @@ RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html)?\ HTTP/
 RewriteRule ^index(\.html)?$ / [R=301,L]
 
 # 2. Redirect any direct .html request to clean URL (without .html)
-RewriteCond %{THE_REQUEST} !google[a-zA-Z0-9]+\.html [NC]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
 RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
 
