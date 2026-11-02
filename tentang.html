@@ -857,15 +857,6 @@
             </div>
           </div>
 
-          <!-- Heel Theory Filter Tabs -->
-          <div class="filter-tabs-heel" id="clientFilterTabs">
-            <button type="button" class="filter-tab-btn active" data-filter="all">Semua Kategori <span class="filter-count-badge">500+</span></button>
-            <button type="button" class="filter-tab-btn" data-filter="gov"><span class="marquee-dot dot-gov"></span>Instansi &amp; BUMN <span class="filter-count-badge">50+</span></button>
-            <button type="button" class="filter-tab-btn" data-filter="bank"><span class="marquee-dot dot-bank"></span>Bank &amp; Finansial <span class="filter-count-badge">30+</span></button>
-            <button type="button" class="filter-tab-btn" data-filter="edu"><span class="marquee-dot dot-edu"></span>Kampus &amp; Dikti <span class="filter-count-badge">25+</span></button>
-            <button type="button" class="filter-tab-btn" data-filter="corp"><span class="marquee-dot dot-corp"></span>Korporasi Swasta <span class="filter-count-badge">100+</span></button>
-          </div>
-
           <div class="row g-4" id="brandCardsGrid">
             <!-- Kategori 1: Government (Diubah Jadi Chip Pills Seperti Bawahnya) -->
             <div class="col-12 col-lg-6 brand-col" data-cat="gov">
@@ -996,29 +987,6 @@
             </div>
           </div>
 
-          <!-- Heel Theory Filter Tab Interaction Script -->
-          <script>
-            (function(){
-              var tabs = document.querySelectorAll('#clientFilterTabs .filter-tab-btn');
-              var cols = document.querySelectorAll('#brandCardsGrid .brand-col');
-              tabs.forEach(function(btn){
-                btn.addEventListener('click', function(){
-                  tabs.forEach(function(b){ b.classList.remove('active'); });
-                  this.classList.add('active');
-                  var filter = this.getAttribute('data-filter');
-                  cols.forEach(function(col){
-                    if (filter === 'all' || col.getAttribute('data-cat') === filter) {
-                      col.classList.remove('is-hidden');
-                      col.style.opacity = '0';
-                      setTimeout(function(){ col.style.opacity = '1'; }, 50);
-                    } else {
-                      col.classList.add('is-hidden');
-                    }
-                  });
-                });
-              });
-            })();
-          </script>
         </div>
 
         <!-- Section: Workshop & Komitmen Keberlanjutan -->
@@ -1153,7 +1121,7 @@
             custom berkualitas untuk seminar, perusahaan, dan event.</p>
           <div class="d-flex flex-wrap">
             <span class="footer-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="me-1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Kualitas Terjamin</span>
-            <span class="footer-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="me-1" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Jahitan Terkontrol</span>
+            <span class="footer-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>Jahitan Terkontrol</span>
             <span class="footer-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Seluruh Indonesia</span>
           </div>
         </div>
