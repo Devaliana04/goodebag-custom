@@ -3682,17 +3682,17 @@ body.modal-open {
 }
 
 .product-slider-slide {
-  flex: 0 0 calc(33.333% - 1rem) !important;
-  min-width: 320px !important;
-  max-width: 420px !important;
-  width: calc(33.333% - 1rem) !important;
+  flex: 0 0 370px !important;
+  width: 370px !important;
+  min-width: 310px !important;
+  max-width: 390px !important;
   flex-shrink: 0 !important;
   scroll-snap-align: start !important;
   scroll-snap-stop: normal !important;
   display: flex !important;
   flex-direction: column !important;
   box-sizing: border-box !important;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
 }
 
 .product-slider-slide .package-card {
@@ -3703,9 +3703,8 @@ body.modal-open {
 }
 
 .card-slider-focus {
-  border-color: var(--color-primary, #096EA7) !important;
-  box-shadow: 0 0 0 3px rgba(9, 110, 167, 0.28), 0 14px 34px rgba(9, 110, 167, 0.2) !important;
-  transform: translateY(-4px) scale(1.01) !important;
+  box-shadow: 0 0 0 4px rgba(9, 110, 167, 0.35), 0 20px 40px rgba(9, 110, 167, 0.22) !important;
+  transform: translateY(-6px) !important;
 }
 
 .slider-progress-wrap {
@@ -3730,22 +3729,14 @@ body.modal-open {
   width: 16.66%;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 768px) {
   .product-slider-slide {
-    flex: 0 0 calc(50% - 0.75rem) !important;
+    flex: 0 0 84vw !important;
+    width: 84vw !important;
     min-width: 280px !important;
-    max-width: calc(50% - 0.75rem) !important;
-    width: calc(50% - 0.75rem) !important;
+    max-width: 88vw !important;
   }
 }
-
-@media (max-width: 639.98px) {
-  .product-slider-slide {
-    flex: 0 0 86% !important;
-    min-width: 260px !important;
-    max-width: 86% !important;
-    width: 86% !important;
-  }
   .slider-header-controls {
     flex-direction: column !important;
     align-items: flex-start !important;

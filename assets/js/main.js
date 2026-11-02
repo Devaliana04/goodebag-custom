@@ -536,10 +536,13 @@
   if (filterButtons.length && packageCards.length) {
     filterButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        filterButtons.forEach(b => b.classList.remove('active', 'btn-primary-brand'));
-        filterButtons.forEach(b => b.classList.add('btn-secondary-brand'));
-        this.classList.remove('btn-secondary-brand');
-        this.classList.add('active', 'btn-primary-brand');
+        // Update Filter Button UI (Both Tailwind and Bootstrap compatible)
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'btn-primary-brand', 'bg-[#096EA7]', 'text-white', 'shadow-sky-500/20', 'border-[#096EA7]');
+          b.classList.add('btn-secondary-brand', 'bg-white', 'text-slate-700', 'border-slate-200');
+        });
+        this.classList.remove('btn-secondary-brand', 'bg-white', 'text-slate-700', 'border-slate-200');
+        this.classList.add('active', 'btn-primary-brand', 'bg-[#096EA7]', 'text-white', 'shadow-sky-500/20', 'border-[#096EA7]');
 
         const filterValue = this.getAttribute('data-filter');
         const track = document.getElementById('packageGrid');
@@ -553,13 +556,10 @@
             if (targetSlide) {
               const targetOffset = targetSlide.offsetLeft - track.offsetLeft;
               track.scrollTo({ left: targetOffset, behavior: 'smooth' });
-              const card = targetSlide.querySelector('.package-card');
-              if (card) {
-                card.classList.add('card-slider-focus');
-                setTimeout(function () {
-                  card.classList.remove('card-slider-focus');
-                }, 1300);
-              }
+              targetSlide.classList.add('card-slider-focus');
+              setTimeout(function () {
+                targetSlide.classList.remove('card-slider-focus');
+              }, 1400);
             }
           }
         } else {

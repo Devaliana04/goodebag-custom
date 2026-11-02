@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Katalog Produk Goodie Bag Custom Lengkap — Goodiebag Custom</title>
   <meta name="description"
-    content="Katalog 6 model paket goodie bag custom: seminar, corporate kantor, promosi, sekolah, pernikahan, dan custom bebas desain. Konsultasi WhatsApp Goodiebag Custom.">>
+    content="Katalog 6 model paket goodie bag custom: seminar, corporate kantor, promosi, sekolah, pernikahan, dan custom bebas desain. Konsultasi WhatsApp Goodiebag Custom.">
   <meta name="author" content="Devaliana Tensa">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://goodiebag.web.id/produk">
@@ -61,14 +61,35 @@
 
   <!-- Bootstrap 5.3.8 CSS (Local self-hosted for fast critical rendering) -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/style.css?v=20261102b" rel="stylesheet">
+  <link href="assets/css/style.css?v=20261102c" rel="stylesheet">
 
-  <!-- Guaranteed Inline Slider CSS (Overcomes Browser Cache) -->
+  <!-- Tailwind CSS (Play CDN with corePlugins preflight: false to preserve base styles) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false
+      },
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#096EA7',
+              navy: '#0B2942',
+              sky: '#38BDF8',
+              warm: '#FAF8F5'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Guaranteed Inline Slider CSS (Failsafe Horizontal Layout) -->
   <style id="luxury-product-slider-css">
     .product-slider-wrapper {
       position: relative !important;
       width: 100% !important;
-      overflow: hidden !important;
     }
     .product-slider-track {
       display: flex !important;
@@ -82,7 +103,7 @@
       -webkit-overflow-scrolling: touch !important;
       scrollbar-width: none !important;
       -ms-overflow-style: none !important;
-      padding: 10px 4px 22px 4px !important;
+      padding: 8px 4px 24px 4px !important;
       cursor: grab !important;
       outline: none !important;
       width: 100% !important;
@@ -99,48 +120,36 @@
       scroll-behavior: auto !important;
     }
     .product-slider-slide {
-      flex: 0 0 calc(33.333% - 1rem) !important;
-      min-width: 320px !important;
-      max-width: 420px !important;
-      width: calc(33.333% - 1rem) !important;
+      flex: 0 0 370px !important;
+      width: 370px !important;
+      min-width: 310px !important;
+      max-width: 390px !important;
       flex-shrink: 0 !important;
       scroll-snap-align: start !important;
       scroll-snap-stop: normal !important;
       display: flex !important;
       flex-direction: column !important;
       box-sizing: border-box !important;
-      transition: transform 0.25s ease, opacity 0.25s ease !important;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
     }
-    .product-slider-slide .package-card {
-      width: 100% !important;
-      height: 100% !important;
-      display: flex !important;
-      flex-direction: column !important;
-    }
-    @media (max-width: 991.98px) {
+    @media (max-width: 768px) {
       .product-slider-slide {
-        flex: 0 0 calc(50% - 0.75rem) !important;
+        flex: 0 0 84vw !important;
+        width: 84vw !important;
         min-width: 280px !important;
-        max-width: calc(50% - 0.75rem) !important;
-        width: calc(50% - 0.75rem) !important;
+        max-width: 88vw !important;
       }
     }
-    @media (max-width: 639.98px) {
-      .product-slider-slide {
-        flex: 0 0 86% !important;
-        min-width: 260px !important;
-        max-width: 86% !important;
-        width: 86% !important;
-      }
-      .slider-header-controls {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 12px !important;
-      }
-      .slider-nav-actions {
-        width: 100% !important;
-        justify-content: space-between !important;
-      }
+    .card-slider-focus {
+      box-shadow: 0 0 0 4px rgba(9, 110, 167, 0.35), 0 20px 40px rgba(9, 110, 167, 0.22) !important;
+      transform: translateY(-6px) !important;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none !important;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none !important;
+      scrollbar-width: none !important;
     }
   </style>
 
@@ -537,32 +546,29 @@
           <p class="section-lead mx-auto">Setiap kategori dirancang untuk memenuhi spesifikasi praktis kegiatan Anda.
             Pilih produk untuk melihat detail spesifikasi bahan, ukuran, dan opsi isi.</p>
 
-          <!-- Filter Chips -->
-          <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 pt-2">
-            <button type="button" class="btn btn-primary-brand btn-sm" data-filter="all">Semua Kategori</button>
-            <button type="button" class="btn btn-secondary-brand btn-sm" data-filter="seminar">Seminar &
-              Pelatihan</button>
-            <button type="button" class="btn btn-secondary-brand btn-sm" data-filter="corporate">Corporate
-              Kantor</button>
-            <button type="button" class="btn btn-secondary-brand btn-sm" data-filter="event">Event Promosi</button>
-            <button type="button" class="btn btn-secondary-brand btn-sm" data-filter="sekolah">Sekolah &
-              Komunitas</button>
-            <button type="button" class="btn btn-secondary-brand btn-sm" data-filter="pernikahan">Pernikahan</button>
-            <button type="button" class="btn btn-secondary-brand btn-sm" data-filter="custom">Produk Custom</button>
+          <!-- Modern Filter Chips -->
+          <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mt-4 pt-2" id="catalogFilterGroup">
+            <button type="button" class="group relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 shadow-sm active:scale-95 bg-[#096EA7] text-white shadow-sky-500/20 border border-[#096EA7]" data-filter="all">Semua Kategori</button>
+            <button type="button" class="group relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 shadow-sm active:scale-95 bg-white text-slate-700 hover:text-[#096EA7] hover:bg-sky-50 border border-slate-200" data-filter="seminar">Seminar & Pelatihan</button>
+            <button type="button" class="group relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 shadow-sm active:scale-95 bg-white text-slate-700 hover:text-[#096EA7] hover:bg-sky-50 border border-slate-200" data-filter="corporate">Corporate Kantor</button>
+            <button type="button" class="group relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 shadow-sm active:scale-95 bg-white text-slate-700 hover:text-[#096EA7] hover:bg-sky-50 border border-slate-200" data-filter="event">Event Promosi</button>
+            <button type="button" class="group relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 shadow-sm active:scale-95 bg-white text-slate-700 hover:text-[#096EA7] hover:bg-sky-50 border border-slate-200" data-filter="sekolah">Sekolah & Komunitas</button>
+            <button type="button" class="group relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 shadow-sm active:scale-95 bg-white text-slate-700 hover:text-[#096EA7] hover:bg-sky-50 border border-slate-200" data-filter="pernikahan">Pernikahan</button>
+            <button type="button" class="group relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wide transition-all duration-300 shadow-sm active:scale-95 bg-white text-slate-700 hover:text-[#096EA7] hover:bg-sky-50 border border-slate-200" data-filter="custom">Produk Custom</button>
           </div>
         </div>
 
         <!-- Modern Luxury Slider Container (Heels Theory Inspired) -->
         <div class="product-slider-wrapper position-relative mt-4">
           <!-- Slider Top Navigation Bar -->
-          <div class="slider-header-controls d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
-            <div class="slider-hint d-flex align-items-center gap-2">
+          <div class="slider-header-controls flex flex-wrap items-center justify-between gap-3 mb-3 px-1">
+            <div class="slider-hint flex items-center gap-2">
               <span class="slider-hint-dot"></span>
-              <span class="small fw-semibold text-muted">Geser koleksi untuk melihat semua model paket</span>
+              <span class="text-xs md:text-sm font-semibold text-slate-500">Geser horizontal untuk melihat semua model paket</span>
             </div>
-            <div class="slider-nav-actions d-flex align-items-center gap-3">
+            <div class="slider-nav-actions flex items-center gap-3">
               <span class="slider-counter" id="catalogSlideCounter" aria-live="polite">01 / 06</span>
-              <div class="slider-btn-group d-flex align-items-center gap-2">
+              <div class="slider-btn-group flex items-center gap-2">
                 <button type="button" class="slider-nav-btn" id="sliderPrevBtn" aria-label="Geser ke kiri" title="Koleksi sebelumnya">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                 </button>
@@ -573,142 +579,267 @@
             </div>
           </div>
 
-          <!-- Slider Track -->
-          <div class="product-slider-track" id="packageGrid" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; overflow-y: hidden !important; gap: 1.5rem !important;">
+          <!-- Slider Track (Strict Horizontal Flow with Tailwind & Inline Failsafe) -->
+          <div class="product-slider-track no-scrollbar flex flex-row flex-nowrap items-stretch gap-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth py-3 px-1" id="packageGrid" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; overflow-y: hidden !important; gap: 1.5rem !important;">
+            
             <!-- 1. Seminar -->
-            <div class="product-slider-slide flex-shrink-0" data-category="seminar" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
-              <article class="package-card h-100" data-category="seminar">
-                <div class="package-card-img-wrap">
-                  <img src="assets/images/packages/seminar-workshop.webp" width="800" height="600" loading="lazy"
-                    decoding="async"
-                    alt="Produk Goodie Bag Seminar bahan kanvas broken white saku kancing snap dan resleting">
-                  <span class="package-badge">Seminar Kit</span>
-                </div>
-                <div class="package-card-body">
-                  <h2 class="package-card-title"><a href="produk-seminar-workshop">Seminar & Workshop</a></h2>
-                  <p class="package-card-desc">Konsep produk terstruktur untuk seminar, konferensi ilmiah, simposium, dan
-                    workshop bisnis berkapasitas besar.</p>
-                  <div class="small mb-3">
-                    <strong>Bahan Tas:</strong> Kanvas Tebal Broken White / Blacu Premium<br>
-                    <strong>Fitur Tas:</strong> Saku Depan Kancing Snap, Saku Samping, Resleting Atas<br>
-                    <strong>Opsi Isi:</strong> Notebook A5, Pulpen Gel, Tali ID Card Lanyard
+            <div class="product-slider-slide group relative shrink-0 snap-start flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-category="seminar" style="flex: 0 0 370px !important; width: 370px !important; min-width: 300px !important; max-width: 390px !important;">
+              <article class="flex flex-col h-full package-card">
+                <!-- Visual Showcase (Heels Theory Luxury Style) -->
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
+                  <img src="assets/images/packages/seminar-workshop.webp" width="800" height="600" loading="lazy" decoding="async" alt="Produk Goodie Bag Seminar bahan kanvas broken white saku kancing snap dan resleting" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108">
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+                  <div class="pointer-events-none absolute left-4 top-3 font-serif text-5xl md:text-6xl font-bold text-white/30 tracking-tight transition-colors duration-500 group-hover:text-sky-300/60 select-none">01</div>
+                  <span class="absolute top-4 right-4 backdrop-blur-md bg-white/95 text-[#0B2942] font-bold text-xs px-3.5 py-1.5 rounded-full shadow-md border border-white/60">Seminar Kit</span>
+                  <div class="pointer-events-none absolute bottom-4 left-5 right-5">
+                    <span class="text-sky-300 text-[11px] font-bold tracking-widest uppercase block mb-1">Koleksi Terpopuler</span>
+                    <h2 class="text-white font-bold text-xl md:text-2xl drop-shadow-sm font-sans tracking-tight mb-0">
+                      <a href="produk-seminar-workshop" class="pointer-events-auto text-white hover:text-sky-200 transition-colors">Seminar & Workshop</a>
+                    </h2>
                   </div>
-                  <a href="produk-seminar-workshop" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+                <!-- Card Body -->
+                <div class="p-5 md:p-6 flex flex-col flex-grow justify-between bg-white">
+                  <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Konsep terstruktur untuk seminar, konferensi ilmiah, simposium, dan workshop bisnis berkapasitas besar.
+                  </p>
+                  <div class="space-y-2 mb-5 text-xs text-slate-700">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Bahan:</span>
+                      <span class="text-slate-600 font-medium">Kanvas Broken White / Blacu</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Fitur:</span>
+                      <span class="text-slate-600 font-medium">Saku Kancing Snap & Resleting</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Isi Kit:</span>
+                      <span class="text-slate-600 font-medium">Notebook A5, Pulpen & Lanyard</span>
+                    </div>
+                  </div>
+                  <a href="produk-seminar-workshop" class="mt-auto w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#096EA7] to-[#0284C7] hover:from-[#075C91] hover:to-[#096EA7] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span>Lihat Detail Spesifikasi</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
                 </div>
               </article>
             </div>
 
             <!-- 2. Corporate -->
-            <div class="product-slider-slide flex-shrink-0" data-category="corporate" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
-              <article class="package-card h-100" data-category="corporate">
-                <div class="package-card-img-wrap">
-                  <img src="assets/images/packages/corporate-kantor.webp" width="800" height="600" loading="lazy"
-                    decoding="async" alt="Produk Goodiebag Corporate bahan denim navy saku depan dse Dermascalp Expert">
-                  <span class="package-badge">Corporate Gift</span>
-                </div>
-                <div class="package-card-body">
-                  <h2 class="package-card-title"><a href="produk-corporate-kantor">Corporate & Kantor</a></h2>
-                  <p class="package-card-desc">Produk eksklusif untuk onboarding karyawan baru, klinik
-                    kesehatan/kecantikan, apresiasi klien VIP, dan suvenir perusahaan.</p>
-                  <div class="small mb-3">
-                    <strong>Bahan Tas:</strong> Denim Navy Tebal 14 oz / Kanvas Twill<br>
-                    <strong>Fitur Tas:</strong> Kompartemen Saku Depan, Sablon Presisi Logo Cyan<br>
-                    <strong>Opsi Isi:</strong> Tumbler Stainless, Agenda Eksklusif, Kit Kantor
+            <div class="product-slider-slide group relative shrink-0 snap-start flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-category="corporate" style="flex: 0 0 370px !important; width: 370px !important; min-width: 300px !important; max-width: 390px !important;">
+              <article class="flex flex-col h-full package-card">
+                <!-- Visual Showcase (Heels Theory Luxury Style) -->
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
+                  <img src="assets/images/packages/corporate-kantor.webp" width="800" height="600" loading="lazy" decoding="async" alt="Produk Goodiebag Corporate bahan denim navy saku depan dse Dermascalp Expert" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108">
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+                  <div class="pointer-events-none absolute left-4 top-3 font-serif text-5xl md:text-6xl font-bold text-white/30 tracking-tight transition-colors duration-500 group-hover:text-sky-300/60 select-none">02</div>
+                  <span class="absolute top-4 right-4 backdrop-blur-md bg-white/95 text-[#0B2942] font-bold text-xs px-3.5 py-1.5 rounded-full shadow-md border border-white/60">Corporate Gift</span>
+                  <div class="pointer-events-none absolute bottom-4 left-5 right-5">
+                    <span class="text-sky-300 text-[11px] font-bold tracking-widest uppercase block mb-1">Eksklusif & Elegan</span>
+                    <h2 class="text-white font-bold text-xl md:text-2xl drop-shadow-sm font-sans tracking-tight mb-0">
+                      <a href="produk-corporate-kantor" class="pointer-events-auto text-white hover:text-sky-200 transition-colors">Corporate & Kantor</a>
+                    </h2>
                   </div>
-                  <a href="produk-corporate-kantor" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+                <!-- Card Body -->
+                <div class="p-5 md:p-6 flex flex-col flex-grow justify-between bg-white">
+                  <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Produk eksklusif untuk onboarding karyawan baru, klinik kesehatan/kecantikan, apresiasi klien VIP & suvenir kantor.
+                  </p>
+                  <div class="space-y-2 mb-5 text-xs text-slate-700">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Bahan:</span>
+                      <span class="text-slate-600 font-medium">Denim Navy 14 oz / Kanvas Twill</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Fitur:</span>
+                      <span class="text-slate-600 font-medium">Saku Depan & Sablon Presisi</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Isi Kit:</span>
+                      <span class="text-slate-600 font-medium">Tumbler Stainless & Agenda Kantor</span>
+                    </div>
+                  </div>
+                  <a href="produk-corporate-kantor" class="mt-auto w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#096EA7] to-[#0284C7] hover:from-[#075C91] hover:to-[#096EA7] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span>Lihat Detail Spesifikasi</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
                 </div>
               </article>
             </div>
 
             <!-- 3. Event & Promosi -->
-            <div class="product-slider-slide flex-shrink-0" data-category="event" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
-              <article class="package-card h-100" data-category="event">
-                <div class="package-card-img-wrap">
-                  <img src="assets/images/packages/event-promosi.webp" width="800" height="600" loading="lazy"
-                    decoding="async" alt="Produk Goodiebag Promosi Brand Retail Safi Skincare full color">
-                  <span class="package-badge">Brand Activation</span>
-                </div>
-                <div class="package-card-body">
-                  <h2 class="package-card-title"><a href="produk-event-promosi">Event & Promosi</a></h2>
-                  <p class="package-card-desc">Solusi merchandise massal untuk booth pameran, peluncuran produk retail
-                    FMCG/skincare, dan festival promosi.</p>
-                  <div class="small mb-3">
-                    <strong>Bahan Tas:</strong> Kain Putih Bersih Tebal / Spunbond / Kraft<br>
-                    <strong>Cetak Desain:</strong> Sablon/DTF Full-Color Maskot & Motif Brand<br>
-                    <strong>Kapasitas:</strong> Produksi cepat dalam skala ratusan hingga ribuan pcs
+            <div class="product-slider-slide group relative shrink-0 snap-start flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-category="event" style="flex: 0 0 370px !important; width: 370px !important; min-width: 300px !important; max-width: 390px !important;">
+              <article class="flex flex-col h-full package-card">
+                <!-- Visual Showcase (Heels Theory Luxury Style) -->
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
+                  <img src="assets/images/packages/event-promosi.webp" width="800" height="600" loading="lazy" decoding="async" alt="Produk Goodiebag Promosi Brand Retail Safi Skincare full color" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108">
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+                  <div class="pointer-events-none absolute left-4 top-3 font-serif text-5xl md:text-6xl font-bold text-white/30 tracking-tight transition-colors duration-500 group-hover:text-sky-300/60 select-none">03</div>
+                  <span class="absolute top-4 right-4 backdrop-blur-md bg-white/95 text-[#0B2942] font-bold text-xs px-3.5 py-1.5 rounded-full shadow-md border border-white/60">Brand Activation</span>
+                  <div class="pointer-events-none absolute bottom-4 left-5 right-5">
+                    <span class="text-sky-300 text-[11px] font-bold tracking-widest uppercase block mb-1">Partai Besar & Cepat</span>
+                    <h2 class="text-white font-bold text-xl md:text-2xl drop-shadow-sm font-sans tracking-tight mb-0">
+                      <a href="produk-event-promosi" class="pointer-events-auto text-white hover:text-sky-200 transition-colors">Event & Promosi</a>
+                    </h2>
                   </div>
-                  <a href="produk-event-promosi" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+                <!-- Card Body -->
+                <div class="p-5 md:p-6 flex flex-col flex-grow justify-between bg-white">
+                  <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Solusi merchandise massal untuk booth pameran, peluncuran produk retail FMCG/skincare, & festival promosi.
+                  </p>
+                  <div class="space-y-2 mb-5 text-xs text-slate-700">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Bahan:</span>
+                      <span class="text-slate-600 font-medium">Kain Putih Tebal / Spunbond Ramah</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Cetak:</span>
+                      <span class="text-slate-600 font-medium">Sablon / DTF Full-Color Maskot</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Kapasitas:</span>
+                      <span class="text-slate-600 font-medium">Produksi Cepat 500 – 10.000+ Pcs</span>
+                    </div>
+                  </div>
+                  <a href="produk-event-promosi" class="mt-auto w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#096EA7] to-[#0284C7] hover:from-[#075C91] hover:to-[#096EA7] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span>Lihat Detail Spesifikasi</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
                 </div>
               </article>
             </div>
 
             <!-- 4. Sekolah & Komunitas -->
-            <div class="product-slider-slide flex-shrink-0" data-category="sekolah" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
-              <article class="package-card h-100" data-category="sekolah">
-                <div class="package-card-img-wrap">
-                  <img src="assets/images/packages/sekolah-komunitas.webp?v=telkom" width="800" height="600"
-                    loading="lazy" decoding="async"
-                    alt="Goodie bag kanvas hitam solid SMK Telkom Malang dengan sablon ilustrasi gedung sekolah dan handle kulit sintetis">
-                  <span class="package-badge">Pilihan Hemat</span>
-                </div>
-                <div class="package-card-body">
-                  <h2 class="package-card-title"><a href="produk-sekolah-komunitas">Sekolah & Komunitas</a></h2>
-                  <p class="package-card-desc">Pilihan praktis untuk masa orientasi mahasiswa (MOS/Ospek), perpisahan
-                    sekolah, gathering komunitas alumni, dan reuni akbar.</p>
-                  <div class="small mb-3">
-                    <strong>Bahan Tas:</strong> Canvas Polyester Berdiri 4 Pilihan Warna<br>
-                    <strong>Fitur Tas:</strong> Handle Kulit Sintetis (Faux Leather) Coklat Tan<br>
-                    <strong>Varian Warna:</strong> Khaki Krem, Oranye Hangat, Hijau Botani, Merah Marun
+            <div class="product-slider-slide group relative shrink-0 snap-start flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-category="sekolah" style="flex: 0 0 370px !important; width: 370px !important; min-width: 300px !important; max-width: 390px !important;">
+              <article class="flex flex-col h-full package-card">
+                <!-- Visual Showcase (Heels Theory Luxury Style) -->
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
+                  <img src="assets/images/packages/sekolah-komunitas.webp?v=telkom" width="800" height="600" loading="lazy" decoding="async" alt="Goodie bag kanvas hitam solid SMK Telkom Malang dengan sablon ilustrasi gedung sekolah dan handle kulit sintetis" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108">
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+                  <div class="pointer-events-none absolute left-4 top-3 font-serif text-5xl md:text-6xl font-bold text-white/30 tracking-tight transition-colors duration-500 group-hover:text-sky-300/60 select-none">04</div>
+                  <span class="absolute top-4 right-4 backdrop-blur-md bg-white/95 text-[#0B2942] font-bold text-xs px-3.5 py-1.5 rounded-full shadow-md border border-white/60">Pilihan Hemat & Solid</span>
+                  <div class="pointer-events-none absolute bottom-4 left-5 right-5">
+                    <span class="text-sky-300 text-[11px] font-bold tracking-widest uppercase block mb-1">MOS, Kampus & Alumni</span>
+                    <h2 class="text-white font-bold text-xl md:text-2xl drop-shadow-sm font-sans tracking-tight mb-0">
+                      <a href="produk-sekolah-komunitas" class="pointer-events-auto text-white hover:text-sky-200 transition-colors">Sekolah & Komunitas</a>
+                    </h2>
                   </div>
-                  <a href="produk-sekolah-komunitas" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+                <!-- Card Body -->
+                <div class="p-5 md:p-6 flex flex-col flex-grow justify-between bg-white">
+                  <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Pilihan praktis untuk masa orientasi mahasiswa (MOS/Ospek), perpisahan sekolah, gathering komunitas alumni & reuni akbar.
+                  </p>
+                  <div class="space-y-2 mb-5 text-xs text-slate-700">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Bahan:</span>
+                      <span class="text-slate-600 font-medium">Canvas Polyester 4 Pilihan Warna</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Fitur:</span>
+                      <span class="text-slate-600 font-medium">Handle Leather Faux Coklat Tan</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Varian:</span>
+                      <span class="text-slate-600 font-medium">Khaki Krem, Oranye, Botani, Marun</span>
+                    </div>
+                  </div>
+                  <a href="produk-sekolah-komunitas" class="mt-auto w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#096EA7] to-[#0284C7] hover:from-[#075C91] hover:to-[#096EA7] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span>Lihat Detail Spesifikasi</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
                 </div>
               </article>
             </div>
 
             <!-- 5. Pernikahan & Acara -->
-            <div class="product-slider-slide flex-shrink-0" data-category="pernikahan" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
-              <article class="package-card h-100" data-category="pernikahan">
-                <div class="package-card-img-wrap">
-                  <img src="assets/images/packages/pernikahan-acara.webp" width="800" height="600" loading="lazy"
-                    decoding="async"
-                    alt="Produk Souvenir Goodie Bag Acara Kenang-kenangan Bapak Sukirman dan Ibu Lyena tali kulit">
-                  <span class="package-badge">Wedding Souvenir</span>
-                </div>
-                <div class="package-card-body">
-                  <h2 class="package-card-title"><a href="produk-pernikahan-acara">Pernikahan & Acara</a></h2>
-                  <p class="package-card-desc">Souvenir tas jinjing bermakna untuk para tamu undangan pernikahan, syukuran
-                    keluarga, kenang-kenangan pensiun, dan reuni.</p>
-                  <div class="small mb-3">
-                    <strong>Bahan Tas:</strong> Kanvas Natural Katun dengan Tali Kulit Sintetis<br>
-                    <strong>Opsi Cetak:</strong> Ilustrasi Watercolor Portrait, Nama Mempelai/Tokoh<br>
-                    <strong>Kesan:</strong> Hangat, bersahaja, berkelas, dan berdaya guna tinggi
+            <div class="product-slider-slide group relative shrink-0 snap-start flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-category="pernikahan" style="flex: 0 0 370px !important; width: 370px !important; min-width: 300px !important; max-width: 390px !important;">
+              <article class="flex flex-col h-full package-card">
+                <!-- Visual Showcase (Heels Theory Luxury Style) -->
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
+                  <img src="assets/images/packages/pernikahan-acara.webp" width="800" height="600" loading="lazy" decoding="async" alt="Produk Souvenir Goodie Bag Acara Kenang-kenangan Bapak Sukirman dan Ibu Lyena tali kulit" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108">
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+                  <div class="pointer-events-none absolute left-4 top-3 font-serif text-5xl md:text-6xl font-bold text-white/30 tracking-tight transition-colors duration-500 group-hover:text-sky-300/60 select-none">05</div>
+                  <span class="absolute top-4 right-4 backdrop-blur-md bg-white/95 text-[#0B2942] font-bold text-xs px-3.5 py-1.5 rounded-full shadow-md border border-white/60">Wedding Souvenir</span>
+                  <div class="pointer-events-none absolute bottom-4 left-5 right-5">
+                    <span class="text-sky-300 text-[11px] font-bold tracking-widest uppercase block mb-1">Hangat & Berkesan</span>
+                    <h2 class="text-white font-bold text-xl md:text-2xl drop-shadow-sm font-sans tracking-tight mb-0">
+                      <a href="produk-pernikahan-acara" class="pointer-events-auto text-white hover:text-sky-200 transition-colors">Pernikahan & Acara</a>
+                    </h2>
                   </div>
-                  <a href="produk-pernikahan-acara" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+                <!-- Card Body -->
+                <div class="p-5 md:p-6 flex flex-col flex-grow justify-between bg-white">
+                  <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Souvenir tas jinjing bermakna untuk para tamu undangan pernikahan, syukuran keluarga, kenang-kenangan pensiun & reuni.
+                  </p>
+                  <div class="space-y-2 mb-5 text-xs text-slate-700">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Bahan:</span>
+                      <span class="text-slate-600 font-medium">Kanvas Natural Katun + Tali Kulit</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Cetak:</span>
+                      <span class="text-slate-600 font-medium">Ilustrasi Portrait Watercolor</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Kesan:</span>
+                      <span class="text-slate-600 font-medium">Hangat, Bersahaja & Berdaya Guna</span>
+                    </div>
+                  </div>
+                  <a href="produk-pernikahan-acara" class="mt-auto w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#096EA7] to-[#0284C7] hover:from-[#075C91] hover:to-[#096EA7] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span>Lihat Detail Spesifikasi</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
                 </div>
               </article>
             </div>
 
             <!-- 6. Custom Bebas -->
-            <div class="product-slider-slide flex-shrink-0" data-category="custom" style="flex: 0 0 calc(33.333% - 1rem) !important; min-width: 320px !important; max-width: 420px !important;">
-              <article class="package-card h-100" data-category="custom">
-                <div class="package-card-img-wrap">
-                  <img src="assets/images/packages/custom.webp" width="800" height="600" loading="lazy" decoding="async"
-                    alt="Produk Goodiebag Custom Penuh Bebas Desain">
-                  <span class="package-badge">Spesifikasi Bebas</span>
-                </div>
-                <div class="package-card-body">
-                  <h2 class="package-card-title"><a href="produk-custom">Produk Custom Bebas</a></h2>
-                  <p class="package-card-desc">Bebas memilih ukuran dimensi tas, kombinasi warna bahan kain, kompartemen
-                    saku, kancing, resleting, dan isi bundling.</p>
-                  <div class="small mb-3">
-                    <strong>Bahan Tas:</strong> Segala material kain kanvas, denim, blacu, spunbond<br>
-                    <strong>Finishing:</strong> Sablon manual presisi, DTF transfer, bordir logo<br>
-                    <strong>Konsultasi:</strong> Didampingi langsung oleh staf produksi Goodiebag Custom
+            <div class="product-slider-slide group relative shrink-0 snap-start flex flex-col rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-category="custom" style="flex: 0 0 370px !important; width: 370px !important; min-width: 300px !important; max-width: 390px !important;">
+              <article class="flex flex-col h-full package-card">
+                <!-- Visual Showcase (Heels Theory Luxury Style) -->
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
+                  <img src="assets/images/packages/custom.webp" width="800" height="600" loading="lazy" decoding="async" alt="Produk Goodiebag Custom Penuh Bebas Desain" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108">
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+                  <div class="pointer-events-none absolute left-4 top-3 font-serif text-5xl md:text-6xl font-bold text-white/30 tracking-tight transition-colors duration-500 group-hover:text-sky-300/60 select-none">06</div>
+                  <span class="absolute top-4 right-4 backdrop-blur-md bg-white/95 text-[#0B2942] font-bold text-xs px-3.5 py-1.5 rounded-full shadow-md border border-white/60">Spesifikasi Bebas</span>
+                  <div class="pointer-events-none absolute bottom-4 left-5 right-5">
+                    <span class="text-sky-300 text-[11px] font-bold tracking-widest uppercase block mb-1">Kustomisasi Penuh</span>
+                    <h2 class="text-white font-bold text-xl md:text-2xl drop-shadow-sm font-sans tracking-tight mb-0">
+                      <a href="produk-custom" class="pointer-events-auto text-white hover:text-sky-200 transition-colors">Produk Custom Bebas</a>
+                    </h2>
                   </div>
-                  <a href="produk-custom" class="btn btn-primary-brand w-100 mt-auto">Lihat Detail →</a>
+                </div>
+                <!-- Card Body -->
+                <div class="p-5 md:p-6 flex flex-col flex-grow justify-between bg-white">
+                  <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    Bebas memilih ukuran dimensi tas, kombinasi warna bahan kain, kompartemen saku, kancing, resleting & isi bundling.
+                  </p>
+                  <div class="space-y-2 mb-5 text-xs text-slate-700">
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Bahan:</span>
+                      <span class="text-slate-600 font-medium">Kanvas, Denim, Blacu, Spunbond Bebas</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Finishing:</span>
+                      <span class="text-slate-600 font-medium">Sablon Manual, DTF & Bordir Logo</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-100 rounded-lg p-2.5">
+                      <span class="font-bold text-[#096EA7] min-w-[70px]">Layanan:</span>
+                      <span class="text-slate-600 font-medium">Gratis Mockup Desain & Konsultasi</span>
+                    </div>
+                  </div>
+                  <a href="produk-custom" class="mt-auto w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#096EA7] to-[#0284C7] hover:from-[#075C91] hover:to-[#096EA7] shadow-md hover:shadow-lg transition-all duration-300">
+                    <span>Lihat Detail Spesifikasi</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1.5 transition-transform"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
                 </div>
               </article>
             </div>
+
           </div>
 
           <!-- Bottom Progress Bar -->
