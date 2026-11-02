@@ -412,11 +412,25 @@
   const heroVideo = document.getElementById('heroVideo');
   const btnToggleVideo = document.getElementById('btnToggleVideo');
   if (heroVideo && btnToggleVideo) {
+    // Only stream 2.6MB video on desktop after initial paint to protect LCP & data
+    if (window.innerWidth >= 768 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          heroVideo.preload = 'auto';
+          const playPromise = heroVideo.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(function () {});
+          }
+        }, 400);
+      });
+    }
+
     btnToggleVideo.addEventListener('click', function () {
       if (heroVideo.paused) {
-        heroVideo.play();
-        btnToggleVideo.innerHTML = '❚❚';
-        btnToggleVideo.setAttribute('aria-label', 'Jeda video latar');
+        heroVideo.play().then(function () {
+          btnToggleVideo.innerHTML = '❚❚';
+          btnToggleVideo.setAttribute('aria-label', 'Jeda video latar');
+        }).catch(function () {});
       } else {
         heroVideo.pause();
         btnToggleVideo.innerHTML = '▶';
