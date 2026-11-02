@@ -443,8 +443,195 @@ body.modal-open{overflow:hidden}
   }
 }
 
+/* Modern Tailwind-Style UI: Gradient Brand, Badges & Journey Timeline */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0B2942 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.badge-premium-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  color: #0284c7;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(2, 132, 199, 0.08);
+}
+
+.timeline-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+@media (max-width: 1199.98px) {
+  .timeline-journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639.98px) {
+  .timeline-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.journey-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.journey-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.journey-card-1::before {
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+}
+
+.journey-card-2::before {
+  background: linear-gradient(90deg, #0d9488, #34d399);
+}
+
+.journey-card-3::before {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+}
+
+.journey-card-4::before {
+  background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+.journey-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  border-color: #cbd5e1;
+}
+
+.journey-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.journey-step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  letter-spacing: -0.02em;
+}
+
+.step-num-1 {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+}
+
+.step-num-2 {
+  background: linear-gradient(135deg, #0d9488, #059669);
+}
+
+.step-num-3 {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.step-num-4 {
+  background: linear-gradient(135deg, #d97706, #ea580c);
+}
+
+.journey-year-pill {
+  font-size: 0.785rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  letter-spacing: 0.02em;
+}
+
+.journey-card-title {
+  font-size: 1.2rem;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.journey-card-body {
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: #475569;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.journey-card-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  width: fit-content;
+  margin-top: auto;
+}
+
+.journey-card-highlight.highlight-emerald {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+
+.journey-card-highlight.highlight-purple {
+  background: #f5f3ff;
+  color: #6d28d9;
+  border-color: #ddd6fe;
+}
+
+.journey-card-highlight.highlight-amber {
+  background: #fffbeb;
+  color: #b45309;
+  border-color: #fde68a;
+}
 </style>
-  <link href="assets/css/style.css?v=2.5" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Rich Structured Data JSON-LD for Google Search Dominance -->
   <script type="application/ld+json">
@@ -1410,93 +1597,6 @@ body.modal-open{overflow:hidden}
       </div>
     </section>
 
-    <!-- Loved by Brands, Trusted by Clients Showcase (Sesuai Referensi Pengadaan Resmi) -->
-    <section class="section-padding section-fresh-ambient border-top border-bottom" aria-labelledby="client-showcase-heading">
-      <div class="container position-relative">
-        <div class="text-center max-w-700 mx-auto mb-5">
-          <span class="badge-premium-glow">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Kemitraan Resmi &amp; Terpercaya
-          </span>
-          <h2 id="client-showcase-heading" class="section-title">Loved by <span class="text-gradient-brand">Brands</span>, Trusted by <span class="text-gradient-brand">Clients</span></h2>
-          <p class="section-lead mx-auto">Dipercaya lebih dari 500+ institusi pemerintahan, kementerian, BUMN, perbankan nasional, perguruan tinggi, serta korporasi swasta untuk memproduksi goodie bag berkualitas prima.</p>
-        </div>
-
-        <div class="row g-4">
-          <!-- Kategori 1: Government / Instansi Pemerintah & BUMN -->
-          <div class="col-12 col-lg-6">
-            <div class="client-frame-box">
-              <div class="client-frame-header">
-                <h3 class="client-frame-title">GOVERNMENT</h3>
-                <div class="client-frame-line"></div>
-              </div>
-              <div class="client-frame-body">
-                <img src="assets/images/clients-goverment-logos.webp" alt="Logo Klien Pemerintah dan BUMN Goodebag Custom - GSF, OJK, PLN, Polda, Puspen TNI, Pertamina, Bawaslu, BPJS Ketenagakerjaan, BKKBN" class="client-logo-banner" width="472" height="111" loading="lazy">
-              </div>
-            </div>
-          </div>
-
-          <!-- Kategori 2: Sektor Perbankan & Keuangan -->
-          <div class="col-12 col-lg-6">
-            <div class="client-frame-box">
-              <div class="client-frame-header">
-                <h3 class="client-frame-title">BANK</h3>
-                <div class="client-frame-line"></div>
-              </div>
-              <div class="client-frame-body">
-                <img src="assets/images/clients-bank-logos.webp" alt="Logo Klien Bank dan Lembaga Keuangan Goodebag Custom - Bank Indonesia, BNI, BSI, Mandiri Taspen, Bank Jatim, BRI Finance, Movin, E-Maal" class="client-logo-banner" width="474" height="106" loading="lazy">
-              </div>
-            </div>
-          </div>
-
-          <!-- Kategori 3: Sektor Pendidikan & Kampus -->
-          <div class="col-12 col-lg-6">
-            <div class="client-frame-box">
-              <div class="client-frame-header">
-                <h3 class="client-frame-title">PENDIDIKAN &amp; UNIVERSITAS</h3>
-                <div class="client-frame-line"></div>
-              </div>
-              <div class="client-frame-body">
-                <div class="client-chips-grid">
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Brawijaya (UB)</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Univ. Muhammadiyah Malang (UMM)</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Jember (UNEJ)</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Terbuka (UT)</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Universitas Bosowa</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>UNTAG Surabaya</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>SMK Telkom Malang</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Taxpert Education</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Kategori 4: Korporasi & Bisnis Swasta -->
-          <div class="col-12 col-lg-6">
-            <div class="client-frame-box">
-              <div class="client-frame-header">
-                <h3 class="client-frame-title">KORPORASI &amp; SWASTA</h3>
-                <div class="client-frame-line"></div>
-              </div>
-              <div class="client-frame-body">
-                <div class="client-chips-grid">
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Daikin Indonesia</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>TelkomAkses</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>IBS Software</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Honda NSS</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>PAMA Persada</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Kharisma Textile</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>RB Shera Building</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Bumida 1967</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>Kanvill Dau Cafe</span>
-                  <span class="client-brand-chip"><span class="client-chip-dot"></span>+ 100 Klien Lainnya</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Jejak & Sejarah Goodiebag Custom (Desain Modern, Seger, & Dinamis) -->
     <section class="section-padding position-relative overflow-hidden" style="background: linear-gradient(180deg, #FFFFFF 0%, #F1F8FC 45%, #F8FBFE 100%);" aria-labelledby="history-heading">
@@ -1578,147 +1678,6 @@ body.modal-open{overflow:hidden}
       </div>
     </section>
 
-    <!-- Testimoni Pelanggan Terpercaya (Desain Modern, Seger & Berkelas) -->
-    <section class="section-padding section-fresh-ambient" aria-labelledby="testimonial-heading">
-      <div class="container position-relative">
-        <div class="text-center max-w-700 mx-auto mb-5">
-          <span class="badge-premium-glow">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            Ulasan &amp; Bukti Nyata
-          </span>
-          <h2 id="testimonial-heading" class="section-title mb-2">Testimoni Pelanggan <span class="text-gradient-brand">Goodiebag Custom</span></h2>
-          <p class="section-lead mx-auto">Kepuasan nyata dari para panitia acara seminar nasional, pimpinan instansi BUMN, perbankan, dan korporasi swasta di seluruh nusantara.</p>
-        </div>
-
-        <div class="testimonials-grid">
-          <!-- Testimoni 1 -->
-          <div class="review-card-modern">
-            <div class="review-stars-wrap">
-              <div class="review-stars" aria-label="Rating 5 dari 5 bintang">★★★★★</div>
-              <span class="review-verified-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                Terverifikasi
-              </span>
-            </div>
-            <p class="review-quote-text">
-              “Pesan 850 pcs goodie bag kanvas untuk seminar tahunan PLN. Jahitannya luar biasa rapi, sablon logo tajam tidak mudah luntur. Pengiriman ke Surabaya tepat waktu bahkan lebih cepat dari deadline. Sangat memuaskan!”
-            </p>
-            <div class="review-client-footer">
-              <div class="review-avatar-ring">RW</div>
-              <div>
-                <h3 class="review-client-name">Rina Wulandari, S.I.Kom.</h3>
-                <p class="review-client-role mb-0">Humas &amp; Protokoler PT PLN (Persero)</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimoni 2 -->
-          <div class="review-card-modern">
-            <div class="review-stars-wrap">
-              <div class="review-stars" aria-label="Rating 5 dari 5 bintang">★★★★★</div>
-              <span class="review-verified-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                Terverifikasi
-              </span>
-            </div>
-            <p class="review-quote-text">
-              “Goodiebag Custom jadi vendor langganan kami untuk tas souvenir nasabah prioritas. Pelayanan super responsif, gratis mockup cepat, dan bahan spunbond-nya tebal serta kokoh membawa beban berat.”
-            </p>
-            <div class="review-client-footer">
-              <div class="review-avatar-ring" style="background: linear-gradient(135deg, #0D9488, #10B981);">DK</div>
-              <div>
-                <h3 class="review-client-name">Dedi Kurniawan, S.E.</h3>
-                <p class="review-client-role mb-0">Divisi Promosi Bank Jatim</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimoni 3 -->
-          <div class="review-card-modern">
-            <div class="review-stars-wrap">
-              <div class="review-stars" aria-label="Rating 5 dari 5 bintang">★★★★★</div>
-              <span class="review-verified-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                Terverifikasi
-              </span>
-            </div>
-            <p class="review-quote-text">
-              “Total 1.200 pcs seminar kit tas blacu selesai sebelum hari H. Peserta dari berbagai kampus memuji kualitas tasnya yang aesthetic dan kuat muat binder &amp; laptop. Terima kasih tim Goodiebag Custom Malang!”
-            </p>
-            <div class="review-client-footer">
-              <div class="review-avatar-ring" style="background: linear-gradient(135deg, #6366F1, #8B5CF6);">HP</div>
-              <div>
-                <h3 class="review-client-name">Dr. Ir. Hendra Prasetyo</h3>
-                <p class="review-client-role mb-0">Ketua Panitia Seminar Nasional UB</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimoni 4 -->
-          <div class="review-card-modern">
-            <div class="review-stars-wrap">
-              <div class="review-stars" aria-label="Rating 5 dari 5 bintang">★★★★★</div>
-              <span class="review-verified-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                Terverifikasi
-              </span>
-            </div>
-            <p class="review-quote-text">
-              “Kualitas pengerjaan dan kerapian packaging luar biasa. Customer service ramah, revisi mockup gratis dan cepat tanggap. Tas goodie bag promosi kami jadi pusat perhatian di pameran expo industri.”
-            </p>
-            <div class="review-client-footer">
-              <div class="review-avatar-ring" style="background: linear-gradient(135deg, #F59E0B, #EA580C);">SA</div>
-              <div>
-                <h3 class="review-client-name">Salsa Amanda Putri</h3>
-                <p class="review-client-role mb-0">Brand Marketing Daikin Indonesia</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimoni 5 -->
-          <div class="review-card-modern">
-            <div class="review-stars-wrap">
-              <div class="review-stars" aria-label="Rating 5 dari 5 bintang">★★★★★</div>
-              <span class="review-verified-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                Terverifikasi
-              </span>
-            </div>
-            <p class="review-quote-text">
-              “Pelayanan sangat profesional, faktur dan kelengkapan administrasi pengadaan instansi pemerintah sangat rapi. Kualitas tas spunbond berkualitas prima, tahan lama, dan harga kompetitif.”
-            </p>
-            <div class="review-client-footer">
-              <div class="review-avatar-ring" style="background: linear-gradient(135deg, #0284C7, #0B2942);">FH</div>
-              <div>
-                <h3 class="review-client-name">Bpk. Firman Hidayat</h3>
-                <p class="review-client-role mb-0">Logistik &amp; Pengadaan Bawaslu Kota Malang</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimoni 6 -->
-          <div class="review-card-modern">
-            <div class="review-stars-wrap">
-              <div class="review-stars" aria-label="Rating 5 dari 5 bintang">★★★★★</div>
-              <span class="review-verified-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                Terverifikasi
-              </span>
-            </div>
-            <p class="review-quote-text">
-              “Komunikasi sangat jelas mulai dari konsultasi bahan, ukuran tali webbing, hingga toleransi sablon. Hasilnya melebihi ekspektasi manajemen kami. Sangat recommended untuk souvenir korporat!”
-            </p>
-            <div class="review-client-footer">
-              <div class="review-avatar-ring" style="background: linear-gradient(135deg, #EC4899, #8B5CF6);">MS</div>
-              <div>
-                <h3 class="review-client-name">Ir. Maya Safitri</h3>
-                <p class="review-client-role mb-0">Procurement Manager TelkomAkses</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- FAQ Accordion (5-7 Pertanyaan Relevan) -->
     <section class="section-padding section-bg-soft" aria-labelledby="faq-heading">
