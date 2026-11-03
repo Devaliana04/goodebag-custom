@@ -125,39 +125,39 @@
     },
     {
       "source": "/goodie-bag-custom-seminar",
-      "destination": "/goodie-bag-custom-seminar.html"
+      "destination": "/produk-seminar-workshop.html"
     },
     {
       "source": "/tote-bag-custom-seminar",
-      "destination": "/tote-bag-custom-seminar.html"
+      "destination": "/produk-seminar-workshop.html"
     },
     {
       "source": "/goodie-bag-seminar",
-      "destination": "/goodie-bag-custom-seminar.html"
+      "destination": "/produk-seminar-workshop.html"
     },
     {
       "source": "/goodie-bag-custom-perusahaan",
-      "destination": "/goodie-bag-custom-perusahaan.html"
+      "destination": "/produk-corporate-kantor.html"
     },
     {
       "source": "/goodie-bag-perusahaan",
-      "destination": "/goodie-bag-custom-perusahaan.html"
+      "destination": "/produk-corporate-kantor.html"
     },
     {
       "source": "/goodie-bag-custom-event",
-      "destination": "/goodie-bag-custom-event.html"
+      "destination": "/produk-event-promosi.html"
     },
     {
       "source": "/goodie-bag-promosi",
-      "destination": "/goodie-bag-custom-event.html"
+      "destination": "/produk-event-promosi.html"
     },
     {
       "source": "/souvenir-goodie-bag-pernikahan",
-      "destination": "/souvenir-goodie-bag-pernikahan.html"
+      "destination": "/produk-pernikahan-acara.html"
     },
     {
       "source": "/produsen-goodie-bag-custom",
-      "destination": "/produsen-goodie-bag-custom.html"
+      "destination": "/produk-custom.html"
     },
     {
       "source": "/goodie-bag-custom",
