@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://goodiebag.web.id/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -98,25 +98,56 @@
   </url>
   <url>
     <loc>https://goodiebag.web.id/blog</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- 1. Vendor Goodiebag -->
+  <url>
+    <loc>https://goodiebag.web.id/vendor-goodiebag</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- 2. Cara Memilih Vendor -->
+  <url>
+    <loc>https://goodiebag.web.id/cara-memilih-vendor-goodiebag</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 3. Jenis Bahan Custom -->
+  <url>
+    <loc>https://goodiebag.web.id/jenis-bahan-goodiebag-custom</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 4. Cara Pesan Partai Besar -->
+  <url>
+    <loc>https://goodiebag.web.id/cara-pesan-goodiebag-custom-partai-besar</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 5. Panduan Memilih Sesuai Acara -->
   <url>
     <loc>https://goodiebag.web.id/blog-panduan-goodiebag</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- 6. Spunbond vs Blacu vs Kanvas -->
   <url>
     <loc>https://goodiebag.web.id/blog-jenis-bahan-goodiebag</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- 7. 7 Ide Isi Goodie Bag Seminar Kit -->
   <url>
     <loc>https://goodiebag.web.id/blog-ide-isi-goodiebag-seminar</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -149,29 +180,5 @@
     <lastmod>2026-10-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://goodiebag.web.id/vendor-goodiebag</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://goodiebag.web.id/cara-memilih-vendor-goodiebag</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goodiebag.web.id/jenis-bahan-goodiebag-custom</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://goodiebag.web.id/cara-pesan-goodiebag-custom-partai-besar</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>

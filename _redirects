@@ -1,3 +1,4 @@
+# 1. Katalog & Kategori Produk
 /produk /produk.html 200
 /produk/seminar-workshop /produk-seminar-workshop.html 200
 /produk/corporate-kantor /produk-corporate-kantor.html 200
@@ -16,6 +17,7 @@
 /produsen-goodie-bag-custom /produsen-goodie-bag-custom.html 200
 /goodie-bag-custom /produk.html 200
 
+# Redirect legacy paket ke produk
 /paket /produk 301
 /paket/seminar-workshop /produk/seminar-workshop 301
 /paket/corporate-kantor /produk/corporate-kantor 301
@@ -24,14 +26,7 @@
 /paket/pernikahan-acara /produk/pernikahan-acara 301
 /paket/custom /produk/custom 301
 
-/blog /blog.html 200
-/blog/panduan-totebag /blog-panduan-totebag.html 200
-/blog/jenis-bahan-totebag /blog-jenis-bahan-totebag.html 200
-/blog/ide-isi-totebag-seminar /blog-ide-isi-totebag-seminar.html 200
-/blog/panduan-goodie-bag /blog-panduan-totebag.html 301
-/blog/jenis-bahan-goodie-bag /blog-jenis-bahan-totebag.html 301
-/blog/ide-isi-goodie-bag-seminar /blog-ide-isi-totebag-seminar.html 301
-
+# Halaman Informasi & Legal
 /tentang /tentang.html 200
 /portofolio /portofolio.html 200
 /kontak /kontak.html 200
@@ -40,12 +35,33 @@
 /kebijakan-privasi /kebijakan-privasi.html 200
 /syarat-ketentuan /syarat-ketentuan.html 200
 
-# New Pillar & Cluster Blog Pages
+# Blog Index & 7 Artikel Edukasi
+/blog /blog.html 200
+
+# 1. Vendor Goodiebag
 /vendor-goodiebag /vendor-goodiebag.html 200
 /blog/vendor-goodiebag /vendor-goodiebag.html 200
+
+# 2. Cara Memilih Vendor
 /cara-memilih-vendor-goodiebag /cara-memilih-vendor-goodiebag.html 200
 /blog/cara-memilih-vendor-goodiebag /cara-memilih-vendor-goodiebag.html 200
+
+# 3. Jenis Bahan Custom
 /jenis-bahan-goodiebag-custom /jenis-bahan-goodiebag-custom.html 200
 /blog/jenis-bahan-goodiebag-custom /jenis-bahan-goodiebag-custom.html 200
+
+# 4. Cara Pesan Partai Besar
 /cara-pesan-goodiebag-custom-partai-besar /cara-pesan-goodiebag-custom-partai-besar.html 200
 /blog/cara-pesan-goodiebag-custom-partai-besar /cara-pesan-goodiebag-custom-partai-besar.html 200
+
+# 5. Panduan Sesuai Acara
+/blog-panduan-goodiebag /blog-panduan-goodiebag.html 200
+/blog/panduan-goodiebag /blog-panduan-goodiebag.html 200
+
+# 6. Spunbond vs Blacu vs Kanvas
+/blog-jenis-bahan-goodiebag /blog-jenis-bahan-goodiebag.html 200
+/blog/jenis-bahan-goodiebag /blog-jenis-bahan-goodiebag.html 200
+
+# 7. 7 Ide Isi Goodie Bag Seminar Kit
+/blog-ide-isi-goodiebag-seminar /blog-ide-isi-goodiebag-seminar.html 200
+/blog/ide-isi-goodiebag-seminar /blog-ide-isi-goodiebag-seminar.html 200

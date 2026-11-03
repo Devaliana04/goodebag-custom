@@ -238,6 +238,18 @@
     {
       "source": "/blog/cara-pesan-goodiebag-custom-partai-besar",
       "destination": "/cara-pesan-goodiebag-custom-partai-besar.html"
+    },
+    {
+      "source": "/blog-panduan-goodiebag",
+      "destination": "/blog-panduan-goodiebag.html"
+    },
+    {
+      "source": "/blog-jenis-bahan-goodiebag",
+      "destination": "/blog-jenis-bahan-goodiebag.html"
+    },
+    {
+      "source": "/blog-ide-isi-goodiebag-seminar",
+      "destination": "/blog-ide-isi-goodiebag-seminar.html"
     }
   ]
 }
