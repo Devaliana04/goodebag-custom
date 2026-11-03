@@ -3761,3 +3761,39 @@ body.modal-open {
   line-height: 1.5;
 }
 
+/* Footer Popular Search & Keyword Mesh */
+.footer-keyword-mesh {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-keyword-title {
+  color: #7dd3fc !important;
+  font-size: 0.8rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.footer-keyword-tag {
+  color: #cfdbe6 !important;
+  font-size: 0.815rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-keyword-tag:hover {
+  color: #ffffff !important;
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+
