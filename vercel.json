@@ -208,38 +208,6 @@
       "destination": "/syarat-ketentuan.html"
     },
     {
-      "source": "/vendor-goodiebag",
-      "destination": "/vendor-goodiebag.html"
-    },
-    {
-      "source": "/blog/vendor-goodiebag",
-      "destination": "/vendor-goodiebag.html"
-    },
-    {
-      "source": "/cara-memilih-vendor-goodiebag",
-      "destination": "/cara-memilih-vendor-goodiebag.html"
-    },
-    {
-      "source": "/blog/cara-memilih-vendor-goodiebag",
-      "destination": "/cara-memilih-vendor-goodiebag.html"
-    },
-    {
-      "source": "/jenis-bahan-goodiebag-custom",
-      "destination": "/jenis-bahan-goodiebag-custom.html"
-    },
-    {
-      "source": "/blog/jenis-bahan-goodiebag-custom",
-      "destination": "/jenis-bahan-goodiebag-custom.html"
-    },
-    {
-      "source": "/cara-pesan-goodiebag-custom-partai-besar",
-      "destination": "/cara-pesan-goodiebag-custom-partai-besar.html"
-    },
-    {
-      "source": "/blog/cara-pesan-goodiebag-custom-partai-besar",
-      "destination": "/cara-pesan-goodiebag-custom-partai-besar.html"
-    },
-    {
       "source": "/blog-panduan-goodiebag",
       "destination": "/blog-panduan-goodiebag.html"
     },
@@ -250,6 +218,54 @@
     {
       "source": "/blog-ide-isi-goodiebag-seminar",
       "destination": "/blog-ide-isi-goodiebag-seminar.html"
+    },
+    {
+      "source": "/vendor-goodiebag",
+      "destination": "/blog-vendor-goodiebag.html"
+    },
+    {
+      "source": "/blog-vendor-goodiebag",
+      "destination": "/blog-vendor-goodiebag.html"
+    },
+    {
+      "source": "/blog/vendor-goodiebag",
+      "destination": "/blog-vendor-goodiebag.html"
+    },
+    {
+      "source": "/cara-memilih-vendor-goodiebag",
+      "destination": "/blog-cara-memilih-vendor-goodiebag.html"
+    },
+    {
+      "source": "/blog-cara-memilih-vendor-goodiebag",
+      "destination": "/blog-cara-memilih-vendor-goodiebag.html"
+    },
+    {
+      "source": "/blog/cara-memilih-vendor-goodiebag",
+      "destination": "/blog-cara-memilih-vendor-goodiebag.html"
+    },
+    {
+      "source": "/jenis-bahan-goodiebag-custom",
+      "destination": "/blog-jenis-bahan-goodiebag-custom.html"
+    },
+    {
+      "source": "/blog-jenis-bahan-goodiebag-custom",
+      "destination": "/blog-jenis-bahan-goodiebag-custom.html"
+    },
+    {
+      "source": "/blog/jenis-bahan-goodiebag-custom",
+      "destination": "/blog-jenis-bahan-goodiebag-custom.html"
+    },
+    {
+      "source": "/cara-pesan-goodiebag-custom-partai-besar",
+      "destination": "/blog-cara-pesan-goodiebag-custom-partai-besar.html"
+    },
+    {
+      "source": "/blog-cara-pesan-goodiebag-custom-partai-besar",
+      "destination": "/blog-cara-pesan-goodiebag-custom-partai-besar.html"
+    },
+    {
+      "source": "/blog/cara-pesan-goodiebag-custom-partai-besar",
+      "destination": "/blog-cara-pesan-goodiebag-custom-partai-besar.html"
     }
   ]
 }
