@@ -1,5 +1,5 @@
-# Robots.txt for Goodiebag Custom (https://goodiebag.web.id/)
-# Vendor & Konveksi Goodiebag Custom Satuan, Souvenir Seminar, & Tote Bag Kanvas
+# Robots.txt for sakabag (https://goodiebag.web.id/)
+# Sentra Konveksi Goodie Bag & Produsen Tas Seminar Kit Malang, Souvenir Seminar, & Tote Bag Kanvas
 
 User-agent: *
 Allow: /
