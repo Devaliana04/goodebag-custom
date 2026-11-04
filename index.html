@@ -45,19 +45,61 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
-        "@id": "https://goodiebag.web.id/#localbusiness",
-        "name": "Goodiebag Custom - Konveksi Goodie Bag Custom & Tas Seminar",
-        "image": "https://goodiebag.web.id/assets/images/og-image.jpg",
+        "@type": "WebSite",
+        "@id": "https://goodiebag.web.id/#website",
         "url": "https://goodiebag.web.id/",
+        "name": "Goodiebag Custom",
+        "alternateName": [
+          "Goodie Bag Custom",
+          "Konveksi Goodie Bag Malang",
+          "Vendor Goodiebag Custom Indonesia",
+          "Pusat Tas Seminar Kit Murah"
+        ],
+        "description": "Vendor konveksi produsen goodie bag custom & tas souvenir seminar kit berkualitas di Malang dan pengiriman seluruh Indonesia.",
+        "inLanguage": "id-ID",
+        "publisher": {
+          "@id": "https://goodiebag.web.id/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://goodiebag.web.id/blog?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": ["LocalBusiness", "Organization", "ProfessionalService"],
+        "@id": "https://goodiebag.web.id/#organization",
+        "name": "Goodiebag Custom - Konveksi & Vendor Goodie Bag Custom Malang",
+        "legalName": "Goodiebag Custom Indonesia",
+        "alternateName": [
+          "Konveksi Goodie Bag Malang",
+          "Vendor Tas Seminar Kit",
+          "Goodiebag Custom"
+        ],
+        "url": "https://goodiebag.web.id/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://goodiebag.web.id/#logo",
+          "url": "https://goodiebag.web.id/assets/images/logo.svg",
+          "contentUrl": "https://goodiebag.web.id/assets/images/logo.svg",
+          "caption": "Logo Resmi Goodiebag Custom",
+          "width": "532",
+          "height": "392"
+        },
+        "image": "https://goodiebag.web.id/assets/images/og-image.jpg",
+        "description": "Vendor produsen dan konveksi goodie bag custom terpercaya di Malang, melayani pembuatan tas seminar kit, tote bag kanvas, spunbond, blacu, drill, korduroi, tas promosi perusahaan, dan souvenir event dengan sablon presisi dan bordir komputer pengiriman ke seluruh Indonesia.",
         "telephone": "+6282131087971",
+        "email": "devaliana@goodiebag-custom.vercel.app",
         "priceRange": "Rp 3.500 - Rp 45.000",
         "currenciesAccepted": "IDR",
-        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "paymentAccepted": "Cash, Bank Transfer, QRIS, Credit Card",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Jl. Raya Candi II No. 534, Karangbesuki, Sukun",
-          "addressLocality": "Malang",
+          "streetAddress": "Jl. Raya Candi II No. 534, Karangbesuki, Kec. Sukun",
+          "addressLocality": "Kota Malang",
           "addressRegion": "Jawa Timur",
           "postalCode": "65146",
           "addressCountry": "ID"
@@ -74,13 +116,126 @@
             "opens": "08:00",
             "closes": "17:00"
           }
+        ],
+        "areaServed": [
+          { "@type": "City", "name": "Malang" },
+          { "@type": "City", "name": "Surabaya" },
+          { "@type": "City", "name": "Jakarta" },
+          { "@type": "City", "name": "Bandung" },
+          { "@type": "City", "name": "Semarang" },
+          { "@type": "City", "name": "Yogyakarta" },
+          { "@type": "City", "name": "Denpasar" },
+          { "@type": "City", "name": "Medan" },
+          { "@type": "City", "name": "Makassar" },
+          { "@type": "City", "name": "Balikpapan" },
+          { "@type": "Country", "name": "Indonesia" }
+        ],
+        "founder": {
+          "@type": "Person",
+          "@id": "https://goodiebag.web.id/#author",
+          "name": "Devaliana Tensa",
+          "jobTitle": "Founder & Head of Production",
+          "image": "https://goodiebag.web.id/assets/images/author/devaliana.webp",
+          "sameAs": "https://goodiebag.web.id/tentang"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+6282131087971",
+          "contactType": "customer service",
+          "contactOption": "TollFree",
+          "areaServed": "ID",
+          "availableLanguage": ["Indonesian"]
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Katalog Layanan Goodie Bag Custom",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Goodie Bag Seminar & Workshop",
+              "url": "https://goodiebag.web.id/produk-seminar-workshop"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Goodie Bag Corporate & Kantor",
+              "url": "https://goodiebag.web.id/produk-corporate-kantor"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Goodie Bag Event & Promosi",
+              "url": "https://goodiebag.web.id/produk-event-promosi"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Goodie Bag Sekolah & Komunitas",
+              "url": "https://goodiebag.web.id/produk-sekolah-komunitas"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Goodie Bag Pernikahan & Souvenir Acara",
+              "url": "https://goodiebag.web.id/produk-pernikahan-acara"
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Goodie Bag Custom Bebas Spesifikasi & Bahan",
+              "url": "https://goodiebag.web.id/produk-custom"
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "385",
+          "reviewCount": "290"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Budi Santoso" },
+            "datePublished": "2026-09-18",
+            "reviewBody": "Pesan 500 pcs goodie bag kanvas untuk seminar nasional di Malang. Hasil sablon sangat tajam dan jahitan rapi, selesai sebelum deadline.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Nadia Larasati" },
+            "datePublished": "2026-10-05",
+            "reviewBody": "Goodie bag spunbond untuk pameran kantor bahannya tebal, tidak mudah robek, dan respon tim sangat responsif dengan mockup gratis.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Rian Anggoro" },
+            "datePublished": "2026-10-22",
+            "reviewBody": "Vendor goodiebag paling recommended di Malang. Pengiriman kargo ke Balikpapan sangat aman, packing karung tebal anti air.",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          }
         ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://goodiebag.web.id/#service-konveksi",
+        "name": "Jasa Konveksi Pembuatan Goodie Bag Custom",
+        "serviceType": "Konveksi & Percetakan Tas Custom",
+        "provider": { "@id": "https://goodiebag.web.id/#organization" },
+        "areaServed": { "@type": "Country", "name": "Indonesia" },
+        "description": "Layanan konveksi jahit dan cetak tas goodie bag custom partai kecil maupun besar dengan berbagai pilihan bahan seperti spunbond, blacu, kanvas, drill, corduroy, dan mika.",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "IDR",
+          "lowPrice": "3500",
+          "highPrice": "45000",
+          "offerCount": "120"
+        }
       },
       {
         "@type": "Product",
         "@id": "https://goodiebag.web.id/#product",
         "name": "Goodie Bag Custom & Tas Seminar Kit",
         "description": "Jasa konveksi pembuatan goodie bag custom, tas seminar kit, tote bag kanvas, spunbond, blacu, dan souvenir promosi perusahaan dengan sablon DTF dan bordir presisi.",
+        "image": "https://goodiebag.web.id/assets/images/og-image.jpg",
         "brand": {
           "@type": "Brand",
           "name": "Goodiebag Custom"
@@ -110,12 +265,12 @@
             "name": "Berapa jumlah minimum pemesanan (MOQ) di Goodiebag Custom?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Kami melayani pemesanan fleksibel dengan minimum order (MOQ) mulai dari 50 pcs hingga partai besar puluhan ribu pcs dengan harga grosir langsung dari pabrik konveksi."
+              "text": "Kami melayani pemesanan fleksibel dengan minimum order (MOQ) mulai dari 50 pcs hingga partai besar puluhan ribu pcs dengan harga grosir tangan pertama langsung dari konveksi pabrik."
             }
           },
           {
             "@type": "Question",
-            "name": "Apakah bisa mencetak logo dan desain sendiri pada tas?",
+            "name": "Apakah bisa mencetak logo dan desain sendiri pada tas goodie bag?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Bisa. Kami melayani cetak custom logo dan desain menggunakan teknologi sablon manual pasta rubber tahan lama, sablon DTF full color digital resolusi tinggi, serta bordir komputer presisi rapi."
@@ -134,7 +289,39 @@
             "name": "Apakah Goodiebag Custom melayani pengiriman ke luar kota dan seluruh Indonesia?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ya, kami melayani pengiriman ke seluruh kota dan kabupaten di Indonesia (Jawa, Sumatera, Kalimantan, Sulawesi, Bali, Nusa Tenggara, hingga Papua) menggunakan ekspedisi kargo darat, laut, dan udara terpercaya."
+              "text": "Ya, kami melayani pengiriman ke seluruh kota dan kabupaten di Indonesia (Jawa, Sumatera, Kalimantan, Sulawesi, Bali, Nusa Tenggara, hingga Papua) menggunakan ekspedisi kargo rekanan terpercaya seperti Indah Logistik, Dakota, J&T Cargo, Baraka, dan JNE JTR."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apa saja pilihan bahan yang tersedia untuk goodie bag custom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pilihan bahan meliputi spunbond ramah lingkungan (ekonomis), blacu natural vintage, kanvas tebal premium, american drill, ripstop waterproof, korduroi eksklusif, mika PVC transparan, dan kain goni (burlap)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah tersedia layanan desain dan mockup gratis sebelum produksi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ya, tim desainer kami menyediakan layanan konsultasi desain dan pembuatan digital mockup 2D gratis untuk memastikan posisi logo, ukuran, dan perpaduan warna sudah tepat sebelum proses pemotongan bahan dan cetak dimulai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana kebijakan garansi dan jaminan kualitas produk?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kami memberikan garansi 100% penggantian atau perbaikan untuk setiap produk yang mengalami cacat produksi, sablon luntur/rusak, atau salah ukuran yang tidak sesuai dengan mockup persetujuan final."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah bisa minta sampel bahan fisik untuk area Malang Raya?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tentu saja. Untuk instansi, kampus, dan kantor di area Malang Raya (Klojen, Lowokwaru, Blimbing, Sukun, Kedungkandang, Batu, Singosari), tim kami siap mengantarkan sampel fisik langsung ke lokasi Anda secara gratis atau Anda bisa datang langsung ke workshop kami di Jl. Raya Candi II No. 534 Malang."
             }
           }
         ]
@@ -158,8 +345,8 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Goodie Bag Seminar",
-            "item": "https://goodiebag.web.id/tote-bag-custom-seminar.html"
+            "name": "Goodie Bag Seminar Kit",
+            "item": "https://goodiebag.web.id/produk-seminar-workshop.html"
           }
         ]
       }
@@ -4043,245 +4230,6 @@
   <link rel="preload" as="image" href="assets/images/hero-video-poster.webp" fetchpriority="high">
   <link href="assets/css/style.css?v=20261103_mobile_perf" rel="stylesheet">
 
-  <!-- Rich Structured Data JSON-LD for Google Search Dominance -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://goodiebag.web.id/#website",
-        "url": "https://goodiebag.web.id/",
-        "name": "Goodiebag Custom",
-        "alternateName": "Goodiebag Custom Indonesia",
-        "description": "Vendor Produsen Goodiebag & Souvenir Custom Berkualitas untuk Seminar, Kantor, Event, dan Komunitas di Indonesia.",
-        "inLanguage": "id-ID",
-        "publisher": {
-          "@id": "https://goodiebag.web.id/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://goodiebag.web.id/blog?s={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://goodiebag.web.id/#organization",
-        "name": "Goodiebag Custom",
-        "legalName": "Goodiebag Custom Indonesia",
-        "alternateName": ["Vendor Goodiebag Malang", "Konveksi Goodiebag Souvenir Custom"],
-        "url": "https://goodiebag.web.id/",
-        "logo": {
-          "@type": "ImageObject",
-          "@id": "https://goodiebag.web.id/#logo",
-          "url": "https://goodiebag.web.id/assets/images/logo.svg",
-          "contentUrl": "https://goodiebag.web.id/assets/images/logo.svg",
-          "caption": "Logo Resmi Goodiebag Custom"
-        },
-        "image": "https://goodiebag.web.id/assets/images/og-image.jpg",
-        "description": "Vendor dan produsen goodiebag custom terpercaya melayani pengadaan tas spunbond, blacu, kanvas, paper bag, dan souvenir kit seminar kantor di seluruh Indonesia.",
-        "telephone": "+6285236894056",
-        "email": "devaliana@goodiebag-custom.vercel.app",
-        "priceRange": "Rp 2.500 - Rp 50.000",
-        "currenciesAccepted": "IDR",
-        "paymentAccepted": "Cash, Bank Transfer, QRIS",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Band. Palmerah No.D3-35B, Cemorokandang, Kec. Kedungkandang",
-          "addressLocality": "Kota Malang",
-          "addressRegion": "Jawa Timur",
-          "postalCode": "65138",
-          "addressCountry": "ID"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -7.9826,
-          "longitude": 112.6308
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "08:00",
-            "closes": "16:00"
-          }
-        ],
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Indonesia"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Jawa Timur"
-          }
-        ],
-        "founder": {
-          "@type": "Person",
-          "@id": "https://goodiebag.web.id/#author",
-          "name": "Devaliana Tensa",
-          "jobTitle": "Founder & Head of Production",
-          "image": "https://goodiebag.web.id/assets/images/author/devaliana.webp",
-          "sameAs": "https://goodiebag.web.id/tentang"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Katalog Produk Goodiebag Custom",
-          "itemListElement": [
-            {
-              "@type": "OfferCatalog",
-              "name": "Produk Goodiebag Seminar & Workshop",
-              "url": "https://goodiebag.web.id/produk-seminar-workshop"
-            },
-            {
-              "@type": "OfferCatalog",
-              "name": "Produk Goodiebag Corporate & Kantor",
-              "url": "https://goodiebag.web.id/produk-corporate-kantor"
-            },
-            {
-              "@type": "OfferCatalog",
-              "name": "Produk Goodiebag Event & Promosi",
-              "url": "https://goodiebag.web.id/produk-event-promosi"
-            },
-            {
-              "@type": "OfferCatalog",
-              "name": "Produk Goodiebag Sekolah & Komunitas",
-              "url": "https://goodiebag.web.id/produk-sekolah-komunitas"
-            },
-            {
-              "@type": "OfferCatalog",
-              "name": "Produk Goodiebag Pernikahan & Acara",
-              "url": "https://goodiebag.web.id/produk-pernikahan-acara"
-            },
-            {
-              "@type": "OfferCatalog",
-              "name": "Produk Goodiebag Custom Bebas Spesifikasi",
-              "url": "https://goodiebag.web.id/produk-custom"
-            }
-          ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "248",
-          "reviewCount": "248"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Budi Santoso — Panitia Seminar Nasional"
-            },
-            "datePublished": "2026-09-15",
-            "reviewBody": "Pesan goodie bag seminar 500 pcs di Goodiebag Custom, hasil sablon sangat rapi, jahitan presisi kuat, dan selesai tepat waktu sebelum acara.",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5"
-            }
-          },
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Rina Marlina — Corporate Event Planner"
-            },
-            "datePublished": "2026-10-02",
-            "reviewBody": "Kualitas bahan kanvas broken white tebal dan eksklusif. Tamu VIP kantor sangat mengapresiasi tas souvenir ini.",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://goodiebag.web.id/#webpage",
-        "url": "https://goodiebag.web.id/",
-        "name": "Goodiebag Custom — Vendor Goodiebag & Souvenir Custom Berkualitas",
-        "description": "Pesan goodie bag custom untuk seminar, kantor, event promosi, sekolah, dan acara pernikahan. Pilihan bahan spunbond, blacu, kanvas rapi dengan cetak logo presisi. Konsultasi WhatsApp gratis!",
-        "inLanguage": "id-ID",
-        "isPartOf": {
-          "@id": "https://goodiebag.web.id/#website"
-        },
-        "about": {
-          "@id": "https://goodiebag.web.id/#organization"
-        },
-        "author": {
-          "@id": "https://goodiebag.web.id/#author"
-        },
-        "breadcrumb": {
-          "@id": "https://goodiebag.web.id/#breadcrumb"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://goodiebag.web.id/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://goodiebag.web.id/"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://goodiebag.web.id/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Berapa jumlah minimum pemesanan (MOQ) di Goodiebag Custom?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Jumlah minimum pemesanan fleksibel tergantung jenis bahan dan teknik cetak yang dipilih. Secara umum, tas spunbond dapat dipesan mulai dari 50–100 pcs, sedangkan bahan kanvas atau blacu custom mulai dari 30–50 pcs. Untuk pesanan dalam jumlah besar, kami memberikan harga khusus yang lebih hemat per pcs."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Apakah bisa mencetak logo dan desain sendiri pada tas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tentu saja! Anda dapat mengirimkan logo perusahaan, tema acara, atau desain grafis dalam format vektor (PDF, AI, EPS, Corel) maupun file gambar beresolusi tinggi (PNG/JPEG). Tim kami akan membuatkan preview tata letak digital (digital proof/mockup) sebelum produksi massal dimulai."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Berapa lama estimasi waktu produksi goodie bag custom?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Waktu produksi standar berkisar antara 4 hingga 10 hari kerja setelah approval mockup desain dan pembayaran uang muka, tergantung kuantitas dan kerumitan finishing. Jika acara Anda mendesak (urgent/express order), silakan konsultasikan dengan admin agar kami dapat menyesuaikan jadwal produksi kami."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Apakah bisa memesan tas saja tanpa isi atau sebaliknya?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Bisa sekali. Anda bebas memesan tas goodiebag saja (hanya tas polos atau tas cetak sablon), atau memesan paket lengkap (bundling) yang sudah berisikan notebook, tumbler, pulpen, lanyard, dan kartu ucapan. Semua dapat disesuaikan dengan kebutuhan dan anggaran Anda."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Apakah Goodiebag Custom melayani pengiriman ke luar kota / seluruh Indonesia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ya, kami melayani pengiriman ke seluruh kota di Indonesia melalui berbagai jasa ekspedisi terpercaya, cargo darat, laut, maupun udara untuk menghemat biaya logistik pesanan dalam volume besar."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
 </head>
 
 <body>
@@ -5539,10 +5487,10 @@
       </div>
     </section>
 
-    <!-- Wilayah Layanan: Malang Raya & Pengiriman Seluruh Indonesia -->
-    <section class="section-padding section-bg-warm" aria-labelledby="coverage-heading" style="padding-block: clamp(48px, 6vw, 84px);">
+<!-- Wilayah Layanan: Malang Raya & Pengiriman Seluruh Indonesia -->
+    <section class="section-padding section-bg-warm" aria-labelledby="coverage-heading" style="padding-block: clamp(40px, 5vw, 68px);">
       <div class="container">
-        <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="text-center max-w-700 mx-auto mb-4 mb-md-5">
           <span class="section-eyebrow section-eyebrow-warm">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -5551,86 +5499,169 @@
             Jangkauan Pengadaan
           </span>
           <h2 id="coverage-heading" class="section-title mb-2 font-serif">Layanan Khusus Area <span class="text-gradient-brand">Malang Raya</span> &amp; Kirim Seluruh Indonesia</h2>
-          <p class="section-lead mx-auto">Kami berdomisili di Kota Malang dan siap melayani pesanan lokal dengan fasilitas antar-jemput sampel, serta pengiriman partai besar ke seluruh penjuru Indonesia.</p>
+          <p class="section-lead mx-auto mb-0" style="max-width: 640px; font-size: 0.96rem;">Workshop konveksi kami berpusat di Kota Malang dengan fasilitas antar-jemput sampel gratis, serta jalur kargo ekspres hemat partai besar ke seluruh penjuru Indonesia.</p>
         </div>
 
-        <div class="row g-4">
-          <!-- Kolom 1: Area Malang Raya -->
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1: Area Malang Raya & Sekitarnya -->
           <div class="col-12 col-lg-6">
-            <div class="bg-white p-4 p-md-5 rounded-4 border shadow-soft h-100 d-flex flex-direction-column">
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <div class="feature-icon-wrap mb-0" style="background: rgba(9, 110, 167, 0.1); color: #096EA7; width: 48px; height: 48px; border-radius: 12px;">
+            <div class="coverage-card-modern coverage-card-malang">
+              <div class="coverage-header">
+                <div class="coverage-icon-badge coverage-badge-malang">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                     <polyline points="9 22 9 12 15 12 15 22" />
                   </svg>
                 </div>
                 <div>
-                  <h3 class="h5 fw-bold text-navy mb-0">Area Malang Raya (Kota &amp; Kabupaten)</h3>
-                  <small class="text-muted">Layanan Lokal Prioritas &amp; Sampling Cepat</small>
+                  <h3 class="coverage-title">Area Malang Raya (Kota &amp; Kabupaten)</h3>
+                  <span class="coverage-subtitle">Layanan Lokal Prioritas &amp; Sampling Cepat</span>
                 </div>
               </div>
-              <ul class="list-unstyled mb-4" style="line-height: 1.8;">
-                <li class="d-flex align-items-start gap-2 mb-2">
-                  <span class="text-primary fw-bold">✓</span>
-                  <span><strong>Kecamatan Kota Malang:</strong> Klojen, Lowokwaru, Blimbing, Sukun, dan Kedungkandang.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 mb-2">
-                  <span class="text-primary fw-bold">✓</span>
-                  <span><strong>Area Kampus &amp; Perguruan Tinggi:</strong> Dekat UB, UM, UIN Maliki, Polinema, Unisma, Unmer, ITN, dan UMM.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 mb-2">
-                  <span class="text-primary fw-bold">✓</span>
-                  <span><strong>Fasilitas Khusus:</strong> Kunjungan sampel fisik ke workshop (Jl. Raya Candi II No. 534, Karangbesuki) atau tim kami siap antar sampel ke kantor Anda.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 mb-0">
-                  <span class="text-primary fw-bold">✓</span>
-                  <span><strong>Pengiriman Lokal:</strong> Layanan antar kurir internal atau ambil langsung ke workshop setelah produksi selesai.</span>
-                </li>
-              </ul>
-              <div class="mt-auto p-3 rounded-3 bg-light border">
-                <small class="text-navy fw-semibold">Butuh sampel bahan di Malang hari ini? Hubungi kami via WhatsApp untuk jadwalkan pengantaran sampel.</small>
+
+              <!-- Kecamatan Malang -->
+              <div class="coverage-chips-group">
+                <div class="coverage-chips-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Cakupan Kecamatan Kota:</span>
+                </div>
+                <div class="coverage-chips-wrap">
+                  <span class="coverage-chip">Klojen</span>
+                  <span class="coverage-chip">Lowokwaru</span>
+                  <span class="coverage-chip">Blimbing</span>
+                  <span class="coverage-chip">Sukun</span>
+                  <span class="coverage-chip">Kedungkandang</span>
+                  <span class="coverage-chip coverage-chip-highlight">Kota Batu &amp; Singosari</span>
+                </div>
+              </div>
+
+              <!-- Kampus & Perguruan Tinggi -->
+              <div class="coverage-chips-group">
+                <div class="coverage-chips-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span>Akses Dekat Kampus:</span>
+                </div>
+                <div class="coverage-chips-wrap">
+                  <span class="coverage-chip">Univ. Brawijaya (UB)</span>
+                  <span class="coverage-chip">UM</span>
+                  <span class="coverage-chip">UIN Maliki</span>
+                  <span class="coverage-chip">Polinema</span>
+                  <span class="coverage-chip">Unisma</span>
+                  <span class="coverage-chip">UMM</span>
+                  <span class="coverage-chip">Unmer</span>
+                  <span class="coverage-chip">ITN</span>
+                </div>
+              </div>
+
+              <!-- Fasilitas Khusus Malang -->
+              <div class="mb-3">
+                <div class="coverage-perk-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div><strong>Antar-Jemput Sampel Gratis:</strong> Tim kami siap membawakan sampel bahan fisik langsung ke kantor atau kampus Anda di Malang.</div>
+                </div>
+                <div class="coverage-perk-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div><strong>Kunjungan Workshop Terbuka:</strong> Jl. Raya Candi II No. 534, Karangbesuki (Bisa survei bahan &amp; konsultasi desain langsung).</div>
+                </div>
+                <div class="coverage-perk-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div><strong>Pengiriman Cepat Kurir Internal:</strong> Layanan kirim langsung begitu selesai QC atau opsi ambil mandiri di workshop.</div>
+                </div>
+              </div>
+
+              <div class="coverage-action-box">
+                <a href="https://wa.me/6282131087971?text=Halo%20Goodiebag%20Custom%2C%20saya%20di%20Malang%20ingin%20jadwalkan%20lihat%20sampel%20fisik." target="_blank" rel="noopener noreferrer" class="coverage-action-btn coverage-btn-malang">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                  Jadwalkan Antar Sampel Malang Gratis &rarr;
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Kolom 2: Kirim Seluruh Indonesia -->
+          <!-- Card 2: Kirim Seluruh Indonesia -->
           <div class="col-12 col-lg-6">
-            <div class="bg-white p-4 p-md-5 rounded-4 border shadow-soft h-100 d-flex flex-direction-column">
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <div class="feature-icon-wrap mb-0" style="background: rgba(18, 107, 86, 0.1); color: #126B56; width: 48px; height: 48px; border-radius: 12px;">
+            <div class="coverage-card-modern coverage-card-nasional">
+              <div class="coverage-header">
+                <div class="coverage-icon-badge coverage-badge-nasional">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="1" y="3" width="15" height="13" />
-                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 8" />
                     <circle cx="5.5" cy="18.5" r="2.5" />
                     <circle cx="18.5" cy="18.5" r="2.5" />
                   </svg>
                 </div>
                 <div>
-                  <h3 class="h5 fw-bold text-navy mb-0">Pengiriman Cepat Seluruh Indonesia</h3>
-                  <small class="text-muted">Kargo Rekanan Hemat Partai Besar</small>
+                  <h3 class="coverage-title">Pengiriman Cepat Seluruh Indonesia</h3>
+                  <span class="coverage-subtitle">Kargo Rekanan Hemat Partai Besar</span>
                 </div>
               </div>
-              <ul class="list-unstyled mb-4" style="line-height: 1.8;">
-                <li class="d-flex align-items-start gap-2 mb-2">
-                  <span class="text-success fw-bold">✓</span>
-                  <span><strong>Wilayah Pengiriman:</strong> Melayani kota-kota besar di Jawa, Sumatra, Kalimantan, Sulawesi, Bali, NTB, NTT, dan Papua.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 mb-2">
-                  <span class="text-success fw-bold">✓</span>
-                  <span><strong>Pilihan Kargo Tarif Hemat:</strong> Indah Logistik Cargo, Dakota Cargo, J&amp;T Cargo, Baraka Sarana Tama, Karyati, Sentral Cargo, JNE Trucking (JTR).</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 mb-2">
-                  <span class="text-success fw-bold">✓</span>
-                  <span><strong>Waktu Produksi:</strong> 7 - 14 hari kerja (bisa ekspres menyesuaikan jadwal acara). Estimasi waktu kirim kargo dihitung terpisah sesuai kota tujuan.</span>
-                </li>
-                <li class="d-flex align-items-start gap-2 mb-0">
-                  <span class="text-success fw-bold">✓</span>
-                  <span><strong>Proteksi Kiriman:</strong> Pengemasan karung tebal berlapis plastik kedap air aman dari benturan &amp; cuaca hujan selama perjalanan.</span>
-                </li>
-              </ul>
-              <div class="mt-auto p-3 rounded-3 bg-light border">
-                <small class="text-navy fw-semibold">Gratis bantuan cek estimasi tarif kargo termurah ke kota Anda sebelum Anda melakukan pemesanan.</small>
+
+              <!-- Jangkauan Wilayah -->
+              <div class="coverage-chips-group">
+                <div class="coverage-chips-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-success"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span>Wilayah Distribusi Rutin:</span>
+                </div>
+                <div class="coverage-chips-wrap">
+                  <span class="coverage-chip">Jawa &amp; Bali</span>
+                  <span class="coverage-chip">Sumatera</span>
+                  <span class="coverage-chip">Kalimantan</span>
+                  <span class="coverage-chip">Sulawesi</span>
+                  <span class="coverage-chip">NTB &amp; NTT</span>
+                  <span class="coverage-chip coverage-chip-highlight">Maluku &amp; Papua</span>
+                </div>
+              </div>
+
+              <!-- Ekspedisi Kargo Rekanan -->
+              <div class="coverage-chips-group">
+                <div class="coverage-chips-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-success"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/></svg>
+                  <span>Ekspedisi Kargo Tarif Grosir:</span>
+                </div>
+                <div class="coverage-chips-wrap">
+                  <span class="coverage-chip">Indah Logistik Cargo</span>
+                  <span class="coverage-chip">Dakota Cargo</span>
+                  <span class="coverage-chip">J&amp;T Cargo</span>
+                  <span class="coverage-chip">Baraka Sarana</span>
+                  <span class="coverage-chip">Sentral Cargo</span>
+                  <span class="coverage-chip">JNE Trucking (JTR)</span>
+                  <span class="coverage-chip">Karyati</span>
+                </div>
+              </div>
+
+              <!-- Fasilitas Proteksi Kirim -->
+              <div class="mb-3">
+                <div class="coverage-perk-item nasional-perk">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div><strong>Proteksi Dobel Karung &amp; Plastik:</strong> Kemasan luar karung tebal + inner plastik kedap air aman dari benturan &amp; cuaca hujan.</div>
+                </div>
+                <div class="coverage-perk-item nasional-perk">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div><strong>Waktu Produksi Terjadwal:</strong> Standar 7-14 hari kerja atau ekspres kilat untuk acara penting dengan nomor resi real-time.</div>
+                </div>
+                <div class="coverage-perk-item nasional-perk">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div><strong>Tarif Grosir Paling Hemat:</strong> Mulai Rp 1.000 - Rp 3.000/kg via kargo darat/laut ke kota tujuan Anda di Indonesia.</div>
+                </div>
+              </div>
+
+              <div class="coverage-action-box">
+                <a href="https://wa.me/6282131087971?text=Halo%20Goodiebag%20Custom%2C%20bisa%20bantu%20cek%20estimasi%20ongkir%20kargo%20ke%20kota%20saya%3F" target="_blank" rel="noopener noreferrer" class="coverage-action-btn coverage-btn-nasional">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                  Cek Estimasi Ongkir Kargo ke Kota Anda &rarr;
+                </a>
               </div>
             </div>
           </div>

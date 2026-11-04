@@ -3797,3 +3797,202 @@ body.modal-open {
 }
 
 
+
+
+/* Modern Sleek Coverage Cards: Malang & Nationwide */
+.coverage-card-modern {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(11, 41, 66, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+}
+
+.coverage-card-modern:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(11, 41, 66, 0.08);
+  border-color: #cbd5e1;
+}
+
+.coverage-card-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.coverage-card-malang::before {
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+}
+
+.coverage-card-nasional::before {
+  background: linear-gradient(90deg, #0d9488, #34d399);
+}
+
+.coverage-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.coverage-icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.coverage-badge-malang {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+}
+
+.coverage-badge-nasional {
+  background: rgba(13, 148, 136, 0.1);
+  color: #0d9488;
+}
+
+.coverage-title {
+  font-size: 1.18rem;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.coverage-subtitle {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.coverage-chips-group {
+  margin-bottom: 1rem;
+}
+
+.coverage-chips-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.coverage-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.coverage-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.coverage-chip:hover {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+  color: #0369a1;
+}
+
+.coverage-chip-highlight {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+  font-weight: 700;
+}
+
+.coverage-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.coverage-perk-item svg {
+  color: #0284c7;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.coverage-perk-item.nasional-perk svg {
+  color: #0d9488;
+}
+
+.coverage-action-box {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.coverage-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.885rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.coverage-btn-malang {
+  background: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.coverage-btn-malang:hover {
+  background: #0284c7;
+  color: #ffffff !important;
+  border-color: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.coverage-btn-nasional {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.coverage-btn-nasional:hover {
+  background: #0d9488;
+  color: #ffffff !important;
+  border-color: #0d9488;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
+}
