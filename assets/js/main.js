@@ -516,13 +516,33 @@
           animateMilestoneNumber(el);
         });
       }
+    
+  // Client Board Filter Buttons (Tentang Kami)
+  const clientFilterBtns = document.querySelectorAll('.filter-client-btn');
+  const clientBoardItems = document.querySelectorAll('.client-board-item');
+  if (clientFilterBtns.length > 0 && clientBoardItems.length > 0) {
+    clientFilterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        clientFilterBtns.forEach(b => {
+          b.classList.remove('active', 'btn-warning-brand');
+          b.classList.add('btn-outline-dark');
+        });
+        this.classList.add('active', 'btn-warning-brand');
+        this.classList.remove('btn-outline-dark');
+
+        const filter = this.getAttribute('data-client-filter');
+        clientBoardItems.forEach(item => {
+          const cat = item.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            item.style.display = '';
+            item.style.opacity = '0';
+            setTimeout(() => { item.style.opacity = '1'; }, 50);
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMilestoneCounter);
-  } else {
-    initMilestoneCounter();
-  }
-
-})();
+});
