@@ -4506,31 +4506,67 @@ small, .small {
 
 
 /* ==========================================================================
-   FULL WIDTH EXPANSIVE LAYOUT (NO GIANT SIDE MARGINS - SESUAI ARAHAN USER)
+   FULL WIDTH EXPANSIVE LAYOUT (NO EMPTY SIDE MARGINS - SESUAI ARAHAN USER)
    ========================================================================== */
+html,
+body {
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .container,
+.container-fluid,
 .container-lg,
 .container-md,
 .container-sm,
 .container-xl,
 .container-xxl {
-  max-width: 96% !important;
-  width: 96% !important;
-  padding-left: clamp(1rem, 2.5vw, 2.5rem) !important;
-  padding-right: clamp(1rem, 2.5vw, 2.5rem) !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: clamp(16px, 2.5vw, 36px) !important;
+  padding-right: clamp(16px, 2.5vw, 36px) !important;
 }
 
 .site-header .container,
 .site-footer .container,
 .breadcrumb-nav .container {
-  max-width: 96% !important;
-  width: 96% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: clamp(16px, 2.5vw, 36px) !important;
+  padding-right: clamp(16px, 2.5vw, 36px) !important;
 }
 
 .max-w-800,
 .max-w-700,
 .max-w-600 {
-  max-width: 1100px !important;
+  max-width: 100% !important;
+}
+
+/* Tombol High-Contrast untuk Banner Layanan */
+.btn-light-brand {
+  background: #ffffff !important;
+  color: #0b2942 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+  font-weight: 750 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-light-brand:hover,
+.btn-light-brand:focus {
+  background: #FEF3C7 !important;
+  color: #92400E !important;
+  border-color: #FDE68A !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25) !important;
 }
 
 
