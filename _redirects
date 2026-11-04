@@ -6,16 +6,16 @@
 /produk/sekolah-komunitas /produk-sekolah-komunitas.html 200
 /produk/pernikahan-acara /produk-pernikahan-acara.html 200
 /produk/custom /produk-custom.html 200
-/goodie-bag-custom-seminar /produk-seminar-workshop 301
-/tote-bag-custom-seminar /produk-seminar-workshop 301
-/goodie-bag-seminar /produk-seminar-workshop 301
-/goodie-bag-custom-perusahaan /produk-corporate-kantor 301
-/goodie-bag-perusahaan /produk-corporate-kantor 301
-/goodie-bag-custom-event /produk-event-promosi 301
-/goodie-bag-promosi /produk-event-promosi 301
-/souvenir-goodie-bag-pernikahan /produk-pernikahan-acara 301
-/produsen-goodie-bag-custom /produk-custom 301
-/goodie-bag-custom /produk-custom 301
+/goodie-bag-custom-seminar /produk/seminar-workshop 301
+/tote-bag-custom-seminar /produk/seminar-workshop 301
+/goodie-bag-seminar /produk/seminar-workshop 301
+/goodie-bag-custom-perusahaan /produk/corporate-kantor 301
+/goodie-bag-perusahaan /produk/corporate-kantor 301
+/goodie-bag-custom-event /produk/event-promosi 301
+/goodie-bag-promosi /produk/event-promosi 301
+/souvenir-goodie-bag-pernikahan /produk/pernikahan-acara 301
+/produsen-goodie-bag-custom /produk/custom 301
+/goodie-bag-custom /produk/custom 301
 
 # Redirect legacy paket ke produk
 /paket /produk 301
@@ -35,47 +35,36 @@
 /kebijakan-privasi /kebijakan-privasi.html 200
 /syarat-ketentuan /syarat-ketentuan.html 200
 
-# Blog Index & 7 Artikel Edukasi (Uniform blog-*)
-/blog /blog.html 200
+# Blog Index & Folder Routing
+/blog /blog/index.html 200
+/blog/ /blog/index.html 200
 
-# 1. Vendor Goodiebag
-/blog-vendor-goodiebag /blog-vendor-goodiebag.html 200
-/blog/vendor-goodiebag /blog-vendor-goodiebag.html 200
-/vendor-goodiebag /blog-vendor-goodiebag.html 200
+# 11 Artikel Edukasi dalam folder /blog/
+/blog/vendor-goodiebag /blog/vendor-goodiebag.html 200
+/blog/cara-memilih-vendor-goodiebag /blog/cara-memilih-vendor-goodiebag.html 200
+/blog/jenis-bahan-goodiebag-custom /blog/jenis-bahan-goodiebag-custom.html 200
+/blog/cara-pesan-goodiebag-custom-partai-besar /blog/cara-pesan-goodiebag-custom-partai-besar.html 200
+/blog/panduan-goodiebag /blog/panduan-goodiebag.html 200
+/blog/jenis-bahan-goodiebag /blog/jenis-bahan-goodiebag.html 200
+/blog/ide-isi-goodiebag-seminar /blog/ide-isi-goodiebag-seminar.html 200
+/blog/panduan-tas-seminar-kit /blog/panduan-tas-seminar-kit.html 200
+/blog/perbandingan-bahan-tas-seminar /blog/perbandingan-bahan-tas-seminar.html 200
+/blog/isi-paket-seminar-kit /blog/isi-paket-seminar-kit.html 200
+/blog/cara-pesan-tas-seminar-custom /blog/cara-pesan-tas-seminar-custom.html 200
 
-# 2. Cara Memilih Vendor
-/blog-cara-memilih-vendor-goodiebag /blog-cara-memilih-vendor-goodiebag.html 200
-/blog/cara-memilih-vendor-goodiebag /blog-cara-memilih-vendor-goodiebag.html 200
-/cara-memilih-vendor-goodiebag /blog-cara-memilih-vendor-goodiebag.html 200
-
-# 3. Jenis Bahan Custom
-/blog-jenis-bahan-goodiebag-custom /blog-jenis-bahan-goodiebag-custom.html 200
-/blog/jenis-bahan-goodiebag-custom /blog-jenis-bahan-goodiebag-custom.html 200
-/jenis-bahan-goodiebag-custom /blog-jenis-bahan-goodiebag-custom.html 200
-
-# 4. Cara Pesan Partai Besar
-/blog-cara-pesan-goodiebag-custom-partai-besar /blog-cara-pesan-goodiebag-custom-partai-besar.html 200
-/blog/cara-pesan-goodiebag-custom-partai-besar /blog-cara-pesan-goodiebag-custom-partai-besar.html 200
-/cara-pesan-goodiebag-custom-partai-besar /blog-cara-pesan-goodiebag-custom-partai-besar.html 200
-
-# 5. Panduan Sesuai Acara
-/blog-panduan-goodiebag /blog-panduan-goodiebag.html 200
-/blog/panduan-goodiebag /blog-panduan-goodiebag.html 200
-
-# 6. Spunbond vs Blacu vs Kanvas
-/blog-jenis-bahan-goodiebag /blog-jenis-bahan-goodiebag.html 200
-/blog/jenis-bahan-goodiebag /blog-jenis-bahan-goodiebag.html 200
-
-# 7. 7 Ide Isi Goodie Bag Seminar Kit
-/blog-ide-isi-goodiebag-seminar /blog-ide-isi-goodiebag-seminar.html 200
-/blog/ide-isi-goodiebag-seminar /blog-ide-isi-goodiebag-seminar.html 200
-
-# 8. Seri Panduan Tas Seminar Kit (Pilar & Cluster)
-/panduan-tas-seminar-kit /panduan-tas-seminar-kit.html 200
-/blog/panduan-tas-seminar-kit /panduan-tas-seminar-kit.html 200
-/perbandingan-bahan-tas-seminar /perbandingan-bahan-tas-seminar.html 200
-/blog/perbandingan-bahan-tas-seminar /perbandingan-bahan-tas-seminar.html 200
-/isi-paket-seminar-kit /isi-paket-seminar-kit.html 200
-/blog/isi-paket-seminar-kit /isi-paket-seminar-kit.html 200
-/cara-pesan-tas-seminar-custom /cara-pesan-tas-seminar-custom.html 200
-/blog/cara-pesan-tas-seminar-custom /cara-pesan-tas-seminar-custom.html 200
+# Legacy Root Redirects (301) to /blog/
+/blog-vendor-goodiebag /blog/vendor-goodiebag 301
+/vendor-goodiebag /blog/vendor-goodiebag 301
+/blog-cara-memilih-vendor-goodiebag /blog/cara-memilih-vendor-goodiebag 301
+/cara-memilih-vendor-goodiebag /blog/cara-memilih-vendor-goodiebag 301
+/blog-jenis-bahan-goodiebag-custom /blog/jenis-bahan-goodiebag-custom 301
+/jenis-bahan-goodiebag-custom /blog/jenis-bahan-goodiebag-custom 301
+/blog-cara-pesan-goodiebag-custom-partai-besar /blog/cara-pesan-goodiebag-custom-partai-besar 301
+/cara-pesan-goodiebag-custom-partai-besar /blog/cara-pesan-goodiebag-custom-partai-besar 301
+/blog-panduan-goodiebag /blog/panduan-goodiebag 301
+/blog-jenis-bahan-goodiebag /blog/jenis-bahan-goodiebag 301
+/blog-ide-isi-goodiebag-seminar /blog/ide-isi-goodiebag-seminar 301
+/panduan-tas-seminar-kit /blog/panduan-tas-seminar-kit 301
+/perbandingan-bahan-tas-seminar /blog/perbandingan-bahan-tas-seminar 301
+/isi-paket-seminar-kit /blog/isi-paket-seminar-kit 301
+/cara-pesan-tas-seminar-custom /blog/cara-pesan-tas-seminar-custom 301

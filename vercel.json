@@ -124,50 +124,6 @@
       "destination": "/produk-custom.html"
     },
     {
-      "source": "/goodie-bag-custom-seminar",
-      "destination": "/produk-seminar-workshop.html"
-    },
-    {
-      "source": "/tote-bag-custom-seminar",
-      "destination": "/produk-seminar-workshop.html"
-    },
-    {
-      "source": "/goodie-bag-seminar",
-      "destination": "/produk-seminar-workshop.html"
-    },
-    {
-      "source": "/goodie-bag-custom-perusahaan",
-      "destination": "/produk-corporate-kantor.html"
-    },
-    {
-      "source": "/goodie-bag-perusahaan",
-      "destination": "/produk-corporate-kantor.html"
-    },
-    {
-      "source": "/goodie-bag-custom-event",
-      "destination": "/produk-event-promosi.html"
-    },
-    {
-      "source": "/goodie-bag-promosi",
-      "destination": "/produk-event-promosi.html"
-    },
-    {
-      "source": "/souvenir-goodie-bag-pernikahan",
-      "destination": "/produk-pernikahan-acara.html"
-    },
-    {
-      "source": "/produsen-goodie-bag-custom",
-      "destination": "/produk-custom.html"
-    },
-    {
-      "source": "/goodie-bag-custom",
-      "destination": "/produk.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    },
-    {
       "source": "/tentang",
       "destination": "/tentang.html"
     },
@@ -196,108 +152,56 @@
       "destination": "/syarat-ketentuan.html"
     },
     {
-      "source": "/blog-vendor-goodiebag",
-      "destination": "/blog-vendor-goodiebag.html"
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog/index.html"
     },
     {
       "source": "/blog/vendor-goodiebag",
-      "destination": "/blog-vendor-goodiebag.html"
-    },
-    {
-      "source": "/vendor-goodiebag",
-      "destination": "/blog-vendor-goodiebag.html"
-    },
-    {
-      "source": "/blog-cara-memilih-vendor-goodiebag",
-      "destination": "/blog-cara-memilih-vendor-goodiebag.html"
+      "destination": "/blog/vendor-goodiebag.html"
     },
     {
       "source": "/blog/cara-memilih-vendor-goodiebag",
-      "destination": "/blog-cara-memilih-vendor-goodiebag.html"
-    },
-    {
-      "source": "/cara-memilih-vendor-goodiebag",
-      "destination": "/blog-cara-memilih-vendor-goodiebag.html"
-    },
-    {
-      "source": "/blog-jenis-bahan-goodiebag-custom",
-      "destination": "/blog-jenis-bahan-goodiebag-custom.html"
+      "destination": "/blog/cara-memilih-vendor-goodiebag.html"
     },
     {
       "source": "/blog/jenis-bahan-goodiebag-custom",
-      "destination": "/blog-jenis-bahan-goodiebag-custom.html"
-    },
-    {
-      "source": "/jenis-bahan-goodiebag-custom",
-      "destination": "/blog-jenis-bahan-goodiebag-custom.html"
-    },
-    {
-      "source": "/blog-cara-pesan-goodiebag-custom-partai-besar",
-      "destination": "/blog-cara-pesan-goodiebag-custom-partai-besar.html"
+      "destination": "/blog/jenis-bahan-goodiebag-custom.html"
     },
     {
       "source": "/blog/cara-pesan-goodiebag-custom-partai-besar",
-      "destination": "/blog-cara-pesan-goodiebag-custom-partai-besar.html"
-    },
-    {
-      "source": "/cara-pesan-goodiebag-custom-partai-besar",
-      "destination": "/blog-cara-pesan-goodiebag-custom-partai-besar.html"
-    },
-    {
-      "source": "/blog-panduan-goodiebag",
-      "destination": "/blog-panduan-goodiebag.html"
+      "destination": "/blog/cara-pesan-goodiebag-custom-partai-besar.html"
     },
     {
       "source": "/blog/panduan-goodiebag",
-      "destination": "/blog-panduan-goodiebag.html"
-    },
-    {
-      "source": "/blog-jenis-bahan-goodiebag",
-      "destination": "/blog-jenis-bahan-goodiebag.html"
+      "destination": "/blog/panduan-goodiebag.html"
     },
     {
       "source": "/blog/jenis-bahan-goodiebag",
-      "destination": "/blog-jenis-bahan-goodiebag.html"
-    },
-    {
-      "source": "/blog-ide-isi-goodiebag-seminar",
-      "destination": "/blog-ide-isi-goodiebag-seminar.html"
+      "destination": "/blog/jenis-bahan-goodiebag.html"
     },
     {
       "source": "/blog/ide-isi-goodiebag-seminar",
-      "destination": "/blog-ide-isi-goodiebag-seminar.html"
-    },
-    {
-      "source": "/panduan-tas-seminar-kit",
-      "destination": "/panduan-tas-seminar-kit.html"
+      "destination": "/blog/ide-isi-goodiebag-seminar.html"
     },
     {
       "source": "/blog/panduan-tas-seminar-kit",
-      "destination": "/panduan-tas-seminar-kit.html"
-    },
-    {
-      "source": "/perbandingan-bahan-tas-seminar",
-      "destination": "/perbandingan-bahan-tas-seminar.html"
+      "destination": "/blog/panduan-tas-seminar-kit.html"
     },
     {
       "source": "/blog/perbandingan-bahan-tas-seminar",
-      "destination": "/perbandingan-bahan-tas-seminar.html"
-    },
-    {
-      "source": "/isi-paket-seminar-kit",
-      "destination": "/isi-paket-seminar-kit.html"
+      "destination": "/blog/perbandingan-bahan-tas-seminar.html"
     },
     {
       "source": "/blog/isi-paket-seminar-kit",
-      "destination": "/isi-paket-seminar-kit.html"
-    },
-    {
-      "source": "/cara-pesan-tas-seminar-custom",
-      "destination": "/cara-pesan-tas-seminar-custom.html"
+      "destination": "/blog/isi-paket-seminar-kit.html"
     },
     {
       "source": "/blog/cara-pesan-tas-seminar-custom",
-      "destination": "/cara-pesan-tas-seminar-custom.html"
+      "destination": "/blog/cara-pesan-tas-seminar-custom.html"
     }
   ]
 }
