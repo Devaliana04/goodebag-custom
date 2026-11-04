@@ -3996,3 +3996,232 @@ body.modal-open {
   border-color: #0d9488;
   box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
 }
+
+/* ==========================================================================
+   MODERN TAILWIND UI ENHANCEMENTS FOR ARTICLES & NAVIGATION HUB
+   ========================================================================== */
+.article-reading-canvas {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  padding: clamp(1.25rem, 3.5vw, 2.75rem);
+  margin-inline: auto;
+  max-width: 1040px;
+}
+
+.article-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.article-content h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.article-content h3 {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content p {
+  margin-bottom: 1.25rem;
+}
+
+/* Modern Card for Feature Lists & Examples (Fixes Image 3) */
+.article-feature-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  margin-block: 1.5rem;
+}
+
+.article-feature-card ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.article-feature-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.95rem;
+  color: #334155;
+  list-style: none !important;
+}
+
+.article-feature-card li:last-child {
+  margin-bottom: 0;
+}
+
+.article-feature-card li::before {
+  content: none !important;
+}
+
+/* Hub Navigasi Internal Modern (Fixes Image 2) */
+.modern-nav-hub {
+  margin-top: 2.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.modern-nav-column-card {
+  height: 100%;
+  border-radius: 0.875rem;
+  border: 1px solid #f1f5f9;
+  background: #f8fafc;
+  padding: 1.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.modern-nav-column-card:hover {
+  border-color: #cbd5e1;
+  background: #f1f5f9;
+}
+
+.modern-nav-column-card ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.modern-nav-column-card li {
+  list-style: none !important;
+  margin-bottom: 0.45rem;
+}
+
+.modern-nav-column-card li::before {
+  content: none !important;
+}
+
+.modern-nav-column-card li:last-child {
+  margin-bottom: 0;
+}
+
+.modern-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  color: #475569;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.modern-nav-link:hover {
+  color: #096ea7 !important;
+  background: #ffffff;
+  transform: translateX(3px);
+}
+
+.modern-nav-link-primary {
+  font-weight: 600;
+  color: #0f172a;
+  background: rgba(9, 110, 167, 0.08);
+}
+
+/* Global Article Reading Canvas Refinements */
+.article-reading-canvas p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 1.25rem;
+}
+
+.article-reading-canvas h2 {
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.article-reading-canvas h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 1.6rem;
+  margin-bottom: 0.65rem;
+}
+
+.article-reading-canvas ul:not(.modern-nav-hub ul):not(.navbar-nav):not(.pagination) {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-block: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article-reading-canvas ul:not(.modern-nav-hub ul):not(.navbar-nav):not(.pagination) > li {
+  position: relative;
+  padding-left: 1.6rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #334155;
+  list-style: none !important;
+}
+
+.article-reading-canvas ul:not(.modern-nav-hub ul):not(.navbar-nav):not(.pagination) > li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0284c7;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.article-reading-canvas ol:not(.breadcrumb) {
+  padding-left: 1.25rem;
+  margin-block: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article-reading-canvas ol:not(.breadcrumb) > li {
+  padding-left: 0.4rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #334155;
+  font-weight: 500;
+}
+
+.article-related-card {
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: clamp(0.65rem, 1.5vw, 1rem);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-related-card:hover {
+  border-color: #096ea7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(9, 110, 167, 0.08);
+}

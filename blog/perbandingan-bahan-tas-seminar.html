@@ -240,6 +240,30 @@
   ]
 }
   </script>
+  <!-- Tailwind CSS (Play CDN with Preflight Disabled for Safe Bootstrap Integration) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      },
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              primary: '#096ea7',
+              dark: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -299,11 +323,9 @@
     </div>
   </nav>
 
-  <main id="main-content">
-    <article class="section-padding pt-0">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-9 col-xl-8">
+  <main id="main-content" class="bg-slate-50 py-4 py-md-5">
+    <div class="container" style="max-width: 1040px;">
+      <article class="article-reading-canvas">
             <!-- Article Header -->
             <header class="mb-4">
               <span class="section-eyebrow mb-2">Panduan Material & Karakteristik Kain</span>
@@ -631,110 +653,92 @@
               </div>
             </div>
 
-            <!-- Hub Navigasi Internal Lengkap (Semua Halaman) -->
-            <div class="mt-5 p-4 rounded-4 border bg-light">
-              <h3 class="h6 fw-bold text-navy text-uppercase tracking-wider mb-4 border-bottom pb-2">Navigasi Lengkap Produk &amp; Layanan Goodiebag Custom</h3>
-              <div class="row g-4">
-                <div class="col-md-4">
-                  <h4 class="h6 fw-bold text-navy mb-3">Katalog Produk Tas</h4>
-                  <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
-                    <li><a href="../produk" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Semua Katalog Produk</a></li>
-                    <li><a href="../produk-seminar-workshop" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Tas Seminar &amp; Workshop</a></li>
-                    <li><a href="../produk-corporate-kantor" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Tas Corporate &amp; Perusahaan</a></li>
-                    <li><a href="../produk-event-promosi" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Tas Event &amp; Promosi Brand</a></li>
-                    <li><a href="../produk-pernikahan-acara" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Souvenir Pernikahan &amp; Acara</a></li>
-                    <li><a href="../produk-sekolah-komunitas" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Tas Sekolah, Kampus &amp; Komunitas</a></li>
-                    <li><a href="../produk-custom" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Custom Pola &amp; Ukuran Khusus</a></li>
-                  </ul>
+            <!-- Hub Navigasi Internal Lengkap (Modern Tailwind UI) -->
+            <section class="modern-nav-hub mt-5">
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pb-3 mb-4 border-bottom border-slate-200">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge bg-primary text-white px-2.5 py-1.5 rounded-pill small fw-semibold">Jelajahi Goodiebag Custom</span>
+                  <h3 class="h6 fw-bold text-navy mb-0">Hub Navigasi Produk &amp; Layanan Lengkap</h3>
                 </div>
-                <div class="col-md-4">
-                  <h4 class="h6 fw-bold text-navy mb-3">Panduan &amp; Edukasi</h4>
-                  <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
-                    <li><a href="panduan-tas-seminar-kit" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Panduan Tas Seminar Kit Lengkap</a></li>
-                    <li><a href="perbandingan-bahan-tas-seminar" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Perbandingan Bahan Spunbond, Blacu &amp; Kanvas</a></li>
-                    <li><a href="isi-paket-seminar-kit" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Rekomendasi Isi Paket Seminar Kit</a></li>
-                    <li><a href="cara-pesan-tas-seminar-custom" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Alur &amp; Prosedur Pemesanan Tas Custom</a></li>
-                    <li><a href="vendor-goodiebag" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Tips Memilih Vendor Konveksi Terpercaya</a></li>
-                    <li><a href="cara-pesan-goodiebag-custom-partai-besar" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Panduan Pesan Goodie Bag Partai Besar</a></li>
-                    <li><a href="./" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Indeks Semua Artikel Blog</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h4 class="h6 fw-bold text-navy mb-3">Layanan &amp; Informasi</h4>
-                  <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
-                    <li><a href="../tentang" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Tentang Goodiebag Custom Malang</a></li>
-                    <li><a href="../portofolio" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Portofolio &amp; Klien Instansi</a></li>
-                    <li><a href="../cara-pesan" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Cara Pesan &amp; Sistem Pembayaran</a></li>
-                    <li><a href="../faq" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Tanya Jawab Pemesanan (FAQ)</a></li>
-                    <li><a href="../kontak" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Kontak &amp; Lokasi Workshop Malang</a></li>
-                    <li><a href="../syarat-ketentuan" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Syarat &amp; Ketentuan Layanan</a></li>
-                    <li><a href="../kebijakan-privasi" class="text-decoration-none text-muted"><span class="text-primary me-1">›</span> Kebijakan Privasi Konsumen</a></li>
-                  </ul>
-                </div>
+                <span class="small text-muted d-none d-sm-inline">Akses Cepat Seluruh Halaman</span>
               </div>
-            </div>
 
-            <!-- Related Articles -->
-            <div class="mt-5 pt-4 border-top">
-              <h3 class="h5 fw-bold text-navy mb-4">Artikel Terkait Seputar Tas Seminar</h3>
-              <div class="row g-2 g-md-3">
-                <div class="col-4 col-sm-4 col-md-4">
-                  <div class="card h-100 border p-3 rounded-3 shadow-none">
-                    
-                  <a href="panduan-tas-seminar-kit" class="d-block text-decoration-none mb-2" style="cursor:pointer;">
-                    <div class="blog-card-img-wrap mb-2" style="aspect-ratio:16/9;border-radius:var(--radius-sm);overflow:hidden;position:relative;">
-                      <img src="../assets/images/seminar-workshop.webp" width="400" height="225" loading="lazy" decoding="async"
-                        alt="Panduan lengkap tas seminar kit bahan isi dan vendor."
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+              <div class="row g-3 g-md-4">
+                <!-- Kolom 1: Katalog Produk -->
+                <div class="col-12 col-md-4">
+                  <div class="modern-nav-column-card">
+                    <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-slate-200">
+                      <span class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width:28px;height:28px;font-size:13px;">🛍️</span>
+                      <div>
+                        <h4 class="h6 fw-bold text-navy mb-0" style="font-size:0.95rem;">Katalog Produk Tas</h4>
+                        <span class="text-muted" style="font-size:11px;">7 Lini Produk Pilihan</span>
+                      </div>
                     </div>
-                  </a>
-                  <span class="badge bg-light text-primary border align-self-start mb-2">Panduan Utama</span>
-                    <h4 class="h6 fw-bold mb-2"><a href="panduan-tas-seminar-kit" class="text-navy text-decoration-none fw-bold">Panduan Tas Seminar Kit: Bahan, Isi, &amp; Tips</a></h4>
-                    <p class="small text-muted mb-0">Ulasan komprehensif dari spesifikasi hingga estimasi anggaran.</p>
+                    <ul class="list-unstyled">
+                      <li><a href="../produk" class="modern-nav-link modern-nav-link-primary"><span class="text-primary fw-bold">➔</span> Semua Katalog Produk</a></li>
+                      <li><a href="../produk-seminar-workshop" class="modern-nav-link"><span class="text-primary">›</span> Tas Seminar &amp; Workshop</a></li>
+                      <li><a href="../produk-tas-kantor-perusahaan" class="modern-nav-link"><span class="text-primary">›</span> Tas Kantor &amp; Perusahaan</a></li>
+                      <li><a href="../produk-tas-event-promosi" class="modern-nav-link"><span class="text-primary">›</span> Tas Event &amp; Promosi Brand</a></li>
+                      <li><a href="../produk-tas-souvenir-pernikahan-acara" class="modern-nav-link"><span class="text-primary">›</span> Souvenir Pernikahan &amp; Acara</a></li>
+                      <li><a href="../produk-tas-sekolah-kampus-komunitas" class="modern-nav-link"><span class="text-primary">›</span> Tas Sekolah &amp; Komunitas</a></li>
+                      <li><a href="../produk-tas-custom-pola-ukuran" class="modern-nav-link"><span class="text-primary">›</span> Custom Pola &amp; Ukuran Khusus</a></li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col-4 col-sm-4 col-md-4">
-                  <div class="card h-100 border p-3 rounded-3 shadow-none">
-                    
-                  <a href="isi-paket-seminar-kit" class="d-block text-decoration-none mb-2" style="cursor:pointer;">
-                    <div class="blog-card-img-wrap mb-2" style="aspect-ratio:16/9;border-radius:var(--radius-sm);overflow:hidden;position:relative;">
-                      <img src="../assets/images/paket-seminar-kit.webp" width="400" height="225" loading="lazy" decoding="async"
-                        alt="Pilihan isi paket seminar kit simple standard dan premium."
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+                <!-- Kolom 2: Panduan & Edukasi -->
+                <div class="col-12 col-md-4">
+                  <div class="modern-nav-column-card">
+                    <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-slate-200">
+                      <span class="d-inline-flex align-items-center justify-content-center bg-success text-white rounded-circle" style="width:28px;height:28px;font-size:13px;">📚</span>
+                      <div>
+                        <h4 class="h6 fw-bold text-navy mb-0" style="font-size:0.95rem;">Panduan &amp; Edukasi</h4>
+                        <span class="text-muted" style="font-size:11px;">Rujukan &amp; Tips Konveksi</span>
+                      </div>
                     </div>
-                  </a>
-                  <span class="badge bg-light text-primary border align-self-start mb-2">Kurasi Isi</span>
-                    <h4 class="h6 fw-bold mb-2"><a href="isi-paket-seminar-kit" class="text-navy text-decoration-none fw-bold">Isi Paket Seminar Kit Simple, Standard, &amp; Premium</a></h4>
-                    <p class="small text-muted mb-0">Konfigurasi barang fungsional untuk peserta dan narasumber.</p>
+                    <ul class="list-unstyled">
+                      <li><a href="panduan-tas-seminar-kit" class="modern-nav-link modern-nav-link-primary"><span class="text-success fw-bold">➔</span> Panduan Tas Seminar Kit</a></li>
+                      <li><a href="perbandingan-bahan-tas-seminar" class="modern-nav-link"><span class="text-success">›</span> Perbandingan Bahan Kain</a></li>
+                      <li><a href="isi-paket-seminar-kit" class="modern-nav-link"><span class="text-success">›</span> Rekomendasi Isi Paket Seminar</a></li>
+                      <li><a href="cara-pesan-tas-seminar-custom" class="modern-nav-link"><span class="text-success">›</span> Alur &amp; Prosedur Order Custom</a></li>
+                      <li><a href="vendor-goodiebag" class="modern-nav-link"><span class="text-success">›</span> Tips Memilih Vendor Konveksi</a></li>
+                      <li><a href="cara-pesan-goodiebag-custom-partai-besar" class="modern-nav-link"><span class="text-success">›</span> Panduan Order Partai Besar</a></li>
+                      <li><a href="" class="modern-nav-link"><span class="text-success">›</span> Indeks Semua Artikel Blog</a></li>
+                    </ul>
                   </div>
                 </div>
-                <div class="col-4 col-sm-4 col-md-4">
-                  <div class="card h-100 border p-3 rounded-3 shadow-none">
-                    
-                  <a href="cara-pesan-tas-seminar-custom" class="d-block text-decoration-none mb-2" style="cursor:pointer;">
-                    <div class="blog-card-img-wrap mb-2" style="aspect-ratio:16/9;border-radius:var(--radius-sm);overflow:hidden;position:relative;">
-                      <img src="../assets/images/proses-pemesanan-tas-seminar.webp" width="400" height="225" loading="lazy" decoding="async"
-                        alt="Langkah cara pesan tas seminar custom dari desain hingga kargo."
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+                <!-- Kolom 3: Layanan & Informasi -->
+                <div class="col-12 col-md-4">
+                  <div class="modern-nav-column-card">
+                    <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-slate-200">
+                      <span class="d-inline-flex align-items-center justify-content-center bg-info text-white rounded-circle" style="width:28px;height:28px;font-size:13px;">ℹ️</span>
+                      <div>
+                        <h4 class="h6 fw-bold text-navy mb-0" style="font-size:0.95rem;">Layanan &amp; Profil</h4>
+                        <span class="text-muted" style="font-size:11px;">Legalitas &amp; Alur Kerja</span>
+                      </div>
                     </div>
-                  </a>
-                  <span class="badge bg-light text-primary border align-self-start mb-2">Prosedur Order</span>
-                    <h4 class="h6 fw-bold mb-2"><a href="cara-pesan-tas-seminar-custom" class="text-navy text-decoration-none fw-bold">Cara Pesan Tas Seminar Custom</a></h4>
-                    <p class="small text-muted mb-0">Prosedur alur mockup, penawaran resmi SPH, dan Quality Control.</p>
+                    <ul class="list-unstyled">
+                      <li><a href="../tentang" class="modern-nav-link"><span class="text-info">›</span> Tentang Goodiebag Custom</a></li>
+                      <li><a href="../portofolio" class="modern-nav-link"><span class="text-info">›</span> Portofolio &amp; Klien Instansi</a></li>
+                      <li><a href="../cara-pesan" class="modern-nav-link"><span class="text-info">›</span> Cara Pesan &amp; Sistem Pembayaran</a></li>
+                      <li><a href="../faq" class="modern-nav-link"><span class="text-info">›</span> Tanya Jawab Pemesanan (FAQ)</a></li>
+                      <li><a href="../kontak" class="modern-nav-link"><span class="text-info">›</span> Kontak &amp; Workshop Malang</a></li>
+                      <li><a href="../syarat-ketentuan" class="modern-nav-link"><span class="text-info">›</span> Syarat &amp; Ketentuan Layanan</a></li>
+                      <li><a href="../kebijakan-privasi" class="modern-nav-link"><span class="text-info">›</span> Kebijakan Privasi Konsumen</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
 
             <!-- Navigasi Bawah -->
             <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-4 pt-3 border-top">
               <a href="panduan-tas-seminar-kit" class="btn btn-secondary-brand">← Kembali ke Panduan Utama</a>
               <a href="isi-paket-seminar-kit" class="btn btn-primary-brand">Lanjut: Rekomendasi &amp; Katalog Isi Kit →</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </main>
 
   <!-- Footer -->
