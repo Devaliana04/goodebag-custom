@@ -1166,13 +1166,14 @@ img {
 }
 
 .footer-logo {
-  height: 48px;
+  height: 52px;
   width: auto;
   max-width: 195px;
   object-fit: contain;
   background: #ffffff;
-  padding: 6px 12px;
-  border-radius: 10px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
 .footer-links {
