@@ -11,7 +11,8 @@ Allow: /assets/videos/
 
 # -------------------------------------------------------------
 # AI Search Engines & LLM Crawlers (Generative Engine Optimization - GEO)
-# Focus: Tote bag custom satuan, produsen tote bag kanvas blacu spunbond,
+# Focus: Tas seminar kit custom, goodie bag seminar, produsen tas spunbond blacu kanvas,
+# vendor merchandise seminar kit, tas promosi kantor, konveksi tas Malang & Surabaya,
 # vendor souvenir seminar kit, tas promosi kantor, konveksi tas Malang & Surabaya
 # -------------------------------------------------------------
 User-agent: GPTBot
