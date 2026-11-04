@@ -4263,7 +4263,11 @@
             <li class="nav-item dropdown">
               <div class="d-flex align-items-center">
                 <a class="nav-link" href="produk.html">Produk</a>
-                <button type="button" class="nav-link dropdown-toggle dropdown-toggle-split border-0 bg-transparent ps-1 pe-2" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Buka submenu Produk"></button>
+                <button type="button" class="btn-dropdown-trigger dropdown-toggle-split border-0 bg-transparent p-0 d-inline-flex align-items-center justify-content-center" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Buka submenu Produk" style="width: 38px; height: 38px; cursor: pointer; color: #D97706;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transition: transform 0.2s ease;">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
                 <ul class="dropdown-menu shadow-lg border-0 rounded-3">
                   <li><a class="dropdown-item fw-bold" href="produk.html">Semua Katalog Model Tas &rarr;</a></li>
                   <li><hr class="dropdown-divider my-1"></li>
@@ -4280,7 +4284,11 @@
             <li class="nav-item dropdown">
               <div class="d-flex align-items-center">
                 <a class="nav-link" href="layanan.html">Layanan</a>
-                <button type="button" class="nav-link dropdown-toggle dropdown-toggle-split border-0 bg-transparent ps-1 pe-2" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Buka submenu Layanan"></button>
+                <button type="button" class="btn-dropdown-trigger dropdown-toggle-split border-0 bg-transparent p-0 d-inline-flex align-items-center justify-content-center" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Buka submenu Layanan" style="width: 38px; height: 38px; cursor: pointer; color: #D97706;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transition: transform 0.2s ease;">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
                 <ul class="dropdown-menu shadow-lg border-0 rounded-3">
                   <li><a class="dropdown-item fw-bold" href="layanan.html">Semua Layanan Konveksi &rarr;</a></li>
                   <li><hr class="dropdown-divider my-1"></li>
@@ -5125,44 +5133,156 @@
           </p>
         </div>
 
-        <div class="row g-4 justify-content-center">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-2 bg-white">
-              <img src="assets/images/clients/client-1.webp" alt="Papan Mitra BUMN dan Korporasi Nasional sakabag" class="w-100 rounded-3 shadow-2xs" loading="lazy">
-              <div class="p-2 text-center font-xs text-muted fw-semibold">Mitra BUMN &amp; Korporasi Nasional</div>
+        
+        <!-- Continuous Moving Marquee Showcase (User Request 2: Animasi Gerak) -->
+        <div class="client-marquee-container my-4" aria-label="Dokumentasi Papan Mitra sakabag Bergerak Otomatis">
+          <div class="client-marquee-track">
+            <!-- Set 1 -->
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-primary px-3 py-1 rounded-pill font-xs fw-bold">Instansi Pemerintah &amp; Kedinasan</span>
+                <span class="text-muted font-xs">OJK, PLN, TNI, Kemendagri</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-1.webp" alt="Papan Mitra Pemerintah &amp; BUMN: OJK, PLN, BPJS, Pertamina, TNI" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-2 bg-white">
-              <img src="assets/images/clients/client-2.webp" alt="Papan Mitra Perbankan dan Keuangan sakabag" class="w-100 rounded-3 shadow-2xs" loading="lazy">
-              <div class="p-2 text-center font-xs text-muted fw-semibold">Mitra Perbankan &amp; Finansial</div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-success px-3 py-1 rounded-pill font-xs fw-bold">Perbankan &amp; Finansial</span>
+                <span class="text-muted font-xs">BI, BNI, BSI, Bank Jatim</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-2.webp" alt="Papan Mitra Perbankan: Bank Indonesia, BNI, BSI, Bank Jatim" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-2 bg-white">
-              <img src="assets/images/clients/client-3.webp" alt="Papan Mitra Perguruan Tinggi dan Kampus sakabag" class="w-100 rounded-3 shadow-2xs" loading="lazy">
-              <div class="p-2 text-center font-xs text-muted fw-semibold">Mitra Universitas &amp; Akademik</div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill font-xs fw-bold">Lembaga Pendidikan &amp; Kampus</span>
+                <span class="text-muted font-xs">UB, UNTAG, Univ Terbuka</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-3.webp" alt="Papan Mitra Perguruan Tinggi: Universitas Brawijaya, UNTAG, UT" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-2 bg-white">
-              <img src="assets/images/clients/client-4.webp" alt="Papan Mitra Lembaga Pemerintahan dan Kedinasan sakabag" class="w-100 rounded-3 shadow-2xs" loading="lazy">
-              <div class="p-2 text-center font-xs text-muted fw-semibold">Mitra Lembaga &amp; Kementerian RI</div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-dark text-white px-3 py-1 rounded-pill font-xs fw-bold">Lembaga Negara &amp; Korporasi</span>
+                <span class="text-muted font-xs">Kemenperin, Kemendikbud</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-4.webp" alt="Papan Mitra Lembaga Negara &amp; Kementerian" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-2 bg-white">
-              <img src="assets/images/clients/client-5.webp" alt="Papan Mitra Brand Retail dan Event Nasional sakabag" class="w-100 rounded-3 shadow-2xs" loading="lazy">
-              <div class="p-2 text-center font-xs text-muted fw-semibold">Mitra Retail &amp; FMCG Nasional</div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-info text-white px-3 py-1 rounded-pill font-xs fw-bold">Retail, Skincare &amp; Industri</span>
+                <span class="text-muted font-xs">Daikin, Safi, Honda, PAMA</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-5.webp" alt="Papan Mitra Brand FMCG &amp; Retail: Daikin, Safi, Honda" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-2 bg-white">
-              <img src="assets/images/clients/client-6.webp" alt="Papan Mitra Komunitas dan Organisasi sakabag" class="w-100 rounded-3 shadow-2xs" loading="lazy">
-              <div class="p-2 text-center font-xs text-muted fw-semibold">Mitra Komunitas &amp; Event Organizer</div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-secondary text-white px-3 py-1 rounded-pill font-xs fw-bold">Komunitas &amp; Event Organizer</span>
+                <span class="text-muted font-xs">Festival, Komunitas, Diklat</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-6.webp" alt="Papan Mitra Komunitas &amp; EO Nasional" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-primary px-3 py-1 rounded-pill font-xs fw-bold">Mitra Resmi Ekosistem sakabag</span>
+                <span class="text-muted font-xs">Pemerintah, BUMN &amp; Swasta</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-7.webp" alt="Dokumentasi Papan Portofolio Kemitraan sakabag" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Set 2 (Duplicates for Seamless Infinite Loop) -->
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-primary px-3 py-1 rounded-pill font-xs fw-bold">Instansi Pemerintah &amp; Kedinasan</span>
+                <span class="text-muted font-xs">OJK, PLN, TNI, Kemendagri</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-1.webp" alt="Papan Mitra Pemerintah &amp; BUMN: OJK, PLN, BPJS, Pertamina, TNI" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-success px-3 py-1 rounded-pill font-xs fw-bold">Perbankan &amp; Finansial</span>
+                <span class="text-muted font-xs">BI, BNI, BSI, Bank Jatim</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-2.webp" alt="Papan Mitra Perbankan: Bank Indonesia, BNI, BSI, Bank Jatim" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill font-xs fw-bold">Lembaga Pendidikan &amp; Kampus</span>
+                <span class="text-muted font-xs">UB, UNTAG, Univ Terbuka</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-3.webp" alt="Papan Mitra Perguruan Tinggi: Universitas Brawijaya, UNTAG, UT" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-dark text-white px-3 py-1 rounded-pill font-xs fw-bold">Lembaga Negara &amp; Korporasi</span>
+                <span class="text-muted font-xs">Kemenperin, Kemendikbud</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-4.webp" alt="Papan Mitra Lembaga Negara &amp; Kementerian" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-info text-white px-3 py-1 rounded-pill font-xs fw-bold">Retail, Skincare &amp; Industri</span>
+                <span class="text-muted font-xs">Daikin, Safi, Honda, PAMA</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-5.webp" alt="Papan Mitra Brand FMCG &amp; Retail: Daikin, Safi, Honda" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-secondary text-white px-3 py-1 rounded-pill font-xs fw-bold">Komunitas &amp; Event Organizer</span>
+                <span class="text-muted font-xs">Festival, Komunitas, Diklat</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-6.webp" alt="Papan Mitra Komunitas &amp; EO Nasional" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
+            </div>
+
+            <div class="client-board-card">
+              <div class="p-3 bg-slate-50 border-bottom d-flex align-items-center justify-content-between">
+                <span class="badge bg-primary px-3 py-1 rounded-pill font-xs fw-bold">Mitra Resmi Ekosistem sakabag</span>
+                <span class="text-muted font-xs">Pemerintah, BUMN &amp; Swasta</span>
+              </div>
+              <div class="p-3 text-center bg-white">
+                <img src="assets/images/clients/client-7.webp" alt="Dokumentasi Papan Portofolio Kemitraan sakabag" class="img-fluid rounded-3 w-100" loading="lazy">
+              </div>
             </div>
           </div>
         </div>
+        <p class="text-center font-xs text-muted mb-0"><span style="color: #D97706; font-weight: bold;">● Bergerak Otomatis</span> &bull; Sentuh atau arahkan kursor untuk menjeda dan melihat detail logo mitra</p>
+
+      </div>
       </div>
     </section>
 

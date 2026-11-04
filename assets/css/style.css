@@ -4638,3 +4638,176 @@ small, .small {
     flex-wrap: nowrap !important;
   }
 }
+
+
+/* ==========================================================================
+   BUTTONS & BADGE FIXES (NO EMPTY BOXES, FULL AMBER PALETTE)
+   ========================================================================== */
+.badge-amber-subtle,
+.bg-amber-100 {
+  background-color: #FEF3C7 !important;
+  color: #92400E !important;
+  border: 1px solid #FDE68A !important;
+}
+
+.text-amber-900 {
+  color: #78350F !important;
+}
+
+.border-amber-200 {
+  border-color: #FDE68A !important;
+}
+
+.btn-warning-brand {
+  background: #D97706 !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #D97706 !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+}
+
+.btn-warning-brand:hover,
+.btn-warning-brand:focus {
+  background: #B45309 !important;
+  border-color: #B45309 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25) !important;
+}
+
+.btn-outline-dark {
+  background: transparent !important;
+  color: #0F172A !important;
+  border: 1.5px solid #0F172A !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  border-color: #0F172A !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ==========================================================================
+   NAVBAR DROPDOWN TRIGGER (AMBER CHEVRON & 100% CLICKABLE)
+   ========================================================================== */
+.btn-dropdown-trigger,
+.dropdown-toggle-split {
+  width: 38px !important;
+  height: 38px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  border-radius: 8px !important;
+  color: #D97706 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-dropdown-trigger::after,
+.dropdown-toggle-split::after {
+  display: none !important; /* Hide old tiny CSS triangle */
+}
+
+.btn-dropdown-trigger:hover,
+.btn-dropdown-trigger:focus,
+.dropdown-toggle-split:hover,
+.dropdown-toggle-split:focus {
+  background: #FEF3C7 !important;
+}
+
+.btn-dropdown-trigger svg,
+.dropdown-toggle-split svg {
+  stroke: #D97706 !important;
+  transition: transform 0.25s ease !important;
+  pointer-events: none;
+}
+
+.dropdown.show .btn-dropdown-trigger svg,
+.dropdown.show .dropdown-toggle-split svg,
+.btn-dropdown-trigger[aria-expanded="true"] svg,
+.dropdown-toggle-split[aria-expanded="true"] svg {
+  transform: rotate(180deg) !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-item.dropdown:hover > .d-flex > .dropdown-menu,
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu,
+  .navbar-nav .nav-item.dropdown .dropdown-menu.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* ==========================================================================
+   CLIENT BOARDS SMOOTH MOVING MARQUEE ANIMATION (User Request 2)
+   ========================================================================== */
+.client-marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 14px 0 24px 0;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+}
+
+.client-marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: clientBoardsGliding 40s linear infinite;
+  will-change: transform;
+}
+
+.client-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes clientBoardsGliding {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.client-board-card {
+  width: 440px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.client-board-card:hover {
+  transform: translateY(-5px);
+  border-color: #D97706 !important;
+  box-shadow: 0 16px 36px rgba(217, 119, 6, 0.16) !important;
+}
+
+@media (max-width: 768px) {
+  .client-board-card {
+    width: 320px;
+  }
+}
