@@ -266,6 +266,38 @@
     {
       "source": "/blog/ide-isi-goodiebag-seminar",
       "destination": "/blog-ide-isi-goodiebag-seminar.html"
+    },
+    {
+      "source": "/panduan-tas-seminar-kit",
+      "destination": "/panduan-tas-seminar-kit.html"
+    },
+    {
+      "source": "/blog/panduan-tas-seminar-kit",
+      "destination": "/panduan-tas-seminar-kit.html"
+    },
+    {
+      "source": "/perbandingan-bahan-tas-seminar",
+      "destination": "/perbandingan-bahan-tas-seminar.html"
+    },
+    {
+      "source": "/blog/perbandingan-bahan-tas-seminar",
+      "destination": "/perbandingan-bahan-tas-seminar.html"
+    },
+    {
+      "source": "/isi-paket-seminar-kit",
+      "destination": "/isi-paket-seminar-kit.html"
+    },
+    {
+      "source": "/blog/isi-paket-seminar-kit",
+      "destination": "/isi-paket-seminar-kit.html"
+    },
+    {
+      "source": "/cara-pesan-tas-seminar-custom",
+      "destination": "/cara-pesan-tas-seminar-custom.html"
+    },
+    {
+      "source": "/blog/cara-pesan-tas-seminar-custom",
+      "destination": "/cara-pesan-tas-seminar-custom.html"
     }
   ]
 }
