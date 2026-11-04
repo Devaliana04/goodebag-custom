@@ -5,27 +5,27 @@
    ========================================================================== */
 
 :root {
-  /* Core Sky Blue & Navy Tokens */
-  --color-primary: #096EA7;
-  --color-primary-hover: #075C91;
-  --color-sky: #38BDF8;
-  --color-sky-50: #F3FAFF;
-  --color-sky-100: #E9F7FF;
-  --color-sky-200: #CDEDFD;
-  --color-navy: #0B2942;
-  --color-navy-dark: #071c2f;
+  /* Core Kuning Pekat & Deep Navy Tokens (Sesuai Arahan User) */
+  --color-primary: #D97706; /* Kuning Pekat / Warm Amber */
+  --color-primary-hover: #B45309; /* Kuning Pekat Tua */
+  --color-sky: #F59E0B; /* Golden Glow */
+  --color-sky-50: #FFFBEB; /* Amber 50 Warm Tint */
+  --color-sky-100: #FEF3C7; /* Amber 100 */
+  --color-sky-200: #FDE68A; /* Amber 200 */
+  --color-navy: #0F172A; /* Deep Navy Slate */
+  --color-navy-dark: #0A0F1D;
   
-  /* Luxury Neutral Tokens - High Contrast WCAG AA Compliant */
-  --color-warm-bg: #FAF8F5;
-  --color-warm-accent: #F4EFE6;
-  --color-warm-border: #E8E2D5;
-  --color-gold: #6E5018;
-  --color-gold-hover: #543D10;
-  --color-gold-light: #F7F1E5;
+  /* Luxury Warm Neutral Tokens (Bukan Putih Menyilaukan) */
+  --color-warm-bg: #FAF9F5; /* Warm Canvas Ivory */
+  --color-warm-accent: #F3EFE6;
+  --color-warm-border: #E5E0D5;
+  --color-gold: #D97706;
+  --color-gold-hover: #B45309;
+  --color-gold-light: #FEF3C7;
 
-  --color-body: #364C5C;
-  --color-muted: #6B7785;
-  --color-white: #FFFFFF;
+  --color-body: #334155;
+  --color-muted: #64748B;
+  --color-white: #FAF9F6; /* Soft Off-White (Tidak Terlalu Kontras) */
   --color-border: #E1EAF0;
   --color-success: #126B56;
   --color-danger: #B42318;
@@ -4016,10 +4016,18 @@ body.modal-open {
   background: #ffffff;
   border-radius: 1.5rem;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-  padding: clamp(1.25rem, 3.5vw, 2.75rem);
-  margin-inline: auto;
-  max-width: 1040px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  margin-inline: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.article-page-container {
+  max-width: 1400px !important;
+  width: 100% !important;
+  padding-inline: clamp(1rem, 3vw, 2.5rem) !important;
+  margin-inline: auto !important;
 }
 
 .article-content {
@@ -4387,4 +4395,47 @@ small, .small {
   .blog-card-excerpt {
     font-size: 0.98rem !important;
   }
+}
+
+/* ==========================================================================
+   DROPDOWN & BRAND ACCENTS (KUNING PEKAT + DEEP NAVY)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    margin-top: 0 !important;
+    animation: fadeInMenu 0.15s ease-in-out;
+  }
+}
+
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-warning-brand {
+  background: #D97706 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #B45309 !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-warning-brand:hover {
+  background: #B45309 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3) !important;
+}
+
+.bg-warm-canvas {
+  background-color: #FAF9F5 !important;
+}
+
+/* Fluid clean layout */
+.max-w-7xl {
+  max-width: 80rem !important;
 }
