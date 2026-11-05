@@ -5548,9 +5548,11 @@
 
     
     <!-- Mengapa Memilih Kami vs Vendor Lain (Tabel Keunggulan Kompetitif) -->
-    <section class="section-padding bg-white" aria-labelledby="comparison-heading" style="padding-block: clamp(48px, 6vw, 84px);">
+    <section class="cmp-section" aria-labelledby="comparison-heading">
       <div class="container">
-        <div class="text-center max-w-700 mx-auto mb-4">
+
+        <!-- Section Header -->
+        <div class="cmp-header">
           <span class="badge-premium-glow">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -5561,136 +5563,147 @@
           <p class="section-lead mx-auto">Kami mengutamakan transparansi harga pabrik, fleksibilitas minimum order, dan jaminan kepuasan 100% untuk setiap kepanitiaan acara Anda.</p>
         </div>
 
-                <!-- Mobile Responsive Comparison Cards (Proposional, Anti-Potong di Mobile) -->
-        <div class="d-md-none d-flex flex-column gap-3 mb-4">
-          <!-- Item 1: Minimum Order -->
-          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <span class="fw-bold text-navy font-sm">Minimum Order (MOQ)</span>
-              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Ramah</span>
+        <!-- Comparison Table — Premium Card Layout -->
+        <div class="cmp-table-wrap">
+
+          <!-- Column Headers -->
+          <div class="cmp-col-header-row">
+            <div class="cmp-col-feat">Fitur &amp; Standar Layanan</div>
+            <div class="cmp-col-us">
+              <span class="cmp-us-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                sakabag Malang
+              </span>
             </div>
-            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
-              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
-              <div class="font-sm fw-bold text-primary">Mulai 50 pcs <span class="fw-normal text-muted font-xs">(Sangat fleksibel untuk event menengah)</span></div>
+            <div class="cmp-col-other">Vendor / Konveksi Lain</div>
+          </div>
+
+          <!-- Row 1: MOQ -->
+          <div class="cmp-row">
+            <div class="cmp-cell-feat">
+              <span class="cmp-feat-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+              </span>
+              <span class="cmp-feat-label">Minimum Order (MOQ)</span>
             </div>
-            <div class="px-2 py-1 font-xs text-muted">
-              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Rata-rata wajib minimal 100 hingga 500 pcs
+            <div class="cmp-cell-us">
+              <span class="cmp-check-icon cmp-check-green">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="cmp-us-text">
+                <strong>Mulai 50 pcs</strong>
+                <span>Sangat fleksibel untuk event menengah</span>
+              </div>
+            </div>
+            <div class="cmp-cell-other">
+              <span class="cmp-x-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </span>
+              Rata-rata wajib minimal 100 hingga 500 pcs
             </div>
           </div>
 
-          <!-- Item 2: Free Mockup -->
-          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <span class="fw-bold text-navy font-sm">Free Mockup Digital 2D</span>
-              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Gratis 100%</span>
+          <!-- Row 2: Free Mockup -->
+          <div class="cmp-row">
+            <div class="cmp-cell-feat">
+              <span class="cmp-feat-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </span>
+              <span class="cmp-feat-label">Free Mockup Digital 2D</span>
             </div>
-            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
-              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
-              <div class="font-sm fw-bold text-primary">Gratis Visualisasi 2D <span class="fw-normal text-muted font-xs">&amp; revisi sampai disetujui</span></div>
+            <div class="cmp-cell-us">
+              <span class="cmp-check-icon cmp-check-green">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="cmp-us-text">
+                <strong>Gratis 100% &amp; Revisi Bebas</strong>
+                <span>Visualisasi desain 2D akurat sampai disetujui</span>
+              </div>
             </div>
-            <div class="px-2 py-1 font-xs text-muted">
-              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Dikenakan biaya jasa desain Rp 50.000 - Rp 150.000
-            </div>
-          </div>
-
-          <!-- Item 3: Garansi Cacat -->
-          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <span class="fw-bold text-navy font-sm">Garansi Kualitas Cacat</span>
-              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Garansi 100%</span>
-            </div>
-            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
-              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
-              <div class="font-sm fw-bold text-primary">Ganti Barang Baru <span class="fw-normal text-muted font-xs">(klaim disetujui apabila sesuai dengan syarat &amp; ketentuan)</span></div>
-            </div>
-            <div class="px-2 py-1 font-xs text-muted">
-              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Tidak bergaransi / lepas tanggung jawab setelah barang diterima
+            <div class="cmp-cell-other">
+              <span class="cmp-x-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </span>
+              Biaya jasa desain Rp&nbsp;50.000&nbsp;–&nbsp;Rp&nbsp;150.000
             </div>
           </div>
 
-          <!-- Item 4: Layanan Antar -->
-          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <span class="fw-bold text-navy font-sm">Layanan Antar Area Malang</span>
-              <span class="badge bg-primary bg-opacity-15 text-primary font-xs">✓ Siap Antar</span>
+          <!-- Row 3: Garansi -->
+          <div class="cmp-row">
+            <div class="cmp-cell-feat">
+              <span class="cmp-feat-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <span class="cmp-feat-label">Garansi Kualitas Cacat</span>
             </div>
-            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
-              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
-              <div class="font-sm fw-bold text-primary">Antar Sampel &amp; Kirim Pesanan <span class="fw-normal text-muted font-xs">langsung ke kantor/kampus di Malang</span></div>
+            <div class="cmp-cell-us">
+              <span class="cmp-check-icon cmp-check-green">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="cmp-us-text">
+                <strong>Ganti Barang Baru</strong>
+                <span>Klaim sesuai syarat &amp; ketentuan berlaku</span>
+              </div>
             </div>
-            <div class="px-2 py-1 font-xs text-muted">
-              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Pelanggan wajib mengambil sendiri atau bayar kurir mahal
+            <div class="cmp-cell-other">
+              <span class="cmp-x-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </span>
+              Tidak bergaransi / lepas tanggung jawab setelah diterima
             </div>
           </div>
 
-          <!-- Item 5: Jangkauan Kargo -->
-          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
-            <div class="d-flex align-items-center justify-content-between mb-2">
-              <span class="fw-bold text-navy font-sm">Jangkauan &amp; Ekspedisi Kargo</span>
-              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Seluruh Indonesia</span>
+          <!-- Row 4: Layanan Antar -->
+          <div class="cmp-row">
+            <div class="cmp-cell-feat">
+              <span class="cmp-feat-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </span>
+              <span class="cmp-feat-label">Layanan Antar Area Malang</span>
             </div>
-            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
-              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
-              <div class="font-sm fw-bold text-primary">Rekanan Kargo Resmi Hemat <span class="fw-normal text-muted font-xs">(Indah, Dakota, J&amp;T Cargo, Baraka)</span></div>
+            <div class="cmp-cell-us">
+              <span class="cmp-check-icon cmp-check-blue">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="cmp-us-text">
+                <strong>Siap Antar ke Kantor / Kampus</strong>
+                <span>Antar sampel bahan &amp; pengiriman pesanan di Malang</span>
+              </div>
             </div>
-            <div class="px-2 py-1 font-xs text-muted">
-              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Pilihan kargo terbatas dan ongkir tidak dibantu cek
+            <div class="cmp-cell-other">
+              <span class="cmp-x-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </span>
+              Wajib ambil sendiri ke lokasi atau bayar kurir mahal
             </div>
           </div>
-        </div>
 
-        <div class="d-none d-md-block table-responsive shadow-soft border rounded-4 overflow-hidden mb-4">
-          <table class="table table-hover align-middle mb-0" style="min-width: 680px;">
-            <thead class="bg-light border-bottom">
-              <tr>
-                <th scope="col" style="width: 28%; padding: 16px 20px;" class="fw-bold text-navy">Fitur &amp; Standar Layanan</th>
-                <th scope="col" style="width: 36%; padding: 16px 20px; background: rgba(9, 110, 167, 0.08);" class="fw-bold text-primary">
-                  <span class="d-inline-flex align-items-center gap-1">
-                    ★ Goodiebag Malang
-                  </span>
-                </th>
-                <th scope="col" style="width: 36%; padding: 16px 20px;" class="fw-bold text-muted">Vendor / Konveksi Konvensional Lain</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="fw-bold text-navy py-3 px-3">Minimum Order (MOQ)</td>
-                <td class="py-3 px-3 fw-semibold text-primary" style="background: rgba(9, 110, 167, 0.03);">
-                  <span class="badge bg-success bg-opacity-15 text-success me-1">✓ Ramah</span> Mulai <strong>50 pcs</strong> (Sangat fleksibel untuk event menengah)
-                </td>
-                <td class="py-3 px-3 text-muted">Rata-rata wajib minimal 100 hingga 500 pcs</td>
-              </tr>
-              <tr>
-                <td class="fw-bold text-navy py-3 px-3">Free Mockup Digital 2D</td>
-                <td class="py-3 px-3 fw-semibold text-primary" style="background: rgba(9, 110, 167, 0.03);">
-                  <span class="badge bg-success bg-opacity-15 text-success me-1">✓ Gratis 100%</span> Visualisasi desain 2D akurat &amp; revisi sampai disetujui
-                </td>
-                <td class="py-3 px-3 text-muted">Dikenakan biaya jasa desain Rp 50.000 - Rp 150.000</td>
-              </tr>
-              <tr>
-                <td class="fw-bold text-navy py-3 px-3">Garansi Kualitas Cacat</td>
-                <td class="py-3 px-3 fw-semibold text-primary" style="background: rgba(9, 110, 167, 0.03);">
-                  <span class="badge bg-success bg-opacity-15 text-success me-1">✓ Garansi 100%</span> Ganti barang baru (klaim disetujui apabila sesuai dengan syarat &amp; ketentuan)
-                </td>
-                <td class="py-3 px-3 text-muted">Tidak bergaransi / lepas tanggung jawab setelah barang diterima</td>
-              </tr>
-              <tr>
-                <td class="fw-bold text-navy py-3 px-3">Layanan Antar Area Malang</td>
-                <td class="py-3 px-3 fw-semibold text-primary" style="background: rgba(9, 110, 167, 0.03);">
-                  <span class="badge bg-primary bg-opacity-15 text-primary me-1">✓ Siap Antar</span> Antar sampel bahan &amp; pengiriman pesanan ke kantor/kampus di Malang
-                </td>
-                <td class="py-3 px-3 text-muted">Pelanggan wajib mengambil sendiri ke lokasi atau bayar kurir mahal</td>
-              </tr>
-              <tr>
-                <td class="fw-bold text-navy py-3 px-3">Jangkauan &amp; Ekspedisi Kargo</td>
-                <td class="py-3 px-3 fw-semibold text-primary" style="background: rgba(9, 110, 167, 0.03);">
-                  <span class="badge bg-success bg-opacity-15 text-success me-1">✓ Seluruh Indonesia</span> Rekanan kargo resmi hemat (Indah, Dakota, J&amp;T Cargo, Baraka)
-                </td>
-                <td class="py-3 px-3 text-muted">Pilihan ekspedisi kargo terbatas dan ongkos kirim tidak dibantu cek</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <!-- Row 5: Kargo -->
+          <div class="cmp-row cmp-row-last">
+            <div class="cmp-cell-feat">
+              <span class="cmp-feat-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <span class="cmp-feat-label">Jangkauan &amp; Ekspedisi Kargo</span>
+            </div>
+            <div class="cmp-cell-us">
+              <span class="cmp-check-icon cmp-check-green">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="cmp-us-text">
+                <strong>Seluruh Indonesia</strong>
+                <span>Rekanan kargo resmi: Indah, Dakota, J&amp;T Cargo, Baraka</span>
+              </div>
+            </div>
+            <div class="cmp-cell-other">
+              <span class="cmp-x-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </span>
+              Pilihan ekspedisi terbatas &amp; ongkir tidak dibantu cek
+            </div>
+          </div>
+
+        </div><!-- .cmp-table-wrap -->
       </div>
     </section>
 

@@ -5524,3 +5524,257 @@ article.article-reading-canvas {
     border-radius: 14px !important;
   }
 }
+
+/* ==========================================================================
+   COMPARISON TABLE — PREMIUM MODERN DESIGN (Mengapa Memilih Sakabag)
+   ========================================================================== */
+
+/* Section wrapper */
+.cmp-section {
+  padding-block: clamp(56px, 7vw, 96px);
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+/* Section header */
+.cmp-header {
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+/* Table wrapper card */
+.cmp-table-wrap {
+  max-width: 960px;
+  margin-inline: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(11, 41, 66, 0.10), 0 2px 8px rgba(11, 41, 66, 0.06);
+  border: 1px solid rgba(9, 110, 167, 0.14);
+}
+
+/* Column header row */
+.cmp-col-header-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #0b2942;
+}
+
+.cmp-col-feat,
+.cmp-col-us,
+.cmp-col-other {
+  padding: 16px 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+
+.cmp-col-us {
+  background: rgba(9, 110, 167, 0.35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.cmp-us-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+/* Data rows */
+.cmp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid #eef1f6;
+  transition: background 0.18s ease;
+}
+.cmp-row:last-child,
+.cmp-row-last {
+  border-bottom: none;
+}
+.cmp-row:hover {
+  background: rgba(9, 110, 167, 0.02);
+}
+
+/* Feature cell (col 1) */
+.cmp-cell-feat {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-right: 1px solid #eef1f6;
+}
+
+.cmp-feat-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(9, 110, 167, 0.08);
+  border-radius: 8px;
+  color: #096ea7;
+}
+
+.cmp-feat-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0b2942;
+  line-height: 1.35;
+}
+
+/* sakabag cell (col 2) */
+.cmp-cell-us {
+  padding: 20px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(9, 110, 167, 0.04);
+  border-right: 2px solid rgba(9, 110, 167, 0.18);
+  border-left: 2px solid rgba(9, 110, 167, 0.18);
+}
+
+.cmp-check-icon {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.cmp-check-green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.cmp-check-blue {
+  background: #dbeafe;
+  color: #096ea7;
+}
+
+.cmp-us-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cmp-us-text strong {
+  font-size: 0.875rem;
+  color: #0b2942;
+  font-weight: 700;
+}
+
+.cmp-us-text span {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* competitor cell (col 3) */
+.cmp-cell-other {
+  padding: 20px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  background: #fafbfc;
+}
+
+.cmp-x-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fee2e2;
+  color: #ef4444;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .cmp-col-header-row {
+    display: none;
+  }
+  .cmp-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(11,41,66,0.06);
+  }
+  .cmp-row:last-child {
+    margin-bottom: 0;
+  }
+  .cmp-cell-feat {
+    background: #0b2942;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 14px 16px;
+  }
+  .cmp-feat-icon {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+  }
+  .cmp-feat-label {
+    color: #fff;
+    font-size: 0.84rem;
+  }
+  .cmp-cell-us {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 14px 16px;
+    background: rgba(9, 110, 167, 0.06);
+  }
+  .cmp-cell-other {
+    padding: 12px 16px;
+    background: #fff;
+  }
+  .cmp-table-wrap {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .cmp-table-wrap {
+    max-width: 100%;
+  }
+  .cmp-feat-label {
+    font-size: 0.82rem;
+  }
+  .cmp-cell-feat,
+  .cmp-cell-us,
+  .cmp-cell-other {
+    padding: 16px 14px;
+  }
+}
