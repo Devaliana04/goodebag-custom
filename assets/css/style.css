@@ -4019,7 +4019,7 @@ body.modal-open {
   box-shadow: 0 4px 24px rgba(11, 41, 66, 0.04);
   padding: clamp(1.75rem, 4vw, 3.5rem);
   width: 100% !important;
-  max-width: 880px !important;
+  max-width: 1240px !important;
   margin-inline: auto !important;
   box-sizing: border-box !important;
 }
@@ -4586,32 +4586,34 @@ body {
 }
 
 
-/* 2. Halaman Daftar Artikel Blog (blog.html) — Max-Width 1200px */
+/* 2. Halaman Daftar Artikel Blog (blog.html) — Lebar Penuh Proporsional */
 .blog-index-container,
 .blog-catalog-container {
-  width: min(92%, 1200px) !important;
-  max-width: 1200px !important;
+  width: 100% !important;
+  max-width: 1440px !important;
   margin-inline: auto !important;
-  padding-inline: clamp(16px, 2vw, 24px) !important;
+  padding-inline: clamp(20px, 4vw, 60px) !important;
 }
 
-/* 3. Halaman Detail Artikel Blog (Editorial Layout 820–900px Canvas / 740–800px Text) */
+/* 3. Halaman Detail Artikel Blog (Lebar Proporsional, Modern, & Elegan) */
 .article-detail-container {
-  width: min(92%, 1180px) !important;
-  max-width: 1180px !important;
+  width: 100% !important;
+  max-width: 1440px !important;
   margin-inline: auto !important;
-  padding-inline: clamp(16px, 2vw, 24px) !important;
+  padding-inline: clamp(20px, 4vw, 60px) !important;
+  box-sizing: border-box !important;
 }
 
+article.article-reading-canvas,
 .article-reading-canvas {
   width: 100% !important;
-  max-width: 880px !important;
+  max-width: 1240px !important;
   margin-inline: auto !important;
   background: #ffffff !important;
   border-radius: 20px !important;
   border: 1px solid #E2E8F0 !important;
   box-shadow: 0 4px 24px rgba(11, 41, 66, 0.04) !important;
-  padding: clamp(1.75rem, 4vw, 3.5rem) !important;
+  padding: clamp(2rem, 5vw, 4rem) !important;
   box-sizing: border-box !important;
 }
 
@@ -4669,24 +4671,37 @@ body {
   margin-bottom: 0.65rem !important;
 }
 
-/* Gambar Utama Artikel: Seluas Area Artikel Utama (820–880px) */
+/* Gambar Utama Artikel: Melebar Penuh & Proporsional Sesuai Kartu Artikel */
 .article-reading-canvas .article-featured-image,
-.article-reading-canvas .article-image-box {
+.article-reading-canvas .article-image-box,
+.article-reading-canvas .article-featured-box {
   width: 100% !important;
-  max-width: 880px !important;
+  max-width: 100% !important;
   margin-inline: auto !important;
-  border-radius: 14px !important;
+  border-radius: 16px !important;
   overflow: hidden !important;
-  margin-block: 1.75rem 2rem !important;
+  margin-block: 1.75rem 2.25rem !important;
+  background: transparent !important;
+}
+
+.article-reading-canvas .img-wrap {
+  background: transparent !important;
+  width: 100% !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
 }
 
 .article-reading-canvas .article-featured-image img,
-.article-reading-canvas .article-image-box img {
+.article-reading-canvas .article-image-box img,
+.article-reading-canvas .article-featured-box img,
+.article-reading-canvas img.img-fluid {
   width: 100% !important;
   height: auto !important;
-  max-height: 520px !important;
+  max-height: 560px !important;
   object-fit: cover !important;
   display: block !important;
+  border-radius: 14px !important;
+  margin: 0 auto !important;
 }
 
 /* 4. Detail Produk & Portofolio Proporsional */
@@ -5373,7 +5388,7 @@ body {
   box-shadow: 0 4px 24px rgba(11, 41, 66, 0.04) !important;
   padding: clamp(1.75rem, 4vw, 3.5rem) !important;
   width: 100% !important;
-  max-width: 880px !important;
+  max-width: 1240px !important;
   margin-inline: auto !important;
   box-sizing: border-box !important;
   overflow: visible !important;
@@ -5436,7 +5451,7 @@ body {
 .article-reading-canvas .article-featured-image,
 .article-reading-canvas .article-image-box {
   width: 100% !important;
-  max-width: 880px !important;
+  max-width: 1240px !important;
   margin-inline: auto !important;
   border-radius: 14px !important;
   overflow: hidden !important;
@@ -5486,20 +5501,17 @@ body {
 }
 
 /* ==========================================================================
-   BLOG DETAIL STRICT 880PX EDITORIAL CONTAINER & CANVAS
+   RESPONSIVE OVERRIDES FOR ARTICLE CANVAS (1240px Desktop, 100% Tablet/Mobile)
    ========================================================================== */
-.article-detail-container {
-  width: min(92%, 880px) !important;
-  max-width: 880px !important;
-  margin-inline: auto !important;
-  padding-inline: 0 !important;
-}
-
-article.article-reading-canvas {
-  width: 100% !important;
-  max-width: 880px !important;
-  margin-inline: auto !important;
-  box-sizing: border-box !important;
+@media (min-width: 1200px) {
+  .article-detail-container {
+    max-width: 1440px !important;
+    padding-inline: clamp(24px, 3.5vw, 48px) !important;
+  }
+  article.article-reading-canvas,
+  .article-reading-canvas {
+    max-width: 1240px !important;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -5508,7 +5520,10 @@ article.article-reading-canvas {
     max-width: 100% !important;
     padding-inline: 24px !important;
   }
-  article.article-reading-canvas {
+  article.article-reading-canvas,
+  .article-reading-canvas {
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 1.75rem 24px !important;
   }
 }
@@ -5519,9 +5534,11 @@ article.article-reading-canvas {
     max-width: 100% !important;
     padding-inline: 16px !important;
   }
-  article.article-reading-canvas {
+  article.article-reading-canvas,
+  .article-reading-canvas {
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 1.25rem 16px !important;
     border-radius: 14px !important;
   }
 }
-
