@@ -533,7 +533,9 @@
           animateMilestoneNumber(el);
         });
       }
-    
+    });
+  }
+
   // Client Board Filter Buttons (Tentang Kami)
   const clientFilterBtns = document.querySelectorAll('.filter-client-btn');
   const clientBoardItems = document.querySelectorAll('.client-board-item');
@@ -612,4 +614,4 @@
       });
     }
   });
-});
+})();
