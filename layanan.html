@@ -56,127 +56,367 @@
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://goodiebag.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Layanan Konveksi",
+          "item": "https://goodiebag.web.id/layanan"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://goodiebag.web.id/#localbusiness",
+      "name": "sakabag",
+      "legalName": "sakabag Konveksi Goodie Bag & Tas Seminar Kit Malang",
+      "url": "https://goodiebag.web.id/",
+      "logo": "https://goodiebag.web.id/assets/images/logo.webp",
+      "image": "https://goodiebag.web.id/assets/images/og-image.webp",
+      "telephone": "+6282131087971",
+      "email": "halo@goodiebag.web.id",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Sigura-Gura No. 18, Sumbersari, Lowokwaru",
+        "addressLocality": "Malang",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "65145",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.9547,
+        "longitude": 112.6148
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://goodiebag.web.id/layanan#service",
+      "name": "Layanan Pembuatan Goodie Bag & Tas Custom sakabag Malang",
+      "serviceType": "Konveksi Pembuatan Tas Custom & Goodie Bag",
+      "provider": {
+        "@id": "https://goodiebag.web.id/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Malang"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jawa Timur"
+        },
+        {
+          "@type": "Country",
+          "name": "Indonesia"
+        }
+      ],
+      "description": "Layanan produksi konveksi tangan pertama untuk goodie bag corporate instansi, tas seminar kit diklat, kustomisasi pola tas khusus, dan suvenir event promosi skala massal.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Katalog Layanan Konveksi sakabag",
         "itemListElement": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://goodiebag.web.id/"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Goodie Bag Corporate & Kantor",
+              "url": "https://goodiebag.web.id/produk-corporate-kantor"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 5,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition"
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Layanan Konveksi",
-            "item": "https://goodiebag.web.id/layanan"
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tas Custom Pola Khusus",
+              "url": "https://goodiebag.web.id/produk-custom"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 5,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tas Seminar Kit & Diklat",
+              "url": "https://goodiebag.web.id/produk-seminar-workshop"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 5,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Goodie Bag Promosi & Event Massal",
+              "url": "https://goodiebag.web.id/produk-event-promosi"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 5,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Souvenir Tas Pernikahan & Syukuran",
+              "url": "https://goodiebag.web.id/produk-pernikahan-acara"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 5,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tas Sekolah, Kampus & Komunitas",
+              "url": "https://goodiebag.web.id/produk-sekolah-komunitas"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 3,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 5,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
+              "returnMethod": "https://schema.org/ReturnByMail",
+              "returnFees": "https://schema.org/FreeReturn"
+            },
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition"
           }
         ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://goodiebag.web.id/#localbusiness",
-        "name": "sakabag",
-        "legalName": "sakabag Konveksi Goodie Bag & Tas Seminar Kit Malang",
-        "url": "https://goodiebag.web.id/",
-        "logo": "https://goodiebag.web.id/assets/images/logo.webp",
-        "image": "https://goodiebag.web.id/assets/images/og-image.webp",
-        "telephone": "+6282131087971",
-        "email": "halo@goodiebag.web.id",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jalan Sigura-Gura No. 18, Sumbersari, Lowokwaru",
-          "addressLocality": "Malang",
-          "addressRegion": "Jawa Timur",
-          "postalCode": "65145",
-          "addressCountry": "ID"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -7.9547,
-          "longitude": 112.6148
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "08:00",
-          "closes": "17:00"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://goodiebag.web.id/layanan#service",
-        "name": "Layanan Pembuatan Goodie Bag & Tas Custom sakabag Malang",
-        "serviceType": "Konveksi Pembuatan Tas Custom & Goodie Bag",
-        "provider": {"@id": "https://goodiebag.web.id/#localbusiness"},
-        "areaServed": [
-          {"@type": "City", "name": "Malang"},
-          {"@type": "AdministrativeArea", "name": "Jawa Timur"},
-          {"@type": "Country", "name": "Indonesia"}
-        ],
-        "description": "Layanan produksi konveksi tangan pertama untuk goodie bag corporate instansi, tas seminar kit diklat, kustomisasi pola tas khusus, dan suvenir event promosi skala massal.",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Katalog Layanan Konveksi sakabag",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Goodie Bag Corporate & Kantor",
-                "url": "https://goodiebag.web.id/produk-corporate-kantor"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Tas Custom Pola Khusus",
-                "url": "https://goodiebag.web.id/produk-custom"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Tas Seminar Kit & Diklat",
-                "url": "https://goodiebag.web.id/produk-seminar-workshop"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Goodie Bag Promosi & Event Massal",
-                "url": "https://goodiebag.web.id/produk-event-promosi"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Souvenir Tas Pernikahan & Syukuran",
-                "url": "https://goodiebag.web.id/produk-pernikahan-acara"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Tas Sekolah, Kampus & Komunitas",
-                "url": "https://goodiebag.web.id/produk-sekolah-komunitas"
-              }
-            }
-          ]
-        }
       }
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
 </head>
 
 <body>

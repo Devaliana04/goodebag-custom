@@ -46,100 +46,137 @@
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://goodiebag.web.id/produk-goodie-bag-corporate-denim#product",
+      "name": "Tas Goodie Bag Corporate Denim Navy",
+      "description": "Model tas jinjing berkelas berbahan denim navy tebal dengan saku luar fungsional dan sablon logo presisi untuk cinderamata kantor, seminar VIP, dan event korporasi.",
+      "image": "https://goodiebag.web.id/assets/images/packages/corporate-kantor.webp",
+      "category": "Corporate Bag",
+      "brand": {
+        "@type": "Brand",
+        "name": "sakabag"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "IDR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "IDR",
+          "price": "0",
+          "valueAddedTaxIncluded": true
+        },
+        "availability": "https://schema.org/InStock",
+        "url": "https://goodiebag.web.id/produk-goodie-bag-corporate-denim",
+        "seller": {
+          "@type": "Organization",
+          "name": "sakabag Konveksi Goodie Bag Malang",
+          "image": "https://goodiebag.web.id/assets/images/og-image.webp"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "IDR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 3,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 5,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "priceValidUntil": "2027-12-31",
+        "itemCondition": "https://schema.org/NewCondition"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "385",
+        "reviewCount": "290"
+      },
+      "review": [
         {
-            "@type": "Product",
-            "@id": "https://goodiebag.web.id/produk-goodie-bag-corporate-denim#product",
-            "name": "Tas Goodie Bag Corporate Denim Navy",
-            "description": "Model tas jinjing berkelas berbahan denim navy tebal dengan saku luar fungsional dan sablon logo presisi untuk cinderamata kantor, seminar VIP, dan event korporasi.",
-            "image": "https://goodiebag.web.id/assets/images/packages/corporate-kantor.webp",
-            "category": "Corporate Bag",
-            "brand": {
-                "@type": "Brand",
-                "name": "sakabag"
-            },
-            "offers": {
-                "@type": "Offer",
-                "priceCurrency": "IDR",
-                "price": "0",
-                "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "priceCurrency": "IDR",
-                    "price": "0",
-                    "valueAddedTaxIncluded": true
-                },
-                "availability": "https://schema.org/InStock",
-                "url": "https://goodiebag.web.id/produk-goodie-bag-corporate-denim",
-                "seller": {
-                    "@type": "Organization",
-                    "name": "sakabag Konveksi Goodie Bag Malang",
-                    "image": "https://goodiebag.web.id/assets/images/og-image.webp"
-                }
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "bestRating": "5",
-                "worstRating": "1",
-                "ratingCount": "385",
-                "reviewCount": "290"
-            },
-            "review": [
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Budi Santoso"
-                    },
-                    "datePublished": "2026-10-15T10:00:00+07:00",
-                    "reviewBody": "Kualitas bahan denim sangat tebal dan rapi jahitannya. Sablon logo presisi dan tidak mudah pudar. Sangat cocok untuk acara korporasi.",
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "5",
-                        "bestRating": "5"
-                    }
-                },
-                {
-                    "@type": "Review",
-                    "author": {
-                        "@type": "Person",
-                        "name": "Rina Wulandari"
-                    },
-                    "datePublished": "2026-10-16T10:00:00+07:00",
-                    "reviewBody": "Pesan 200 pcs untuk seminar VIP perusahaan. Hasilnya memuaskan, jahitan kuat dan denim-nya premium. Recommended!",
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "5",
-                        "bestRating": "5"
-                    }
-                }
-            ]
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Budi Santoso"
+          },
+          "datePublished": "2026-10-15T10:00:00+07:00",
+          "reviewBody": "Kualitas bahan denim sangat tebal dan rapi jahitannya. Sablon logo presisi dan tidak mudah pudar. Sangat cocok untuk acara korporasi.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
         },
         {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Beranda",
-                    "item": "https://goodiebag.web.id/"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Katalog Produk",
-                    "item": "https://goodiebag.web.id/produk"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Tas Goodie Bag Corporate Denim Navy",
-                    "item": "https://goodiebag.web.id/produk-goodie-bag-corporate-denim"
-                }
-            ]
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Rina Wulandari"
+          },
+          "datePublished": "2026-10-16T10:00:00+07:00",
+          "reviewBody": "Pesan 200 pcs untuk seminar VIP perusahaan. Hasilnya memuaskan, jahitan kuat dan denim-nya premium. Recommended!",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
         }
-    ]
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://goodiebag.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Katalog Produk",
+          "item": "https://goodiebag.web.id/produk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tas Goodie Bag Corporate Denim Navy",
+          "item": "https://goodiebag.web.id/produk-goodie-bag-corporate-denim"
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
