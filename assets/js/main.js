@@ -385,7 +385,7 @@
     });
   }
 
-  // --- 6. CATALOG FILTER (IF PRESENT ON PAKET / PRODUK PAGE) ---
+  // --- 6. CATALOG FILTER (IF PRESENT ON PAKET / PRODUK / PORTOFOLIO PAGE) ---
   const filterButtons = document.querySelectorAll('[data-filter]');
   const packageCards = document.querySelectorAll('[data-category]');
 
@@ -397,12 +397,12 @@
 
         const filterValue = this.getAttribute('data-filter');
         packageCards.forEach(function (card) {
-          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            const col = card.closest('.col-12');
-            if (col) col.style.display = '';
+          // Support both 'all' and 'semua' as "show all" values
+          const showAll = (filterValue === 'all' || filterValue === 'semua');
+          if (showAll || card.getAttribute('data-category') === filterValue) {
+            card.style.display = '';
           } else {
-            const col = card.closest('.col-12');
-            if (col) col.style.display = 'none';
+            card.style.display = 'none';
           }
         });
       });

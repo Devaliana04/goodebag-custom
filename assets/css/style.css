@@ -4927,3 +4927,329 @@ body {
     pointer-events: none !important;
   }
 }
+
+
+/* ==========================================================================
+   PORTFOLIO FILTER BUTTONS (Pill Style)
+   ========================================================================== */
+.porto-filter-wrap {
+  overflow: hidden;
+}
+
+.porto-filter-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.porto-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1.5px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1.4;
+  font-family: var(--font-body);
+}
+
+.porto-filter-btn:hover {
+  background-color: #F1F5F9;
+  border-color: #94A3B8;
+  color: #1E293B;
+  transform: translateY(-1px);
+}
+
+.porto-filter-btn.active {
+  background-color: #0B2942;
+  border-color: #0B2942;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(11, 41, 66, 0.25);
+}
+
+@media (max-width: 768px) {
+  .porto-filter-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .porto-filter-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .porto-filter-btn {
+    flex-shrink: 0;
+  }
+}
+
+/* Portfolio card transition for filter */
+.porto-card-item {
+  transition: opacity 0.3s ease;
+}
+
+/* ==========================================================================
+   PERBAIKAN FINAL KOMPREHENSIF: NAVBAR ALIGNMENT, DROPDOWN, FILTER PILL, & BLOG
+   ========================================================================== */
+
+/* 1. Navbar Alignment — Pastikan Konsultasi WhatsApp Sejajar Sempurna */
+@media (min-width: 992px) {
+  .site-header {
+    overflow: visible !important;
+  }
+  .navbar {
+    overflow: visible !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .navbar .container {
+    overflow: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .navbar-collapse {
+    overflow: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+  .navbar-nav {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    margin-bottom: 0 !important;
+    gap: 4px !important;
+  }
+  .navbar-nav .nav-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 44px !important;
+  }
+  .navbar-nav .nav-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 40px !important;
+    padding: 0 12px !important;
+    font-size: 0.95rem !important;
+    font-weight: 650 !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+  }
+  .navbar-nav .nav-item.dropdown > .d-flex {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 40px !important;
+  }
+  .navbar-nav .btn-dropdown-trigger,
+  .navbar-nav .dropdown-toggle-split {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin-left: 2px !important;
+    background: transparent !important;
+    border: none !important;
+    color: #D97706 !important;
+    cursor: pointer !important;
+  }
+  .navbar-collapse .btn-warning-brand,
+  .navbar-collapse a[href*="wa.me"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 40px !important;
+    padding: 0 18px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 12px !important;
+    font-size: 0.925rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 2px 8px rgba(217, 119, 6, 0.25) !important;
+  }
+}
+
+/* 2. Dropdown Menu Anti-Terpotong (Full Visibility, Stacking Context, & Scrolling) */
+.site-header,
+.site-header .container,
+.navbar,
+.navbar-collapse {
+  overflow: visible !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-item.dropdown {
+    position: relative !important;
+  }
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    position: absolute !important;
+    top: calc(100% + 4px) !important;
+    left: 0 !important;
+    z-index: 1090 !important;
+    min-width: 290px !important;
+    max-width: 360px !important;
+    max-height: calc(85vh - 60px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    background: #ffffff !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 18px 40px rgba(11, 41, 66, 0.16) !important;
+    padding: 8px !important;
+    margin: 0 !important;
+  }
+  .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px 14px !important;
+    font-size: 0.925rem !important;
+    font-weight: 600 !important;
+    color: #0B2942 !important;
+    border-radius: 8px !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+    transition: all 0.15s ease !important;
+  }
+  .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
+  .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
+    background-color: #FEF3C7 !important;
+    color: #92400E !important;
+    transform: translateX(4px) !important;
+  }
+}
+
+/* 3. Filter Pill Buttons (Modern, Minimalis, Elegan, & Responsive Horizontal Scroll) */
+.porto-filter-wrap {
+  width: 100% !important;
+  margin-bottom: 2rem !important;
+}
+
+.porto-filter-scroll {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 4px !important;
+}
+
+.porto-filter-btn,
+.filter-product-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 9px 22px !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid #CBD5E1 !important;
+  background-color: #FFFFFF !important;
+  color: #334155 !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease-in-out !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  line-height: 1.3 !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.porto-filter-btn:hover,
+.filter-product-btn:hover {
+  background-color: #F1F5F9 !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+.porto-filter-btn.active,
+.filter-product-btn.active {
+  background-color: #0B2942 !important;
+  border-color: #0B2942 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(11, 41, 66, 0.28) !important;
+  transform: translateY(-1px) !important;
+}
+
+@media (max-width: 991.98px) {
+  .porto-filter-scroll {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    padding-bottom: 12px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .porto-filter-scroll::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+/* 4. Blog Reading Canvas — Full & Generous Layout (No Empty Space, No Cutoff Text) */
+.article-reading-canvas {
+  background: #ffffff !important;
+  border-radius: 1.25rem !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 20px rgba(11, 41, 66, 0.04) !important;
+  padding: clamp(1.5rem, 3.5vw, 3rem) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-inline: 0 !important;
+  overflow: visible !important;
+}
+
+.article-reading-canvas h1,
+.article-reading-canvas h2,
+.article-reading-canvas h3,
+.article-reading-canvas h4,
+.article-reading-canvas h5,
+.article-reading-canvas p,
+.article-reading-canvas li,
+.article-reading-canvas a {
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
+
+.article-toc {
+  background: #FAF9F5 !important;
+  border: 1px solid #E5E0D5 !important;
+  border-radius: 14px !important;
+  padding: 24px 28px !important;
+  margin: 1.5rem 0 2.5rem 0 !important;
+  overflow: visible !important;
+}
+
+.article-toc li a {
+  color: #0B2942 !important;
+  text-decoration: none !important;
+  display: inline !important;
+  overflow-wrap: break-word !important;
+}
+
+.article-toc li a:hover {
+  color: #D97706 !important;
+  text-decoration: underline !important;
+}
