@@ -4672,22 +4672,24 @@ article.article-reading-canvas,
   margin-bottom: 0.65rem !important;
 }
 
-/* Gambar Utama Artikel: Melebar Penuh & Proporsional Sesuai Kartu Artikel */
+/* Gambar Utama Artikel: Ukuran Sedang & Proporsional Elegan (Medium Size) */
 .article-reading-canvas .article-featured-image,
 .article-reading-canvas .article-image-box,
 .article-reading-canvas .article-featured-box {
   width: 100% !important;
-  max-width: 100% !important;
+  max-width: 640px !important;
   margin-inline: auto !important;
   border-radius: 16px !important;
   overflow: hidden !important;
-  margin-block: 1.75rem 2.25rem !important;
+  margin-block: 1.5rem 2rem !important;
   background: transparent !important;
 }
 
 .article-reading-canvas .img-wrap {
   background: transparent !important;
   width: 100% !important;
+  max-width: 640px !important;
+  margin-inline: auto !important;
   border-radius: 16px !important;
   overflow: hidden !important;
 }
@@ -4697,8 +4699,10 @@ article.article-reading-canvas,
 .article-reading-canvas .article-featured-box img,
 .article-reading-canvas img.img-fluid {
   width: 100% !important;
+  max-width: 640px !important;
   height: auto !important;
-  max-height: 560px !important;
+  max-height: 380px !important;
+  aspect-ratio: 16 / 10 !important;
   object-fit: cover !important;
   display: block !important;
   border-radius: 14px !important;
@@ -5452,18 +5456,20 @@ article.article-reading-canvas,
 .article-reading-canvas .article-featured-image,
 .article-reading-canvas .article-image-box {
   width: 100% !important;
-  max-width: 1240px !important;
+  max-width: 640px !important;
   margin-inline: auto !important;
   border-radius: 14px !important;
   overflow: hidden !important;
-  margin-block: 1.75rem 2rem !important;
+  margin-block: 1.5rem 2rem !important;
 }
 
 .article-reading-canvas .article-featured-image img,
 .article-reading-canvas .article-image-box img {
   width: 100% !important;
+  max-width: 640px !important;
   height: auto !important;
-  max-height: 520px !important;
+  max-height: 380px !important;
+  aspect-ratio: 16 / 10 !important;
   object-fit: cover !important;
   display: block !important;
 }
