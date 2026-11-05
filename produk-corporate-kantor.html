@@ -64,131 +64,133 @@
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": "https://goodiebag.web.id/produk-corporate-kantor#product",
-        "name": "Produk Goodiebag Corporate & Kantor",
-        "description": "Paket goodie bag corporate corporate eksklusif bahan denim navy kokoh dengan saku depan dan sablon logo presisi untuk onboarding karyawan baru, klinik kecantikan, dan merchandise kantor.",
-        "image": [
-          "https://goodiebag.web.id/assets/images/packages/corporate-kantor.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-5.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-7.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-10.webp"
-        ],
-        "sku": "GB-CORP-01",
-        "mpn": "GB-CORP-01",
-        "category": "goodie bag corporate Custom / Corporate Kit",
-        "brand": {
-          "@type": "Brand",
-          "name": "sakabag"
-        },
-        "manufacturer": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://goodiebag.web.id/produk-corporate-kantor#product",
+      "name": "Produk Goodiebag Corporate & Kantor",
+      "description": "Paket goodie bag corporate corporate eksklusif bahan denim navy kokoh dengan saku depan dan sablon logo presisi untuk onboarding karyawan baru, klinik kecantikan, dan merchandise kantor.",
+      "image": [
+        "https://goodiebag.web.id/assets/images/packages/corporate-kantor.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-5.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-7.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-10.webp"
+      ],
+      "sku": "GB-CORP-01",
+      "mpn": "GB-CORP-01",
+      "category": "goodie bag corporate Custom / Corporate Kit",
+      "brand": {
+        "@type": "Brand",
+        "name": "sakabag"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "@id": "https://goodiebag.web.id/#organization",
+        "name": "sakabag",
+        "url": "https://goodiebag.web.id/",
+        "image": "https://goodiebag.web.id/assets/images/og-image.webp"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://goodiebag.web.id/produk-corporate-kantor",
+        "priceCurrency": "IDR",
+        "lowPrice": "18000",
+        "highPrice": "150000",
+        "offerCount": "100",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
           "@type": "Organization",
-          "@id": "https://goodiebag.web.id/#organization",
           "name": "sakabag",
-          "url": "https://goodiebag.web.id/"
+          "image": "https://goodiebag.web.id/assets/images/og-image.webp"
         },
-        "offers": {
-          "@type": "AggregateOffer",
-          "url": "https://goodiebag.web.id/produk-corporate-kantor",
-          "priceCurrency": "IDR",
-          "lowPrice": "18000",
-          "highPrice": "150000",
-          "offerCount": "100",
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "seller": {
-            "@type": "Organization",
-            "name": "sakabag"
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 3,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "IDR"
           },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 3,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
           },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 4,
+              "maxValue": 7,
+              "unitCode": "DAY"
             },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 4,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 2,
-                "maxValue": 4,
-                "unitCode": "DAY"
-              }
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4,
+              "unitCode": "DAY"
             }
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "62",
-          "reviewCount": "62"
-        },
-        "review": {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Siti Rahma - HR Onboarding"
-          },
-          "datePublished": "2026-10-02T14:30:00+07:00",
-          "reviewBody": "Kualitas goodie bag corporate kanvas dan packaging kit kantor sangat memuaskan, bahan tebal dan jahitan sangat rapi.",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
           }
         }
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://goodiebag.web.id/produk-corporate-kantor#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://goodiebag.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Katalog Produk",
-            "item": "https://goodiebag.web.id/produk"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Paket Corporate & Kantor",
-            "item": "https://goodiebag.web.id/produk-corporate-kantor"
-          }
-        ]
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "62",
+        "reviewCount": "62"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Siti Rahma - HR Onboarding"
+        },
+        "datePublished": "2026-10-02T14:30:00+07:00",
+        "reviewBody": "Kualitas goodie bag corporate kanvas dan packaging kit kantor sangat memuaskan, bahan tebal dan jahitan sangat rapi.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://goodiebag.web.id/produk-corporate-kantor#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://goodiebag.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Katalog Produk",
+          "item": "https://goodiebag.web.id/produk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Paket Corporate & Kantor",
+          "item": "https://goodiebag.web.id/produk-corporate-kantor"
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Preload Critical Web Fonts to Guarantee 0 Layout Shift & Instant Render -->
   <link rel="preload" as="font" type="font/woff2"

@@ -64,129 +64,131 @@
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": "https://goodiebag.web.id/produk-pernikahan-acara#product",
-        "name": "Produk Goodiebag Pernikahan & Acara Keluarga",
-        "description": "Paket souvenir souvenir goodie bag dan pouch estetik untuk pernikahan, syukuran keluarga, dan hari peringatan. Dilengkapi ilustrasi custom dan tali kulit sintetis elegan.",
-        "image": [
-          "https://goodiebag.web.id/assets/images/packages/pernikahan-acara.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-3.webp"
-        ],
-        "sku": "GB-WED-05",
-        "mpn": "GB-WED-05",
-        "category": "souvenir goodie bag Custom / Souvenir Pernikahan",
-        "brand": {
-          "@type": "Brand",
-          "name": "sakabag"
-        },
-        "manufacturer": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://goodiebag.web.id/produk-pernikahan-acara#product",
+      "name": "Produk Goodiebag Pernikahan & Acara Keluarga",
+      "description": "Paket souvenir souvenir goodie bag dan pouch estetik untuk pernikahan, syukuran keluarga, dan hari peringatan. Dilengkapi ilustrasi custom dan tali kulit sintetis elegan.",
+      "image": [
+        "https://goodiebag.web.id/assets/images/packages/pernikahan-acara.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-3.webp"
+      ],
+      "sku": "GB-WED-05",
+      "mpn": "GB-WED-05",
+      "category": "souvenir goodie bag Custom / Souvenir Pernikahan",
+      "brand": {
+        "@type": "Brand",
+        "name": "sakabag"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "@id": "https://goodiebag.web.id/#organization",
+        "name": "sakabag",
+        "url": "https://goodiebag.web.id/",
+        "image": "https://goodiebag.web.id/assets/images/og-image.webp"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://goodiebag.web.id/produk-pernikahan-acara",
+        "priceCurrency": "IDR",
+        "lowPrice": "5500",
+        "highPrice": "45000",
+        "offerCount": "100",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
           "@type": "Organization",
-          "@id": "https://goodiebag.web.id/#organization",
           "name": "sakabag",
-          "url": "https://goodiebag.web.id/"
+          "image": "https://goodiebag.web.id/assets/images/og-image.webp"
         },
-        "offers": {
-          "@type": "AggregateOffer",
-          "url": "https://goodiebag.web.id/produk-pernikahan-acara",
-          "priceCurrency": "IDR",
-          "lowPrice": "5500",
-          "highPrice": "45000",
-          "offerCount": "100",
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "seller": {
-            "@type": "Organization",
-            "name": "sakabag"
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 3,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "IDR"
           },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 3,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
           },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 4,
+              "maxValue": 7,
+              "unitCode": "DAY"
             },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 4,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 2,
-                "maxValue": 4,
-                "unitCode": "DAY"
-              }
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4,
+              "unitCode": "DAY"
             }
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "67",
-          "reviewCount": "67"
-        },
-        "review": {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Rian & Mega - Souvenir Pernikahan"
-          },
-          "datePublished": "2026-09-20T16:00:00+07:00",
-          "reviewBody": "Pilihan pouch dan tas kanvas souvenir pernikahan kami sangat disukai para tamu, pengerjaan rapi dan tepat waktu.",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
           }
         }
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://goodiebag.web.id/produk-pernikahan-acara#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://goodiebag.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Katalog Produk",
-            "item": "https://goodiebag.web.id/produk"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Paket Pernikahan & Acara",
-            "item": "https://goodiebag.web.id/produk-pernikahan-acara"
-          }
-        ]
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "67",
+        "reviewCount": "67"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rian & Mega - Souvenir Pernikahan"
+        },
+        "datePublished": "2026-09-20T16:00:00+07:00",
+        "reviewBody": "Pilihan pouch dan tas kanvas souvenir pernikahan kami sangat disukai para tamu, pengerjaan rapi dan tepat waktu.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://goodiebag.web.id/produk-pernikahan-acara#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://goodiebag.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Katalog Produk",
+          "item": "https://goodiebag.web.id/produk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Paket Pernikahan & Acara",
+          "item": "https://goodiebag.web.id/produk-pernikahan-acara"
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Preload Critical Web Fonts to Guarantee 0 Layout Shift & Instant Render -->
   <link rel="preload" as="font" type="font/woff2"

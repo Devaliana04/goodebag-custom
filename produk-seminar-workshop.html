@@ -64,131 +64,133 @@
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": "https://goodiebag.web.id/produk-seminar-workshop#product",
-        "name": "Produk Goodiebag Seminar & Workshop",
-        "description": "Paket goodie bag custom seminar dan pelatihan lengkap dengan goodie bag custom kanvas broken white saku depan kancing snap, notebook A5, pulpen gel, dan lanyard ID card.",
-        "image": [
-          "https://goodiebag.web.id/assets/images/packages/seminar-workshop.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-1.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-12.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-13.webp"
-        ],
-        "sku": "GB-SEM-01",
-        "mpn": "GB-SEM-01",
-        "category": "goodie bag custom Custom / Seminar Kit",
-        "brand": {
-          "@type": "Brand",
-          "name": "sakabag"
-        },
-        "manufacturer": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://goodiebag.web.id/produk-seminar-workshop#product",
+      "name": "Produk Goodiebag Seminar & Workshop",
+      "description": "Paket goodie bag custom seminar dan pelatihan lengkap dengan goodie bag custom kanvas broken white saku depan kancing snap, notebook A5, pulpen gel, dan lanyard ID card.",
+      "image": [
+        "https://goodiebag.web.id/assets/images/packages/seminar-workshop.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-1.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-12.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-13.webp"
+      ],
+      "sku": "GB-SEM-01",
+      "mpn": "GB-SEM-01",
+      "category": "goodie bag custom Custom / Seminar Kit",
+      "brand": {
+        "@type": "Brand",
+        "name": "sakabag"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "@id": "https://goodiebag.web.id/#organization",
+        "name": "sakabag",
+        "url": "https://goodiebag.web.id/",
+        "image": "https://goodiebag.web.id/assets/images/og-image.webp"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://goodiebag.web.id/produk-seminar-workshop",
+        "priceCurrency": "IDR",
+        "lowPrice": "6500",
+        "highPrice": "35000",
+        "offerCount": "100",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
           "@type": "Organization",
-          "@id": "https://goodiebag.web.id/#organization",
           "name": "sakabag",
-          "url": "https://goodiebag.web.id/"
+          "image": "https://goodiebag.web.id/assets/images/og-image.webp"
         },
-        "offers": {
-          "@type": "AggregateOffer",
-          "url": "https://goodiebag.web.id/produk-seminar-workshop",
-          "priceCurrency": "IDR",
-          "lowPrice": "6500",
-          "highPrice": "35000",
-          "offerCount": "100",
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "seller": {
-            "@type": "Organization",
-            "name": "sakabag"
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 3,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "IDR"
           },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 3,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
           },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 4,
+              "maxValue": 7,
+              "unitCode": "DAY"
             },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 4,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 2,
-                "maxValue": 4,
-                "unitCode": "DAY"
-              }
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4,
+              "unitCode": "DAY"
             }
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "84",
-          "reviewCount": "84"
-        },
-        "review": {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Budi Santoso - Panitia Seminar Nasional"
-          },
-          "datePublished": "2026-09-15T10:00:00+07:00",
-          "reviewBody": "Pesan goodie bag custom seminar 500 pcs di Goodiebag Malang, hasil sablon rapi sekali dan selesai tepat waktu sebelum acara.",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
           }
         }
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://goodiebag.web.id/produk-seminar-workshop#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://goodiebag.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Katalog Produk",
-            "item": "https://goodiebag.web.id/produk"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Paket Seminar & Workshop",
-            "item": "https://goodiebag.web.id/produk-seminar-workshop"
-          }
-        ]
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "84",
+        "reviewCount": "84"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Budi Santoso - Panitia Seminar Nasional"
+        },
+        "datePublished": "2026-09-15T10:00:00+07:00",
+        "reviewBody": "Pesan goodie bag custom seminar 500 pcs di Goodiebag Malang, hasil sablon rapi sekali dan selesai tepat waktu sebelum acara.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://goodiebag.web.id/produk-seminar-workshop#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://goodiebag.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Katalog Produk",
+          "item": "https://goodiebag.web.id/produk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Paket Seminar & Workshop",
+          "item": "https://goodiebag.web.id/produk-seminar-workshop"
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Preload Critical Web Fonts to Guarantee 0 Layout Shift & Instant Render -->
   <link rel="preload" as="font" type="font/woff2"

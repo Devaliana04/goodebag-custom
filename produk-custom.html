@@ -65,133 +65,135 @@
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": "https://goodiebag.web.id/produk-custom#product",
-        "name": "Produk Goodiebag Custom Bebas Spesifikasi",
-        "description": "Kustomisasi goodie bag custom bebas mulai dari ukuran tas, warna bahan, model jahitan, saku depan kancing snap, resleting, hingga cetak logo.",
-        "image": [
-          "https://goodiebag.web.id/assets/images/packages/custom.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-1.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-9.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-11.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-12.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-13.webp"
-        ],
-        "sku": "GB-CUS-06",
-        "mpn": "GB-CUS-06",
-        "category": "goodie bag custom Custom / Desain Bebas",
-        "brand": {
-          "@type": "Brand",
-          "name": "sakabag"
-        },
-        "manufacturer": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://goodiebag.web.id/produk-custom#product",
+      "name": "Produk Goodiebag Custom Bebas Spesifikasi",
+      "description": "Kustomisasi goodie bag custom bebas mulai dari ukuran tas, warna bahan, model jahitan, saku depan kancing snap, resleting, hingga cetak logo.",
+      "image": [
+        "https://goodiebag.web.id/assets/images/packages/custom.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-1.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-9.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-11.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-12.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-13.webp"
+      ],
+      "sku": "GB-CUS-06",
+      "mpn": "GB-CUS-06",
+      "category": "goodie bag custom Custom / Desain Bebas",
+      "brand": {
+        "@type": "Brand",
+        "name": "sakabag"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "@id": "https://goodiebag.web.id/#organization",
+        "name": "sakabag",
+        "url": "https://goodiebag.web.id/",
+        "image": "https://goodiebag.web.id/assets/images/og-image.webp"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://goodiebag.web.id/produk-custom",
+        "priceCurrency": "IDR",
+        "lowPrice": "5000",
+        "highPrice": "150000",
+        "offerCount": "100",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
           "@type": "Organization",
-          "@id": "https://goodiebag.web.id/#organization",
           "name": "sakabag",
-          "url": "https://goodiebag.web.id/"
+          "image": "https://goodiebag.web.id/assets/images/og-image.webp"
         },
-        "offers": {
-          "@type": "AggregateOffer",
-          "url": "https://goodiebag.web.id/produk-custom",
-          "priceCurrency": "IDR",
-          "lowPrice": "5000",
-          "highPrice": "150000",
-          "offerCount": "100",
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "seller": {
-            "@type": "Organization",
-            "name": "sakabag"
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 3,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "IDR"
           },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 3,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
           },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 4,
+              "maxValue": 7,
+              "unitCode": "DAY"
             },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 4,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 2,
-                "maxValue": 4,
-                "unitCode": "DAY"
-              }
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4,
+              "unitCode": "DAY"
             }
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "46",
-          "reviewCount": "46"
-        },
-        "review": {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Fajar Wicaksono - Agency Lead"
-          },
-          "datePublished": "2026-10-12T13:45:00+07:00",
-          "reviewBody": "Custom ukuran khusus dengan kantong depan dan resleting dikerjakan dengan sangat presisi sesuai brief desain kami.",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
           }
         }
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://goodiebag.web.id/produk-custom#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://goodiebag.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Katalog Produk",
-            "item": "https://goodiebag.web.id/produk"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Produk Custom Bebas Desain",
-            "item": "https://goodiebag.web.id/produk-custom"
-          }
-        ]
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "46",
+        "reviewCount": "46"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Fajar Wicaksono - Agency Lead"
+        },
+        "datePublished": "2026-10-12T13:45:00+07:00",
+        "reviewBody": "Custom ukuran khusus dengan kantong depan dan resleting dikerjakan dengan sangat presisi sesuai brief desain kami.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://goodiebag.web.id/produk-custom#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://goodiebag.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Katalog Produk",
+          "item": "https://goodiebag.web.id/produk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Produk Custom Bebas Desain",
+          "item": "https://goodiebag.web.id/produk-custom"
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Preload Critical Web Fonts to Guarantee 0 Layout Shift & Instant Render -->
   <link rel="preload" as="font" type="font/woff2"

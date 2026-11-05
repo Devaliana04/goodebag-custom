@@ -64,130 +64,132 @@
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": "https://goodiebag.web.id/produk-event-promosi#product",
-        "name": "Produk Goodiebag Event & Promosi",
-        "description": "Paket goodie bag promosi promosi pameran expo dan brand activation dengan cetak sablon/DTF full color karakter maskot dan motif produk retail berkualitas tinggi.",
-        "image": [
-          "https://goodiebag.web.id/assets/images/packages/event-promosi.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-2.webp",
-          "https://goodiebag.web.id/assets/images/portfolio/project-6.webp"
-        ],
-        "sku": "GB-EVT-01",
-        "mpn": "GB-EVT-01",
-        "category": "goodie bag promosi Custom / Brand Event Kit",
-        "brand": {
-          "@type": "Brand",
-          "name": "sakabag"
-        },
-        "manufacturer": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://goodiebag.web.id/produk-event-promosi#product",
+      "name": "Produk Goodiebag Event & Promosi",
+      "description": "Paket goodie bag promosi promosi pameran expo dan brand activation dengan cetak sablon/DTF full color karakter maskot dan motif produk retail berkualitas tinggi.",
+      "image": [
+        "https://goodiebag.web.id/assets/images/packages/event-promosi.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-2.webp",
+        "https://goodiebag.web.id/assets/images/portfolio/project-6.webp"
+      ],
+      "sku": "GB-EVT-01",
+      "mpn": "GB-EVT-01",
+      "category": "goodie bag promosi Custom / Brand Event Kit",
+      "brand": {
+        "@type": "Brand",
+        "name": "sakabag"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "@id": "https://goodiebag.web.id/#organization",
+        "name": "sakabag",
+        "url": "https://goodiebag.web.id/",
+        "image": "https://goodiebag.web.id/assets/images/og-image.webp"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://goodiebag.web.id/produk-event-promosi",
+        "priceCurrency": "IDR",
+        "lowPrice": "4500",
+        "highPrice": "25000",
+        "offerCount": "100",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
           "@type": "Organization",
-          "@id": "https://goodiebag.web.id/#organization",
           "name": "sakabag",
-          "url": "https://goodiebag.web.id/"
+          "image": "https://goodiebag.web.id/assets/images/og-image.webp"
         },
-        "offers": {
-          "@type": "AggregateOffer",
-          "url": "https://goodiebag.web.id/produk-event-promosi",
-          "priceCurrency": "IDR",
-          "lowPrice": "4500",
-          "highPrice": "25000",
-          "offerCount": "100",
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "seller": {
-            "@type": "Organization",
-            "name": "sakabag"
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "ID",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 3,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "IDR"
           },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "ID",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 3,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "ID"
           },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "IDR"
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 4,
+              "maxValue": 7,
+              "unitCode": "DAY"
             },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "ID"
-            },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 4,
-                "maxValue": 7,
-                "unitCode": "DAY"
-              },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 2,
-                "maxValue": 4,
-                "unitCode": "DAY"
-              }
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4,
+              "unitCode": "DAY"
             }
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "58",
-          "reviewCount": "58"
-        },
-        "review": {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Dimas Pratama - Event Coordinator"
-          },
-          "datePublished": "2026-09-28T11:00:00+07:00",
-          "reviewBody": "Tas promosi spunbond untuk event pameran sangat menarik perhatian pengunjung, cetak warna logo cerah dan presisi.",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
           }
         }
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://goodiebag.web.id/produk-event-promosi#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://goodiebag.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Katalog Produk",
-            "item": "https://goodiebag.web.id/produk"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Paket Event & Promosi",
-            "item": "https://goodiebag.web.id/produk-event-promosi"
-          }
-        ]
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "58",
+        "reviewCount": "58"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Dimas Pratama - Event Coordinator"
+        },
+        "datePublished": "2026-09-28T11:00:00+07:00",
+        "reviewBody": "Tas promosi spunbond untuk event pameran sangat menarik perhatian pengunjung, cetak warna logo cerah dan presisi.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://goodiebag.web.id/produk-event-promosi#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://goodiebag.web.id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Katalog Produk",
+          "item": "https://goodiebag.web.id/produk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Paket Event & Promosi",
+          "item": "https://goodiebag.web.id/produk-event-promosi"
+        }
+      ]
+    }
+  ]
+}
   </script>
   <!-- Preload Critical Web Fonts to Guarantee 0 Layout Shift & Instant Render -->
   <link rel="preload" as="font" type="font/woff2"
