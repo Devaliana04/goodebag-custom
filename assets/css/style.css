@@ -4521,13 +4521,11 @@ body {
 
 /* ==========================================================================
    SISTEM LEBAR KONTEN PROPORSIONAL & SEIMBANG (DESAIN MODERN PREMIUM)
-   Sesuai Standar:
-   - Monitor 1920px: max-width 1280px terpusat
-   - Desktop 1366px–1440px: lebar 88%–92% terpusat
-   - Laptop: proporsional terpusat
-   - Tablet: lebar 94% dengan padding seimbang
-   - Mobile: lebar 100% dengan padding 16–20px
-   - Standar: width: min(92%, 1280px); margin-inline: auto;
+   - Monitor 1920px+: max-width 1440px terpusat
+   - Desktop 1366px–1440px: lebar 96% terpusat
+   - Laptop 1200px–1365px: proporsional terpusat
+   - Tablet: lebar 94% padding seimbang
+   - Mobile: lebar 100% padding 16–20px
    ========================================================================== */
 
 /* 1. Global Container Standar Seluruh Website */
@@ -4538,10 +4536,10 @@ body {
 .site-header .container,
 .site-footer .container,
 .breadcrumb-nav .container {
-  width: min(92%, 1280px) !important;
-  max-width: 1280px !important;
+  width: 100% !important;
+  max-width: 1440px !important;
   margin-inline: auto !important;
-  padding-inline: clamp(16px, 2vw, 24px) !important;
+  padding-inline: clamp(20px, 4vw, 60px) !important;
   box-sizing: border-box !important;
 }
 
@@ -4550,8 +4548,8 @@ body {
   .container,
   .site-header .container,
   .site-footer .container {
-    width: 1280px !important;
-    max-width: 1280px !important;
+    max-width: 1440px !important;
+    padding-inline: clamp(40px, 5vw, 80px) !important;
   }
 }
 
@@ -4560,7 +4558,8 @@ body {
   .container,
   .site-header .container,
   .site-footer .container {
-    width: min(90%, 1280px) !important;
+    max-width: 1440px !important;
+    padding-inline: clamp(24px, 3.5vw, 48px) !important;
   }
 }
 
@@ -4569,9 +4568,9 @@ body {
   .container,
   .site-header .container,
   .site-footer .container {
-    width: 94% !important;
+    width: 100% !important;
     max-width: 100% !important;
-    padding-inline: 20px !important;
+    padding-inline: 24px !important;
   }
 }
 
@@ -4582,9 +4581,10 @@ body {
   .site-footer .container {
     width: 100% !important;
     max-width: 100% !important;
-    padding-inline: clamp(16px, 4vw, 20px) !important;
+    padding-inline: 16px !important;
   }
 }
+
 
 /* 2. Halaman Daftar Artikel Blog (blog.html) — Max-Width 1200px */
 .blog-index-container,
