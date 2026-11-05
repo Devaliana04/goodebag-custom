@@ -757,12 +757,13 @@ img {
 
 .portfolio-img-wrap {
   position: relative;
-  aspect-ratio: 4/3;
-  max-height: 290px;
+  aspect-ratio: 16/10 !important;
+  max-height: 220px !important;
   width: 100%;
   overflow: hidden;
   background-color: #f7fafc;
   flex-shrink: 0;
+  border-radius: 16px 16px 0 0;
 }
 
 .portfolio-img-wrap img {
@@ -5541,4 +5542,17 @@ article.article-reading-canvas,
     padding: 1.25rem 16px !important;
     border-radius: 14px !important;
   }
+}
+/* Medium Portfolio Card Image Proportions */
+.portfolio-card .portfolio-img-wrap {
+  aspect-ratio: 16/10 !important;
+  max-height: 220px !important;
+  height: 220px !important;
+}
+
+.portfolio-card .portfolio-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
 }

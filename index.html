@@ -4229,7 +4229,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="assets/images/hero-video-poster.webp" fetchpriority="high">
-  <link href="assets/css/style.css?v=20261105_layout_v3" rel="stylesheet">
+  <link href="assets/css/style.css?v=20261105_layout_v4" rel="stylesheet">
 </head>
 
 <body>
@@ -5547,246 +5547,231 @@
     </section>
 
     
-    <!-- Mengapa Memilih Kami vs Vendor Lain (Tabel Keunggulan Kompetitif) -->
-    <section class="section-padding bg-light bg-opacity-50" aria-labelledby="comparison-heading" style="padding-block: clamp(48px, 6vw, 80px);">
-      <div class="container" style="max-width: 1080px;">
+    <!-- Mengapa Memilih Kami vs Vendor Lain (Tailwind UI Premium Comparison) -->
+    <section class="section-padding" aria-labelledby="comparison-heading" style="padding-block: clamp(56px, 7vw, 96px); background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);">
+      <div class="container" style="max-width: 1200px;">
 
         <!-- Section Header -->
-        <div class="text-center mx-auto mb-4 mb-md-5" style="max-width: 680px;">
-          <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 rounded-pill px-3 py-1 mb-2 fw-semibold" style="font-size: 0.8rem;">
+        <div class="text-center mx-auto mb-4 mb-md-5" style="max-width: 720px;">
+          <span class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill fw-bold text-amber-900 border border-amber-300 shadow-sm mb-3" style="font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; background: #fef3c7;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Keunggulan Kompetitif
           </span>
-          <h2 id="comparison-heading" class="section-title mb-2 font-serif">Mengapa Memilih <span class="text-gradient-brand">Goodiebag Custom</span> Dibanding Vendor Lain?</h2>
-          <p class="section-lead mx-auto mb-0" style="font-size: 0.95rem; color: #64748b;">Kami mengutamakan transparansi harga pabrik, fleksibilitas minimum order, dan jaminan kepuasan 100% untuk setiap kepanitiaan acara Anda.</p>
+          <h2 id="comparison-heading" class="section-title mb-3 font-serif" style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); color: #0b2942; line-height: 1.25;">
+            Mengapa Memilih <span class="text-gradient-brand">Goodiebag Custom</span> Dibanding Vendor Lain?
+          </h2>
+          <p class="section-lead mx-auto mb-0" style="font-size: 1rem; color: #64748b; line-height: 1.6;">
+            Kami mengutamakan transparansi harga pabrik tangan pertama, fleksibilitas minimum order, dan jaminan kepuasan 100% untuk setiap kepanitiaan acara Anda.
+          </p>
         </div>
 
-        <!-- DESKTOP VIEW: Tabel Perbandingan Standar Bootstrap (Rapi, Terpusat, Modern) -->
-        <div class="d-none d-lg-block card border rounded-4 shadow-sm overflow-hidden mb-4 bg-white">
-          <table class="table table-hover align-middle mb-0" style="width: 100%;">
-            <thead>
-              <tr style="border-bottom: 2px solid #e2e8f0;">
-                <th scope="col" class="py-3 px-4 bg-light text-dark fw-bold" style="width: 28%; font-size: 0.9rem;">
-                  Fitur &amp; Standar Layanan
-                </th>
-                <th scope="col" class="py-3 px-4 bg-primary text-white fw-bold" style="width: 38%; font-size: 0.95rem;">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <span>★ sakabag Malang</span>
-                    <span class="badge bg-white text-primary rounded-pill px-2.5 py-1 fw-bold" style="font-size: 0.72rem;">Pilihan Unggulan</span>
-                  </div>
-                </th>
-                <th scope="col" class="py-3 px-4 bg-light text-muted fw-bold" style="width: 34%; font-size: 0.9rem;">
-                  Vendor / Konveksi Lain
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Row 1: MOQ -->
-              <tr>
-                <td class="py-3 px-4 fw-bold text-dark" style="font-size: 0.92rem;">
-                  Minimum Order (MOQ)
-                </td>
-                <td class="py-3 px-4" style="background-color: rgba(9, 110, 167, 0.05); border-left: 2px solid #096ea7; border-right: 2px solid #096ea7;">
-                  <div class="d-flex align-items-start gap-2">
-                    <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-1 fw-bold" style="font-size: 0.8rem;">✓</span>
-                    <div>
-                      <span class="fw-bold text-dark d-block" style="font-size: 0.92rem;">Mulai 50 pcs</span>
-                      <small class="text-muted" style="font-size: 0.82rem;">Sangat fleksibel untuk event skala kecil hingga menengah</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-3 px-4 text-muted" style="font-size: 0.88rem;">
-                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-1 me-1 fw-bold" style="font-size: 0.75rem;">✕</span>
-                  Rata-rata wajib minimal 100 hingga 500 pcs
-                </td>
-              </tr>
+        <!-- TAILWIND UI PREMIUM: Side-by-Side Dual Comparison Cards -->
+        <div class="row g-4 align-items-stretch justify-content-center">
 
-              <!-- Row 2: Free Mockup -->
-              <tr>
-                <td class="py-3 px-4 fw-bold text-dark" style="font-size: 0.92rem;">
-                  Free Mockup Digital 2D
-                </td>
-                <td class="py-3 px-4" style="background-color: rgba(9, 110, 167, 0.05); border-left: 2px solid #096ea7; border-right: 2px solid #096ea7;">
-                  <div class="d-flex align-items-start gap-2">
-                    <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-1 fw-bold" style="font-size: 0.8rem;">✓</span>
-                    <div>
-                      <span class="fw-bold text-dark d-block" style="font-size: 0.92rem;">Gratis 100% &amp; Revisi Sampai Disetujui</span>
-                      <small class="text-muted" style="font-size: 0.82rem;">Visualisasi akurat sebelum masuk antrean jahit pabrik</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-3 px-4 text-muted" style="font-size: 0.88rem;">
-                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-1 me-1 fw-bold" style="font-size: 0.75rem;">✕</span>
-                  Dikenakan biaya jasa desain Rp 50.000 – Rp 150.000
-                </td>
-              </tr>
-
-              <!-- Row 3: Garansi -->
-              <tr>
-                <td class="py-3 px-4 fw-bold text-dark" style="font-size: 0.92rem;">
-                  Garansi Kualitas Cacat
-                </td>
-                <td class="py-3 px-4" style="background-color: rgba(9, 110, 167, 0.05); border-left: 2px solid #096ea7; border-right: 2px solid #096ea7;">
-                  <div class="d-flex align-items-start gap-2">
-                    <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-1 fw-bold" style="font-size: 0.8rem;">✓</span>
-                    <div>
-                      <span class="fw-bold text-dark d-block" style="font-size: 0.92rem;">Ganti Barang Baru (Garansi 100%)</span>
-                      <small class="text-muted" style="font-size: 0.82rem;">Klaim cepat apabila ada cacat jahit atau sablon tidak presisi</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-3 px-4 text-muted" style="font-size: 0.88rem;">
-                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-1 me-1 fw-bold" style="font-size: 0.75rem;">✕</span>
-                  Tidak bergaransi / lepas tanggung jawab setelah barang keluar
-                </td>
-              </tr>
-
-              <!-- Row 4: Layanan Antar -->
-              <tr>
-                <td class="py-3 px-4 fw-bold text-dark" style="font-size: 0.92rem;">
-                  Layanan Antar Area Malang
-                </td>
-                <td class="py-3 px-4" style="background-color: rgba(9, 110, 167, 0.05); border-left: 2px solid #096ea7; border-right: 2px solid #096ea7;">
-                  <div class="d-flex align-items-start gap-2">
-                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1 fw-bold" style="font-size: 0.8rem;">✓</span>
-                    <div>
-                      <span class="fw-bold text-dark d-block" style="font-size: 0.92rem;">Siap Antar ke Kantor / Kampus Malang</span>
-                      <small class="text-muted" style="font-size: 0.82rem;">Pengantaran sampel bahan fisik dan pengiriman pesanan jadi</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-3 px-4 text-muted" style="font-size: 0.88rem;">
-                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-1 me-1 fw-bold" style="font-size: 0.75rem;">✕</span>
-                  Pelanggan wajib ambil sendiri ke workshop atau bayar kurir reguler
-                </td>
-              </tr>
-
-              <!-- Row 5: Kargo -->
-              <tr>
-                <td class="py-3 px-4 fw-bold text-dark" style="font-size: 0.92rem;">
-                  Jangkauan Kargo Nasional
-                </td>
-                <td class="py-3 px-4" style="background-color: rgba(9, 110, 167, 0.05); border-left: 2px solid #096ea7; border-right: 2px solid #096ea7;">
-                  <div class="d-flex align-items-start gap-2">
-                    <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-1 fw-bold" style="font-size: 0.8rem;">✓</span>
-                    <div>
-                      <span class="fw-bold text-dark d-block" style="font-size: 0.92rem;">Kirim ke Seluruh Indonesia</span>
-                      <small class="text-muted" style="font-size: 0.82rem;">Kerjasama kargo resmi hemat partai besar: Indah, Dakota, Baraka, J&amp;T Cargo</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-3 px-4 text-muted" style="font-size: 0.88rem;">
-                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-2 py-1 me-1 fw-bold" style="font-size: 0.75rem;">✕</span>
-                  Pilihan kargo terbatas dan ongkos kirim tidak dibantu cekkan
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- MOBILE & TABLET VIEW: Card Responsif Bootstrap Bersih & Rapi -->
-        <div class="d-lg-none d-flex flex-column gap-3 mb-4">
-
-          <!-- Card 1: MOQ -->
-          <div class="card border rounded-3 shadow-sm overflow-hidden bg-white">
-            <div class="card-header bg-light py-2 px-3 border-bottom d-flex align-items-center justify-content-between">
-              <span class="fw-bold text-dark" style="font-size: 0.88rem;">Minimum Order (MOQ)</span>
-              <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-0.5" style="font-size: 0.72rem;">Ramah Event</span>
-            </div>
-            <div class="card-body p-3">
-              <div class="p-2.5 rounded-3 mb-2" style="background-color: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7; padding: 10px 12px;">
-                <div class="d-flex align-items-center gap-1 mb-1">
-                  <small class="text-primary fw-bold" style="font-size: 0.76rem;">★ sakabag Malang:</small>
+          <!-- CARD 1: SAKABAG MALANG (Winner / Hero Card) -->
+          <div class="col-12 col-lg-6">
+            <div class="h-100 d-flex flex-column bg-white position-relative overflow-hidden"
+                 style="box-shadow: 0 20px 40px -15px rgba(9, 110, 167, 0.22); border: 2px solid #096ea7 !important; border-radius: 24px !important;">
+              
+              <!-- Top Banner Header -->
+              <div class="p-4 p-md-4 text-white" style="background: linear-gradient(135deg, #0b2942 0%, #096ea7 100%);">
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <span class="d-inline-flex align-items-center gap-1.5 px-3 py-1 rounded-pill fw-bold text-white shadow-sm"
+                        style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); font-size: 0.74rem; letter-spacing: 0.04em;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    PILIHAN UTAMA &amp; REKOMENDASI
+                  </span>
+                  <span class="badge bg-white bg-opacity-20 text-white rounded-pill px-2.5 py-1" style="font-size: 0.72rem;">Workshop Resmi</span>
                 </div>
-                <div class="fw-bold text-dark" style="font-size: 0.88rem;">Mulai 50 pcs</div>
-                <small class="text-muted" style="font-size: 0.8rem;">Sangat fleksibel untuk kebutuhan acara skala kecil &amp; menengah</small>
+                <h3 class="h4 fw-bold text-white mb-1" style="font-size: 1.35rem;">sakabag Malang</h3>
+                <p class="mb-0 text-white-50 small" style="font-size: 0.86rem;">Solusi konveksi modern tangan pertama dengan garansi mutu 100%</p>
               </div>
-              <div class="px-2 py-1 text-muted small" style="font-size: 0.8rem;">
-                <span class="text-secondary fw-semibold">Konveksi Lain:</span> Minimal order tinggi 100 hingga 500 pcs
+
+              <!-- Feature List Body -->
+              <div class="p-4 p-md-4 d-flex flex-column gap-3 flex-grow-1" style="background: #ffffff;">
+
+                <!-- Feature 1: MOQ -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Minimum Order (MOQ)</span>
+                    <strong class="d-block text-dark fw-bold" style="font-size: 0.95rem; color: #0f172a;">Mulai 50 pcs</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Sangat fleksibel untuk event kecil, menengah, hingga partai besar</span>
+                  </div>
+                </div>
+
+                <!-- Feature 2: Mockup -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Digital Mockup 2D</span>
+                    <strong class="d-block text-dark fw-bold" style="font-size: 0.95rem; color: #0f172a;">Gratis 100% &amp; Revisi Sampai Disetujui</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Visualisasi tata letak sablon presisi sebelum proses jahit dimulai</span>
+                  </div>
+                </div>
+
+                <!-- Feature 3: Garansi -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Garansi Mutu &amp; Kualitas</span>
+                    <strong class="d-block text-dark fw-bold" style="font-size: 0.95rem; color: #0f172a;">Garansi 100% Ganti Baru</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Klaim cepat dan transparan apabila ditemukan cacat jahit atau sablon</span>
+                  </div>
+                </div>
+
+                <!-- Feature 4: Layanan Malang -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #f1f5f9 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Layanan Area Malang Raya</span>
+                    <strong class="d-block text-dark fw-bold" style="font-size: 0.95rem; color: #0f172a;">Antar Sampel &amp; Kirim ke Kantor / Kampus</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Layanan cek fisik bahan langsung ke lokasi dan survei workshop terbuka</span>
+                  </div>
+                </div>
+
+                <!-- Feature 5: Kargo -->
+                <div class="d-flex align-items-start gap-3" style="border-color: #f1f5f9 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Jangkauan Distribusi Kargo</span>
+                    <strong class="d-block text-dark fw-bold" style="font-size: 0.95rem; color: #0f172a;">Kirim ke Seluruh Indonesia</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Rekanan resmi kargo hemat partai besar: Indah, Dakota, Baraka, J&amp;T Cargo</span>
+                  </div>
+                </div>
+
               </div>
+
+              <!-- Card Action Button -->
+              <div class="p-4 pt-0 bg-white mt-auto">
+                <a href="https://wa.me/6282131087971?text=Halo%20sakabag%2C%20saya%20ingin%20konsultasi%20pesanan%20goodie%20bag."
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-warning-brand w-100 py-3 rounded-3 fw-bold shadow-sm d-inline-flex align-items-center justify-content-center gap-2"
+                   style="font-size: 0.95rem; border-radius: 14px !important;">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                  Konsultasi WhatsApp Sekarang &rarr;
+                </a>
+              </div>
+
             </div>
           </div>
 
-          <!-- Card 2: Free Mockup -->
-          <div class="card border rounded-3 shadow-sm overflow-hidden bg-white">
-            <div class="card-header bg-light py-2 px-3 border-bottom d-flex align-items-center justify-content-between">
-              <span class="fw-bold text-dark" style="font-size: 0.88rem;">Free Mockup Digital 2D</span>
-              <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-0.5" style="font-size: 0.72rem;">Gratis 100%</span>
-            </div>
-            <div class="card-body p-3">
-              <div class="p-2.5 rounded-3 mb-2" style="background-color: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7; padding: 10px 12px;">
-                <div class="d-flex align-items-center gap-1 mb-1">
-                  <small class="text-primary fw-bold" style="font-size: 0.76rem;">★ sakabag Malang:</small>
+          <!-- CARD 2: VENDOR KONVENSIONAL (Comparison Card) -->
+          <div class="col-12 col-lg-6">
+            <div class="h-100 d-flex flex-column border overflow-hidden"
+                 style="box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05); border: 1px solid #cbd5e1 !important; border-radius: 24px !important; background: #fafafa !important;">
+              
+              <!-- Top Header -->
+              <div class="p-4 p-md-4 border-bottom bg-white" style="border-color: #e2e8f0 !important;">
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <span class="d-inline-flex align-items-center px-3 py-1 rounded-pill fw-semibold text-secondary"
+                        style="background: #f1f5f9; font-size: 0.74rem; letter-spacing: 0.04em;">
+                    SISTEM KONVENSIONAL
+                  </span>
+                  <span class="badge bg-secondary bg-opacity-10 text-secondary rounded-pill px-2.5 py-1" style="font-size: 0.72rem;">Vendor Lain</span>
                 </div>
-                <div class="fw-bold text-dark" style="font-size: 0.88rem;">Gratis Desain &amp; Revisi Sampai Disetujui</div>
-                <small class="text-muted" style="font-size: 0.8rem;">Visualisasi layout sablon presisi sebelum proses jahit dimulai</small>
+                <h3 class="h4 fw-bold text-dark mb-1" style="font-size: 1.35rem; color: #334155 !important;">Vendor / Konveksi Lain</h3>
+                <p class="mb-0 text-muted small" style="font-size: 0.86rem;">Pola konvensional dengan banyak batasan dan biaya tambahan</p>
               </div>
-              <div class="px-2 py-1 text-muted small" style="font-size: 0.8rem;">
-                <span class="text-secondary fw-semibold">Konveksi Lain:</span> Dikenakan biaya jasa desain Rp 50.000 – Rp 150.000
+
+              <!-- Feature List Body -->
+              <div class="p-4 p-md-4 d-flex flex-column gap-3 flex-grow-1">
+
+                <!-- Feature 1: MOQ -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #e2e8f0 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #fef2f2; color: #ef4444; border: 1px solid #fecaca;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Minimum Order (MOQ)</span>
+                    <strong class="d-block text-secondary fw-semibold" style="font-size: 0.95rem;">Wajib Minimal 100 &ndash; 500 pcs</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Sulit untuk kepanitiaan acara berskala kecil atau anggaran terbatas</span>
+                  </div>
+                </div>
+
+                <!-- Feature 2: Mockup -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #e2e8f0 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #fef2f2; color: #ef4444; border: 1px solid #fecaca;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Digital Mockup 2D</span>
+                    <strong class="d-block text-secondary fw-semibold" style="font-size: 0.95rem;">Biaya Desain Rp 50.000 &ndash; Rp 150.000</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Revisi dibatasi ketat dan sering dikenakan charge tambahan</span>
+                  </div>
+                </div>
+
+                <!-- Feature 3: Garansi -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #e2e8f0 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #fef2f2; color: #ef4444; border: 1px solid #fecaca;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Garansi Mutu &amp; Kualitas</span>
+                    <strong class="d-block text-secondary fw-semibold" style="font-size: 0.95rem;">Tidak Bergaransi / Lepas Tanggung Jawab</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Barang cacat atau sablon rusak tidak diganti setelah barang keluar workshop</span>
+                  </div>
+                </div>
+
+                <!-- Feature 4: Layanan Malang -->
+                <div class="d-flex align-items-start gap-3 pb-3 border-bottom" style="border-color: #e2e8f0 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #fef2f2; color: #ef4444; border: 1px solid #fecaca;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Layanan Area Malang Raya</span>
+                    <strong class="d-block text-secondary fw-semibold" style="font-size: 0.95rem;">Wajib Ambil Sendiri / Ongkir Ekstra</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Pelanggan wajib datang ke workshop atau menanggung kurir reguler mahal</span>
+                  </div>
+                </div>
+
+                <!-- Feature 5: Kargo -->
+                <div class="d-flex align-items-start gap-3" style="border-color: #e2e8f0 !important;">
+                  <span class="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+                        style="width: 32px; height: 32px; background: #fef2f2; color: #ef4444; border: 1px solid #fecaca;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <span class="d-block text-uppercase fw-bold text-muted" style="font-size: 0.7rem; letter-spacing: 0.06em;">Jangkauan Distribusi Kargo</span>
+                    <strong class="d-block text-secondary fw-semibold" style="font-size: 0.95rem;">Pilihan Terbatas &amp; Ongkir Tidak Dibantu</strong>
+                    <span class="text-muted small" style="font-size: 0.82rem; line-height: 1.45;">Biaya pengiriman kargo sering mahal karena tidak ada rekanan resmi</span>
+                  </div>
+                </div>
+
               </div>
+
+              <!-- Note Box -->
+              <div class="p-4 pt-0 mt-auto">
+                <div class="p-3 text-center" style="background: rgba(148, 163, 184, 0.1); border: 1px dashed #cbd5e1; border-radius: 14px !important;">
+                  <span class="text-muted small fw-semibold" style="font-size: 0.8rem;">
+                    ⚠️ Rentan biaya tak terduga dan risiko reject tanpa pertanggungjawaban
+                  </span>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <!-- Card 3: Garansi -->
-          <div class="card border rounded-3 shadow-sm overflow-hidden bg-white">
-            <div class="card-header bg-light py-2 px-3 border-bottom d-flex align-items-center justify-content-between">
-              <span class="fw-bold text-dark" style="font-size: 0.88rem;">Garansi Kualitas Cacat</span>
-              <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-0.5" style="font-size: 0.72rem;">Garansi 100%</span>
-            </div>
-            <div class="card-body p-3">
-              <div class="p-2.5 rounded-3 mb-2" style="background-color: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7; padding: 10px 12px;">
-                <div class="d-flex align-items-center gap-1 mb-1">
-                  <small class="text-primary fw-bold" style="font-size: 0.76rem;">★ sakabag Malang:</small>
-                </div>
-                <div class="fw-bold text-dark" style="font-size: 0.88rem;">Ganti Barang Baru</div>
-                <small class="text-muted" style="font-size: 0.8rem;">Klaim cepat dan transparan apabila produk cacat produksi</small>
-              </div>
-              <div class="px-2 py-1 text-muted small" style="font-size: 0.8rem;">
-                <span class="text-secondary fw-semibold">Konveksi Lain:</span> Tidak bergaransi / lepas tanggung jawab setelah diterima
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Layanan Antar -->
-          <div class="card border rounded-3 shadow-sm overflow-hidden bg-white">
-            <div class="card-header bg-light py-2 px-3 border-bottom d-flex align-items-center justify-content-between">
-              <span class="fw-bold text-dark" style="font-size: 0.88rem;">Layanan Antar Area Malang</span>
-              <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-0.5" style="font-size: 0.72rem;">Prioritas Lokal</span>
-            </div>
-            <div class="card-body p-3">
-              <div class="p-2.5 rounded-3 mb-2" style="background-color: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7; padding: 10px 12px;">
-                <div class="d-flex align-items-center gap-1 mb-1">
-                  <small class="text-primary fw-bold" style="font-size: 0.76rem;">★ sakabag Malang:</small>
-                </div>
-                <div class="fw-bold text-dark" style="font-size: 0.88rem;">Siap Antar ke Kantor / Kampus Malang</div>
-                <small class="text-muted" style="font-size: 0.8rem;">Pengantaran sampel bahan fisik dan pesanan jadi langsung ke lokasi</small>
-              </div>
-              <div class="px-2 py-1 text-muted small" style="font-size: 0.8rem;">
-                <span class="text-secondary fw-semibold">Konveksi Lain:</span> Pelanggan wajib mengambil sendiri atau membayar ongkos kirim mahal
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5: Kargo -->
-          <div class="card border rounded-3 shadow-sm overflow-hidden bg-white">
-            <div class="card-header bg-light py-2 px-3 border-bottom d-flex align-items-center justify-content-between">
-              <span class="fw-bold text-dark" style="font-size: 0.88rem;">Jangkauan &amp; Ekspedisi Kargo</span>
-              <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-2 py-0.5" style="font-size: 0.72rem;">Seluruh RI</span>
-            </div>
-            <div class="card-body p-3">
-              <div class="p-2.5 rounded-3 mb-2" style="background-color: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7; padding: 10px 12px;">
-                <div class="d-flex align-items-center gap-1 mb-1">
-                  <small class="text-primary fw-bold" style="font-size: 0.76rem;">★ sakabag Malang:</small>
-                </div>
-                <div class="fw-bold text-dark" style="font-size: 0.88rem;">Rekanan Kargo Resmi Tarif Hemat</div>
-                <small class="text-muted" style="font-size: 0.8rem;">Bekerjasama dengan Indah, Dakota, J&amp;T Cargo, dan Baraka ke seluruh Indonesia</small>
-              </div>
-              <div class="px-2 py-1 text-muted small" style="font-size: 0.8rem;">
-                <span class="text-secondary fw-semibold">Konveksi Lain:</span> Pilihan kargo terbatas dan tarif ongkir tidak dibantu carikan yang termurah
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /MOBILE & TABLET VIEW -->
+        </div><!-- /row -->
 
       </div>
     </section>
