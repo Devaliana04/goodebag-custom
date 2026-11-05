@@ -385,24 +385,24 @@
     });
   }
 
-  // --- 6. CATALOG FILTER (IF PRESENT ON PAKET PAGE) ---
+  // --- 6. CATALOG FILTER (IF PRESENT ON PAKET / PRODUK PAGE) ---
   const filterButtons = document.querySelectorAll('[data-filter]');
   const packageCards = document.querySelectorAll('[data-category]');
 
   if (filterButtons.length && packageCards.length) {
     filterButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        filterButtons.forEach(b => b.classList.remove('active', 'btn-primary-brand'));
-        filterButtons.forEach(b => b.classList.add('btn-secondary-brand'));
-        this.classList.remove('btn-secondary-brand');
-        this.classList.add('active', 'btn-primary-brand');
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
 
         const filterValue = this.getAttribute('data-filter');
         packageCards.forEach(function (card) {
           if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            card.closest('.col-12').style.display = '';
+            const col = card.closest('.col-12');
+            if (col) col.style.display = '';
           } else {
-            card.closest('.col-12').style.display = 'none';
+            const col = card.closest('.col-12');
+            if (col) col.style.display = 'none';
           }
         });
       });
@@ -415,28 +415,38 @@
   if (heroVideo) {
     heroVideo.muted = true;
     heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+    heroVideo.setAttribute('playsinline', '');
+    heroVideo.setAttribute('webkit-playsinline', '');
+    heroVideo.setAttribute('autoplay', '');
+
     const playVid = function () {
       const p = heroVideo.play();
       if (p !== undefined) {
-        p.catch(function () {
-          // Autoplay policy fallback: start on any initial tap/click
-          const resumeOnTouch = function () {
-            heroVideo.play();
-            window.removeEventListener('click', resumeOnTouch);
-            window.removeEventListener('touchstart', resumeOnTouch);
-            window.removeEventListener('scroll', resumeOnTouch);
-          };
-          window.addEventListener('click', resumeOnTouch, { once: true, passive: true });
-          window.addEventListener('touchstart', resumeOnTouch, { once: true, passive: true });
-          window.addEventListener('scroll', resumeOnTouch, { once: true, passive: true });
-        });
+        p.catch(function () {});
       }
     };
     playVid();
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', playVid);
+      document.addEventListener('DOMContentLoaded', playVid, { once: true });
     }
-    window.addEventListener('load', playVid);
+    window.addEventListener('load', playVid, { once: true });
+
+    // Autoplay fallback for mobile browsers
+    const resumeOnGesture = function () {
+      if (heroVideo.paused) {
+        heroVideo.play().catch(function () {});
+      }
+    };
+    ['touchstart', 'click', 'scroll', 'pointerdown'].forEach(function (evt) {
+      window.addEventListener(evt, resumeOnGesture, { passive: true });
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && heroVideo.paused) {
+        heroVideo.play().catch(function () {});
+      }
+    });
 
     if (btnToggleVideo) {
       btnToggleVideo.addEventListener('click', function () {

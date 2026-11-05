@@ -4883,3 +4883,47 @@ body {
     background: #ffffff !important;
   }
 }
+
+/* Filter Chips Kategori Model Tas (Consistent Rounded Pills) */
+.filter-product-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 18px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  background-color: #FFFFFF !important;
+  color: #334155 !important;
+  transition: all 0.2s ease-in-out !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.filter-product-btn:hover {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+  transform: translateY(-1px) !important;
+}
+
+.filter-product-btn.active {
+  background-color: #0B2942 !important;
+  border-color: #0B2942 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(11, 41, 66, 0.22) !important;
+}
+
+/* Mobile Video Autoplay Guarantee */
+@media (max-width: 768px) {
+  .hero-video-bg {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: none !important;
+  }
+}

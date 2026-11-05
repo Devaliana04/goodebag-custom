@@ -4329,7 +4329,7 @@
       <div class="hero-video-bg-wrap">
         <img id="heroPosterImg" src="assets/images/hero-video-poster.webp?v=20261104_sakabag" alt="Suasana workshop konveksi sakabag Malang proses penjahitan dan sablon goodie bag tas seminar kit"
           class="hero-poster-img" width="1920" height="1080" fetchpriority="high" decoding="sync">
-        <video id="heroVideo" class="hero-video-bg" poster="assets/images/hero-video-poster.webp?v=20261104_sakabag" muted loop playsinline webkit-playsinline preload="none">
+        <video id="heroVideo" class="hero-video-bg" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/images/hero-video-poster.webp?v=20261104_sakabag">
           <source src="assets/videos/hero-bg.mp4?v=20261104_sakabag" type="video/mp4">
         </video>
         <div class="hero-video-overlay"></div>
@@ -5561,7 +5561,85 @@
           <p class="section-lead mx-auto">Kami mengutamakan transparansi harga pabrik, fleksibilitas minimum order, dan jaminan kepuasan 100% untuk setiap kepanitiaan acara Anda.</p>
         </div>
 
-        <div class="table-responsive shadow-soft border rounded-4 overflow-hidden mb-4">
+                <!-- Mobile Responsive Comparison Cards (Proposional, Anti-Potong di Mobile) -->
+        <div class="d-md-none d-flex flex-column gap-3 mb-4">
+          <!-- Item 1: Minimum Order -->
+          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="fw-bold text-navy font-sm">Minimum Order (MOQ)</span>
+              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Ramah</span>
+            </div>
+            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
+              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
+              <div class="font-sm fw-bold text-primary">Mulai 50 pcs <span class="fw-normal text-muted font-xs">(Sangat fleksibel untuk event menengah)</span></div>
+            </div>
+            <div class="px-2 py-1 font-xs text-muted">
+              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Rata-rata wajib minimal 100 hingga 500 pcs
+            </div>
+          </div>
+
+          <!-- Item 2: Free Mockup -->
+          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="fw-bold text-navy font-sm">Free Mockup Digital 2D</span>
+              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Gratis 100%</span>
+            </div>
+            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
+              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
+              <div class="font-sm fw-bold text-primary">Gratis Visualisasi 2D <span class="fw-normal text-muted font-xs">&amp; revisi sampai disetujui</span></div>
+            </div>
+            <div class="px-2 py-1 font-xs text-muted">
+              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Dikenakan biaya jasa desain Rp 50.000 - Rp 150.000
+            </div>
+          </div>
+
+          <!-- Item 3: Garansi Cacat -->
+          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="fw-bold text-navy font-sm">Garansi Kualitas Cacat</span>
+              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Garansi 100%</span>
+            </div>
+            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
+              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
+              <div class="font-sm fw-bold text-primary">Ganti Barang Baru <span class="fw-normal text-muted font-xs">(klaim disetujui apabila sesuai dengan syarat &amp; ketentuan)</span></div>
+            </div>
+            <div class="px-2 py-1 font-xs text-muted">
+              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Tidak bergaransi / lepas tanggung jawab setelah barang diterima
+            </div>
+          </div>
+
+          <!-- Item 4: Layanan Antar -->
+          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="fw-bold text-navy font-sm">Layanan Antar Area Malang</span>
+              <span class="badge bg-primary bg-opacity-15 text-primary font-xs">✓ Siap Antar</span>
+            </div>
+            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
+              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
+              <div class="font-sm fw-bold text-primary">Antar Sampel &amp; Kirim Pesanan <span class="fw-normal text-muted font-xs">langsung ke kantor/kampus di Malang</span></div>
+            </div>
+            <div class="px-2 py-1 font-xs text-muted">
+              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Pelanggan wajib mengambil sendiri atau bayar kurir mahal
+            </div>
+          </div>
+
+          <!-- Item 5: Jangkauan Kargo -->
+          <div class="bg-white border rounded-4 p-3.5 shadow-sm">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="fw-bold text-navy font-sm">Jangkauan &amp; Ekspedisi Kargo</span>
+              <span class="badge bg-success bg-opacity-15 text-success font-xs">✓ Seluruh Indonesia</span>
+            </div>
+            <div class="p-2.5 rounded-3 mb-2" style="background: rgba(9, 110, 167, 0.06); border-left: 3px solid #096ea7;">
+              <span class="font-xs text-muted d-block mb-0.5">★ sakabag Malang:</span>
+              <div class="font-sm fw-bold text-primary">Rekanan Kargo Resmi Hemat <span class="fw-normal text-muted font-xs">(Indah, Dakota, J&amp;T Cargo, Baraka)</span></div>
+            </div>
+            <div class="px-2 py-1 font-xs text-muted">
+              <span class="text-secondary fw-semibold">Konveksi Konvensional Lain:</span> Pilihan kargo terbatas dan ongkir tidak dibantu cek
+            </div>
+          </div>
+        </div>
+
+        <div class="d-none d-md-block table-responsive shadow-soft border rounded-4 overflow-hidden mb-4">
           <table class="table table-hover align-middle mb-0" style="min-width: 680px;">
             <thead class="bg-light border-bottom">
               <tr>
