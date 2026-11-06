@@ -1,23 +1,19 @@
-# 1. Katalog & Kategori Produk
-/produk /produk.html 200
-/produk/seminar-workshop /produk-seminar-workshop.html 200
-/produk/corporate-kantor /produk-corporate-kantor.html 200
-/produk/event-promosi /produk-event-promosi.html 200
-/produk/sekolah-komunitas /produk-sekolah-komunitas.html 200
-/produk/pernikahan-acara /produk-pernikahan-acara.html 200
-/produk/custom /produk-custom.html 200
-/goodie-bag-custom-seminar /produk/seminar-workshop 301
-/tote-bag-custom-seminar /produk/seminar-workshop 301
-/goodie-bag-seminar /produk/seminar-workshop 301
-/goodie-bag-custom-perusahaan /produk/corporate-kantor 301
-/goodie-bag-perusahaan /produk/corporate-kantor 301
-/goodie-bag-custom-event /produk/event-promosi 301
-/goodie-bag-promosi /produk/event-promosi 301
-/souvenir-goodie-bag-pernikahan /produk/pernikahan-acara 301
-/produsen-goodie-bag-custom /produk/custom 301
-/goodie-bag-custom /produk/custom 301
+# === Sakabag Netlify / Cloudflare _redirects ===
 
-# Redirect legacy paket ke produk
+# Core Pages
+/produk /produk/index.html 200
+/portofolio /portofolio/index.html 200
+/blog /blog/index.html 200
+/blog/ /blog/index.html 200
+/tentang /tentang.html 200
+/layanan /layanan.html 200
+/kontak /kontak.html 200
+/faq /faq.html 200
+/cara-pesan /cara-pesan.html 200
+/kebijakan-privasi /kebijakan-privasi.html 200
+/syarat-ketentuan /syarat-ketentuan.html 200
+
+# Legacy Paket Redirects (301)
 /paket /produk 301
 /paket/seminar-workshop /produk/seminar-workshop 301
 /paket/corporate-kantor /produk/corporate-kantor 301
@@ -25,21 +21,65 @@
 /paket/sekolah-komunitas /produk/sekolah-komunitas 301
 /paket/pernikahan-acara /produk/pernikahan-acara 301
 /paket/custom /produk/custom 301
+/paket-seminar-workshop /produk/seminar-workshop 301
+/paket-corporate-kantor /produk/corporate-kantor 301
+/paket-event-promosi /produk/event-promosi 301
+/paket-sekolah-komunitas /produk/sekolah-komunitas 301
+/paket-pernikahan-acara /produk/pernikahan-acara 301
+/paket-custom /produk/custom 301
 
-# Halaman Informasi & Legal
-/tentang /tentang.html 200
-/portofolio /portofolio.html 200
-/kontak /kontak.html 200
-/faq /faq.html 200
-/cara-pesan /cara-pesan.html 200
-/kebijakan-privasi /kebijakan-privasi.html 200
-/syarat-ketentuan /syarat-ketentuan.html 200
+# Produk Rewrites (200)
+/produk/seminar-workshop /produk/seminar-workshop.html 200
+/produk/corporate-kantor /produk/corporate-kantor.html 200
+/produk/event-promosi /produk/event-promosi.html 200
+/produk/sekolah-komunitas /produk/sekolah-komunitas.html 200
+/produk/pernikahan-acara /produk/pernikahan-acara.html 200
+/produk/custom /produk/custom.html 200
+/produk/goodie-bag-corporate-denim /produk/goodie-bag-corporate-denim.html 200
+/produk/tas-blacu-katun-souvenir /produk/tas-blacu-katun-souvenir.html 200
+/produk/tas-etnik-goni-tenun-ikat /produk/tas-etnik-goni-tenun-ikat.html 200
+/produk/tas-kedinasan-hijau-tni /produk/tas-kedinasan-hijau-tni.html 200
+/produk/tas-ransel-laptop-diklat /produk/tas-ransel-laptop-diklat.html 200
+/produk/tas-spunbond-promosi-event /produk/tas-spunbond-promosi-event.html 200
+/produk/tas-two-tone-dual-pocket /produk/tas-two-tone-dual-pocket.html 200
+/produk/totebag-kulit-sintetis /produk/totebag-kulit-sintetis.html 200
+/produk/totebag-multiwarna-tali-kulit /produk/totebag-multiwarna-tali-kulit.html 200
+/produk/totebag-seminar-kanvas /produk/totebag-seminar-kanvas.html 200
 
-# Blog Index & Folder Routing
-/blog /blog/index.html 200
-/blog/ /blog/index.html 200
+# Produk Legacy 301 Redirects
+/produk-seminar-workshop /produk/seminar-workshop 301
+/produk-corporate-kantor /produk/corporate-kantor 301
+/produk-event-promosi /produk/event-promosi 301
+/produk-sekolah-komunitas /produk/sekolah-komunitas 301
+/produk-pernikahan-acara /produk/pernikahan-acara 301
+/produk-custom /produk/custom 301
+/produk-goodie-bag-corporate-denim /produk/goodie-bag-corporate-denim 301
+/produk-tas-blacu-katun-souvenir /produk/tas-blacu-katun-souvenir 301
+/produk-tas-etnik-goni-tenun-ikat /produk/tas-etnik-goni-tenun-ikat 301
+/produk-tas-kedinasan-hijau-tni /produk/tas-kedinasan-hijau-tni 301
+/produk-tas-ransel-laptop-diklat /produk/tas-ransel-laptop-diklat 301
+/produk-tas-spunbond-promosi-event /produk/tas-spunbond-promosi-event 301
+/produk-tas-two-tone-dual-pocket /produk/tas-two-tone-dual-pocket 301
+/produk-totebag-kulit-sintetis /produk/totebag-kulit-sintetis 301
+/produk-totebag-multiwarna-tali-kulit /produk/totebag-multiwarna-tali-kulit 301
+/produk-totebag-seminar-kanvas /produk/totebag-seminar-kanvas 301
+/produk /produk 301
 
-# 11 Artikel Edukasi dalam folder /blog/
+# Blog Rewrites (200)
+/blog/goodie-bag /blog/goodie-bag.html 200
+/blog/apa-itu-goodie-bag /blog/apa-itu-goodie-bag.html 200
+/blog/perbedaan-goodie-bag-dan-tote-bag /blog/perbedaan-goodie-bag-dan-tote-bag.html 200
+/blog/jenis-goodie-bag /blog/jenis-goodie-bag.html 200
+/blog/goodie-bag-custom-vs-ready-stock /blog/goodie-bag-custom-vs-ready-stock.html 200
+/blog/cara-memilih-goodie-bag /blog/cara-memilih-goodie-bag.html 200
+/blog/kesalahan-pesan-goodie-bag /blog/kesalahan-pesan-goodie-bag.html 200
+/blog/goodie-bag-custom /blog/goodie-bag-custom.html 200
+/blog/goodie-bag-custom-logo /blog/goodie-bag-custom-logo.html 200
+/blog/desain-goodie-bag-custom /blog/desain-goodie-bag-custom.html 200
+/blog/ukuran-logo-goodie-bag /blog/ukuran-logo-goodie-bag.html 200
+/blog/cetak-goodie-bag-custom /blog/cetak-goodie-bag-custom.html 200
+/blog/file-desain-goodie-bag /blog/file-desain-goodie-bag.html 200
+/blog/warna-goodie-bag-custom /blog/warna-goodie-bag-custom.html 200
 /blog/vendor-goodiebag /blog/vendor-goodiebag.html 200
 /blog/cara-memilih-vendor-goodiebag /blog/cara-memilih-vendor-goodiebag.html 200
 /blog/jenis-bahan-goodiebag-custom /blog/jenis-bahan-goodiebag-custom.html 200
@@ -52,15 +92,25 @@
 /blog/isi-paket-seminar-kit /blog/isi-paket-seminar-kit.html 200
 /blog/cara-pesan-tas-seminar-custom /blog/cara-pesan-tas-seminar-custom.html 200
 
-# Legacy Root Redirects (301) to /blog/
+# Blog Legacy 301 Redirects
+/blog-goodie-bag /blog/goodie-bag 301
+/blog-apa-itu-goodie-bag /blog/apa-itu-goodie-bag 301
+/blog-perbedaan-goodie-bag-dan-tote-bag /blog/perbedaan-goodie-bag-dan-tote-bag 301
+/blog-jenis-goodie-bag /blog/jenis-goodie-bag 301
+/blog-goodie-bag-custom-vs-ready-stock /blog/goodie-bag-custom-vs-ready-stock 301
+/blog-cara-memilih-goodie-bag /blog/cara-memilih-goodie-bag 301
+/blog-kesalahan-pesan-goodie-bag /blog/kesalahan-pesan-goodie-bag 301
+/blog-goodie-bag-custom /blog/goodie-bag-custom 301
+/blog-goodie-bag-custom-logo /blog/goodie-bag-custom-logo 301
+/blog-desain-goodie-bag-custom /blog/desain-goodie-bag-custom 301
+/blog-ukuran-logo-goodie-bag /blog/ukuran-logo-goodie-bag 301
+/blog-cetak-goodie-bag-custom /blog/cetak-goodie-bag-custom 301
+/blog-file-desain-goodie-bag /blog/file-desain-goodie-bag 301
+/blog-warna-goodie-bag-custom /blog/warna-goodie-bag-custom 301
 /blog-vendor-goodiebag /blog/vendor-goodiebag 301
-/vendor-goodiebag /blog/vendor-goodiebag 301
 /blog-cara-memilih-vendor-goodiebag /blog/cara-memilih-vendor-goodiebag 301
-/cara-memilih-vendor-goodiebag /blog/cara-memilih-vendor-goodiebag 301
 /blog-jenis-bahan-goodiebag-custom /blog/jenis-bahan-goodiebag-custom 301
-/jenis-bahan-goodiebag-custom /blog/jenis-bahan-goodiebag-custom 301
 /blog-cara-pesan-goodiebag-custom-partai-besar /blog/cara-pesan-goodiebag-custom-partai-besar 301
-/cara-pesan-goodiebag-custom-partai-besar /blog/cara-pesan-goodiebag-custom-partai-besar 301
 /blog-panduan-goodiebag /blog/panduan-goodiebag 301
 /blog-jenis-bahan-goodiebag /blog/jenis-bahan-goodiebag 301
 /blog-ide-isi-goodiebag-seminar /blog/ide-isi-goodiebag-seminar 301
@@ -68,36 +118,4 @@
 /perbandingan-bahan-tas-seminar /blog/perbandingan-bahan-tas-seminar 301
 /isi-paket-seminar-kit /blog/isi-paket-seminar-kit 301
 /cara-pesan-tas-seminar-custom /blog/cara-pesan-tas-seminar-custom 301
-
-
-# Batch 1 Edukasi & Pilar (200 Rewrite)
-/blog/goodie-bag /blog-goodie-bag.html 200
-/blog/goodie-bag-custom /blog-goodie-bag-custom.html 200
-/blog/apa-itu-goodie-bag /blog-apa-itu-goodie-bag.html 200
-/blog/perbedaan-goodie-bag-dan-tote-bag /blog-perbedaan-goodie-bag-dan-tote-bag.html 200
-/blog/jenis-goodie-bag /blog-jenis-goodie-bag.html 200
-/blog/goodie-bag-custom-vs-ready-stock /blog-goodie-bag-custom-vs-ready-stock.html 200
-/blog/cara-memilih-goodie-bag /blog-cara-memilih-goodie-bag.html 200
-/blog/kesalahan-pesan-goodie-bag /blog-kesalahan-pesan-goodie-bag.html 200
-/blog/goodie-bag-custom-logo /blog-goodie-bag-custom-logo.html 200
-/blog/desain-goodie-bag-custom /blog-desain-goodie-bag-custom.html 200
-/blog/ukuran-logo-goodie-bag /blog-ukuran-logo-goodie-bag.html 200
-/blog/cetak-goodie-bag-custom /blog-cetak-goodie-bag-custom.html 200
-/blog/file-desain-goodie-bag /blog-file-desain-goodie-bag.html 200
-/blog/warna-goodie-bag-custom /blog-warna-goodie-bag-custom.html 200
-
-# Batch 1 Legacy Root 301 Redirects
-/blog-goodie-bag /blog/goodie-bag 301
-/blog-goodie-bag-custom /blog/goodie-bag-custom 301
-/blog-apa-itu-goodie-bag /blog/apa-itu-goodie-bag 301
-/blog-perbedaan-goodie-bag-dan-tote-bag /blog/perbedaan-goodie-bag-dan-tote-bag 301
-/blog-jenis-goodie-bag /blog/jenis-goodie-bag 301
-/blog-goodie-bag-custom-vs-ready-stock /blog/goodie-bag-custom-vs-ready-stock 301
-/blog-cara-memilih-goodie-bag /blog/cara-memilih-goodie-bag 301
-/blog-kesalahan-pesan-goodie-bag /blog/kesalahan-pesan-goodie-bag 301
-/blog-goodie-bag-custom-logo /blog/goodie-bag-custom-logo 301
-/blog-desain-goodie-bag-custom /blog/desain-goodie-bag-custom 301
-/blog-ukuran-logo-goodie-bag /blog/ukuran-logo-goodie-bag 301
-/blog-cetak-goodie-bag-custom /blog/cetak-goodie-bag-custom 301
-/blog-file-desain-goodie-bag /blog/file-desain-goodie-bag 301
-/blog-warna-goodie-bag-custom /blog/warna-goodie-bag-custom 301
+/blog /blog 301

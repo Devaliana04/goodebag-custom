@@ -50,86 +50,271 @@
     },
     {
       "source": "/paket-seminar-workshop",
-      "destination": "/produk-seminar-workshop",
+      "destination": "/produk/seminar-workshop",
       "permanent": true
     },
     {
       "source": "/paket-corporate-kantor",
-      "destination": "/produk-corporate-kantor",
+      "destination": "/produk/corporate-kantor",
       "permanent": true
     },
     {
       "source": "/paket-event-promosi",
-      "destination": "/produk-event-promosi",
+      "destination": "/produk/event-promosi",
       "permanent": true
     },
     {
       "source": "/paket-sekolah-komunitas",
-      "destination": "/produk-sekolah-komunitas",
+      "destination": "/produk/sekolah-komunitas",
       "permanent": true
     },
     {
       "source": "/paket-pernikahan-acara",
-      "destination": "/produk-pernikahan-acara",
+      "destination": "/produk/pernikahan-acara",
       "permanent": true
     },
     {
       "source": "/paket-custom",
-      "destination": "/produk-custom",
+      "destination": "/produk/custom",
       "permanent": true
     },
     {
-      "source": "/blog/panduan-goodie-bag",
+      "source": "/produk-seminar-workshop",
+      "destination": "/produk/seminar-workshop",
+      "permanent": true
+    },
+    {
+      "source": "/produk-corporate-kantor",
+      "destination": "/produk/corporate-kantor",
+      "permanent": true
+    },
+    {
+      "source": "/produk-event-promosi",
+      "destination": "/produk/event-promosi",
+      "permanent": true
+    },
+    {
+      "source": "/produk-sekolah-komunitas",
+      "destination": "/produk/sekolah-komunitas",
+      "permanent": true
+    },
+    {
+      "source": "/produk-pernikahan-acara",
+      "destination": "/produk/pernikahan-acara",
+      "permanent": true
+    },
+    {
+      "source": "/produk-custom",
+      "destination": "/produk/custom",
+      "permanent": true
+    },
+    {
+      "source": "/produk-goodie-bag-corporate-denim",
+      "destination": "/produk/goodie-bag-corporate-denim",
+      "permanent": true
+    },
+    {
+      "source": "/produk-tas-blacu-katun-souvenir",
+      "destination": "/produk/tas-blacu-katun-souvenir",
+      "permanent": true
+    },
+    {
+      "source": "/produk-tas-etnik-goni-tenun-ikat",
+      "destination": "/produk/tas-etnik-goni-tenun-ikat",
+      "permanent": true
+    },
+    {
+      "source": "/produk-tas-kedinasan-hijau-tni",
+      "destination": "/produk/tas-kedinasan-hijau-tni",
+      "permanent": true
+    },
+    {
+      "source": "/produk-tas-ransel-laptop-diklat",
+      "destination": "/produk/tas-ransel-laptop-diklat",
+      "permanent": true
+    },
+    {
+      "source": "/produk-tas-spunbond-promosi-event",
+      "destination": "/produk/tas-spunbond-promosi-event",
+      "permanent": true
+    },
+    {
+      "source": "/produk-tas-two-tone-dual-pocket",
+      "destination": "/produk/tas-two-tone-dual-pocket",
+      "permanent": true
+    },
+    {
+      "source": "/produk-totebag-kulit-sintetis",
+      "destination": "/produk/totebag-kulit-sintetis",
+      "permanent": true
+    },
+    {
+      "source": "/produk-totebag-multiwarna-tali-kulit",
+      "destination": "/produk/totebag-multiwarna-tali-kulit",
+      "permanent": true
+    },
+    {
+      "source": "/produk-totebag-seminar-kanvas",
+      "destination": "/produk/totebag-seminar-kanvas",
+      "permanent": true
+    },
+    {
+      "source": "/produk",
+      "destination": "/produk",
+      "permanent": true
+    },
+    {
+      "source": "/blog-goodie-bag",
+      "destination": "/blog/goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-apa-itu-goodie-bag",
+      "destination": "/blog/apa-itu-goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-perbedaan-goodie-bag-dan-tote-bag",
+      "destination": "/blog/perbedaan-goodie-bag-dan-tote-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-jenis-goodie-bag",
+      "destination": "/blog/jenis-goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-goodie-bag-custom-vs-ready-stock",
+      "destination": "/blog/goodie-bag-custom-vs-ready-stock",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cara-memilih-goodie-bag",
+      "destination": "/blog/cara-memilih-goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-kesalahan-pesan-goodie-bag",
+      "destination": "/blog/kesalahan-pesan-goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-goodie-bag-custom",
+      "destination": "/blog/goodie-bag-custom",
+      "permanent": true
+    },
+    {
+      "source": "/blog-goodie-bag-custom-logo",
+      "destination": "/blog/goodie-bag-custom-logo",
+      "permanent": true
+    },
+    {
+      "source": "/blog-desain-goodie-bag-custom",
+      "destination": "/blog/desain-goodie-bag-custom",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ukuran-logo-goodie-bag",
+      "destination": "/blog/ukuran-logo-goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cetak-goodie-bag-custom",
+      "destination": "/blog/cetak-goodie-bag-custom",
+      "permanent": true
+    },
+    {
+      "source": "/blog-file-desain-goodie-bag",
+      "destination": "/blog/file-desain-goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-warna-goodie-bag-custom",
+      "destination": "/blog/warna-goodie-bag-custom",
+      "permanent": true
+    },
+    {
+      "source": "/blog-vendor-goodiebag",
+      "destination": "/blog/vendor-goodiebag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cara-memilih-vendor-goodiebag",
+      "destination": "/blog/cara-memilih-vendor-goodiebag",
+      "permanent": true
+    },
+    {
+      "source": "/blog-jenis-bahan-goodiebag-custom",
+      "destination": "/blog/jenis-bahan-goodiebag-custom",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cara-pesan-goodiebag-custom-partai-besar",
+      "destination": "/blog/cara-pesan-goodiebag-custom-partai-besar",
+      "permanent": true
+    },
+    {
+      "source": "/blog-panduan-goodiebag",
       "destination": "/blog/panduan-goodiebag",
       "permanent": true
     },
     {
-      "source": "/blog/jenis-bahan-goodie-bag",
+      "source": "/blog-jenis-bahan-goodiebag",
       "destination": "/blog/jenis-bahan-goodiebag",
       "permanent": true
     },
     {
-      "source": "/blog/ide-isi-goodie-bag-seminar",
+      "source": "/blog-ide-isi-goodiebag-seminar",
       "destination": "/blog/ide-isi-goodiebag-seminar",
+      "permanent": true
+    },
+    {
+      "source": "/panduan-tas-seminar-kit",
+      "destination": "/blog/panduan-tas-seminar-kit",
+      "permanent": true
+    },
+    {
+      "source": "/perbandingan-bahan-tas-seminar",
+      "destination": "/blog/perbandingan-bahan-tas-seminar",
+      "permanent": true
+    },
+    {
+      "source": "/isi-paket-seminar-kit",
+      "destination": "/blog/isi-paket-seminar-kit",
+      "permanent": true
+    },
+    {
+      "source": "/cara-pesan-tas-seminar-custom",
+      "destination": "/blog/cara-pesan-tas-seminar-custom",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/portofolio.html",
+      "destination": "/portofolio",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/produk",
-      "destination": "/produk.html"
-    },
-    {
-      "source": "/produk/seminar-workshop",
-      "destination": "/produk-seminar-workshop.html"
-    },
-    {
-      "source": "/produk/corporate-kantor",
-      "destination": "/produk-corporate-kantor.html"
-    },
-    {
-      "source": "/produk/event-promosi",
-      "destination": "/produk-event-promosi.html"
-    },
-    {
-      "source": "/produk/sekolah-komunitas",
-      "destination": "/produk-sekolah-komunitas.html"
-    },
-    {
-      "source": "/produk/pernikahan-acara",
-      "destination": "/produk-pernikahan-acara.html"
-    },
-    {
-      "source": "/produk/custom",
-      "destination": "/produk-custom.html"
-    },
-    {
       "source": "/tentang",
       "destination": "/tentang.html"
     },
     {
+      "source": "/layanan",
+      "destination": "/layanan.html"
+    },
+    {
       "source": "/portofolio",
-      "destination": "/portofolio.html"
+      "destination": "/portofolio/index.html"
+    },
+    {
+      "source": "/portofolio/",
+      "destination": "/portofolio/index.html"
     },
     {
       "source": "/kontak",
@@ -152,12 +337,140 @@
       "destination": "/syarat-ketentuan.html"
     },
     {
+      "source": "/produk",
+      "destination": "/produk/index.html"
+    },
+    {
+      "source": "/produk/",
+      "destination": "/produk/index.html"
+    },
+    {
       "source": "/blog",
       "destination": "/blog/index.html"
     },
     {
       "source": "/blog/",
       "destination": "/blog/index.html"
+    },
+    {
+      "source": "/produk/seminar-workshop",
+      "destination": "/produk/seminar-workshop.html"
+    },
+    {
+      "source": "/produk/corporate-kantor",
+      "destination": "/produk/corporate-kantor.html"
+    },
+    {
+      "source": "/produk/event-promosi",
+      "destination": "/produk/event-promosi.html"
+    },
+    {
+      "source": "/produk/sekolah-komunitas",
+      "destination": "/produk/sekolah-komunitas.html"
+    },
+    {
+      "source": "/produk/pernikahan-acara",
+      "destination": "/produk/pernikahan-acara.html"
+    },
+    {
+      "source": "/produk/custom",
+      "destination": "/produk/custom.html"
+    },
+    {
+      "source": "/produk/goodie-bag-corporate-denim",
+      "destination": "/produk/goodie-bag-corporate-denim.html"
+    },
+    {
+      "source": "/produk/tas-blacu-katun-souvenir",
+      "destination": "/produk/tas-blacu-katun-souvenir.html"
+    },
+    {
+      "source": "/produk/tas-etnik-goni-tenun-ikat",
+      "destination": "/produk/tas-etnik-goni-tenun-ikat.html"
+    },
+    {
+      "source": "/produk/tas-kedinasan-hijau-tni",
+      "destination": "/produk/tas-kedinasan-hijau-tni.html"
+    },
+    {
+      "source": "/produk/tas-ransel-laptop-diklat",
+      "destination": "/produk/tas-ransel-laptop-diklat.html"
+    },
+    {
+      "source": "/produk/tas-spunbond-promosi-event",
+      "destination": "/produk/tas-spunbond-promosi-event.html"
+    },
+    {
+      "source": "/produk/tas-two-tone-dual-pocket",
+      "destination": "/produk/tas-two-tone-dual-pocket.html"
+    },
+    {
+      "source": "/produk/totebag-kulit-sintetis",
+      "destination": "/produk/totebag-kulit-sintetis.html"
+    },
+    {
+      "source": "/produk/totebag-multiwarna-tali-kulit",
+      "destination": "/produk/totebag-multiwarna-tali-kulit.html"
+    },
+    {
+      "source": "/produk/totebag-seminar-kanvas",
+      "destination": "/produk/totebag-seminar-kanvas.html"
+    },
+    {
+      "source": "/blog/goodie-bag",
+      "destination": "/blog/goodie-bag.html"
+    },
+    {
+      "source": "/blog/apa-itu-goodie-bag",
+      "destination": "/blog/apa-itu-goodie-bag.html"
+    },
+    {
+      "source": "/blog/perbedaan-goodie-bag-dan-tote-bag",
+      "destination": "/blog/perbedaan-goodie-bag-dan-tote-bag.html"
+    },
+    {
+      "source": "/blog/jenis-goodie-bag",
+      "destination": "/blog/jenis-goodie-bag.html"
+    },
+    {
+      "source": "/blog/goodie-bag-custom-vs-ready-stock",
+      "destination": "/blog/goodie-bag-custom-vs-ready-stock.html"
+    },
+    {
+      "source": "/blog/cara-memilih-goodie-bag",
+      "destination": "/blog/cara-memilih-goodie-bag.html"
+    },
+    {
+      "source": "/blog/kesalahan-pesan-goodie-bag",
+      "destination": "/blog/kesalahan-pesan-goodie-bag.html"
+    },
+    {
+      "source": "/blog/goodie-bag-custom",
+      "destination": "/blog/goodie-bag-custom.html"
+    },
+    {
+      "source": "/blog/goodie-bag-custom-logo",
+      "destination": "/blog/goodie-bag-custom-logo.html"
+    },
+    {
+      "source": "/blog/desain-goodie-bag-custom",
+      "destination": "/blog/desain-goodie-bag-custom.html"
+    },
+    {
+      "source": "/blog/ukuran-logo-goodie-bag",
+      "destination": "/blog/ukuran-logo-goodie-bag.html"
+    },
+    {
+      "source": "/blog/cetak-goodie-bag-custom",
+      "destination": "/blog/cetak-goodie-bag-custom.html"
+    },
+    {
+      "source": "/blog/file-desain-goodie-bag",
+      "destination": "/blog/file-desain-goodie-bag.html"
+    },
+    {
+      "source": "/blog/warna-goodie-bag-custom",
+      "destination": "/blog/warna-goodie-bag-custom.html"
     },
     {
       "source": "/blog/vendor-goodiebag",
