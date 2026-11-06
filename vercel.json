@@ -515,6 +515,34 @@
     {
       "source": "/blog/cara-pesan-tas-seminar-custom",
       "destination": "/blog/cara-pesan-tas-seminar-custom.html"
+    },
+    {
+      "source": "/blog/bahan-goodie-bag",
+      "destination": "/blog/bahan-goodie-bag.html"
+    },
+    {
+      "source": "/blog/goodie-bag-spunbond",
+      "destination": "/blog/goodie-bag-spunbond.html"
+    },
+    {
+      "source": "/blog/goodie-bag-blacu",
+      "destination": "/blog/goodie-bag-blacu.html"
+    },
+    {
+      "source": "/blog/goodie-bag-kanvas",
+      "destination": "/blog/goodie-bag-kanvas.html"
+    },
+    {
+      "source": "/blog/spunbond-vs-blacu",
+      "destination": "/blog/spunbond-vs-blacu.html"
+    },
+    {
+      "source": "/blog/gramasi-goodie-bag",
+      "destination": "/blog/gramasi-goodie-bag.html"
+    },
+    {
+      "source": "/blog/jahitan-goodie-bag",
+      "destination": "/blog/jahitan-goodie-bag.html"
     }
   ]
 }
