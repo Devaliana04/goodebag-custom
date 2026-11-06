@@ -1,10 +1,10 @@
 # === Sakabag Netlify / Cloudflare _redirects ===
 
 # Core Pages
-/produk /produk/index.html 200
-/portofolio /portofolio/index.html 200
-/blog /blog/index.html 200
-/blog/ /blog/index.html 200
+/produk /produk/produk.html 200
+/portofolio /portofolio/portofolio.html 200
+/blog /blog/blog.html 200
+/blog/ /blog/blog.html 200
 /tentang /tentang.html 200
 /layanan /layanan.html 200
 /kontak /kontak.html 200

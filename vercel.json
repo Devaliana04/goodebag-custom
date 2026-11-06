@@ -310,11 +310,11 @@
     },
     {
       "source": "/portofolio",
-      "destination": "/portofolio/index.html"
+      "destination": "/portofolio/portofolio.html"
     },
     {
       "source": "/portofolio/",
-      "destination": "/portofolio/index.html"
+      "destination": "/portofolio/portofolio.html"
     },
     {
       "source": "/kontak",
@@ -338,19 +338,19 @@
     },
     {
       "source": "/produk",
-      "destination": "/produk/index.html"
+      "destination": "/produk/produk.html"
     },
     {
       "source": "/produk/",
-      "destination": "/produk/index.html"
+      "destination": "/produk/produk.html"
     },
     {
       "source": "/blog",
-      "destination": "/blog/index.html"
+      "destination": "/blog/blog.html"
     },
     {
       "source": "/blog/",
-      "destination": "/blog/index.html"
+      "destination": "/blog/blog.html"
     },
     {
       "source": "/produk/seminar-workshop",
