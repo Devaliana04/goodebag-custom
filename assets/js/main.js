@@ -9,18 +9,6 @@
 
   const WA_PHONE = '6282131087971';
 
-  // Auto clean /index.html in address bar to /
-  if (typeof window !== 'undefined' && window.location) {
-    var p = window.location.pathname;
-    if (p.endsWith('/index.html') || p === '/index.html') {
-      var clean = p.replace(/\/index\.html$/, '/') || '/';
-      try {
-        window.history.replaceState(null, '', clean + window.location.search + window.location.hash);
-      } catch (e) {}
-    }
-  }
-
-
   // --- 1. CORE UTILS ---
 
   // --- 2. FLOATING SCROLL BUTTONS ("BATOM NAIK TURUN") ---
