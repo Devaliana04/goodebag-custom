@@ -9,41 +9,7 @@
 
   const WA_PHONE = '6282131087971';
 
-  // --- 1. CLEAN URL NORMALIZER (Mirrors https://goodiebag.web.id in browser) ---
-  // Automatically masks .html and /index.html in the address bar for pristine URLs
-  function normalizeCleanUrl() {
-    try {
-      if (window.location.protocol === 'file:') return;
-      const currentPath = window.location.pathname;
-      let cleanPath = currentPath;
-      if (cleanPath.endsWith('/index.html') || cleanPath === '/index.html') {
-        cleanPath = cleanPath.replace(/\/index\.html$/, '/') || '/';
-      } else if (cleanPath.endsWith('.html')) {
-        cleanPath = cleanPath.replace(/\.html$/, '');
-      }
-      if (cleanPath !== currentPath) {
-        window.history.replaceState({ originalPath: currentPath }, document.title, cleanPath + window.location.search + window.location.hash);
-      }
-    } catch (e) {
-      // Safe fallback
-    }
-  }
-  normalizeCleanUrl();
-
-  // Safely restore .html on beforeunload / pagehide so Live Server reload (F5) never 404s
-  function restoreActualPathForReload() {
-    try {
-      if (window.location.protocol === 'file:') return;
-      const path = window.location.pathname;
-      if (path !== '/' && !path.endsWith('.html') && !path.endsWith('/')) {
-        window.history.replaceState(null, '', path + '.html' + window.location.search + window.location.hash);
-      } else if (path === '/') {
-        window.history.replaceState(null, '', '/index.html' + window.location.search + window.location.hash);
-      }
-    } catch (e) {}
-  }
-  window.addEventListener('beforeunload', restoreActualPathForReload);
-  window.addEventListener('pagehide', restoreActualPathForReload);
+  // --- 1. CORE UTILS ---
 
   // --- 2. FLOATING SCROLL BUTTONS ("BATOM NAIK TURUN") ---
   const btnScrollTop = document.getElementById('btnScrollTop');
