@@ -68,3 +68,36 @@
 /perbandingan-bahan-tas-seminar /blog/perbandingan-bahan-tas-seminar 301
 /isi-paket-seminar-kit /blog/isi-paket-seminar-kit 301
 /cara-pesan-tas-seminar-custom /blog/cara-pesan-tas-seminar-custom 301
+
+
+# Batch 1 Edukasi & Pilar (200 Rewrite)
+/blog/goodie-bag /blog-goodie-bag.html 200
+/blog/goodie-bag-custom /blog-goodie-bag-custom.html 200
+/blog/apa-itu-goodie-bag /blog-apa-itu-goodie-bag.html 200
+/blog/perbedaan-goodie-bag-dan-tote-bag /blog-perbedaan-goodie-bag-dan-tote-bag.html 200
+/blog/jenis-goodie-bag /blog-jenis-goodie-bag.html 200
+/blog/goodie-bag-custom-vs-ready-stock /blog-goodie-bag-custom-vs-ready-stock.html 200
+/blog/cara-memilih-goodie-bag /blog-cara-memilih-goodie-bag.html 200
+/blog/kesalahan-pesan-goodie-bag /blog-kesalahan-pesan-goodie-bag.html 200
+/blog/goodie-bag-custom-logo /blog-goodie-bag-custom-logo.html 200
+/blog/desain-goodie-bag-custom /blog-desain-goodie-bag-custom.html 200
+/blog/ukuran-logo-goodie-bag /blog-ukuran-logo-goodie-bag.html 200
+/blog/cetak-goodie-bag-custom /blog-cetak-goodie-bag-custom.html 200
+/blog/file-desain-goodie-bag /blog-file-desain-goodie-bag.html 200
+/blog/warna-goodie-bag-custom /blog-warna-goodie-bag-custom.html 200
+
+# Batch 1 Legacy Root 301 Redirects
+/blog-goodie-bag /blog/goodie-bag 301
+/blog-goodie-bag-custom /blog/goodie-bag-custom 301
+/blog-apa-itu-goodie-bag /blog/apa-itu-goodie-bag 301
+/blog-perbedaan-goodie-bag-dan-tote-bag /blog/perbedaan-goodie-bag-dan-tote-bag 301
+/blog-jenis-goodie-bag /blog/jenis-goodie-bag 301
+/blog-goodie-bag-custom-vs-ready-stock /blog/goodie-bag-custom-vs-ready-stock 301
+/blog-cara-memilih-goodie-bag /blog/cara-memilih-goodie-bag 301
+/blog-kesalahan-pesan-goodie-bag /blog/kesalahan-pesan-goodie-bag 301
+/blog-goodie-bag-custom-logo /blog/goodie-bag-custom-logo 301
+/blog-desain-goodie-bag-custom /blog/desain-goodie-bag-custom 301
+/blog-ukuran-logo-goodie-bag /blog/ukuran-logo-goodie-bag 301
+/blog-cetak-goodie-bag-custom /blog/cetak-goodie-bag-custom 301
+/blog-file-desain-goodie-bag /blog/file-desain-goodie-bag 301
+/blog-warna-goodie-bag-custom /blog/warna-goodie-bag-custom 301
