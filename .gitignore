@@ -7,5 +7,6 @@ node_modules/
 !ai-catalog.json
 !package.json
 !package-lock.json
+!.vscode/settings.json
 scratch/
 .system_generated/
