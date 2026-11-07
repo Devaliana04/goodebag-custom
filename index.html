@@ -2391,12 +2391,133 @@
       letter-spacing: -0.03em
     }
 
-    .milestone-label {
+        .milestone-label {
       font-size: 0.875rem;
       color: var(--color-muted);
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .stats-section {
+      padding: clamp(48px, 6vw, 80px) 0;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .stats-header h2,
+    .stats-header .section-title {
+      font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+      font-weight: 700;
+      color: var(--color-navy, #0F172A);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .stats-header p,
+    .stats-header .section-lead {
+      color: #64748B;
+      margin-bottom: 36px;
+      font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+      max-width: 650px;
+      margin-inline: auto;
+    }
+
+    .stats-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #f7f9fc;
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e6edf5;
+    }
+
+    .stat-item {
+      padding: 36px 20px;
+      border-right: 1px solid #e6edf5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    .stat-item:hover {
+      background-color: #ffffff;
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-item .milestone-number {
+      font-size: clamp(2rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      color: var(--color-primary, #D97706);
+      line-height: 1.1;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-item .milestone-label {
+      color: #64748B;
+      font-size: clamp(0.85rem, 1vw, 0.95rem);
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 0;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    @media (max-width: 768px) {
+      .stats-section {
+        padding: 36px 15px;
+      }
+
+      .stats-header h2,
+      .stats-header .section-title {
+        font-size: 1.35rem;
+        margin-bottom: 6px;
+      }
+
+      .stats-header p,
+      .stats-header .section-lead {
+        font-size: 0.85rem;
+        margin-bottom: 24px;
+      }
+
+      .stats-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 12px;
+      }
+
+      .stat-item {
+        padding: 22px 10px;
+        border-right: 1px solid #e6edf5;
+        border-bottom: 1px solid #e6edf5;
+      }
+
+      .stat-item:nth-child(2n) {
+        border-right: none;
+      }
+
+      .stat-item:nth-child(3),
+      .stat-item:nth-child(4) {
+        border-bottom: none;
+      }
+
+      .stat-item .milestone-number {
+        font-size: 1.75rem;
+        margin-bottom: 4px;
+      }
+
+      .stat-item .milestone-label {
+        font-size: 0.8rem;
+      }
     }
 
     .hero-section {
@@ -4665,34 +4786,34 @@
       </div>
     </div>
 
-    <!-- Howel &amp; Co Inspired Trust Stats Bar -->
-    <section class="py-4 border-bottom bg-white" aria-labelledby="stats-heading">
+    <!-- Stats Section - Dipercaya Klien di Seluruh Indonesia (Mirrored from Saka Souvenir) -->
+    <section class="stats-section py-5 bg-white" aria-labelledby="stats-heading">
       <div class="container">
-        <h2 id="stats-heading" class="visually-hidden">Pencapaian dan Statistik Mutu Goodiebag Custom</h2>
-        <div class="row text-center g-3">
-          <div class="col-6 col-md-3">
-            <div class="milestone-item">
-              <div class="milestone-number" data-target="6000" data-suffix="+">6.000+</div>
-              <div class="milestone-label">Pesanan Selesai</div>
-            </div>
+        <div class="stats-header text-center mb-4 mb-lg-5">
+          <h2 id="stats-heading" class="section-title fw-bold text-navy mb-2">
+            Dipercaya oleh Klien di Seluruh Indonesia
+          </h2>
+          <p class="section-lead text-muted mx-auto mb-0" style="max-width: 650px;">
+            Kami menjaga kualitas, kepercayaan, dan profesionalisme dalam setiap proyek.
+          </p>
+        </div>
+
+        <div class="stats-wrapper">
+          <div class="stat-item milestone-item">
+            <div class="milestone-number" data-target="1500" data-suffix="+">1500+</div>
+            <p class="milestone-label mb-0">Produk Terkirim</p>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="milestone-item">
-              <div class="milestone-number" data-target="100" data-suffix="%">100%</div>
-              <div class="milestone-label">Pengecekan Mutu (QC)</div>
-            </div>
+          <div class="stat-item milestone-item">
+            <div class="milestone-number" data-target="350" data-suffix="+">350+</div>
+            <p class="milestone-label mb-0">Varian Produk</p>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="milestone-item">
-              <div class="milestone-number" data-target="34" data-suffix="">34</div>
-              <div class="milestone-label">Provinsi Terjangkau</div>
-            </div>
+          <div class="stat-item milestone-item">
+            <div class="milestone-number" data-target="750" data-suffix="+">750+</div>
+            <p class="milestone-label mb-0">Loyal Customer</p>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="milestone-item border-end-0">
-              <div class="milestone-number" data-target="500" data-suffix="+">500+</div>
-              <div class="milestone-label">Mitra &amp; Instansi</div>
-            </div>
+          <div class="stat-item milestone-item">
+            <div class="milestone-number" data-target="70" data-suffix="+">70+</div>
+            <p class="milestone-label mb-0">Mitra Perusahaan</p>
           </div>
         </div>
       </div>
