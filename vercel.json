@@ -543,6 +543,62 @@
     {
       "source": "/blog/jahitan-goodie-bag",
       "destination": "/blog/jahitan-goodie-bag.html"
+    },
+    {
+      "source": "/blog/goodie-bag-seminar-pelatihan",
+      "destination": "/blog/goodie-bag-seminar-pelatihan.html"
+    },
+    {
+      "source": "/blog/ide-goodie-bag-seminar",
+      "destination": "/blog/ide-goodie-bag-seminar.html"
+    },
+    {
+      "source": "/blog/ukuran-goodie-bag-a4",
+      "destination": "/blog/ukuran-goodie-bag-a4.html"
+    },
+    {
+      "source": "/blog/isi-goodie-bag-pelatihan",
+      "destination": "/blog/isi-goodie-bag-pelatihan.html"
+    },
+    {
+      "source": "/blog/goodie-bag-workshop",
+      "destination": "/blog/goodie-bag-workshop.html"
+    },
+    {
+      "source": "/blog/checklist-goodie-bag-seminar",
+      "destination": "/blog/checklist-goodie-bag-seminar.html"
+    },
+    {
+      "source": "/blog/goodie-bag-vs-seminar-kit",
+      "destination": "/blog/goodie-bag-vs-seminar-kit.html"
+    },
+    {
+      "source": "/blog/goodie-bag-kantor",
+      "destination": "/blog/goodie-bag-kantor.html"
+    },
+    {
+      "source": "/blog/goodie-bag-gathering-kantor",
+      "destination": "/blog/goodie-bag-gathering-kantor.html"
+    },
+    {
+      "source": "/blog/goodie-bag-corporate",
+      "destination": "/blog/goodie-bag-corporate.html"
+    },
+    {
+      "source": "/blog/goodie-bag-onboarding",
+      "destination": "/blog/goodie-bag-onboarding.html"
+    },
+    {
+      "source": "/blog/goodie-bag-rapat-kantor",
+      "destination": "/blog/goodie-bag-rapat-kantor.html"
+    },
+    {
+      "source": "/blog/goodie-bag-instansi",
+      "destination": "/blog/goodie-bag-instansi.html"
+    },
+    {
+      "source": "/blog/pengadaan-goodie-bag-kantor",
+      "destination": "/blog/pengadaan-goodie-bag-kantor.html"
     }
   ]
 }
