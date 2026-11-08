@@ -289,57 +289,12 @@
       "permanent": true
     },
     {
-      "source": "/portofolio/portofolio",
-      "destination": "/portofolio",
-      "permanent": true
-    },
-    {
-      "source": "/portofolio/portofolio.html",
-      "destination": "/portofolio",
-      "permanent": true
-    },
-    {
       "source": "/produk.html",
       "destination": "/produk",
       "permanent": true
     },
     {
-      "source": "/produk/produk",
-      "destination": "/produk",
-      "permanent": true
-    },
-    {
-      "source": "/produk/produk.html",
-      "destination": "/produk",
-      "permanent": true
-    },
-    {
       "source": "/blog.html",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/blog/blog",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/blog/blog.html",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/portofolio/index.html",
-      "destination": "/portofolio",
-      "permanent": true
-    },
-    {
-      "source": "/produk/index.html",
-      "destination": "/produk",
-      "permanent": true
-    },
-    {
-      "source": "/blog/index.html",
       "destination": "/blog",
       "permanent": true
     }
@@ -355,11 +310,11 @@
     },
     {
       "source": "/portofolio",
-      "destination": "/portofolio/index.html"
+      "destination": "/portofolio/portofolio.html"
     },
     {
       "source": "/portofolio/",
-      "destination": "/portofolio/index.html"
+      "destination": "/portofolio/portofolio.html"
     },
     {
       "source": "/kontak",
@@ -383,19 +338,19 @@
     },
     {
       "source": "/produk",
-      "destination": "/produk/index.html"
+      "destination": "/produk/produk.html"
     },
     {
       "source": "/produk/",
-      "destination": "/produk/index.html"
+      "destination": "/produk/produk.html"
     },
     {
       "source": "/blog",
-      "destination": "/blog/index.html"
+      "destination": "/blog/blog.html"
     },
     {
       "source": "/blog/",
-      "destination": "/blog/index.html"
+      "destination": "/blog/blog.html"
     },
     {
       "source": "/produk/seminar-workshop",
