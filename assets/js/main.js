@@ -9,6 +9,31 @@
 
   const WA_PHONE = '6282131087971';
 
+  // Redirect local preview (numbers 127.0.0.1 or localhost) to official goodiebag domain
+  if (typeof window !== 'undefined' && window.location) {
+    var host = window.location.hostname;
+    var proto = window.location.protocol;
+    if (host === '127.0.0.1' || host === 'localhost' || host === '0.0.0.0' || proto === 'file:') {
+      var targetPath = '/';
+      if (proto !== 'file:') {
+        var rawPath = window.location.pathname;
+        if (rawPath === '/' || rawPath.endsWith('/index.html') || rawPath === '/index.html') {
+          targetPath = rawPath.replace(/\/index\.html$/, '/') || '/';
+        } else if (rawPath.endsWith('.html')) {
+          targetPath = rawPath.replace(/\.html$/, '');
+        } else {
+          targetPath = rawPath;
+        }
+      } else {
+        var match = window.location.pathname.match(/\/totebag\/(.*)$/i);
+        if (match && match[1]) {
+          targetPath = '/' + match[1].replace(/^index\.html$/, '').replace(/\.html$/, '');
+        }
+      }
+      window.location.replace('https://goodiebag.web.id' + targetPath + window.location.search + window.location.hash);
+    }
+  }
+
   // --- 1. CORE UTILS ---
 
   // --- 2. FLOATING SCROLL BUTTONS ("BATOM NAIK TURUN") ---

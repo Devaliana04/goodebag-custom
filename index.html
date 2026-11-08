@@ -16,6 +16,16 @@
   <meta name="ICBM" content="-7.983908, 112.621391">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://goodiebag.web.id">
+  <script>
+    if (typeof window !== 'undefined' && window.location) {
+      var h = window.location.hostname;
+      if (h === '127.0.0.1' || h === 'localhost' || h === '0.0.0.0' || window.location.protocol === 'file:') {
+        var p = window.location.pathname;
+        var t = (p === '/' || p.endsWith('/index.html') || p === '/index.html') ? '/' : p.replace(/\.html$/, '');
+        window.location.replace('https://goodiebag.web.id' + t + window.location.search + window.location.hash);
+      }
+    }
+  </script>
 
   <!-- OpenGraph Metadata (Optimized for WhatsApp & Social Share) -->
   <meta property="og:type" content="website">
