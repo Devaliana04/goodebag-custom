@@ -1140,87 +1140,226 @@
     </nav>
   </header>
 
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <!-- Breadcrumb -->
+  <nav class="breadcrumb-nav py-2" aria-label="Breadcrumb" style="background:#F8FAFC; border-bottom: 1px solid #E2E8F0;">
     <div class="container">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-        <li class="breadcrumb-item"><a href="/portofolio">Portofolio</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Goodie Bag Kanvas Premium Kantong Depan & Snap Button</li>
+      <ol class="breadcrumb mb-0" style="font-size:0.825rem;">
+        <li class="breadcrumb-item"><a href="/" class="text-decoration-none" style="color:#64748B;">Beranda</a></li>
+        <li class="breadcrumb-item"><a href="/portofolio" class="text-decoration-none" style="color:#64748B;">Portofolio</a></li>
+        <li class="breadcrumb-item active fw-bold" style="color:#0B2942;" aria-current="page">Goodie Bag Kanvas Premium Kantong Depan & Snap Button</li>
       </ol>
     </div>
   </nav>
 
   <main id="main-content">
-    <section class="section-padding pt-4" aria-labelledby="detail-heading">
+    <section class="section-padding py-4 py-lg-5" aria-labelledby="portfolio-detail-title">
       <div class="container">
 
-        <!-- Back Button -->
+        <!-- Tombol Kembali -->
         <div class="mb-4">
-          <a href="/portofolio" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 fw-semibold">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-            Kembali ke Portofolio
+          <a href="/portofolio" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1.5 fw-semibold" style="font-size:0.825rem; border-color:#CBD5E1; color:#334155;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            Kembali ke Daftar Portofolio
           </a>
         </div>
 
-        <!-- Project Detail Card -->
-        <div class="bg-white rounded-4 border shadow-soft overflow-hidden">
-          <!-- Header -->
-          <div class="bg-slate-900 text-white py-3 px-4 px-md-5">
-            <div class="d-flex flex-wrap align-items-center gap-2">
-              <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill text-uppercase">Seminar & Konferensi</span>
-              <h1 id="detail-heading" class="fs-5 fw-bold text-white mb-0">Goodie Bag Kanvas Premium Kantong Depan & Snap Button</h1>
+        <!-- Detail Proyek Utama -->
+        <div class="bg-white rounded-4 border shadow-sm p-4 p-md-5 mb-5" style="border-color:#E2E8F0 !important;">
+          <div class="row g-4 g-lg-5 align-items-center">
+            
+            <!-- Kolom Foto Portofolio -->
+            <div class="col-12 col-lg-5">
+              <div class="rounded-4 overflow-hidden border shadow-sm position-relative" style="aspect-ratio: 1/1; width: 100%; border-color:#E2E8F0; background:#F8FAFC;">
+                <img src="../assets/images/portfolio/project-1.webp" alt="Tas goodie bag kanvas tebal broken white dengan saku depan fungsional kancing snap logam" class="w-100 h-100 object-fit-cover" width="800" height="800" loading="eager" decoding="async">
+              </div>
+              <div class="d-flex align-items-center justify-content-center gap-2 mt-3 small" style="color:#64748B;">
+                <svg width="16" height="16" fill="none" stroke="#D97706" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Dokumentasi Fisik Asli &bull; Workshop Goodie Bag Malang</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Body -->
-          <div class="p-4 p-md-5">
-            <div class="row g-4 g-lg-5 align-items-start">
-              <!-- Image Column -->
-              <div class="col-12 col-md-5">
-                <div class="rounded-4 overflow-hidden border shadow-sm bg-slate-100" style="aspect-ratio:4/3; max-height:480px;">
-                  <img src="../assets/images/portfolio/project-1.webp" alt="Tas goodie bag kanvas tebal broken white dengan saku depan fungsional kancing snap logam" class="w-100 h-100 object-fit-cover" width="800" height="600" loading="eager" decoding="async">
+            <!-- Kolom Informasi & Spesifikasi Lengkap -->
+            <div class="col-12 col-lg-7">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                <span class="badge px-3 py-1.5 rounded-pill text-uppercase fw-bold" style="font-size:0.75rem; letter-spacing:0.04em; background-color:#FEF3C7; color:#92400E; border: 1px solid #FCD34D;">
+                  Seminar & Konferensi
+                </span>
+                <span class="badge px-3 py-1.5 rounded-pill fw-semibold" style="font-size:0.75rem; background-color:#EFF6FF; color:#1D4ED8; border: 1px solid #BFDBFE;">
+                  MOQ Mulai 50 pcs
+                </span>
+              </div>
+
+              <h1 id="portfolio-detail-title" class="h2 fw-bold mb-3" style="color: #0B2942; line-height: 1.3;">
+                Goodie Bag Kanvas Premium Kantong Depan & Snap Button
+              </h1>
+
+              <p class="leading-relaxed mb-4" style="font-size: 0.975rem; line-height: 1.7; color: #475569;">
+                Produksi goodie bag bahan kanvas broken white tebal dengan kompartemen saku depan kancing snap besi antik, saku samping pulpen, dan penutup resleting atas rapi.
+              </p>
+
+              <!-- Spesifikasi Teknis Card -->
+              <div class="rounded-3 border mb-4 overflow-hidden bg-white shadow-xs" style="border-color:#E2E8F0 !important;">
+                <div class="px-3 py-2.5 border-bottom d-flex align-items-center justify-content-between" style="background: #F8FAFC; border-color:#E2E8F0 !important;">
+                  <span class="fw-bold text-uppercase d-flex align-items-center gap-2" style="color: #0B2942; letter-spacing: 0.5px; font-size: 0.8rem;">
+                    <svg width="15" height="15" fill="none" stroke="#D97706" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    Spesifikasi Teknis &amp; Detail Kain
+                  </span>
+                  <span class="small fw-semibold" style="color: #D97706; font-size: 0.775rem;">100% Bisa Custom</span>
+                </div>
+                <div class="table-responsive mb-0">
+                  <table class="table table-sm table-striped mb-0 align-middle" style="font-size: 0.85rem;">
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="text-muted fw-semibold ps-3 py-2" style="width: 32%; border-color: #f1f5f9;">Kategori / Model</th>
+                        <td class="fw-bold pe-3 py-2" style="color: #0B2942; border-color: #f1f5f9;">Seminar & Konferensi</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted fw-semibold ps-3 py-2" style="width: 32%; border-color: #f1f5f9;">Material / Bahan</th>
+                        <td class="fw-semibold pe-3 py-2" style="color: #0B2942; border-color: #f1f5f9;">Kanvas Katun Premium Broken White (Tebal & Kokoh)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted fw-semibold ps-3 py-2" style="width: 32%; border-color: #f1f5f9;">Fitur &amp; Kompartemen</th>
+                        <td class="fw-semibold pe-3 py-2" style="color: #0B2942; border-color: #f1f5f9;">Saku Depan Snap Button Logam + Slot Pulpen + Resleting Utama</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted fw-semibold ps-3 py-2" style="width: 32%; border-color: #f1f5f9;">Teknik Cetak / Sablon</th>
+                        <td class="fw-semibold pe-3 py-2" style="color: #0B2942; border-color: #f1f5f9;">Sablon Presisi / Bordir Logo Komputer</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted fw-semibold ps-3 py-2" style="width: 32%; border-color: #f1f5f9;">Estimasi Pengerjaan</th>
+                        <td class="fw-semibold pe-3 py-2" style="color: #0B2942; border-color: #f1f5f9;">5 – 14 Hari Kerja (Sesuai Kuantitas &amp; Deadline)</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
 
-              <!-- Info Column -->
-              <div class="col-12 col-md-7">
-                <!-- Quantity / MOQ Meta -->
-                <div class="d-flex justify-content-between align-items-center mb-4 p-3 rounded-3 bg-slate-50 border">
-                  <span class="text-muted fw-semibold small">Kuantitas Produksi:</span>
-                  <strong class="text-slate-800">Mulai 50 pcs</strong>
-                </div>
-                <h2 class="fs-6 fw-bold text-slate-900 mb-2">Dokumentasi Proyek</h2>
-                <p class="text-slate-600 leading-relaxed mb-4">Produksi goodie bag bahan kanvas broken white tebal dengan kompartemen saku depan kancing snap besi antik, saku samping pulpen, dan penutup resleting atas rapi. Nyaman dan serbaguna untuk panitia dan peserta konferensi.</p>
+              <!-- CTA Buttons -->
+              <div class="d-flex flex-wrap gap-2 pt-1">
+                <a href="https://wa.me/6282131087971?text=Halo%2C%20saya%20tertarik%20dengan%20proyek%20portofolio%20Goodie%20Bag%20Kanvas%20Premium%20Kantong%20Depan%20%26%20Snap%20Button." target="_blank" rel="noopener noreferrer" class="btn btn-warning-brand flex-grow-1 py-2.5 px-4 fw-bold shadow-sm d-inline-flex align-items-center justify-content-center gap-2 rounded-3 text-white" style="background:#D97706; border-color:#B45309;">
+                  <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                  Konsultasi Model Serupa via WhatsApp
+                </a>
+                <a href="/portofolio" class="btn btn-outline-secondary py-2.5 px-3.5 fw-semibold rounded-3" style="font-size:0.875rem;">
+                  Portofolio Lainnya &rarr;
+                </a>
+              </div>
 
-                <h2 class="fs-6 fw-bold text-slate-900 mb-2">Spesifikasi &amp; Detail Kain</h2>
-                <div class="p-3 rounded-3 bg-amber-50 border border-amber-200 text-amber-950 mb-4">
-                  <strong>Spesifikasi Teknis:</strong> Kanvas Tebal Broken White &bull; Ukuran 36 &times; 32 &times; 10 cm &bull; Saku Depan Snap Button + Resleting Atas
-                </div>
+            </div>
+          </div>
+        </div>
 
-                <!-- CTA Buttons -->
-                <div class="d-flex flex-wrap gap-2">
-                  <a href="https://wa.me/6282131087971?text=Halo%2C%20saya%20tertarik%20dengan%20proyek%20portofolio%20Goodie+Bag+Kanvas+Premium+Kantong+Depan+%26+Snap+Button." target="_blank" rel="noopener noreferrer"
-                    class="btn btn-warning-brand flex-grow-1 py-2 px-4 fw-bold shadow-sm d-inline-flex align-items-center justify-content-center gap-2">
-                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
-                    Konsultasi Konsep Serupa via WA
-                  </a>
-                  <a href="/portofolio" class="btn btn-outline-secondary py-2 px-3 fw-semibold">
-                    Kembali ke Portofolio
-                  </a>
-                </div>
+        <!-- Keunggulan Standar Konveksi (3 Trust Badges Grid) -->
+        <div class="row g-3 g-md-4 mb-5">
+          <div class="col-12 col-md-4">
+            <div class="p-3.5 rounded-3 border bg-white h-100 shadow-xs d-flex align-items-start gap-3" style="border-color:#E2E8F0 !important;">
+              <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:42px;height:42px;background:#EFF6FF;color:#2563EB;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1" style="color:#0B2942;">100% Garansi Kualitas Jahitan</h3>
+                <p class="text-muted small mb-0">Quality Control teliti di tiap potongan pola, jahitan kuat, dan kerapian detail resleting.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="p-3.5 rounded-3 border bg-white h-100 shadow-xs d-flex align-items-start gap-3" style="border-color:#E2E8F0 !important;">
+              <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:42px;height:42px;background:#ECFDF5;color:#059669;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1" style="color:#0B2942;">Pengerjaan Tepat Waktu</h3>
+                <p class="text-muted small mb-0">Manajemen antrean produksi workshop terstruktur untuk mengejar deadline acara penting Anda.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="p-3.5 rounded-3 border bg-white h-100 shadow-xs d-flex align-items-start gap-3" style="border-color:#E2E8F0 !important;">
+              <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width:42px;height:42px;background:#FFFBEB;color:#D97706;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div>
+                <h3 class="fs-6 fw-bold mb-1" style="color:#0B2942;">Gratis Mockup Visual 2D</h3>
+                <p class="text-muted small mb-0">Konsultasi tata letak logo dan warna kain sebelum masuk ke meja potong &amp; sablon.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Related CTA -->
-        <div class="cta-box text-center mt-5">
-          <h2 class="h3 fw-bold mb-3">Tertarik Memesan Tas Serupa?</h2>
-          <p class="mb-4 mx-auto" style="max-width:600px;">Konsultasikan kebutuhan goodie bag custom Anda langsung dengan tim produksi kami. Gratis desain mockup 24 jam.</p>
-          <a href="https://wa.me/6282131087971?text=Halo%2C%20saya%20tertarik%20dengan%20proyek%20portofolio%20Goodie+Bag+Kanvas+Premium+Kantong+Depan+%26+Snap+Button." class="btn btn-wa-brand btn-primary-brand btn-lg" target="_blank" rel="noopener noreferrer">
-            Diskusikan via WhatsApp: +62 821-3108-7971
-          </a>
+        <!-- Proyek Portofolio Terkait Pilihan (3 Items) -->
+        <div class="mb-5">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div>
+              <span class="text-uppercase small fw-bold" style="color:#D97706; letter-spacing:0.05em;">Dokumentasi Lainnya</span>
+              <h2 class="h4 fw-bold mb-0" style="color:#0B2942;">Inspirasi Model Goodie Bag Terkait</h2>
+            </div>
+            <a href="/portofolio" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1 fw-semibold d-none d-sm-inline-flex" style="border-color:#D97706; color:#D97706;">
+              Semua Portofolio &rarr;
+            </a>
+          </div>
+          <div class="row g-3 g-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <article class="bg-white rounded-3 border overflow-hidden shadow-xs h-100 d-flex flex-column" style="border-color:#E2E8F0 !important;">
+              <div style="aspect-ratio:16/10; overflow:hidden; background:#F8FAFC;">
+                <img src="../assets/images/portfolio/project-2.webp" alt="Goodie bag promosi pameran brand retail Safi Skincare sablon full color karakter hijab" class="w-100 h-100 object-fit-cover" loading="lazy" width="400" height="250">
+              </div>
+              <div class="p-3.5 d-flex flex-column flex-grow-1">
+                <span class="badge align-self-start mb-2 px-2.5 py-1 rounded-pill fw-bold text-uppercase" style="font-size:0.7rem; background:#FEF3C7; color:#92400E; border:1px solid #FCD34D;">Event & Retail Brand</span>
+                <h3 class="fs-6 fw-bold mb-2" style="color:#0B2942; line-height:1.35; font-size:0.95rem;">Goodie Bag Promosi Brand Retail Safi Skincare</h3>
+                <div class="mt-auto pt-3">
+                  <a href="/portofolio/goodie-bag-promosi-safi-skincare" class="btn btn-sm btn-outline-primary w-100 fw-semibold rounded-2 py-1.5" style="border-color:#D97706; color:#D97706; font-size:0.8rem;">
+                    Lihat Detail Proyek &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <article class="bg-white rounded-3 border overflow-hidden shadow-xs h-100 d-flex flex-column" style="border-color:#E2E8F0 !important;">
+              <div style="aspect-ratio:16/10; overflow:hidden; background:#F8FAFC;">
+                <img src="../assets/images/portfolio/project-3.webp" alt="Tas souvenir hajatan keluarga blacu katun natural broken white dengan tali kulit sintetis coklat" class="w-100 h-100 object-fit-cover" loading="lazy" width="400" height="250">
+              </div>
+              <div class="p-3.5 d-flex flex-column flex-grow-1">
+                <span class="badge align-self-start mb-2 px-2.5 py-1 rounded-pill fw-bold text-uppercase" style="font-size:0.7rem; background:#FEF3C7; color:#92400E; border:1px solid #FCD34D;">Souvenir Acara & Hajatan</span>
+                <h3 class="fs-6 fw-bold mb-2" style="color:#0B2942; line-height:1.35; font-size:0.95rem;">Goodie Bag Souvenir Kenang-kenangan Acara Bapak Sukirman & Ibu Lyena</h3>
+                <div class="mt-auto pt-3">
+                  <a href="/portofolio/goodie-bag-souvenir-acara-sukirman-lyena" class="btn btn-sm btn-outline-primary w-100 fw-semibold rounded-2 py-1.5" style="border-color:#D97706; color:#D97706; font-size:0.8rem;">
+                    Lihat Detail Proyek &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <article class="bg-white rounded-3 border overflow-hidden shadow-xs h-100 d-flex flex-column" style="border-color:#E2E8F0 !important;">
+              <div style="aspect-ratio:16/10; overflow:hidden; background:#F8FAFC;">
+                <img src="../assets/images/portfolio/project-4.webp" alt="Koleksi 4 varian warna tas goodie bag kanvas premium mustard oranye zaitun dan krem" class="w-100 h-100 object-fit-cover" loading="lazy" width="400" height="250">
+              </div>
+              <div class="p-3.5 d-flex flex-column flex-grow-1">
+                <span class="badge align-self-start mb-2 px-2.5 py-1 rounded-pill fw-bold text-uppercase" style="font-size:0.7rem; background:#FEF3C7; color:#92400E; border:1px solid #FCD34D;">Komunitas & Gathering</span>
+                <h3 class="fs-6 fw-bold mb-2" style="color:#0B2942; line-height:1.35; font-size:0.95rem;">Goodie Bag Gathering Komunitas Multi-Warna Tali Kulit</h3>
+                <div class="mt-auto pt-3">
+                  <a href="/portofolio/goodie-bag-gathering-komunitas-multiwarna" class="btn btn-sm btn-outline-primary w-100 fw-semibold rounded-2 py-1.5" style="border-color:#D97706; color:#D97706; font-size:0.8rem;">
+                    Lihat Detail Proyek &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          </div>
+        </div>
+
+        <!-- Banner Konsultasi Footer -->
+        <div class="rounded-4 p-4 p-md-5 text-center text-white position-relative overflow-hidden shadow-sm" style="background: linear-gradient(135deg, #0B2942 0%, #164E63 100%);">
+          <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill text-uppercase mb-2" style="font-size:0.75rem;">Konsultasi Gratis</span>
+          <h2 class="h3 fw-bold mb-2">Ingin Memesan Goodie Bag Seperti Model Ini?</h2>
+          <p class="text-white-50 mb-4 mx-auto" style="max-width: 620px; font-size: 0.95rem;">Hubungi tim kami untuk mendiskusikan kustomisasi bahan, warna kain, ukuran tas, serta sablon logo brand Anda. Kami siap melayani pengiriman ke seluruh Indonesia.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <a href="https://wa.me/6282131087971?text=Halo%2C%20saya%20tertarik%20dengan%20proyek%20portofolio%20Goodie%20Bag%20Kanvas%20Premium%20Kantong%20Depan%20%26%20Snap%20Button." target="_blank" rel="noopener noreferrer" class="btn btn-warning-brand btn-lg py-2.5 px-4 fw-bold shadow-sm d-inline-flex align-items-center gap-2 rounded-3 text-white" style="background:#D97706; border-color:#B45309;">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+              Konsultasi WhatsApp Sekarang (+62 821-3108-7971)
+            </a>
+          </div>
         </div>
 
       </div>
