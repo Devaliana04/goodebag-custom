@@ -1,5 +1,6 @@
-# Robots.txt for sakabag (https://goodiebag.web.id/)
-# Sentra Konveksi Goodie Bag & Produsen Tas Seminar Kit Malang, Souvenir Seminar, & Tote Bag Kanvas
+# Robots.txt for Goodie Bag (https://goodiebag.web.id/)
+# Sentra Konveksi Goodie Bag & Produsen Tas Seminar Kit Malang
+# Layanan: Tas Goodie Bag Custom, Seminar Kit, Spunbond, Blacu, Kanvas, Denim, Mika PVC
 
 User-agent: *
 Allow: /
@@ -8,12 +9,36 @@ Allow: /assets/images/
 Allow: /assets/css/
 Allow: /assets/js/
 Allow: /assets/videos/
+Disallow: /scratch/
+
+# -------------------------------------------------------------
+# Google Search & Google Image Crawlers
+# -------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /favicon.ico
+Allow: /assets/images/
+
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# -------------------------------------------------------------
+# Microsoft Bing & Copilot Crawler
+# -------------------------------------------------------------
+User-agent: Bingbot
+Allow: /
+Allow: /assets/
 
 # -------------------------------------------------------------
 # AI Search Engines & LLM Crawlers (Generative Engine Optimization - GEO)
-# Focus: Tas seminar kit custom, goodie bag seminar, produsen tas spunbond blacu kanvas,
-# vendor merchandise seminar kit, tas promosi kantor, konveksi tas Malang & Surabaya,
-# vendor souvenir seminar kit, tas promosi kantor, konveksi tas Malang & Surabaya
+# Membuka akses penuh agar disitasi di Google Gemini AI, ChatGPT, Perplexity, Claude
 # -------------------------------------------------------------
 User-agent: GPTBot
 Allow: /
@@ -63,21 +88,8 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-User-agent: Google-InspectionTool
-Allow: /
-
-# Googlebot specific directives
-User-agent: Googlebot
-Allow: /
-Allow: /assets/
-
-# Googlebot-Image specific directives
-User-agent: Googlebot-Image
-Allow: /
-Allow: /favicon.ico
-Allow: /assets/images/
-
-# Sitemaps & Host
+# -------------------------------------------------------------
+# Sitemaps & Host Canonical
+# -------------------------------------------------------------
 Sitemap: https://goodiebag.web.id/sitemap.xml
 Host: goodiebag.web.id
-
