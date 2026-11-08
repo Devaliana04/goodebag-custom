@@ -159,11 +159,6 @@
       "permanent": true
     },
     {
-      "source": "/produk",
-      "destination": "/produk",
-      "permanent": true
-    },
-    {
       "source": "/blog-goodie-bag",
       "destination": "/blog/goodie-bag",
       "permanent": true
@@ -286,11 +281,6 @@
     {
       "source": "/cara-pesan-tas-seminar-custom",
       "destination": "/blog/cara-pesan-tas-seminar-custom",
-      "permanent": true
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog",
       "permanent": true
     },
     {

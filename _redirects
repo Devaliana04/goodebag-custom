@@ -1,10 +1,12 @@
 # === Sakabag Netlify / Cloudflare _redirects ===
 
 # Core Pages
-/produk /produk.html 200
-/portofolio /portofolio.html 200
-/blog /blog.html 200
-/blog/ /blog.html 200
+/produk /produk/produk.html 200
+/produk/ /produk/produk.html 200
+/portofolio /portofolio/portofolio.html 200
+/portofolio/ /portofolio/portofolio.html 200
+/blog /blog/blog.html 200
+/blog/ /blog/blog.html 200
 /tentang /tentang.html 200
 /layanan /layanan.html 200
 /kontak /kontak.html 200
@@ -63,7 +65,6 @@
 /produk-totebag-kulit-sintetis /produk/totebag-kulit-sintetis 301
 /produk-totebag-multiwarna-tali-kulit /produk/totebag-multiwarna-tali-kulit 301
 /produk-totebag-seminar-kanvas /produk/totebag-seminar-kanvas 301
-/produk /produk 301
 
 # Blog Rewrites (200)
 /blog/goodie-bag /blog/goodie-bag.html 200
@@ -118,4 +119,3 @@
 /perbandingan-bahan-tas-seminar /blog/perbandingan-bahan-tas-seminar 301
 /isi-paket-seminar-kit /blog/isi-paket-seminar-kit 301
 /cara-pesan-tas-seminar-custom /blog/cara-pesan-tas-seminar-custom 301
-/blog /blog 301
