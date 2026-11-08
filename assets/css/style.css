@@ -5020,6 +5020,22 @@ article.article-reading-canvas,
   margin: 0 auto !important;
 }
 
+.article-reading-canvas .article-featured-image img.img-contain,
+.article-reading-canvas .article-image-box img.img-contain,
+.article-reading-canvas .article-featured-box img.img-contain,
+.article-reading-canvas img.img-fluid.img-contain,
+img.img-contain {
+  width: 100% !important;
+  max-width: 640px !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  border-radius: 14px !important;
+  margin: 0 auto !important;
+}
+
 /* 4. Detail Produk & Portofolio Proporsional */
 .product-detail-layout {
   display: grid !important;
@@ -5826,6 +5842,14 @@ article.article-reading-canvas,
   aspect-ratio: 16 / 10 !important;
   object-fit: cover !important;
   display: block !important;
+}
+
+.article-reading-canvas .article-featured-image img.img-contain,
+.article-reading-canvas .article-image-box img.img-contain {
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
 }
 
 .article-reading-canvas h1,
