@@ -327,6 +327,21 @@
       "source": "/blog/blog.html",
       "destination": "/blog",
       "permanent": true
+    },
+    {
+      "source": "/portofolio/index.html",
+      "destination": "/portofolio",
+      "permanent": true
+    },
+    {
+      "source": "/produk/index.html",
+      "destination": "/produk",
+      "permanent": true
+    },
+    {
+      "source": "/blog/index.html",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -340,11 +355,11 @@
     },
     {
       "source": "/portofolio",
-      "destination": "/portofolio/portofolio.html"
+      "destination": "/portofolio/index.html"
     },
     {
       "source": "/portofolio/",
-      "destination": "/portofolio/portofolio.html"
+      "destination": "/portofolio/index.html"
     },
     {
       "source": "/kontak",
@@ -368,19 +383,19 @@
     },
     {
       "source": "/produk",
-      "destination": "/produk/produk.html"
+      "destination": "/produk/index.html"
     },
     {
       "source": "/produk/",
-      "destination": "/produk/produk.html"
+      "destination": "/produk/index.html"
     },
     {
       "source": "/blog",
-      "destination": "/blog/blog.html"
+      "destination": "/blog/index.html"
     },
     {
       "source": "/blog/",
-      "destination": "/blog/blog.html"
+      "destination": "/blog/index.html"
     },
     {
       "source": "/produk/seminar-workshop",
