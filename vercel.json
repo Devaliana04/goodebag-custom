@@ -287,6 +287,46 @@
       "source": "/portofolio.html",
       "destination": "/portofolio",
       "permanent": true
+    },
+    {
+      "source": "/portofolio/portofolio",
+      "destination": "/portofolio",
+      "permanent": true
+    },
+    {
+      "source": "/portofolio/portofolio.html",
+      "destination": "/portofolio",
+      "permanent": true
+    },
+    {
+      "source": "/produk.html",
+      "destination": "/produk",
+      "permanent": true
+    },
+    {
+      "source": "/produk/produk",
+      "destination": "/produk",
+      "permanent": true
+    },
+    {
+      "source": "/produk/produk.html",
+      "destination": "/produk",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog.html",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "rewrites": [
