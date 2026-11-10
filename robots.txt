@@ -1,6 +1,6 @@
 # Robots.txt for Goodie Bag (https://goodiebag.web.id/)
 # Sentra Konveksi Goodie Bag & Produsen Tas Seminar Kit Malang
-# Layanan: Tas Goodie Bag Custom, Seminar Kit, Tas Pameran & Expo, Tas Wisuda Sekolah & Kampus, Spunbond, Blacu, Kanvas, Denim, Mika PVC
+# Layanan: Tas Goodie Bag Custom, Seminar Kit, Tas Pameran & Expo, Tas Wisuda Sekolah & Kampus, Tas MPLS Siswa Baru, Spunbond, Blacu, Kanvas, Denim, Mika PVC
 
 User-agent: *
 Allow: /
