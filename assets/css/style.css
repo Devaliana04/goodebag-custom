@@ -6692,3 +6692,33 @@ img.img-contain {
     font-size: 0.8rem;
   }
 }
+
+/* ==========================================================================
+   Article CTA Banner Box - High Contrast White Text Fix
+   ========================================================================== */
+.article-reading-canvas .cta-box,
+.article-reading-canvas .cta-banner-box,
+.article-reading-canvas div[style*="linear-gradient"] {
+  color: #ffffff !important;
+}
+
+.article-reading-canvas .cta-box h2,
+.article-reading-canvas .cta-box h3,
+.article-reading-canvas .cta-box h4,
+.article-reading-canvas .cta-banner-box h2,
+.article-reading-canvas .cta-banner-box h3,
+.article-reading-canvas .cta-banner-box h4,
+.article-reading-canvas div[style*="linear-gradient"] h2,
+.article-reading-canvas div[style*="linear-gradient"] h3,
+.article-reading-canvas div[style*="linear-gradient"] h4,
+.article-reading-canvas div[style*="linear-gradient"] .h4,
+.article-reading-canvas .text-white {
+  color: #ffffff !important;
+}
+
+.article-reading-canvas .cta-box p,
+.article-reading-canvas .cta-banner-box p,
+.article-reading-canvas div[style*="linear-gradient"] p,
+.article-reading-canvas .text-white-50 {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
