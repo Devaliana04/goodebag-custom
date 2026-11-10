@@ -506,6 +506,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://goodiebag.web.id/blog/goodie-bag-pameran</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/blog/bahan-goodie-bag-pameran</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/blog/ukuran-goodie-bag-katalog-pameran</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/blog/desain-cetak-goodie-bag-pameran</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://goodiebag.web.id/produk/goodie-bag-transparan-mika-pvc</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
