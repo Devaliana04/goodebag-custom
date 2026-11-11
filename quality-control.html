@@ -148,6 +148,164 @@
   ]
 }
   </script>
+  <style>
+    /* Modern Tailwind-Style UI Tokens & Components for Quality Control Page */
+    :root {
+      --tw-slate-50: #f8fafc;
+      --tw-slate-100: #f1f5f9;
+      --tw-slate-200: #e2e8f0;
+      --tw-slate-300: #cbd5e1;
+      --tw-slate-600: #475569;
+      --tw-slate-700: #334155;
+      --tw-slate-800: #1e293b;
+      --tw-slate-900: #0f172a;
+      --tw-emerald-50: #ecfdf5;
+      --tw-emerald-100: #d1fae5;
+      --tw-emerald-600: #059669;
+      --tw-emerald-700: #047857;
+      --tw-emerald-800: #065f46;
+      --tw-blue-50: #eff6ff;
+      --tw-blue-100: #dbeafe;
+      --tw-blue-600: #2563eb;
+      --tw-blue-700: #1d4ed8;
+      --tw-amber-50: #fffbeb;
+      --tw-amber-100: #fef3c7;
+      --tw-amber-500: #f59e0b;
+      --tw-amber-600: #d97706;
+      --tw-amber-700: #b45309;
+    }
+
+    .tw-hero-card {
+      background: #ffffff;
+      border: 1px solid var(--tw-slate-200);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .tw-step-card {
+      background: #ffffff;
+      border: 1px solid var(--tw-slate-200);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .tw-step-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .tw-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+    }
+
+    .tw-pill-emerald {
+      background: var(--tw-emerald-50);
+      color: var(--tw-emerald-800);
+      border: 1px solid var(--tw-emerald-100);
+    }
+
+    .tw-pill-blue {
+      background: var(--tw-blue-50);
+      color: var(--tw-blue-700);
+      border: 1px solid var(--tw-blue-100);
+    }
+
+    .tw-pill-amber {
+      background: var(--tw-amber-50);
+      color: var(--tw-amber-700);
+      border: 1px solid var(--tw-amber-100);
+    }
+
+    .tw-step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--tw-blue-50);
+      color: var(--tw-blue-600);
+      border: 1px solid var(--tw-blue-100);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
+    .tw-hd-img-frame {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--tw-slate-200);
+      box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.12);
+      aspect-ratio: 4 / 3;
+    }
+
+    .tw-hd-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .tw-hd-img-frame:hover img {
+      transform: scale(1.02);
+    }
+
+    .tw-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .tw-check-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--tw-emerald-50);
+      color: var(--tw-emerald-600);
+      border: 1px solid var(--tw-emerald-100);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .tw-garansi-banner {
+      background: linear-gradient(135deg, #0b2942 0%, #162e4a 100%);
+      border: 1px solid #1e3a5a;
+      border-radius: 24px;
+      color: #ffffff;
+      padding: clamp(28px, 4vw, 48px);
+      box-shadow: 0 20px 40px -15px rgba(11, 41, 66, 0.4);
+    }
+
+    .tw-cta-box {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      border-radius: 24px;
+      color: #ffffff;
+      padding: clamp(32px, 5vw, 56px);
+      box-shadow: 0 20px 40px -15px rgba(217, 119, 6, 0.35);
+    }
+  </style>
 </head>
 
 <body>
@@ -253,147 +411,255 @@
 
   <main id="main-content">
     <section class="section-padding pt-4 pb-5" aria-labelledby="qc-heading">
-      <div class="container" style="max-width: 960px;">
+      <div class="container" style="max-width: 1080px;">
         <!-- Page Header -->
-        <div class="text-center max-w-700 mx-auto mb-5">
-          <span class="section-eyebrow section-eyebrow-warm">Dedikasi Mutu Workshop</span>
-          <h1 id="qc-heading" class="section-title font-serif">Quality Control Goodie Bag dan Garansi Mutu Produksi</h1>
-          <p class="section-lead mx-auto">Standar ketat pengendalian kualitas (QC) di setiap pos produksi tangan pertama untuk memastikan setiap tas souvenir yang Anda terima memiliki jahitan rapi, sablon presisi, dan daya tahan maksimal.</p>
+        <div class="text-center mx-auto mb-5" style="max-width: 720px;">
+          <div class="tw-pill-badge tw-pill-emerald mb-3">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Standar Mutu Workshop Resmi</span>
+          </div>
+          <h1 id="qc-heading" class="section-title font-serif" style="color: #0f172a; font-size: clamp(1.85rem, 3.5vw, 2.6rem); line-height: 1.25;">Quality Control Goodie Bag &amp; Standar Garansi</h1>
+          <p class="lead mx-auto text-secondary" style="font-size: 1rem; line-height: 1.65;">Pengendalian mutu berlapis di setiap pos produksi tangan pertama untuk memastikan setiap goodie bag pesanan Anda memiliki jahitan presisi, sablon tajam, dan daya tahan maksimal.</p>
         </div>
 
-        <!-- Section 1: Intro Nilai Mutu -->
-        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 mb-5 bg-white">
-          <div class="row align-items-center g-4">
-            <div class="col-12 col-md-8">
-              <span class="badge bg-success bg-opacity-10 text-success font-xs fw-bold px-3 py-1.5 rounded-pill mb-2">Presisi &amp; Tanggung Jawab</span>
-              <h2 class="h3 fw-bold text-navy mb-3">Mengapa Standar Kendali Mutu Sangat Krusial Bagi Acara Anda?</h2>
-              <p class="text-body mb-3">
+        <!-- Section 1: Intro Nilai Mutu (Tailwind UI Split Card with HD Image) -->
+        <div class="tw-hero-card p-4 p-md-5 mb-5">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-12 col-lg-7">
+              <div class="tw-pill-badge tw-pill-emerald mb-3">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Inspeksi Mutu Tangan Pertama</span>
+              </div>
+              <h2 class="h3 fw-bold text-navy mb-3" style="font-size: clamp(1.35rem, 2.4vw, 1.75rem); color: #0f172a; line-height: 1.35;">Mengapa Standar Kendali Mutu Sangat Krusial Bagi Acara Anda?</h2>
+              <p class="text-secondary mb-3" style="font-size: 0.95rem; line-height: 1.65;">
                 Goodie bag adalah representasi visual pertama yang dilihat dan dipegang oleh tamu kehormatan, peserta seminar, pimpinan perusahaan, maupun mitra bisnis Anda. Tali tas yang mudah lepas atau sablon yang retak akan langsung mempengaruhi citra instansi penyelenggara.
               </p>
-              <p class="text-muted small mb-0">
+              <p class="text-secondary mb-4" style="font-size: 0.95rem; line-height: 1.65;">
                 Oleh sebab itu, di workshop Goodie Bag Malang, setiap lembar kain dan benang diproses melalui alur kendali mutu terstruktur oleh tenaga operator berpengalaman.
               </p>
+
+              <!-- 3 Checklist Keunggulan Mutu (Tailwind Style) -->
+              <div class="pt-3 border-top d-flex flex-column gap-3" style="border-color: #f1f5f9;">
+                <div class="tw-check-item">
+                  <div class="tw-check-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <strong class="font-xs text-dark d-block">Jahitan Silang Box-X &amp; Pengunci Bar-Tack</strong>
+                    <span class="font-xs text-muted">Pangkal tali pegangan dijahit silang ganda (box-X) agar kuat menampung beban seminar kit dan tumbler tanpa resiko putus.</span>
+                  </div>
+                </div>
+                <div class="tw-check-item">
+                  <div class="tw-check-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <strong class="font-xs text-dark d-block">Presisi Sablon &amp; Pemanasan Curing Stabil</strong>
+                    <span class="font-xs text-muted">Garis logo dicetak tajam sesuai kode warna brand, solid, dan tidak pecah/retak saat dicuci maupun dilipat.</span>
+                  </div>
+                </div>
+                <div class="tw-check-item">
+                  <div class="tw-check-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <strong class="font-xs text-dark d-block">Trimming &amp; Pembersihan Serat 100% per Pcs</strong>
+                    <span class="font-xs text-muted">Setiap unit tas dibersihkan dari sisa benang jahit yang menjuntai dan diperiksa manual sebelum dikemas inner plastik.</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-12 col-md-4 text-center">
-              <img src="assets/images/details/detail-jahitan.webp" width="300" height="225" class="rounded-4 border shadow-sm img-fluid" alt="Detail inspeksi kerapian jahitan double stitch pada goodie bag" loading="lazy">
+
+            <!-- HD Image on Right -->
+            <div class="col-12 col-lg-5">
+              <div class="tw-hd-img-frame">
+                <img src="assets/images/detail-jahitan-goodie-bag.webp" width="1024" height="682" alt="Detail inspeksi kerapian jahitan double stitch dan penguat silang box-X pada goodie bag" loading="lazy">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(180deg, transparent 0%, rgba(15,23,42,0.85) 100%);">
+                  <div class="d-flex align-items-center justify-content-between text-white">
+                    <span class="badge rounded-pill px-2.5 py-1 text-white fw-bold shadow-xs" style="background:#059669; font-size:11px;">100% Lolos Inspeksi QC</span>
+                    <span class="font-xs text-white-50">Kerapian Jahitan Presisi HD</span>
+                  </div>
+                </div>
+              </div>
+              <p class="text-center text-muted font-xs mt-2 mb-0">Dokumentasi makro inspeksi jahitan penguat tali handle goodie bag kain.</p>
             </div>
           </div>
         </div>
 
-        <!-- Section 2: 6 Tahapan QC -->
+        <!-- Section 2: 6 Tahapan QC (Tailwind 6-Card Grid) -->
         <div class="my-5">
-          <div class="text-center max-w-700 mx-auto mb-4">
-            <span class="badge bg-primary bg-opacity-10 text-primary font-xs fw-bold px-3 py-1 rounded-pill mb-2">Pos Pemeriksaan Berlapis</span>
-            <h2 class="h3 fw-bold text-navy">6 Tahap Standar Quality Control (QC) di Workshop Kami</h2>
-            <p class="text-muted small">Pemeriksaan mutu tidak hanya dilakukan di akhir pengerjaan, melainkan melekat pada setiap pos produksi:</p>
+          <div class="text-center mx-auto mb-4" style="max-width: 720px;">
+            <div class="tw-pill-badge tw-pill-blue mb-2">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              <span>SOP Pos Pemeriksaan Berlapis</span>
+            </div>
+            <h2 class="h3 fw-bold text-navy" style="color: #0f172a;">6 Tahap Standar Quality Control (QC) Workshop</h2>
+            <p class="text-muted small">Pemeriksaan mutu terstandarisasi diterapkan di setiap pos produksi tangan pertama:</p>
           </div>
 
           <div class="row g-4">
             <!-- Tahap 1 -->
-            <div class="col-12 col-md-6">
-              <div class="card h-100 p-4 border rounded-4 shadow-xs bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="badge bg-primary text-white rounded-circle fw-bold" style="width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;">1</span>
-                  <h3 class="h6 fw-bold text-navy mb-0">Kurasi Bahan Kain Mentah</h3>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="tw-step-card">
+                <div>
+                  <div class="d-flex align-items-center gap-2.5 mb-3">
+                    <span class="tw-step-num">1</span>
+                    <h3 class="h6 fw-bold mb-0" style="color: #0f172a; font-size: 15px;">Kurasi Bahan Mentah</h3>
+                  </div>
+                  <p class="font-xs text-secondary mb-0" style="line-height: 1.55;">Memverifikasi gramasi asli (Spunbond 75 gsm murni, Kanvas broken white 12 oz, Blacu katun natural). Rol kain dipastikan bebas cacat tenun dan tidak belang warna sebelum masuk meja potong.</p>
                 </div>
-                <p class="font-xs text-muted mb-0">Memverifikasi ketebalan gramasi asli (misal: Spunbond 75 gsm murni, Kanvas broken white 12 oz, Blacu katun natural). Kami memastikan rol kain bebas cacat tenun dan tidak belang warna sebelum masuk meja potong.</p>
+                <div class="pt-3 mt-3 border-top font-xs text-muted d-flex align-items-center justify-content-between" style="border-color:#f1f5f9;">
+                  <span>Pos: Gudang Kain</span>
+                  <span class="badge bg-light text-dark border">Pengecekan Rol</span>
+                </div>
               </div>
             </div>
 
             <!-- Tahap 2 -->
-            <div class="col-12 col-md-6">
-              <div class="card h-100 p-4 border rounded-4 shadow-xs bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="badge bg-primary text-white rounded-circle fw-bold" style="width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;">2</span>
-                  <h3 class="h6 fw-bold text-navy mb-0">Presisi Pola Potong Kain</h3>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="tw-step-card">
+                <div>
+                  <div class="d-flex align-items-center gap-2.5 mb-3">
+                    <span class="tw-step-num">2</span>
+                    <h3 class="h6 fw-bold mb-0" style="color: #0f172a; font-size: 15px;">Presisi Pola Potong</h3>
+                  </div>
+                  <p class="font-xs text-secondary mb-0" style="line-height: 1.55;">Pemotongan lembaran kain menggunakan pola presisi tinggi sesuai dimensi yang disetujui (misal: 30x40 cm, lipat alas 8 cm). Toleransi ukuran dijaga ketat agar bentuk seluruh tas seragam.</p>
                 </div>
-                <p class="font-xs text-muted mb-0">Pemotongan lembaran kain menggunakan pola presisi tinggi sesuai dimensi yang disetujui (misal: 30x40 cm, lipat alas 8 cm). Toleransi ukuran dijaga sangat ketat guna memastikan keseragaman seluruh hasil jadi.</p>
+                <div class="pt-3 mt-3 border-top font-xs text-muted d-flex align-items-center justify-content-between" style="border-color:#f1f5f9;">
+                  <span>Pos: Meja Potong</span>
+                  <span class="badge bg-light text-dark border">Toleransi &plusmn;5mm</span>
+                </div>
               </div>
             </div>
 
             <!-- Tahap 3 -->
-            <div class="col-12 col-md-6">
-              <div class="card h-100 p-4 border rounded-4 shadow-xs bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="badge bg-primary text-white rounded-circle fw-bold" style="width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;">3</span>
-                  <h3 class="h6 fw-bold text-navy mb-0">Ketajaman Cetak Sablon &amp; Bordir</h3>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="tw-step-card">
+                <div>
+                  <div class="d-flex align-items-center gap-2.5 mb-3">
+                    <span class="tw-step-num">3</span>
+                    <h3 class="h6 fw-bold mb-0" style="color: #0f172a; font-size: 15px;">Ketajaman Sablon &amp; Bordir</h3>
+                  </div>
+                  <p class="font-xs text-secondary mb-2" style="line-height: 1.55;">Pencocokan warna tinta dengan kode pantone brand. Diperiksa detail ketajaman garis logo, kerataan sapuan cat, dan daya rekat setelah proses pemanasan curing.</p>
+                  <div class="rounded-3 overflow-hidden border mt-2" style="height: 120px; border-color:#e2e8f0;">
+                    <img src="assets/images/detail-cetak-logo.webp" width="1024" height="768" class="w-100 h-100 object-fit-cover" alt="Detail ketajaman sablon logo pada goodie bag" loading="lazy">
+                  </div>
                 </div>
-                <p class="font-xs text-muted mb-2">Pencocokan komposisi warna tinta dengan kode warna brand instansi. Setiap panel cetak diperiksa detail ketajaman garis logo, kerataan sapuan cat, serta daya rekat setelah melalui pemanasan curing.</p>
-                <div class="text-start mt-auto">
-                  <img src="assets/images/details/detail-sablon.webp" width="100%" height="160" class="rounded-3 border object-fit-cover" alt="Detail ketajaman sablon logo pada goodie bag" loading="lazy">
+                <div class="pt-3 mt-3 border-top font-xs text-muted d-flex align-items-center justify-content-between" style="border-color:#f1f5f9;">
+                  <span>Pos: Sablon &amp; Curing</span>
+                  <span class="badge bg-light text-dark border">Uji Daya Rekat</span>
                 </div>
               </div>
             </div>
 
             <!-- Tahap 4 -->
-            <div class="col-12 col-md-6">
-              <div class="card h-100 p-4 border rounded-4 shadow-xs bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="badge bg-primary text-white rounded-circle fw-bold" style="width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;">4</span>
-                  <h3 class="h6 fw-bold text-navy mb-0">Kerapian &amp; Pengunci Jahitan (Bar-Tack)</h3>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="tw-step-card">
+                <div>
+                  <div class="d-flex align-items-center gap-2.5 mb-3">
+                    <span class="tw-step-num">4</span>
+                    <h3 class="h6 fw-bold mb-0" style="color: #0f172a; font-size: 15px;">Jahitan Silang Bar-Tack</h3>
+                  </div>
+                  <p class="font-xs text-secondary mb-2" style="line-height: 1.55;">Penjahitan sisi menggunakan benang berkekuatan tinggi dengan kerapatan stabil. Sambungan pangkal tali handle dilengkapi jahitan silang pengunci (box-X cross stitch/bar-tack) agar kuat menahan beban berat.</p>
+                  <div class="rounded-3 overflow-hidden border mt-2" style="height: 120px; border-color:#e2e8f0;">
+                    <img src="assets/images/detail-jahitan-tas-sekolah.webp" width="1200" height="896" class="w-100 h-100 object-fit-cover" alt="Detail jahitan pegangan dan lipatan bawah tas goodie bag" loading="lazy">
+                  </div>
                 </div>
-                <p class="font-xs text-muted mb-2">Penjahitan sisi menggunakan benang berkekuatan tinggi dengan kerapatan jahitan stabil. Sambungan pangkal tali handle dilengkapi jahitan silang pengunci (cross stitch/bar-tack) agar kuat menampung beban seminar kit dan tumbler.</p>
-                <p class="font-xs text-muted mb-0">Pelajari standar konstruksi benang di artikel <a href="/blog/jahitan-goodie-bag" class="fw-bold text-primary">Panduan Konstruksi Jahitan Goodie Bag</a>.</p>
+                <div class="pt-3 mt-3 border-top font-xs text-muted d-flex align-items-center justify-content-between" style="border-color:#f1f5f9;">
+                  <span>Pos: Jahit &amp; Perakitan</span>
+                  <a href="/blog/jahitan-goodie-bag" class="fw-semibold text-primary text-decoration-none">Artikel Konstruksi &rarr;</a>
+                </div>
               </div>
             </div>
 
             <!-- Tahap 5 -->
-            <div class="col-12 col-md-6">
-              <div class="card h-100 p-4 border rounded-4 shadow-xs bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="badge bg-primary text-white rounded-circle fw-bold" style="width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;">5</span>
-                  <h3 class="h6 fw-bold text-navy mb-0">Uji Fungsional Aksesoris &amp; Kompartemen</h3>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="tw-step-card">
+                <div>
+                  <div class="d-flex align-items-center gap-2.5 mb-3">
+                    <span class="tw-step-num">5</span>
+                    <h3 class="h6 fw-bold mb-0" style="color: #0f172a; font-size: 15px;">Uji Fungsional Aksesoris</h3>
+                  </div>
+                  <p class="font-xs text-secondary mb-0" style="line-height: 1.55;">Menguji kelancaran buka-tutup resleting YKK, kekuatan klik kancing snap logam, kerapian furing satin, dan kekuatan perekat velcro sebelum barang dinyatakan lolos perakitan.</p>
                 </div>
-                <p class="font-xs text-muted mb-0">Untuk tas dengan fitur tambahan, tim kami menguji kelancaran buka-tutup resleting YKK, kekuatan klik kancing snap logam, kerapian furing satin, dan kekuatan perekat velcro sebelum barang dinyatakan lolos perakitan.</p>
+                <div class="pt-3 mt-3 border-top font-xs text-muted d-flex align-items-center justify-content-between" style="border-color:#f1f5f9;">
+                  <span>Pos: Aksesoris</span>
+                  <span class="badge bg-light text-dark border">Uji Ketahanan Klik</span>
+                </div>
               </div>
             </div>
 
             <!-- Tahap 6 -->
-            <div class="col-12 col-md-6">
-              <div class="card h-100 p-4 border rounded-4 shadow-xs bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <span class="badge bg-primary text-white rounded-circle fw-bold" style="width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;">6</span>
-                  <h3 class="h6 fw-bold text-navy mb-0">Trimming Benang &amp; Uji Kebersihan Akhir</h3>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="tw-step-card">
+                <div>
+                  <div class="d-flex align-items-center gap-2.5 mb-3">
+                    <span class="tw-step-num">6</span>
+                    <h3 class="h6 fw-bold mb-0" style="color: #0f172a; font-size: 15px;">Trimming &amp; Inner Plastik</h3>
+                  </div>
+                  <p class="font-xs text-secondary mb-0" style="line-height: 1.55;">Setiap unit tas dibersihkan dari sisa serat benang jahitan yang menjuntai dan debu kain. Tas kemudian dilipat rapi dan dikelompokkan per lusin (12 pcs) dalam bungkus inner plastik kedap air.</p>
                 </div>
-                <p class="font-xs text-muted mb-0">Setiap tas dibersihkan dari sisa serat benang jahitan yang menjuntai serta debu workshop. Tas kemudian dilipat rapi dan dikelompokkan per lusin (12 pcs) dalam bungkus inner plastik kedap udara.</p>
+                <div class="pt-3 mt-3 border-top font-xs text-muted d-flex align-items-center justify-content-between" style="border-color:#f1f5f9;">
+                  <span>Pos: Finishing &amp; QC Final</span>
+                  <span class="badge bg-light text-success border border-success-subtle">Siap Kirim</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Section 3: Komitmen Garansi Resmi -->
-        <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 my-5" style="background: linear-gradient(135deg, #0b2942 0%, #153e63 100%); color:#ffffff;">
+        <!-- Section 3: Komitmen Garansi Resmi (Tailwind Dark Card) -->
+        <div class="tw-garansi-banner my-5">
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-8">
-              <span class="badge bg-warning text-dark px-3 py-1.5 rounded-pill fw-bold mb-3">Komitmen Garansi Resmi</span>
-              <h2 class="h3 font-serif fw-bold text-white mb-3">Kebijakan Garansi &amp; Kompensasi Cacat Produksi</h2>
-              <p class="lead text-white font-serif mb-3" style="font-size: 1.15rem; line-height: 1.6;">
+            <div class="col-12 col-lg-8">
+              <div class="tw-pill-badge tw-pill-amber mb-3" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Komitmen Resmi Workshop</span>
+              </div>
+              <h2 class="h3 font-serif fw-bold text-white mb-2" style="font-size: clamp(1.4rem, 2.5vw, 1.85rem);">Kebijakan Garansi &amp; Kompensasi Cacat Produksi</h2>
+              <blockquote class="my-3 p-3.5 rounded-3 border-start border-4 border-warning" style="background: rgba(255,255,255,0.06); color: #f8fafc; font-style: italic; font-size: 1.1rem; line-height: 1.6;">
                 &ldquo;Jika ditemukan cacat jahit atau kesalahan cetak yang tidak sesuai mockup yang disetujui, penggantian atau kompensasi ditentukan sesuai kesepakatan.&rdquo;
-              </p>
-              <p class="text-white-50 small mb-0">
-                Kami menjunjung tinggi prinsip kejujuran spesifikasi dan kemitraan jangka panjang. Kami tidak mengumbar janji garansi tanpa batas yang tidak masuk akal, melainkan memberikan kepastian penyelesaian masalah yang adil, cepat, dan transparan.
+              </blockquote>
+              <p class="text-white-50 font-xs mb-0" style="line-height: 1.6;">
+                Kami menjunjung tinggi prinsip kejujuran spesifikasi bahan dan kemitraan jangka panjang. Kami tidak mengumbar janji garansi tanpa batas yang tidak masuk akal, melainkan memberikan kepastian penanganan solutif yang transparan, adil, dan cepat bagi kelancaran acara Anda.
               </p>
             </div>
-            <div class="col-12 col-md-4 text-center">
-              <div class="p-4 rounded-4" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);">
-                <div class="h5 fw-bold text-warning mb-2">Perlindungan Klien</div>
-                <p class="font-xs text-white-50 mb-3">Konsultasikan kebutuhan mitigasi risiko pengadaan acara Anda bersama tim kami.</p>
-                <a href="/cara-pesan" class="btn btn-warning-brand btn-sm fw-bold px-3 py-2 w-100">Alur Klaim &amp; Pemesanan &rarr;</a>
+            <div class="col-12 col-lg-4 text-center">
+              <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
+                <div class="h6 fw-bold text-warning mb-2">Konsultasi Mitigasi Risiko</div>
+                <p class="font-xs text-white-50 mb-3">Pelajari alur pengajuan sampel fisik dan pengujian spesifikasi sebelum produksi massal.</p>
+                <a href="/cara-pesan" class="btn btn-warning-brand btn-sm fw-bold px-3 py-2 w-100 rounded-pill shadow-sm">Alur Pemesanan &amp; Klaim &rarr;</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Section 4: FAQ -->
+        <!-- Section 4: FAQ (Tailwind Clean Accordion) -->
         <div class="my-5">
-          <div class="text-center max-w-700 mx-auto mb-4">
-            <span class="section-eyebrow">Tanya Jawab</span>
-            <h2 class="h3 fw-bold text-navy">Tanya Jawab Seputar Kendali Mutu &amp; Garansi (FAQ)</h2>
+          <div class="text-center mx-auto mb-4" style="max-width: 720px;">
+            <div class="tw-pill-badge tw-pill-emerald mb-2">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+              <span>Pertanyaan Umum</span>
+            </div>
+            <h2 class="h3 fw-bold text-navy" style="color: #0f172a;">Tanya Jawab Seputar Kendali Mutu &amp; Garansi (FAQ)</h2>
           </div>
 
-          <div class="accordion custom-accordion" id="qcAccordion">
+          <div class="accordion custom-accordion" id="qcAccordion" style="max-width: 860px; margin: 0 auto;">
             <!-- FAQ 1 -->
-            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs">
+            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs" style="border-color:#e2e8f0 !important;">
               <h3 class="accordion-header" id="hQc1">
                 <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse"
                   data-bs-target="#cQc1" aria-expanded="false" aria-controls="cQc1">
@@ -401,14 +667,14 @@
                 </button>
               </h3>
               <div id="cQc1" class="accordion-collapse collapse" aria-labelledby="hQc1" data-bs-parent="#qcAccordion">
-                <div class="accordion-body text-muted small">
+                <div class="accordion-body text-secondary font-xs" style="line-height: 1.6;">
                   Tim QC kami memeriksa enam parameter utama: konsistensi gramasi kain, presisi ukuran pola potong, kerapian dan kekuatan jahitan (termasuk jahitan silang X pada tali handle), ketajaman detail sablon/bordir, fungsi aksesoris (resleting/kancing), serta kebersihan sisa benang per unit tas.
                 </div>
               </div>
             </div>
 
             <!-- FAQ 2 -->
-            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs">
+            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs" style="border-color:#e2e8f0 !important;">
               <h3 class="accordion-header" id="hQc2">
                 <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse"
                   data-bs-target="#cQc2" aria-expanded="false" aria-controls="cQc2">
@@ -416,14 +682,14 @@
                 </button>
               </h3>
               <div id="cQc2" class="accordion-collapse collapse" aria-labelledby="hQc2" data-bs-parent="#qcAccordion">
-                <div class="accordion-body text-muted small">
+                <div class="accordion-body text-secondary font-xs" style="line-height: 1.6;">
                   Pemeriksaan mutu dilakukan bertahap di setiap pos kerja: inspeksi roll kain mentah sebelum digelar, pengecekan hasil cetak sablon setelah proses curing/pengeringan, pemantauan kerapian operator mesin jahit, dan inspeksi final 100% per unit sebelum tas dimasukkan ke kemasan inner plastik.
                 </div>
               </div>
             </div>
 
             <!-- FAQ 3 -->
-            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs">
+            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs" style="border-color:#e2e8f0 !important;">
               <h3 class="accordion-header" id="hQc3">
                 <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse"
                   data-bs-target="#cQc3" aria-expanded="false" aria-controls="cQc3">
@@ -431,14 +697,14 @@
                 </button>
               </h3>
               <div id="cQc3" class="accordion-collapse collapse" aria-labelledby="hQc3" data-bs-parent="#qcAccordion">
-                <div class="accordion-body text-muted small">
+                <div class="accordion-body text-secondary font-xs" style="line-height: 1.6;">
                   Sesuai ketentuan resmi kami: <em>Jika ditemukan cacat jahit atau kesalahan cetak yang tidak sesuai mockup yang disetujui, penggantian atau kompensasi ditentukan sesuai kesepakatan</em> secara transparan dan solutif.
                 </div>
               </div>
             </div>
 
             <!-- FAQ 4 -->
-            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs">
+            <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-xs" style="border-color:#e2e8f0 !important;">
               <h3 class="accordion-header" id="hQc4">
                 <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse"
                   data-bs-target="#cQc4" aria-expanded="false" aria-controls="cQc4">
@@ -446,49 +712,55 @@
                 </button>
               </h3>
               <div id="cQc4" class="accordion-collapse collapse" aria-labelledby="hQc4" data-bs-parent="#qcAccordion">
-                <div class="accordion-body text-muted small">
-                  Pelanggan cukup mengirimkan foto atau video dokumentasi yang memperlihatkan detail cacat jahit atau ketidaksesuaian sablon kepada admin WhatsApp resmi kami. Tim kami akan segera memverifikasi dan memberikan solusi penggantian atau kompensasi sesuai kesepakatan bersama. Simak panduan mitigasi risiko di artikel <a href="/blog/kesalahan-pesan-goodie-bag" class="fw-bold">Kesalahan Umum Memesan Goodie Bag</a>.
+                <div class="accordion-body text-secondary font-xs" style="line-height: 1.6;">
+                  Pelanggan cukup mengirimkan foto atau video dokumentasi yang memperlihatkan detail cacat jahit atau ketidaksesuaian sablon kepada admin WhatsApp resmi kami. Tim kami akan segera memverifikasi dan memberikan solusi penggantian atau kompensasi sesuai kesepakatan bersama. Simak panduan mitigasi risiko di artikel <a href="/blog/kesalahan-pesan-goodie-bag" class="fw-bold text-primary">Kesalahan Umum Memesan Goodie Bag</a>.
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Section 5: Internal Links & Navigasi Terkait -->
-        <div class="p-4 bg-light rounded-4 border my-5">
-          <h3 class="h6 fw-bold text-navy mb-3">Informasi &amp; Tautan Terkait:</h3>
-          <div class="row g-2">
+        <!-- Section 5: Internal Links & Navigasi Terkait (Tailwind Clean Cards) -->
+        <div class="p-4 rounded-4 border my-5 bg-white shadow-xs" style="border-color: #e2e8f0;">
+          <h3 class="h6 fw-bold mb-3" style="color: #0f172a;">Informasi &amp; Tautan Terkait:</h3>
+          <div class="row g-2.5">
             <div class="col-12 col-sm-6 col-md-3">
-              <a href="/minimum-order" class="btn btn-outline-dark btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between">
+              <a href="/minimum-order" class="btn btn-outline-secondary btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between rounded-3 py-2">
                 <span>Minimum Order (MOQ)</span> &rarr;
               </a>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-              <a href="/pengiriman" class="btn btn-outline-dark btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between">
+              <a href="/pengiriman" class="btn btn-outline-secondary btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between rounded-3 py-2">
                 <span>Pengiriman Kargo</span> &rarr;
               </a>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-              <a href="/cara-pesan" class="btn btn-outline-dark btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between">
+              <a href="/cara-pesan" class="btn btn-outline-secondary btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between rounded-3 py-2">
                 <span>Alur Cara Pesan</span> &rarr;
               </a>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-              <a href="/syarat-ketentuan" class="btn btn-outline-dark btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between">
+              <a href="/syarat-ketentuan" class="btn btn-outline-secondary btn-sm w-100 fw-semibold text-start d-flex align-items-center justify-content-between rounded-3 py-2">
                 <span>Syarat &amp; Ketentuan</span> &rarr;
               </a>
             </div>
           </div>
         </div>
 
-        <!-- CTA Box WhatsApp -->
-        <div class="cta-box text-center p-4 p-lg-5 rounded-4 mt-5">
-          <h2 class="h3 fw-bold mb-3">Ingin Berkonsultasi Spesifikasi Jahitan &amp; Bahan?</h2>
-          <p class="mb-4 mx-auto text-muted" style="max-width: 600px;">Diskusikan standar ketahanan beban, jenis sablon tahan cuci, atau ajukan permintaan sampel fisik untuk pengadaan skala besar kantor Anda.</p>
-          <a class="btn btn-warning-brand fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center gap-2"
+        <!-- CTA Box WhatsApp (Tailwind Style) -->
+        <div class="tw-cta-box text-center mt-5">
+          <div class="tw-pill-badge mb-3 text-white" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35);">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>Konsultasi Teknis Gratis</span>
+          </div>
+          <h2 class="h3 fw-bold mb-3 text-white" style="font-size: clamp(1.4rem, 2.5vw, 1.95rem);">Ingin Berkonsultasi Spesifikasi Jahitan &amp; Bahan?</h2>
+          <p class="mb-4 mx-auto text-white-50" style="max-width: 620px; font-size: 0.95rem; line-height: 1.6;">Diskusikan standar ketahanan beban, jenis sablon tahan cuci, atau ajukan permintaan sampel fisik untuk pengadaan skala besar kantor Anda.</p>
+          <a class="btn btn-light fw-bold px-4 py-2.5 rounded-pill shadow-sm d-inline-flex align-items-center gap-2 text-dark font-sm"
             href="https://wa.me/6282131087971?text=Halo%2C%20saya%20ingin%20konsultasi%20quality%20control%20dan%20garansi%20goodie%20bag."
             target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
               <path
                 d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.655.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z" />
             </svg>
