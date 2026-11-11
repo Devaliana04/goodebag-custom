@@ -245,7 +245,7 @@
     },
     {
       "source": "/blog-apa-itu-goodie-bag",
-      "destination": "/blog/apa-itu-goodie-bag",
+      "destination": "/blog/goodie-bag",
       "permanent": true
     },
     {
@@ -335,7 +335,7 @@
     },
     {
       "source": "/blog-jenis-bahan-goodiebag",
-      "destination": "/blog/jenis-bahan-goodiebag",
+      "destination": "/blog/bahan-goodie-bag",
       "permanent": true
     },
     {
@@ -380,22 +380,22 @@
     },
     {
       "source": "/apa-itu-goodie-bag",
-      "destination": "/blog/apa-itu-goodie-bag",
+      "destination": "/blog/goodie-bag",
       "permanent": true
     },
     {
       "source": "/apa-itu-goodie-bag.html",
-      "destination": "/blog/apa-itu-goodie-bag",
+      "destination": "/blog/goodie-bag",
       "permanent": true
     },
     {
       "source": "/blog-apa-itu-goodie-bag.html",
-      "destination": "/blog/apa-itu-goodie-bag",
+      "destination": "/blog/goodie-bag",
       "permanent": true
     },
     {
       "source": "/blog/apa-itu-goodie-bag.html",
-      "destination": "/blog/apa-itu-goodie-bag",
+      "destination": "/blog/goodie-bag",
       "permanent": true
     },
     {
@@ -1110,22 +1110,22 @@
     },
     {
       "source": "/jenis-bahan-goodiebag",
-      "destination": "/blog/jenis-bahan-goodiebag",
+      "destination": "/blog/bahan-goodie-bag",
       "permanent": true
     },
     {
       "source": "/jenis-bahan-goodiebag.html",
-      "destination": "/blog/jenis-bahan-goodiebag",
+      "destination": "/blog/bahan-goodie-bag",
       "permanent": true
     },
     {
       "source": "/blog-jenis-bahan-goodiebag.html",
-      "destination": "/blog/jenis-bahan-goodiebag",
+      "destination": "/blog/bahan-goodie-bag",
       "permanent": true
     },
     {
       "source": "/blog/jenis-bahan-goodiebag.html",
-      "destination": "/blog/jenis-bahan-goodiebag",
+      "destination": "/blog/bahan-goodie-bag",
       "permanent": true
     },
     {
@@ -2391,6 +2391,16 @@
     {
       "source": "/portofolio/goodie-bag-transparan-mika-pvc-self-love-club.html",
       "destination": "/portofolio/goodie-bag-transparan-mika-pvc-self-love-club",
+      "permanent": true
+    },
+    {
+      "source": "/blog/apa-itu-goodie-bag",
+      "destination": "/blog/goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog/jenis-bahan-goodiebag",
+      "destination": "/blog/bahan-goodie-bag",
       "permanent": true
     }
   ],
