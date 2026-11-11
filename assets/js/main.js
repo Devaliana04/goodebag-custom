@@ -511,4 +511,15 @@
       });
     }
   });
+
+  // --- 8. SYNC BREADCRUMB BLOG LINKS WITH ACTIVE CATEGORY ---
+  try {
+    const savedBlogCat = sessionStorage.getItem('activeBlogCategory');
+    if (savedBlogCat && savedBlogCat !== 'all') {
+      document.querySelectorAll('.breadcrumb a[href="/blog"], .breadcrumb a[href="/blog/"]').forEach(function (link) {
+        link.href = '/blog?kategori=' + encodeURIComponent(savedBlogCat);
+      });
+    }
+  } catch (e) {}
+
 })();
