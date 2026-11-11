@@ -55,3 +55,4 @@ Gunakan markup standar Google PageSpeed & Core Web Vitals berikut saat menyisipk
 | `npm run images` | Memindai seluruh folder gambar dan mengonversi semua JPG/PNG baru ke WebP (Quality 80, maks lebar 1600px). |
 | `npm run images:watch` | Mode pemantau realtime. Otomatis mengonversi setiap gambar yang baru dimasukkan ke `assets/images/`. |
 | `npm run images:check` | Memvalidasi bahwa seluruh gambar JPG/PNG di proyek telah memiliki versi WebP (exit 1 jika ada yang belum). |
+

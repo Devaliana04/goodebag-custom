@@ -207,3 +207,4 @@ if (isWatch) {
 } else {
   runBatch();
 }
+

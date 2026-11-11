@@ -36,3 +36,4 @@ try {
 } catch (e) {
   console.warn('⚠️ Tidak dapat memasang git hook otomatis:', e.message);
 }
+
