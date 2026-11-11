@@ -10,6 +10,8 @@ Allow: /assets/css/
 Allow: /assets/js/
 Allow: /assets/videos/
 Disallow: /scratch/
+Disallow: /_originals/
+Disallow: /_backup-gambar/
 
 # -------------------------------------------------------------
 # Google Search & Google Image Crawlers
