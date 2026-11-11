@@ -663,4 +663,29 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Cluster Goodie Bag Sekolah Custom 2026 -->
+  <url>
+    <loc>https://goodiebag.web.id/blog/goodie-bag-sekolah</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/blog/ide-goodie-bag-kegiatan-sekolah</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/blog/isi-goodie-bag-sekolah-sesuai-usia</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/blog/anggaran-distribusi-goodie-bag-sekolah</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
