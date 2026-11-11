@@ -144,6 +144,251 @@
   ]
 }
   </script>
+  <!-- Tailwind UI Design Styles for Pengiriman -->
+  <style>
+    :root {
+      --tw-slate-50: #f8fafc;
+      --tw-slate-100: #f1f5f9;
+      --tw-slate-200: #e2e8f0;
+      --tw-slate-300: #cbd5e1;
+      --tw-slate-400: #94a3b8;
+      --tw-slate-500: #64748b;
+      --tw-slate-600: #475569;
+      --tw-slate-700: #334155;
+      --tw-slate-800: #1e293b;
+      --tw-slate-900: #0f172a;
+      --tw-emerald-50: #ecfdf5;
+      --tw-emerald-100: #d1fae5;
+      --tw-emerald-600: #059669;
+      --tw-emerald-700: #047857;
+      --tw-emerald-800: #065f46;
+      --tw-blue-50: #eff6ff;
+      --tw-blue-100: #dbeafe;
+      --tw-blue-600: #2563eb;
+      --tw-blue-700: #1d4ed8;
+      --tw-blue-800: #1e40af;
+      --tw-amber-50: #fffbeb;
+      --tw-amber-100: #fef3c7;
+      --tw-amber-500: #f59e0b;
+      --tw-amber-600: #d97706;
+      --tw-amber-700: #b45309;
+      --tw-purple-50: #faf5ff;
+      --tw-purple-100: #f3e8ff;
+      --tw-purple-600: #9333ea;
+      --tw-purple-700: #7e22ce;
+    }
+
+    .tw-hero-card {
+      background: #ffffff;
+      border: 1px solid var(--tw-slate-200);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .tw-card {
+      background: #ffffff;
+      border: 1px solid var(--tw-slate-200);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .tw-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .tw-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+    }
+
+    .tw-pill-emerald {
+      background: var(--tw-emerald-50);
+      color: var(--tw-emerald-800);
+      border: 1px solid var(--tw-emerald-100);
+    }
+
+    .tw-pill-blue {
+      background: var(--tw-blue-50);
+      color: var(--tw-blue-700);
+      border: 1px solid var(--tw-blue-100);
+    }
+
+    .tw-pill-amber {
+      background: var(--tw-amber-50);
+      color: var(--tw-amber-700);
+      border: 1px solid var(--tw-amber-100);
+    }
+
+    .tw-pill-purple {
+      background: var(--tw-purple-50);
+      color: var(--tw-purple-700);
+      border: 1px solid var(--tw-purple-100);
+    }
+
+    .tw-pill-slate {
+      background: var(--tw-slate-100);
+      color: var(--tw-slate-700);
+      border: 1px solid var(--tw-slate-200);
+    }
+
+    .tw-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .tw-hd-img-frame {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--tw-slate-200);
+      box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.12);
+      aspect-ratio: 16 / 9;
+      background: var(--tw-slate-100);
+    }
+
+    .tw-hd-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .tw-hd-img-frame:hover img {
+      transform: scale(1.02);
+    }
+
+    .tw-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .tw-check-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--tw-emerald-50);
+      color: var(--tw-emerald-600);
+      border: 1px solid var(--tw-emerald-100);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .tw-table-container {
+      border: 1px solid var(--tw-slate-200);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
+      background: #ffffff;
+    }
+
+    .tw-table-container table {
+      margin-bottom: 0;
+    }
+
+    .tw-table-container th {
+      background: var(--tw-slate-50);
+      color: var(--tw-slate-700);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--tw-slate-200);
+    }
+
+    .tw-table-container td {
+      padding: 16px 20px;
+      border-color: var(--tw-slate-100);
+      font-size: 0.92rem;
+    }
+
+    .tw-table-container tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    .tw-accordion-item {
+      background: #ffffff;
+      border: 1px solid var(--tw-slate-200);
+      border-radius: 16px !important;
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tw-accordion-item:hover {
+      border-color: var(--tw-slate-300);
+      box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+    }
+
+    .tw-accordion-button {
+      padding: 18px 22px;
+      font-weight: 700;
+      color: var(--tw-slate-900);
+      background: #ffffff;
+      border: none;
+      box-shadow: none !important;
+    }
+
+    .tw-accordion-button:not(.collapsed) {
+      color: #1e3a8a;
+      background: var(--tw-blue-50);
+    }
+
+    .tw-nav-card {
+      background: #ffffff;
+      border: 1px solid var(--tw-slate-200);
+      border-radius: 16px;
+      padding: 1.25rem;
+      text-decoration: none;
+      display: block;
+      height: 100%;
+      box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+      transition: all 0.2s ease;
+    }
+
+    .tw-nav-card:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px -4px rgba(15, 23, 42, 0.08);
+    }
+
+    .tw-navy-cta {
+      background: linear-gradient(135deg, #0b2942 0%, #162e4a 100%);
+      border: 1px solid #1e3a5a;
+      border-radius: 24px;
+      color: #ffffff;
+      padding: clamp(32px, 5vw, 56px);
+      box-shadow: 0 20px 40px -15px rgba(11, 41, 66, 0.4);
+    }
+  </style>
 </head>
 
 <body>
@@ -224,356 +469,628 @@
   </header>
 
   <!-- Breadcrumb Navigation -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-    <div class="container article-detail-container">
-      <ol class="breadcrumb">
+  <nav class="breadcrumb-nav py-2" aria-label="Breadcrumb">
+    <div class="container" style="max-width: 1040px;">
+      <ol class="breadcrumb mb-0">
         <li class="breadcrumb-item"><a href="/">Beranda</a></li>
         <li class="breadcrumb-item active" aria-current="page">Pengiriman Kargo</li>
       </ol>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main id="main-content" class="article-page-container article-reading-canvas my-4">
-    <div class="container article-detail-container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-10">
+  <main id="main-content">
+    <div class="container section-padding pt-4 pb-5" style="max-width: 1040px;">
 
-          <!-- Page Header -->
-          <header class="mb-5 text-center">
-            <div class="badge bg-light text-primary border px-3 py-2 rounded-pill fw-bold mb-3">LOGISTIK &amp; DISTRIBUSI KARGO AMAN</div>
-            <h1 class="section-title font-serif text-navy mb-3">Pengiriman Goodie Bag ke Seluruh Indonesia</h1>
-            <p class="lead text-muted mx-auto" style="max-width: 820px;">
-              Dari workshop kami di Kota Malang, pesanan goodie bag dan tas seminar didistribusikan ke 38 provinsi di seluruh Nusantara dengan proteksi pengemasan ekstra kedap air serta jaringan kargo terpercaya.
-            </p>
-          </header>
+      <!-- Page Header -->
+      <header class="mb-5 text-center">
+        <div class="tw-pill-badge tw-pill-blue mb-3">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" />
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+          <span>Logistik &amp; Distribusi Kargo Nasional</span>
+        </div>
+        <h1 class="section-title font-serif text-navy mb-3" style="font-size: clamp(1.85rem, 3.5vw, 2.6rem); line-height: 1.25;">Pengiriman Goodie Bag ke Seluruh Indonesia</h1>
+        <p class="lead text-secondary mx-auto" style="max-width: 780px; font-size: 1.05rem; line-height: 1.65;">
+          Dari workshop konveksi kami di Kota Malang, ribuan pesanan goodie bag dan tas seminar kit didistribusikan ke 38 provinsi di seluruh Nusantara dengan proteksi pengemasan ekstra dobel karung kedap air serta jaringan kargo terpercaya.
+        </p>
+      </header>
 
-          <!-- Section 1: Pengantar Logistik -->
-          <section class="mb-5">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
-              <div class="row align-items-center g-4">
-                <div class="col-md-7">
-                  <h2 class="h3 text-navy font-serif mb-3">Jangkauan Pengiriman Luar Kota &amp; Luar Pulau</h2>
-                  <p class="text-secondary mb-3">
-                    Lebih dari separuh pemesan goodie bag kami berasal dari luar kota dan luar Pulau Jawa, termasuk kementerian, BUMN, perguruan tinggi, korporasi swasta, hingga panitia kegiatan sekolah di Sumatera, Kalimantan, Sulawesi, Bali, dan Papua.
-                  </p>
-                  <p class="text-secondary mb-3">
-                    Untuk memastikan paket tiba sebelum hari pelaksanaan kegiatan, kami memisahkan alur secara ketat antara <strong>waktu pengerjaan produksi (7&ndash;14 hari kerja)</strong> dengan <strong>waktu tempuh ekspedisi kargo</strong>. Setelah seluruh produk lolos proses <a href="/quality-control" class="text-decoration-none fw-semibold text-primary">Quality Control ketat</a> dan pembayaran sisa pelunasan 50% diselesaikan, paket langsung diserahterimakan ke ekspedisi kargo rekanan.
-                  </p>
-                  <div class="p-3 bg-light rounded-3 border-start border-4 border-warning">
-                    <small class="text-dark d-block">
-                      <strong>Catatan Alur:</strong> Klien di luar kota tidak perlu khawatir mengenai lokasi workshop. Kami menyediakan laporan foto &amp; video penimbangan koli, penempelan label resi, hingga nomor resi kargo resmi yang dapat dilacak secara online.
-                    </small>
-                  </div>
-                </div>
-                <div class="col-md-5 text-center">
-                  <img src="assets/images/pengemasan-goodiebag-event.webp" alt="Pengemasan Goodie Bag untuk Pengiriman Ekspedisi Kargo" class="img-fluid rounded-4 shadow-sm" width="460" height="345" loading="lazy">
-                </div>
+      <!-- Section 1: Pengantar Logistik (Tailwind UI Split Card with HD Image) -->
+      <section class="mb-5" aria-labelledby="heading-jangkauan">
+        <div class="tw-hero-card p-4 p-md-5">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-12 col-lg-7">
+              <div class="tw-pill-badge tw-pill-emerald mb-3">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Jangkauan 38 Provinsi</span>
               </div>
-            </div>
-          </section>
-
-          <!-- Section 2: Standar Proteksi Pengemasan (Dobel Karung & Inner Plastik) -->
-          <section class="mb-5">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
-              <h2 class="h3 text-navy font-serif mb-3">Standar Pengemasan Proteksi Ekstra: Dobel Karung &amp; Inner Plastik</h2>
-              <p class="text-secondary mb-4">
-                Goodie bag adalah produk kain yang sensitif terhadap rembesan air hujan, debu jalanan, dan gesekan selama transit di gudang kargo. Oleh karena itu, kami menerapkan sistem perlindungan berlapis standar ekspedisi:
+              <h2 id="heading-jangkauan" class="h3 fw-bold text-navy mb-3" style="font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.35;">
+                Jangkauan Pengiriman Luar Kota &amp; Luar Pulau Terpercaya
+              </h2>
+              <p class="text-secondary mb-3" style="font-size: 0.95rem; line-height: 1.65;">
+                Lebih dari separuh pemesan goodie bag kami berasal dari luar kota dan luar Pulau Jawa, termasuk kementerian, BUMN, perguruan tinggi, korporasi swasta, hingga panitia kegiatan sekolah di Sumatera, Kalimantan, Sulawesi, Bali, dan Papua.
+              </p>
+              <p class="text-secondary mb-4" style="font-size: 0.95rem; line-height: 1.65;">
+                Untuk memastikan paket tiba sebelum hari pelaksanaan kegiatan, kami memisahkan alur secara ketat antara <strong>waktu pengerjaan produksi (7&ndash;14 hari kerja)</strong> dengan <strong>waktu tempuh ekspedisi kargo</strong>. Setelah seluruh produk lolos proses <a href="/quality-control" class="text-decoration-none fw-semibold text-primary">Quality Control ketat</a> dan pembayaran sisa pelunasan 50% diselesaikan, paket langsung diserahterimakan ke ekspedisi kargo rekanan.
               </p>
 
-              <div class="row g-4 mb-4">
-                <div class="col-md-4">
-                  <div class="p-4 rounded-3 border h-100 bg-light">
-                    <div class="fs-3 mb-2">🛡️</div>
-                    <h3 class="h5 text-navy fw-bold mb-2">1. Inner Plastik Kedap Air</h3>
-                    <p class="text-muted small mb-0">
-                      Tas ditata rapi per 12 pcs (1 lusin) lalu dimasukkan ke dalam kantong plastik tebal kedap air dan diikat kencang. Menjaga permukaan tas tetap bersih, kering, dan bebas dari debu lembap.
-                    </p>
+              <!-- 3 Checklist Keunggulan Logistik (Tailwind Style) -->
+              <div class="pt-3 border-top d-flex flex-column gap-3" style="border-color: #f1f5f9;">
+                <div class="tw-check-item">
+                  <div class="tw-check-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <strong class="font-xs text-dark d-block">Laporan Dokumentasi Timbang &amp; Manifest Real-Time</strong>
+                    <span class="font-xs text-muted">Klien di luar kota menerima bukti foto/video penimbangan koli, penempelan label resi, hingga nomor resi kargo online sebelum armada berangkat.</span>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="p-4 rounded-3 border h-100 bg-light">
-                    <div class="fs-3 mb-2">📦</div>
-                    <h3 class="h5 text-navy fw-bold mb-2">2. Karung Koli Jahit Rapat</h3>
-                    <p class="text-muted small mb-0">
-                      Seluruh bundel lusinan dikemas ke dalam karung koli tebal luar berkapasitas besar. Ujung karung dijahit mesin/jarum goni dengan benang nilon rapat sehingga tidak bergeser atau robek saat dibongkar-muat.
-                    </p>
+                <div class="tw-check-item">
+                  <div class="tw-check-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <strong class="font-xs text-dark d-block">Tarif Kargo Volumetrik &amp; Koli Hemat Pabrik</strong>
+                    <span class="font-xs text-muted">Bekerja sama dengan kargo rekanan dengan tarif koli ekonomis, menghemat 40%–60% ongkir dibanding kurir ekspres kiloan retail.</span>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="p-4 rounded-3 border h-100 bg-light">
-                    <div class="fs-3 mb-2">🏷️</div>
-                    <h3 class="h5 text-navy fw-bold mb-2">3. Label Identitas &amp; Nomor Koli</h3>
-                    <p class="text-muted small mb-0">
-                      Setiap karung ditempeli lembar manifest tahan air: memuat nama instansi penerima, alamat detail acara, nomor telepon PIC aktif, dan penomoran koli (contoh: <em>Koli 1 dari 4</em>) agar paket tidak tercecer di cabang kargo.
-                    </p>
+                <div class="tw-check-item">
+                  <div class="tw-check-icon">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <strong class="font-xs text-dark d-block">Koordinasi Langsung ke Alamat Acara</strong>
+                    <span class="font-xs text-muted">Paket koli dikirim langsung ke gedung pertemuan, hotel seminar, kantor cabang instansi, atau kampus tujuan di seluruh Indonesia.</span>
                   </div>
                 </div>
-              </div>
-
-              <div class="text-center mt-3">
-                <img src="assets/images/packing-koli-karung-ekspedisi.webp" alt="Standar Packing Koli Dobel Karung untuk Pengiriman Luar Kota" class="img-fluid rounded-4 shadow-sm" width="620" height="346" loading="lazy">
-                <p class="text-muted small mt-2">Dokumentasi paket koli goodie bag yang telah terbungkus inner plastik dan terjahit rapat di karung koli luar.</p>
               </div>
             </div>
-          </section>
 
-          <!-- Section 3: Mitra Ekspedisi Kargo -->
-          <section class="mb-5">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
-              <h2 class="h3 text-navy font-serif mb-3">Mitra Ekspedisi Kargo Rekanan Resmi</h2>
-              <p class="text-secondary mb-4">
-                Untuk pesanan partai mulai dari <a href="/minimum-order" class="text-decoration-none fw-semibold text-primary">minimum order 50 pcs</a> hingga ribuan pcs, pengiriman melalui kurir reguler kiloan sangat membebani anggaran panitia. Kami bekerja sama dengan jaringan kargo tarif koli dan volumetrik ekonomis:
-              </p>
-
-              <div class="row g-3 mb-4">
-                <div class="col-sm-6 col-lg-4">
-                  <div class="p-3 border rounded-3 bg-light h-100">
-                    <div class="fw-bold text-navy mb-1">Indah Logistik Cargo</div>
-                    <small class="text-muted">Jaringan terluas darat dan laut ke seluruh pelosok kabupaten di Sumatera, Jawa, Kalimantan, dan Sulawesi.</small>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <div class="p-3 border rounded-3 bg-light h-100">
-                    <div class="fw-bold text-navy mb-1">Baraka Sarana Tama</div>
-                    <small class="text-muted">Spesialis jalur darat cepat lintas Jawa, Madura, Bali, dan Sumatera dengan armada truk boks tertutup.</small>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <div class="p-3 border rounded-3 bg-light h-100">
-                    <div class="fw-bold text-navy mb-1">Dakota Cargo</div>
-                    <small class="text-muted">Layanan kargo darat ekonomis dengan timbangan minimal bersahabat untuk pesanan skala menengah.</small>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <div class="p-3 border rounded-3 bg-light h-100">
-                    <div class="fw-bold text-navy mb-1">J&amp;T Cargo &amp; JTR (JNE Trucking)</div>
-                    <small class="text-muted">Pelacakan digital real-time melalui website dan aplikasi hingga ke tingkat kecamatan.</small>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <div class="p-3 border rounded-3 bg-light h-100">
-                    <div class="fw-bold text-navy mb-1">Kalog (Kereta Api Logistik)</div>
-                    <small class="text-muted">Pengiriman kilat stasiun-ke-stasiun antar kota di Pulau Jawa dengan kepastian jadwal 1 hari sampai.</small>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <div class="p-3 border rounded-3 bg-light h-100">
-                    <div class="fw-bold text-navy mb-1">TAM Cargo &amp; Ekspedisi Khusus</div>
-                    <small class="text-muted">Pengiriman partai besar kargo kubikasi laut (kontainer) untuk kebutuhan kepulauan Maluku, Papua, dan NTT.</small>
-                  </div>
-                </div>
-              </div>
-
-              <div class="alert alert-secondary mb-0">
-                <strong>Punya Langganan Kargo Sendiri?</strong> Klien korporasi atau instansi yang telah memiliki kontrak kargo khusus di Kota Malang dipersilakan mengarahkan armada jemputan atau menunjuk ekspedisi pilihan sendiri.
+            <!-- HD Image Frame -->
+            <div class="col-12 col-lg-5">
+              <div class="tw-hd-img-frame" style="aspect-ratio: 4 / 3;">
+                <img src="assets/images/pengemasan-goodiebag-event.webp" width="460" height="345" alt="Pengemasan Goodie Bag untuk Pengiriman Ekspedisi Kargo" loading="lazy">
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          <!-- Section 4: Estimasi Durasi (Lead Time Kargo) -->
-          <section class="mb-5">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
-              <h2 class="h3 text-navy font-serif mb-3">Estimasi Waktu Tempuh Pengiriman (Lead Time Kargo)</h2>
-              <p class="text-secondary mb-4">
-                Waktu tempuh dihitung sejak barang diserahkan ke loket kargo di Kota Malang setelah tahap <a href="/quality-control" class="text-decoration-none fw-semibold text-primary">Quality Control</a> dan pelunasan selesai. Berikut rata-rata waktu tempuh kargo berdasarkan wilayah tujuan:
-              </p>
+      <!-- Section 2: Standar Proteksi Pengemasan (Dobel Karung & Inner Plastik) -->
+      <section class="mb-5" aria-labelledby="heading-proteksi">
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <div class="tw-pill-badge tw-pill-emerald mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Proteksi Ekstra Ekspedisi</span>
+          </div>
+          <h2 id="heading-proteksi" class="h3 fw-bold text-navy" style="font-size: clamp(1.4rem, 2.5vw, 1.85rem);">
+            Standar Pengemasan Berlapis: Inner Plastik &amp; Karung Koli Jahit Rapat
+          </h2>
+          <p class="text-muted small">
+            Goodie bag adalah produk kain yang sensitif terhadap rembesan air hujan, debu jalanan, dan gesekan selama transit di gudang kargo. Kami menerapkan sistem perlindungan 3 lapis standar ekspedisi:
+          </p>
+        </div>
 
-              <div class="table-responsive mb-4">
-                <table class="table table-bordered table-hover align-middle mb-0">
-                  <thead class="table-light text-navy">
-                    <tr>
-                      <th scope="col" style="width: 35%;">Wilayah Tujuan</th>
-                      <th scope="col" style="width: 30%;">Jalur Ekspedisi</th>
-                      <th scope="col" style="width: 35%;">Estimasi Durasi Sampai</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="fw-semibold text-dark">Jawa Timur &amp; Madura</td>
-                      <td>Darat / Truk Boks</td>
-                      <td>1 &ndash; 2 hari kerja</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold text-dark">Jawa Tengah, DIY, &amp; Jawa Barat / Jabodetabek</td>
-                      <td>Darat (Truk) / Kereta Api Logistik</td>
-                      <td>1 &ndash; 3 hari kerja</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold text-dark">Bali &amp; Nusa Tenggara Barat (Lombok)</td>
-                      <td>Darat &amp; Feri Penyeberangan</td>
-                      <td>2 &ndash; 4 hari kerja</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold text-dark">Sumatera (Lampung, Palembang, Medan, dsb.)</td>
-                      <td>Darat &amp; Laut (Truk Lintas)</td>
-                      <td>3 &ndash; 5 hari kerja</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold text-dark">Kalimantan (Balikpapan, Banjarmasin, Pontianak)</td>
-                      <td>Kargo Kapal Cepat / Udara</td>
-                      <td>4 &ndash; 7 hari kerja</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold text-dark">Sulawesi (Makassar, Manado, Palu)</td>
-                      <td>Kargo Kapal Cepat / Udara</td>
-                      <td>4 &ndash; 7 hari kerja</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-semibold text-dark">Maluku, Papua, &amp; Nusa Tenggara Timur</td>
-                      <td>Kargo Laut Reguler / Port-to-Port Udara</td>
-                      <td>6 &ndash; 10 hari kerja</td>
-                    </tr>
-                  </tbody>
-                </table>
+        <!-- 3 Feature Cards Grid -->
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-md-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="tw-icon-box bg-blue-50 text-primary">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <span class="tw-pill-badge tw-pill-blue">Lapis 1</span>
               </div>
-
-              <div class="p-3 bg-light rounded-3 border-start border-4 border-info">
-                <small class="text-muted">
-                  <strong>Tips Perencanaan:</strong> Total lead time pemesanan adalah <strong>Durasi Produksi (7&ndash;14 hari kerja)</strong> + <strong>Durasi Kargo Wilayah Anda</strong>. Pelajari panduan alur order di halaman <a href="/cara-pesan" class="text-decoration-none fw-semibold text-primary">Cara Pemesanan Goodie Bag</a>.
-                </small>
-              </div>
-            </div>
-          </section>
-
-          <!-- Section 5: Pelacakan Resi & Koordinasi Pengiriman -->
-          <section class="mb-5">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
-              <h2 class="h3 text-navy font-serif mb-3">Pelacakan Resi Aktif &amp; Koordinasi Real-Time</h2>
-              <p class="text-secondary mb-3">
-                Transparansi pengiriman adalah kunci kenyamanan panitia acara. Begitu paket goodie bag selesai ditimbang dan terdaftar di sistem ekspedisi kargo, tim kami segera mengirimkan:
-              </p>
-              <ul class="text-secondary mb-4">
-                <li class="mb-2"><strong>Foto Dokumentasi Koli:</strong> Foto tampak luar karung yang sudah berjahit rapat dan berlabel manifest jelas sebelum dinaikkan ke armada kargo.</li>
-                <li class="mb-2"><strong>Foto Surat Jalan / Resi Kargo:</strong> Lembar bukti serah terima resmi dari pihak ekspedisi yang memuat nomor Surat Tanda Terima (STT) atau AWB.</li>
-                <li class="mb-2"><strong>Tautan Pelacakan Online:</strong> Link cek resi langsung untuk memantau posisi pergerakan truk kargo hingga paket tiba di alamat tujuan Anda.</li>
-              </ul>
-              <p class="text-secondary mb-0">
-                Untuk pesanan instansi dalam jumlah sangat besar yang membutuhkan koordinasi khusus dengan divisi logistik kantor pusat, baca juga ulasan teknis kami di panduan <a href="/blog/cara-pesan-goodiebag-custom-partai-besar" class="text-decoration-none fw-semibold text-primary">Cara Pesan Goodie Bag Custom Partai Besar</a>.
+              <h3 class="h6 fw-bold text-navy mb-2" style="font-size: 1.05rem;">1. Inner Plastik Kedap Air</h3>
+              <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                Tas ditata rapi per 12 pcs (1 lusin) lalu dimasukkan ke dalam kantong plastik tebal kedap air dan diikat kencang. Menjaga permukaan tas tetap bersih, steril, dan bebas dari debu lembap selama di perjalanan.
               </p>
             </div>
-          </section>
+          </div>
 
-          <!-- Section 6: FAQ -->
-          <section class="mb-5">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white">
-              <h2 class="h3 text-navy font-serif mb-4">Pertanyaan Umum Seputar Pengiriman Goodie Bag (FAQ)</h2>
-              <div class="accordion" id="faqPengirimanAccordion">
-
-                <div class="accordion-item border-0 border-bottom">
-                  <h3 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      Ekspedisi apa saja yang digunakan untuk mengirim pesanan goodie bag?
-                    </button>
-                  </h3>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqPengirimanAccordion">
-                    <div class="accordion-body text-secondary">
-                      Kami bermitra dengan kargo darat, laut, dan udara terpercaya seperti Indah Logistik Cargo, Baraka Sarana Tama, Dakota Cargo, J&amp;T Cargo, Karyati, TAM Cargo, Kalog (kereta api), serta JNE Trucking (JTR) untuk memastikan ongkos kirim paling efisien dan aman.
-                    </div>
-                  </div>
+          <div class="col-12 col-md-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="tw-icon-box bg-amber-50 text-amber-600">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
                 </div>
-
-                <div class="accordion-item border-0 border-bottom">
-                  <h3 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Apakah bisa mengirim pesanan ke instansi atau kampus di luar Pulau Jawa?
-                    </button>
-                  </h3>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqPengirimanAccordion">
-                    <div class="accordion-body text-secondary">
-                      Bisa. Kami rutin melayani pengiriman kargo ke 38 provinsi di seluruh Indonesia, mulai dari Sumatera, Bali, Kalimantan, Sulawesi, hingga Maluku dan Papua via kargo kapal cepat atau kargo udara port-to-port/door-to-door.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item border-0 border-bottom">
-                  <h3 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Apakah klien boleh menentukan ekspedisi kargo sendiri di Malang?
-                    </button>
-                  </h3>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqPengirimanAccordion">
-                    <div class="accordion-body text-secondary">
-                      Sangat boleh. Jika instansi atau perusahaan Anda telah memiliki rekanan kargo langganan atau kontrak korporasi tertentu di Kota Malang, tim kami siap mengirimkan paket koli langsung ke kantor perwakilan ekspedisi tersebut.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item border-0 border-bottom">
-                  <h3 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Bagaimana standar perlindungan paket agar tas tidak basah atau kotor di perjalanan?
-                    </button>
-                  </h3>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqPengirimanAccordion">
-                    <div class="accordion-body text-secondary">
-                      Setiap 12 pcs (1 lusin) tas dibungkus rapi dalam inner plastik kedap air dan debu. Seluruh bundel kemudian dimasukkan ke dalam karung koli tebal yang dijahit rapat dengan benang nilon kencang serta diberi label identitas penerima tahan air.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item border-0">
-                  <h3 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed fw-bold text-navy" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      Kapan waktu yang tepat untuk memesan agar goodie bag tiba sebelum tanggal acara?
-                    </button>
-                  </h3>
-                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqPengirimanAccordion">
-                    <div class="accordion-body text-secondary">
-                      Waktu produksi membutuhkan 7 hingga 14 hari kerja setelah approval mockup. Ditambah durasi kargo (Jawa 1-3 hari, luar Jawa 3-7 hari). Kami merekomendasikan klien luar kota memesan minimal 3 hingga 4 minggu sebelum hari-H kegiatan.
-                    </div>
-                  </div>
-                </div>
-
+                <span class="tw-pill-badge tw-pill-amber">Lapis 2</span>
               </div>
-            </div>
-          </section>
-
-          <!-- Section 7: CTA WhatsApp -->
-          <section class="mb-5 text-center">
-            <div class="card border-0 shadow rounded-4 p-5" style="background: linear-gradient(135deg, #1E3A8A 0%, #172554 100%); color: #ffffff;">
-              <h2 class="h3 font-serif mb-3 text-white">Rencanakan Pengiriman Kargo Goodie Bag Anda Sekarang</h2>
-              <p class="mb-4 text-white-50 mx-auto" style="max-width: 650px;">
-                Konsultasikan tujuan kota pengiriman, estimasi berat koli, serta batas tanggal acara Anda kepada tim layanan kami. Kami bantu pilihkan opsi ekspedisi kargo paling cepat, aman, dan hemat ongkos kirim.
+              <h3 class="h6 fw-bold text-navy mb-2" style="font-size: 1.05rem;">2. Karung Koli Jahit Rapat</h3>
+              <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                Seluruh bundel lusinan dikemas ke dalam karung koli tebal luar berkapasitas besar. Ujung karung dijahit mesin/jarum goni dengan benang nilon rapat sehingga tidak bergeser atau robek saat dibongkar-muat di depo kargo.
               </p>
-              <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="https://wa.me/6282131087971?text=Halo%20Goodie%20Bag%2C%20saya%20ingin%20konsultasi%20pengiriman%20kargo%20untuk%20acara%20kami." target="_blank" rel="noopener noreferrer" class="btn btn-warning-brand fw-bold px-4 py-3 rounded-pill shadow">
-                  Konsultasi Rute Kargo WhatsApp
-                </a>
-                <a href="/cara-pesan" class="btn btn-outline-light fw-bold px-4 py-3 rounded-pill">
-                  Alur Pemesanan Lengkap
-                </a>
-              </div>
             </div>
-          </section>
+          </div>
 
-          <!-- Navigasi Terkait -->
-          <div class="p-4 rounded-4 bg-light border mb-5">
-            <h3 class="h6 text-navy fw-bold mb-3 text-uppercase letter-spacing-1">Informasi Terkait Layanan &amp; Ketentuan</h3>
-            <div class="row g-3">
-              <div class="col-sm-4">
-                <a href="/minimum-order" class="d-block p-3 bg-white rounded-3 border text-decoration-none shadow-sm h-100">
-                  <div class="fw-bold text-navy mb-1">&rarr; Minimum Order</div>
-                  <small class="text-muted">Ketentuan batas minimal 50 pcs &amp; skala pesanan.</small>
-                </a>
+          <div class="col-12 col-md-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="tw-icon-box bg-purple-50 text-purple-600">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                  </svg>
+                </div>
+                <span class="tw-pill-badge tw-pill-purple">Lapis 3</span>
               </div>
-              <div class="col-sm-4">
-                <a href="/quality-control" class="d-block p-3 bg-white rounded-3 border text-decoration-none shadow-sm h-100">
-                  <div class="fw-bold text-navy mb-1">&rarr; Quality Control &amp; Garansi</div>
-                  <small class="text-muted">Standar inspeksi 6 tahap dan kompensasi mutu.</small>
-                </a>
+              <h3 class="h6 fw-bold text-navy mb-2" style="font-size: 1.05rem;">3. Label Manifest &amp; Nomor Koli</h3>
+              <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                Setiap karung ditempeli lembar manifest tahan air: memuat nama instansi penerima, alamat detail acara, kontak PIC aktif, dan penomoran koli (contoh: <em>Koli 1 dari 4</em>) agar paket tidak tercecer di cabang kargo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- High-Res HD Showcase Image (100% Synchronized) -->
+        <div class="tw-hero-card p-3 p-md-4">
+          <div class="tw-hd-img-frame" style="max-height: 480px;">
+            <img src="assets/images/packing-koli-karung-ekspedisi.webp" width="1376" height="768" alt="Standar Packing Koli Dobel Karung untuk Pengiriman Luar Kota" loading="lazy">
+          </div>
+          <div class="text-center pt-3 pb-1">
+            <span class="tw-pill-badge tw-pill-slate">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 14 14"/>
+              </svg>
+              <span>Dokumentasi Nyata: Paket koli goodie bag terbungkus inner plastik &amp; terjahit rapat di karung koli luar</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Mitra Ekspedisi Kargo Rekanan -->
+      <section class="mb-5" aria-labelledby="heading-mitra">
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <div class="tw-pill-badge tw-pill-blue mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+            <span>Tarif Kargo Pabrik Tangan Pertama</span>
+          </div>
+          <h2 id="heading-mitra" class="h3 fw-bold text-navy" style="font-size: clamp(1.4rem, 2.5vw, 1.85rem);">
+            Mitra Ekspedisi Kargo Rekanan Resmi
+          </h2>
+          <p class="text-muted small">
+            Untuk pesanan partai mulai dari <a href="/minimum-order" class="text-decoration-none fw-semibold text-primary">minimum order 50 pcs</a> hingga ribuan pcs, pengiriman melalui kargo tarif koli dan volumetrik jauh lebih ekonomis dibanding kurir reguler kiloan retail:
+          </p>
+        </div>
+
+        <!-- 6 Cargo Partner Cards -->
+        <div class="row g-3 g-md-4 mb-4">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary text-white rounded-circle p-1.5" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">1</span>
+                <h3 class="h6 fw-bold text-navy mb-0">Indah Logistik Cargo</h3>
               </div>
-              <div class="col-sm-4">
-                <a href="/faq" class="d-block p-3 bg-white rounded-3 border text-decoration-none shadow-sm h-100">
-                  <div class="fw-bold text-navy mb-1">&rarr; Tanya Jawab (FAQ)</div>
-                  <small class="text-muted">Jawaban lengkap seputar bahan, sablon, &amp; pembayaran.</small>
-                </a>
+              <p class="text-secondary small mb-0" style="line-height: 1.55;">
+                Jaringan terluas darat dan laut ke seluruh pelosok kabupaten di Sumatera, Jawa, Kalimantan, dan Sulawesi dengan tarif koli sangat hemat.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary text-white rounded-circle p-1.5" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">2</span>
+                <h3 class="h6 fw-bold text-navy mb-0">Baraka Sarana Tama</h3>
+              </div>
+              <p class="text-secondary small mb-0" style="line-height: 1.55;">
+                Spesialis jalur darat cepat lintas Jawa, Madura, Bali, dan Sumatera dengan armada truk boks tertutup berjadwal harian ketat.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary text-white rounded-circle p-1.5" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">3</span>
+                <h3 class="h6 fw-bold text-navy mb-0">Dakota Cargo</h3>
+              </div>
+              <p class="text-secondary small mb-0" style="line-height: 1.55;">
+                Layanan kargo darat ekonomis dengan timbangan minimum bersahabat untuk pesanan skala menengah (50 hingga 300 pcs).
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary text-white rounded-circle p-1.5" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">4</span>
+                <h3 class="h6 fw-bold text-navy mb-0">J&amp;T Cargo &amp; JTR (JNE Trucking)</h3>
+              </div>
+              <p class="text-secondary small mb-0" style="line-height: 1.55;">
+                Pelacakan digital real-time melalui website dan aplikasi hingga ke tingkat kecamatan dengan integrasi status manifest otomatis.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary text-white rounded-circle p-1.5" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">5</span>
+                <h3 class="h6 fw-bold text-navy mb-0">Kalog (Kereta Api Logistik)</h3>
+              </div>
+              <p class="text-secondary small mb-0" style="line-height: 1.55;">
+                Pengiriman kilat stasiun-ke-stasiun antar kota di Pulau Jawa dengan kepastian jadwal 1–2 hari kerja sampai tanpa kendala macet.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="tw-card">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary text-white rounded-circle p-1.5" style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">6</span>
+                <h3 class="h6 fw-bold text-navy mb-0">TAM Cargo &amp; Ekspedisi Khusus</h3>
+              </div>
+              <p class="text-secondary small mb-0" style="line-height: 1.55;">
+                Pengiriman partai besar kargo kubikasi laut (kontainer LCL/FCL) untuk kebutuhan kepulauan Maluku, Papua, dan Nusa Tenggara Timur.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Courier Callout -->
+        <div class="p-4 rounded-4 bg-white border d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 shadow-xs">
+          <div class="d-flex align-items-center gap-3">
+            <div class="tw-icon-box bg-blue-50 text-primary">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div>
+              <strong class="d-block text-navy font-sm fw-bold">Punya Langganan Ekspedisi Kargo Sendiri?</strong>
+              <span class="text-muted small">Klien korporasi atau instansi yang telah memiliki kontrak kargo khusus di Kota Malang dipersilakan mengarahkan armada jemputan ke workshop kami.</span>
+            </div>
+          </div>
+          <a href="https://wa.me/6282131087971?text=Halo%2C%20kami%20ingin%20menggunakan%20ekspedisi%20kargo%20langganan%20kami%20sendiri." target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill px-3 py-2 fw-semibold text-nowrap">
+            Koordinasi Kargo Sendiri &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 4: Estimasi Durasi (Lead Time Kargo) -->
+      <section class="mb-5" aria-labelledby="heading-estimasi">
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <div class="tw-pill-badge tw-pill-amber mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Kepastian Jadwal Acara</span>
+          </div>
+          <h2 id="heading-estimasi" class="h3 fw-bold text-navy" style="font-size: clamp(1.4rem, 2.5vw, 1.85rem);">
+            Estimasi Waktu Tempuh Pengiriman (Lead Time Kargo)
+          </h2>
+          <p class="text-muted small">
+            Waktu tempuh dihitung sejak barang diserahkan ke loket kargo di Kota Malang setelah tahap <a href="/quality-control" class="text-decoration-none fw-semibold text-primary">Quality Control</a> dan pelunasan 50% diselesaikan:
+          </p>
+        </div>
+
+        <!-- Modern Tailwind Table -->
+        <div class="tw-table-container mb-4">
+          <div class="table-responsive">
+            <table class="table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 40%;">Wilayah Tujuan</th>
+                  <th scope="col" style="width: 30%;">Jalur Ekspedisi</th>
+                  <th scope="col" style="width: 30%;" class="text-end pe-4">Estimasi Durasi Sampai</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="fw-bold text-navy">Jawa Timur &amp; Madura</div>
+                    <small class="text-muted">Surabaya, Sidoarjo, Kediri, Madiun, dsb.</small>
+                  </td>
+                  <td><span class="text-secondary small">Darat / Truk Boks</span></td>
+                  <td class="text-end pe-4">
+                    <span class="tw-pill-badge tw-pill-emerald">1 &ndash; 2 Hari Kerja</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold text-navy">Jawa Tengah, DIY, &amp; Jabodetabek / Jabar</div>
+                    <small class="text-muted">Semarang, Solo, Jogja, Bandung, Jakarta, Bekasi</small>
+                  </td>
+                  <td><span class="text-secondary small">Darat (Truk) / Kereta Api Logistik</span></td>
+                  <td class="text-end pe-4">
+                    <span class="tw-pill-badge tw-pill-emerald">1 &ndash; 3 Hari Kerja</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold text-navy">Bali &amp; Nusa Tenggara Barat (Lombok)</div>
+                    <small class="text-muted">Denpasar, Badung, Mataram, dsb.</small>
+                  </td>
+                  <td><span class="text-secondary small">Darat &amp; Feri Penyeberangan</span></td>
+                  <td class="text-end pe-4">
+                    <span class="tw-pill-badge tw-pill-blue">2 &ndash; 4 Hari Kerja</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold text-navy">Sumatera</div>
+                    <small class="text-muted">Lampung, Palembang, Medan, Pekanbaru, Padang</small>
+                  </td>
+                  <td><span class="text-secondary small">Darat &amp; Laut (Truk Lintas)</span></td>
+                  <td class="text-end pe-4">
+                    <span class="tw-pill-badge tw-pill-blue">3 &ndash; 5 Hari Kerja</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold text-navy">Kalimantan</div>
+                    <small class="text-muted">Balikpapan, Banjarmasin, Pontianak, Samarinda</small>
+                  </td>
+                  <td><span class="text-secondary small">Kargo Kapal Cepat / Udara</span></td>
+                  <td class="text-end pe-4">
+                    <span class="tw-pill-badge tw-pill-amber">4 &ndash; 7 Hari Kerja</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold text-navy">Sulawesi</div>
+                    <small class="text-muted">Makassar, Manado, Palu, Kendari</small>
+                  </td>
+                  <td><span class="text-secondary small">Kargo Kapal Cepat / Udara</span></td>
+                  <td class="text-end pe-4">
+                    <span class="tw-pill-badge tw-pill-amber">4 &ndash; 7 Hari Kerja</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="fw-bold text-navy">Maluku, Papua, &amp; Nusa Tenggara Timur</div>
+                    <small class="text-muted">Ambon, Jayapura, Kupang, Sorong</small>
+                  </td>
+                  <td><span class="text-secondary small">Kargo Laut Reguler / Port-to-Port Udara</span></td>
+                  <td class="text-end pe-4">
+                    <span class="tw-pill-badge tw-pill-purple">6 &ndash; 10 Hari Kerja</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Formula Tips Callout -->
+        <div class="p-3.5 rounded-3 bg-light border-start border-4 border-warning d-flex align-items-center gap-3">
+          <div class="fs-4 text-warning">💡</div>
+          <div class="small text-secondary">
+            <strong>Tips Perencanaan Panitia:</strong> Total lead time pemesanan adalah <strong>Durasi Produksi (7&ndash;14 hari kerja)</strong> + <strong>Durasi Kargo Wilayah Anda</strong>. Pelajari panduan alur order di halaman <a href="/cara-pesan" class="text-decoration-none fw-semibold text-primary">Cara Pemesanan Goodie Bag</a>.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Pelacakan Resi & Koordinasi Pengiriman -->
+      <section class="mb-5" aria-labelledby="heading-pelacakan">
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <div class="tw-pill-badge tw-pill-emerald mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Transparansi Pengiriman 100%</span>
+          </div>
+          <h2 id="heading-pelacakan" class="h3 fw-bold text-navy" style="font-size: clamp(1.4rem, 2.5vw, 1.85rem);">
+            Pelacakan Resi Aktif &amp; Koordinasi Real-Time
+          </h2>
+          <p class="text-muted small">
+            Transparansi pengiriman adalah kunci kenyamanan panitia acara. Begitu paket goodie bag selesai ditimbang dan terdaftar di sistem ekspedisi kargo, tim kami segera membagikan:
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="tw-card">
+              <div class="tw-icon-box bg-blue-50 text-primary mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                  <circle cx="12" cy="13" r="4"/>
+                </svg>
+              </div>
+              <h3 class="h6 fw-bold text-navy mb-2" style="font-size: 1.05rem;">Foto Dokumentasi Koli</h3>
+              <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                Foto tampak luar karung yang sudah berjahit rapat dan berlabel manifest jelas sebelum dinaikkan ke armada kargo.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="tw-card">
+              <div class="tw-icon-box bg-emerald-50 text-emerald-600 mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+              <h3 class="h6 fw-bold text-navy mb-2" style="font-size: 1.05rem;">Foto Resi &amp; Surat Jalan</h3>
+              <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                Lembar bukti serah terima resmi dari pihak ekspedisi yang memuat nomor Surat Tanda Terima (STT) atau Air Waybill (AWB).
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="tw-card">
+              <div class="tw-icon-box bg-purple-50 text-purple-600 mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3 class="h6 fw-bold text-navy mb-2" style="font-size: 1.05rem;">Tautan Pelacakan Online</h3>
+              <p class="text-secondary small mb-0" style="line-height: 1.6;">
+                Link cek resi langsung untuk memantau posisi pergerakan armada kargo secara real-time hingga paket tiba di alamat tujuan Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: FAQ Accordion -->
+      <section class="mb-5" aria-labelledby="heading-faq">
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <div class="tw-pill-badge tw-pill-blue mb-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>Informasi Praktis</span>
+          </div>
+          <h2 id="heading-faq" class="h3 fw-bold text-navy" style="font-size: clamp(1.4rem, 2.5vw, 1.85rem);">
+            Pertanyaan Umum Seputar Pengiriman (FAQ)
+          </h2>
+        </div>
+
+        <div class="accordion" id="faqPengirimanAccordion">
+          <div class="tw-accordion-item">
+            <h3 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed tw-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Ekspedisi apa saja yang digunakan untuk mengirim pesanan goodie bag?
+              </button>
+            </h3>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqPengirimanAccordion">
+              <div class="accordion-body text-secondary small" style="line-height: 1.65; padding: 18px 24px;">
+                Kami bermitra dengan kargo darat, laut, dan udara terpercaya seperti Indah Logistik Cargo, Baraka Sarana Tama, Dakota Cargo, J&amp;T Cargo, Karyati, TAM Cargo, Kalog (kereta api), serta JNE Trucking (JTR) untuk memastikan ongkos kirim paling efisien dan aman.
               </div>
             </div>
           </div>
 
+          <div class="tw-accordion-item">
+            <h3 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed tw-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Apakah bisa mengirim pesanan ke instansi atau kampus di luar Pulau Jawa?
+              </button>
+            </h3>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqPengirimanAccordion">
+              <div class="accordion-body text-secondary small" style="line-height: 1.65; padding: 18px 24px;">
+                Tentu saja bisa. Sekitar 60% pemesan kami berasal dari luar Jawa seperti Sumatera, Kalimantan, Sulawesi, Bali, NTB, hingga Papua. Kami memilihkan jalur kargo kapal cepat atau udara terpercaya agar tiba tepat waktu sebelum hari-H acara.
+              </div>
+            </div>
+          </div>
+
+          <div class="tw-accordion-item">
+            <h3 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed tw-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Apakah klien boleh menentukan ekspedisi kargo sendiri di Malang?
+              </button>
+            </h3>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqPengirimanAccordion">
+              <div class="accordion-body text-secondary small" style="line-height: 1.65; padding: 18px 24px;">
+                Sangat boleh. Jika instansi atau perusahaan Anda telah memiliki rekanan kargo langganan atau kontrak korporasi tertentu di Kota Malang, tim kami siap mengirimkan paket koli langsung ke kantor perwakilan ekspedisi tersebut.
+              </div>
+            </div>
+          </div>
+
+          <div class="tw-accordion-item">
+            <h3 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed tw-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Bagaimana standar perlindungan paket agar tas tidak basah atau kotor di perjalanan?
+              </button>
+            </h3>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqPengirimanAccordion">
+              <div class="accordion-body text-secondary small" style="line-height: 1.65; padding: 18px 24px;">
+                Setiap 12 pcs (1 lusin) tas dibungkus rapi dalam inner plastik kedap air dan debu. Seluruh bundel kemudian dimasukkan ke dalam karung koli tebal yang dijahit rapat dengan benang nilon kencang serta diberi label identitas penerima tahan air.
+              </div>
+            </div>
+          </div>
+
+          <div class="tw-accordion-item">
+            <h3 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed tw-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Kapan waktu yang tepat untuk memesan agar goodie bag tiba sebelum tanggal acara?
+              </button>
+            </h3>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqPengirimanAccordion">
+              <div class="accordion-body text-secondary small" style="line-height: 1.65; padding: 18px 24px;">
+                Waktu produksi membutuhkan 7 hingga 14 hari kerja setelah approval mockup. Ditambah durasi kargo (Jawa 1-3 hari, luar Jawa 3-7 hari). Kami merekomendasikan klien luar kota memesan minimal 3 hingga 4 minggu sebelum hari-H kegiatan.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: CTA WhatsApp (Tailwind Dark Navy Gradient) -->
+      <section class="mb-5 text-center" aria-labelledby="heading-cta">
+        <div class="tw-navy-cta">
+          <h2 id="heading-cta" class="h3 font-serif mb-3 text-white" style="font-size: clamp(1.4rem, 2.5vw, 1.9rem);">
+            Rencanakan Pengiriman Kargo Goodie Bag Anda Sekarang
+          </h2>
+          <p class="mb-4 text-white-50 mx-auto" style="max-width: 650px; font-size: 0.95rem; line-height: 1.65;">
+            Konsultasikan tujuan kota pengiriman, estimasi berat koli, serta batas tanggal acara Anda kepada tim layanan kami. Kami bantu pilihkan opsi ekspedisi kargo paling cepat, aman, dan hemat ongkos kirim.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="https://wa.me/6282131087971?text=Halo%20Goodie%20Bag%2C%20saya%20ingin%20konsultasi%20pengiriman%20kargo%20untuk%20acara%20kami." target="_blank" rel="noopener noreferrer" class="btn btn-warning-brand fw-bold px-4 py-3 rounded-pill shadow">
+              Konsultasi Rute Kargo WhatsApp &rarr;
+            </a>
+            <a href="/cara-pesan" class="btn btn-outline-light fw-bold px-4 py-3 rounded-pill">
+              Lihat Alur Cara Pemesanan
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Navigasi Terkait (Tailwind Cards) -->
+      <div class="p-4 rounded-4 bg-light border mb-5">
+        <h3 class="h6 text-navy fw-bold mb-3 text-uppercase letter-spacing-1">Informasi Terkait Layanan &amp; Ketentuan</h3>
+        <div class="row g-3">
+          <div class="col-12 col-sm-4">
+            <a href="/minimum-order" class="tw-nav-card">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="tw-pill-badge tw-pill-emerald px-2 py-0.5" style="font-size:10px;">MOQ 50 Pcs</span>
+              </div>
+              <div class="fw-bold text-navy mb-1">&rarr; Minimum Order</div>
+              <small class="text-muted">Ketentuan batas minimal 50 pcs untuk seluruh bahan.</small>
+            </a>
+          </div>
+          <div class="col-12 col-sm-4">
+            <a href="/quality-control" class="tw-nav-card">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="tw-pill-badge tw-pill-blue px-2 py-0.5" style="font-size:10px;">QC 6 Tahap</span>
+              </div>
+              <div class="fw-bold text-navy mb-1">&rarr; Quality Control &amp; Garansi</div>
+              <small class="text-muted">Standar inspeksi 6 tahap dan kompensasi mutu.</small>
+            </a>
+          </div>
+          <div class="col-12 col-sm-4">
+            <a href="/faq" class="tw-nav-card">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="tw-pill-badge tw-pill-purple px-2 py-0.5" style="font-size:10px;">FAQ</span>
+              </div>
+              <div class="fw-bold text-navy mb-1">&rarr; Tanya Jawab Lengkap</div>
+              <small class="text-muted">Jawaban seputar bahan, sablon, &amp; pelunasan.</small>
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
   </main>
 
