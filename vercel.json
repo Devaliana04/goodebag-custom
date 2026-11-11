@@ -29,6 +29,21 @@
       "permanent": true
     },
     {
+      "source": "/minimum-order.html",
+      "destination": "/minimum-order",
+      "permanent": true
+    },
+    {
+      "source": "/quality-control.html",
+      "destination": "/quality-control",
+      "permanent": true
+    },
+    {
+      "source": "/pengiriman.html",
+      "destination": "/pengiriman",
+      "permanent": true
+    },
+    {
       "source": "/faq.html",
       "destination": "/faq",
       "permanent": true

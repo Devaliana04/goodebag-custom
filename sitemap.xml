@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://goodiebag.web.id/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://goodiebag.web.id/produk</loc>
@@ -22,7 +22,19 @@
   </url>
   <url>
     <loc>https://goodiebag.web.id/cara-pesan</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/minimum-order</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/quality-control</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://goodiebag.web.id/pengiriman</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://goodiebag.web.id/kontak</loc>
@@ -30,7 +42,7 @@
   </url>
   <url>
     <loc>https://goodiebag.web.id/faq</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://goodiebag.web.id/blog</loc>

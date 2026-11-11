@@ -1,4 +1,4 @@
-# === Sakabag Netlify / Cloudflare _redirects ===
+# === Goodie Bag Netlify / Cloudflare _redirects ===
 
 # Core Pages
 /produk /produk/produk.html 200
@@ -12,6 +12,9 @@
 /kontak /kontak.html 200
 /faq /faq.html 200
 /cara-pesan /cara-pesan.html 200
+/minimum-order /minimum-order.html 200
+/quality-control /quality-control.html 200
+/pengiriman /pengiriman.html 200
 /kebijakan-privasi /kebijakan-privasi.html 200
 /syarat-ketentuan /syarat-ketentuan.html 200
 
@@ -21,6 +24,9 @@
 /kontak.html /kontak 301
 /faq.html /faq 301
 /cara-pesan.html /cara-pesan 301
+/minimum-order.html /minimum-order 301
+/quality-control.html /quality-control 301
+/pengiriman.html /pengiriman 301
 /kebijakan-privasi.html /kebijakan-privasi 301
 /syarat-ketentuan.html /syarat-ketentuan 301
 /produk.html /produk 301
