@@ -14,6 +14,26 @@
   ],
   "redirects": [
     {
+      "source": "/blog/pengadaan-goodie-bag-kantor",
+      "destination": "/blog/cara-pesan-goodiebag-custom-partai-besar",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pengadaan-goodie-bag-kantor.html",
+      "destination": "/blog/cara-pesan-goodiebag-custom-partai-besar",
+      "permanent": true
+    },
+    {
+      "source": "/blog/perbandingan-bahan-tas-seminar",
+      "destination": "/blog/bahan-goodie-bag",
+      "permanent": true
+    },
+    {
+      "source": "/blog/perbandingan-bahan-tas-seminar.html",
+      "destination": "/blog/bahan-goodie-bag",
+      "permanent": true
+    },
+    {
       "source": "/blog/panduan-goodiebag",
       "destination": "/blog/cara-memilih-goodie-bag",
       "permanent": true
