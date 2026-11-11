@@ -14,6 +14,41 @@
   ],
   "redirects": [
     {
+      "source": "/syarat-ketentuan.html",
+      "destination": "/syarat-ketentuan",
+      "permanent": true
+    },
+    {
+      "source": "/kebijakan-privasi.html",
+      "destination": "/kebijakan-privasi",
+      "permanent": true
+    },
+    {
+      "source": "/cara-pesan.html",
+      "destination": "/cara-pesan",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/kontak.html",
+      "destination": "/kontak",
+      "permanent": true
+    },
+    {
+      "source": "/layanan.html",
+      "destination": "/layanan",
+      "permanent": true
+    },
+    {
+      "source": "/tentang.html",
+      "destination": "/tentang",
+      "permanent": true
+    },
+    {
       "source": "/paket",
       "destination": "/produk",
       "permanent": true

@@ -15,6 +15,18 @@
 /kebijakan-privasi /kebijakan-privasi.html 200
 /syarat-ketentuan /syarat-ketentuan.html 200
 
+# Core Pages 301 Redirects (.html to clean URLs)
+/tentang.html /tentang 301
+/layanan.html /layanan 301
+/kontak.html /kontak 301
+/faq.html /faq 301
+/cara-pesan.html /cara-pesan 301
+/kebijakan-privasi.html /kebijakan-privasi 301
+/syarat-ketentuan.html /syarat-ketentuan 301
+/produk.html /produk 301
+/portofolio.html /portofolio 301
+/blog.html /blog 301
+
 # Legacy Paket Redirects (301)
 /paket /produk 301
 /paket/seminar-workshop /produk/seminar-workshop 301
