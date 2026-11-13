@@ -6727,3 +6727,21 @@ img.img-contain {
 .article-reading-canvas .text-white-50 {
   color: rgba(255, 255, 255, 0.92) !important;
 }
+
+/* ==========================================================================
+   KONSISTENSI FONT ARTIKEL & KATALOG BLOG (SESUAI ARAHAN USER)
+   Menjamin seluruh judul (H1), subjudul (H2-H6), dan judul kartu blog 
+   konsisten menggunakan font sans-serif modern (Plus Jakarta Sans).
+   ========================================================================== */
+.article-reading-canvas h1,
+.article-reading-canvas h2,
+.article-reading-canvas h3,
+.article-reading-canvas h4,
+.article-reading-canvas h5,
+.article-reading-canvas h6,
+.article-reading-canvas .section-title,
+.article-reading-canvas .font-serif,
+.blog-card-title,
+.blog-card-title a {
+  font-family: var(--font-heading) !important;
+}
