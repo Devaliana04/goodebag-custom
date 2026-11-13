@@ -228,9 +228,10 @@ img {
 
 .navbar-nav .nav-link[aria-current="page"],
 .navbar-nav .nav-link.active {
-  color: var(--color-primary);
+  color: #D97706;
   font-weight: 750;
-  background-color: var(--color-sky-100);
+  background-color: #FEF3C7;
+  border-radius: 8px;
 }
 
 .dropdown-menu {
@@ -1344,9 +1345,10 @@ img {
 
   .navbar-nav .nav-link.active,
   .navbar-nav .nav-link[aria-current="page"] {
-    color: var(--color-primary) !important;
-    background-color: var(--color-sky-100);
-    font-weight: 750;
+    color: #D97706 !important;
+    background-color: #FEF3C7 !important;
+    font-weight: 750 !important;
+    border-radius: 8px !important;
   }
 
   /* Dropdown menu mobile */
@@ -2358,9 +2360,10 @@ body.modal-open {
 
   .navbar-nav .nav-link.active,
   .navbar-nav .nav-link[aria-current="page"] {
-    color: var(--color-primary) !important;
-    background-color: var(--color-sky-100) !important;
+    color: #D97706 !important;
+    background-color: #FEF3C7 !important;
     font-weight: 750 !important;
+    border-radius: 8px !important;
   }
 
   .dropdown-menu {
@@ -4923,7 +4926,9 @@ small,
 }
 
 .nav-link.active,
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active,
+.nav-link[aria-current="page"],
+.navbar-nav .nav-link[aria-current="page"] {
   color: #D97706 !important;
   background-color: #FEF3C7 !important;
   font-weight: 700 !important;
