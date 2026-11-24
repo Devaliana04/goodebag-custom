@@ -2463,19 +2463,19 @@
     },
     {
       "source": "/produk",
-      "destination": "/produk/produk.html"
+      "destination": "/produk/index.html"
     },
     {
       "source": "/produk/",
-      "destination": "/produk/produk.html"
+      "destination": "/produk/index.html"
     },
     {
       "source": "/blog",
-      "destination": "/blog/blog.html"
+      "destination": "/blog/index.html"
     },
     {
       "source": "/blog/",
-      "destination": "/blog/blog.html"
+      "destination": "/blog/index.html"
     },
     {
       "source": "/produk/seminar-workshop",
