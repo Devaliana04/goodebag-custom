@@ -19,6 +19,10 @@
 /syarat-ketentuan /syarat-ketentuan.html 200
 
 # Core Pages 301 Redirects (.html to clean URLs)
+/blog/blog /blog 301!
+/blog/blog.html /blog 301!
+/produk/produk /produk 301!
+/produk/produk.html /produk 301!
 /tentang.html /tentang 301
 /layanan.html /layanan 301
 /kontak.html /kontak 301
@@ -85,6 +89,10 @@
 /produk-totebag-seminar-kanvas /produk/totebag-seminar-kanvas 301
 
 # Blog Rewrites (200)
+/blog/goodie-bag-malang /blog/goodie-bag-malang.html 200
+/blog/rekomendasi-vendor-goodie-bag-malang /blog/rekomendasi-vendor-goodie-bag-malang.html 200
+/blog/goodie-bag-custom-malang /blog/goodie-bag-custom-malang.html 200
+/blog/bahan-goodie-bag-corporate /blog/bahan-goodie-bag-corporate.html 200
 /blog/goodie-bag /blog/goodie-bag.html 200
 /blog/apa-itu-goodie-bag /blog/apa-itu-goodie-bag.html 200
 /blog/perbedaan-goodie-bag-dan-tote-bag /blog/perbedaan-goodie-bag-dan-tote-bag.html 200

@@ -19,6 +19,8 @@ RewriteRule ^paket/sekolah-komunitas/?$ paket-sekolah-komunitas.html [L]
 RewriteRule ^paket/pernikahan-acara/?$ paket-pernikahan-acara.html [L]
 RewriteRule ^paket/custom/?$ paket-custom.html [L]
 
+RewriteRule ^blog/blog/?$ /blog [R=301,L]
+RewriteRule ^produk/produk/?$ /produk [R=301,L]
 RewriteRule ^blog/?$ blog/blog.html [L]
 RewriteRule ^produk/?$ produk/produk.html [L]
 RewriteRule ^portofolio/?$ portofolio/portofolio.html [L]
