@@ -8,8 +8,9 @@ function renderArticlePage({
   metaTitle,
   metaDescription,
   focusKeyphrase,
-  datePublished = '2026-11-23T08:00:00+07:00',
-  dateModified = '2026-11-23T08:00:00+07:00',
+  datePublished = '2026-11-24T17:00:00+07:00',
+  dateModified = '2026-11-24T17:00:00+07:00',
+  dateFormatted = '24 November 2026, 17:00 WIB',
   author = 'Devaliana Tensa Nanul',
   readingTime = '8 Menit',
   imagePath,
@@ -334,7 +335,7 @@ function renderArticlePage({
                     <img src="../assets/images/author/devaliana-square.webp" width="28" height="28" class="rounded-circle border" alt="Devaliana Tensa Nanul" style="width:28px;height:28px;object-fit:cover;"> Penulis: <strong>${author}</strong>
                   </span>
                   <span>•</span>
-                  <span>Diperbarui: <strong><time datetime="${dateModified}">23 November 2026</time></strong></span>
+                  <span>Diperbarui: <strong><time datetime="${dateModified}">${dateFormatted}</time></strong></span>
                   <span>•</span>
                   <span>Waktu Baca: <strong>${readingTime}</strong></span>
                 </div>
